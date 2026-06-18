@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bright Dental Care | Newport Beach Dentist | Dr. Koroush Bassiri</title>
+  <meta name="description" content="Redesigned premium dental care in Newport Beach, CA. Dr. Koroush Bassiri specializes in gentle, advanced dentistry. Call (949) 849-0260 to schedule.">
+  <meta name="keywords" content="Newport Beach Dentist, Dr. Koroush Bassiri, Bright Dental Care, Cosmetic Dentistry, Dental Implants, Invisalign">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://www.brightdentalcare.com/storage/app/media/Logo-Dental-Black.png">
+  
+  <!-- Font Setup -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS via Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0f7ff',
+              100: '#e0effe',
+              200: '#bae0fd',
+              500: '#38bdf8',
+              600: '#0ea5e9',
+              700: '#0369a1',
+              800: '#075985',
+              900: '#0c4a6e',
+            },
+            accent: {
+              gold: '#D4AF37',
+              dark: '#0f172a',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Outfit', 'sans-serif'],
+          },
+          boxShadow: {
+            'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.07)',
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Base styles for animations & overrides -->
+  <style>
+    .glassmorphism {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .text-glow {
+      text-shadow: 0 2px 10px rgba(14, 165, 233, 0.2);
+    }
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+  <!-- TOP INFO STRIP -->
+  <div class="bg-brand-900 text-white py-2 px-4 text-xs md:text-sm font-medium z-50 relative">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+      <div class="flex items-center gap-4">
+        <span class="flex items-center gap-1.5">
+          <i class="fa-solid fa-location-dot text-brand-500"></i>
+          250 Newport Center Dr. Suite 104, Newport Beach, CA 92660
+        </span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="tel:9498490260" class="hover:text-brand-500 transition-colors flex items-center gap-1.5">
+          <i class="fa-solid fa-phone text-brand-500"></i>
+          (949) 849-0260
+        </a>
+        <span class="hidden md:inline text-slate-400">|</span>
+        <a href="https://bcpay.online?Profile=brightdentalcare" target="_blank" class="hover:text-brand-500 transition-colors flex items-center gap-1.5">
+          <i class="fa-solid fa-credit-card text-brand-500"></i>
+          Pay Online
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FLOATING FLOATING MOBILE Call Actions -->
+  <div class="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-white/95 backdrop-blur shadow-[0_-4px_20px_rgba(0,0,0,0.08)] border-t border-slate-100 p-3 grid grid-cols-2 gap-3">
+    <a href="tel:9498490260" class="bg-brand-900 text-white py-3 px-4 rounded-xl flex items-center justify-center gap-2 font-bold text-center text-sm active:scale-95 transition-transform">
+      <i class="fa-solid fa-phone"></i>
+      Call Now
+    </a>
+    <button onclick="openBookingModal()" class="bg-brand-600 hover:bg-brand-700 text-white py-3 px-4 rounded-xl flex items-center justify-center gap-2 font-bold text-center text-sm active:scale-95 transition-transform">
+      <i class="fa-solid fa-calendar-check"></i>
+      Book Visit
+    </button>
+  </div>
+
+  <!-- STICKY HEADER -->
+  <header id="main-header" class="sticky top-0 z-40 bg-white/90 backdrop-blur-md transition-all duration-300 border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
+      
+      <!-- LOGO -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="bg-brand-50 p-2.5 rounded-xl border border-brand-100 group-hover:bg-brand-100 transition-colors">
+          <img src="https://www.brightdentalcare.com/storage/app/media/Logo-Dental-Black.png" alt="Bright Dental Care Logo" class="h-8 w-auto">
+        </div>
+        <div>
+          <span class="font-display font-extrabold text-xl md:text-2xl text-brand-900 tracking-tight block">Bright Dental Care</span>
+          <span class="text-xs font-semibold tracking-widest text-slate-500 uppercase block">Koroush Bassiri, D.D.S.</span>
+        </div>
+      </a>
+
+      <!-- DESKTOP NAVIGATION -->
+      <nav class="hidden lg:flex items-center gap-8">
+        <a href="#welcome" class="text-slate-600 hover:text-brand-600 font-semibold tracking-wide transition-colors">Welcome</a>
+        <a href="#services" class="text-slate-600 hover:text-brand-600 font-semibold tracking-wide transition-colors">Services</a>
+        <a href="#meet-doctor" class="text-slate-600 hover:text-brand-600 font-semibold tracking-wide transition-colors">Meet Dr. Bassiri</a>
+        <a href="#contact" class="text-slate-600 hover:text-brand-600 font-semibold tracking-wide transition-colors">Location & Hours</a>
+      </nav>
+
+      <!-- CTA -->
+      <div class="hidden md:flex items-center gap-4">
+        <button onclick="openBookingModal()" class="bg-brand-900 hover:bg-brand-800 text-white font-semibold px-6 py-2.5 rounded-xl transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 shadow-md">
+          Request Appointment
+        </button>
+      </div>
+
+      <!-- Hamburger Menu for Mobile -->
+      <button onclick="toggleMobileMenu()" class="lg:hidden text-slate-700 hover:text-brand-600 p-2" aria-label="Toggle Menu">
+        <i class="fa-solid fa-bars text-2xl"></i>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div id="mobile-menu" class="fixed inset-0 z-50 bg-slate-900/40 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-300">
+    <div class="absolute right-0 top-0 bottom-0 w-80 bg-white shadow-2xl p-6 flex flex-col transform translate-x-full transition-transform duration-300">
+      <div class="flex items-center justify-between mb-8">
+        <span class="font-display font-extrabold text-lg text-brand-900">Navigation</span>
+        <button onclick="toggleMobileMenu()" class="text-slate-500 hover:text-slate-800 p-2">
+          <i class="fa-solid fa-xmark text-2xl"></i>
+        </button>
+      </div>
+      
+      <nav class="flex flex-col gap-6 text-lg font-semibold text-slate-700">
+        <a href="#welcome" onclick="toggleMobileMenu()" class="hover:text-brand-600 flex items-center gap-3">
+          <i class="fa-solid fa-house text-brand-500"></i> Welcome
+        </a>
+        <a href="#services" onclick="toggleMobileMenu()" class="hover:text-brand-600 flex items-center gap-3">
+          <i class="fa-solid fa-hand-holding-medical text-brand-500"></i> Our Services
+        </a>
+        <a href="#meet-doctor" onclick="toggleMobileMenu()" class="hover:text-brand-600 flex items-center gap-3">
+          <i class="fa-solid fa-user-doctor text-brand-500"></i> Meet Dr. Bassiri
+        </a>
+        <a href="#contact" onclick="toggleMobileMenu()" class="hover:text-brand-600 flex items-center gap-3">
+          <i class="fa-solid fa-map-location-dot text-brand-500"></i> Location & Hours
+        </a>
+      </nav>
+
+      <div class="mt-auto pt-6 border-t border-slate-100 flex flex-col gap-4">
+        <a href="tel:9498490260" class="flex items-center justify-center gap-2 bg-brand-50 text-brand-800 font-bold py-3 px-4 rounded-xl border border-brand-100">
+          <i class="fa-solid fa-phone"></i>
+          (949) 849-0260
+        </a>
+        <button onclick="openBookingModal(); toggleMobileMenu();" class="w-full bg-brand-900 hover:bg-brand-800 text-white font-bold py-3 px-4 rounded-xl shadow-md">
+          Request Appointment
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO SECTION WITH PREMIUM SLIDER -->
+  <section id="welcome" class="relative overflow-hidden min-h-[85vh] flex items-center py-20 bg-slate-950">
+    
+    <!-- Slides Container -->
+    <div id="hero-slider" class="absolute inset-0 z-0">
+      <!-- Slide 1 -->
+      <div class="hero-slide absolute inset-0 opacity-100 transition-opacity duration-1000 bg-cover bg-center" style="background-image: linear-gradient(to bottom, rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.8)), url('https://cdcssl.ibsrv.net/ibimg/smb/1200x1200_80/webmgr/0b/7/9/67cf5e12b582f_1SLIDER.jpg.webp');"></div>
+      <!-- Slide 2 -->
+      <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000 bg-cover bg-center" style="background-image: linear-gradient(to bottom, rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.8)), url('https://cdcssl.ibsrv.net/ibimg/smb/1200x1200_80/webmgr/0b/7/9/67cf5df834898_2SLIDER.jpg.webp');"></div>
+      <!-- Slide 3 -->
+      <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000 bg-cover bg-center" style="background-image: linear-gradient(to bottom, rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.8)), url('https://cdcssl.ibsrv.net/ibimg/smb/1200x1200_80/webmgr/0b/7/9/67cf5dd73f0d1_3SLIDER.jpg.webp');"></div>
+      <!-- Slide 4 -->
+      <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000 bg-cover bg-center" style="background-image: linear-gradient(to bottom, rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.8)), url('https://cdcssl.ibsrv.net/ibimg/smb/1200x1200_80/webmgr/0b/7/9/67cf5d70e253a_4SLIDER.jpg.webp');"></div>
+    </div>
+
+    <!-- Content Overlays -->
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Hero Copy -->
+        <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+          <div class="inline-flex items-center gap-2 bg-brand-500/10 border border-brand-400/20 px-3.5 py-1.5 rounded-full text-brand-400 text-xs md:text-sm font-bold tracking-wide uppercase">
+            <i class="fa-solid fa-star"></i> Newport Beach's Choice For Premium Dental Care
+          </div>
+          
+          <h1 id="hero-title" class="font-display font-extrabold text-4xl sm:text-5xl md:text-6xl text-white leading-tight tracking-tight text-glow">
+            Your Brightest <span class="text-brand-500">Smile</span> Starts Here
+          </h1>
+          
+          <p id="hero-caption" class="text-lg md:text-xl text-slate-300 max-w-2xl font-light leading-relaxed">
+            Make a brilliant first impression with exceptional, compassionate general and cosmetic dentistry.
+          </p>
+          
+          <!-- Actions -->
+          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
+            <button onclick="openBookingModal()" class="bg-brand-600 hover:bg-brand-500 text-white font-bold text-base px-8 py-4 rounded-xl transition-all duration-300 shadow-[0_4px_20px_rgba(14,165,233,0.3)] hover:scale-105 active:scale-95 flex items-center justify-center gap-2">
+              <i class="fa-solid fa-calendar-check"></i> Book Online Appointment
+            </button>
+            <a href="tel:9498490260" class="bg-slate-800/80 hover:bg-slate-800 text-white border border-slate-700 font-semibold text-base px-8 py-4 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 hover:border-brand-500">
+              <i class="fa-solid fa-phone text-brand-500"></i> (949) 849-0260
+            </a>
+          </div>
+
+          <!-- Feature Bullets (Mobile-Friendly Grid) -->
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-4 pt-6 text-left">
+            <div class="flex items-center gap-2 text-slate-300">
+              <div class="bg-brand-500/20 p-2 rounded-lg text-brand-400"><i class="fa-solid fa-circle-check"></i></div>
+              <span class="text-xs md:text-sm font-semibold">Accepts HMO & PPO</span>
+            </div>
+            <div class="flex items-center gap-2 text-slate-300">
+              <div class="bg-brand-500/20 p-2 rounded-lg text-brand-400"><i class="fa-solid fa-user-doctor"></i></div>
+              <span class="text-xs md:text-sm font-semibold">Experienced DDS</span>
+            </div>
+            <div class="flex items-center gap-2 text-slate-300 col-span-2 md:col-span-1">
+              <div class="bg-brand-500/20 p-2 rounded-lg text-brand-400"><i class="fa-solid fa-face-smile"></i></div>
+              <span class="text-xs md:text-sm font-semibold">Friendly Environment</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Quick Info Card (Glassmorphism) -->
+        <div class="lg:col-span-5 w-full">
+          <div class="glassmorphism rounded-3xl p-6 md:p-8 border border-white/20 shadow-2xl relative overflow-hidden">
+            <div class="absolute -right-16 -top-16 w-32 h-32 bg-brand-500/20 rounded-full blur-2xl"></div>
+            
+            <span class="text-brand-700 text-xs font-bold uppercase tracking-wider block mb-1">New Patient Special</span>
+            <h3 class="font-display font-extrabold text-2xl text-slate-900 mb-4">Welcoming New Patients</h3>
+            <p class="text-slate-600 text-sm md:text-base leading-relaxed mb-6 font-medium">
+              We look forward to having you as part of our dental family. Explore our office, staff, and state-of-the-art procedures designed with comfort in mind.
+            </p>
+
+            <div class="space-y-4">
+              <div class="flex items-start gap-3 bg-white/60 p-3.5 rounded-2xl border border-slate-100">
+                <i class="fa-solid fa-shield-halved text-brand-600 text-xl mt-1"></i>
+                <div>
+                  <h4 class="font-bold text-slate-900 text-sm">Affordable Care Plans</h4>
+                  <p class="text-xs text-slate-500">We accept major PPO dental insurances and popular payment packages.</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start gap-3 bg-white/60 p-3.5 rounded-2xl border border-slate-100">
+                <i class="fa-solid fa-clock text-brand-600 text-xl mt-1"></i>
+                <div>
+                  <h4 class="font-bold text-slate-900 text-sm">Convenient Scheduling</h4>
+                  <p class="text-xs text-slate-500">Flexible operation times tailored to match your busy work routine.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CLINIC VIDEO SHOWCASE -->
+  <section class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <div class="max-w-2xl mx-auto mb-10">
+        <span class="text-brand-600 text-sm font-bold uppercase tracking-widest block mb-2">Virtual Tour</span>
+        <h2 class="font-display font-extrabold text-3xl md:text-4xl text-slate-900 tracking-tight">Friendly Staff. Beautiful Smiles. Welcoming Environment.</h2>
+        <div class="w-20 h-1 bg-brand-500 mx-auto mt-4 rounded-full"></div>
+      </div>
+
+      <!-- Modern Custom Framed Video Player -->
+      <div class="relative rounded-3xl overflow-hidden shadow-2xl bg-slate-950 border border-slate-200 aspect-video group">
+        <video id="clinic-video" class="w-full h-full object-cover" controls preload="metadata" poster="https://cdcssl.ibsrv.net/ibimg/smb/1200x1200_80/webmgr/0b/7/9/67cf5e12b582f_1SLIDER.jpg.webp">
+          <source src="https://www.brightdentalcare.com/storage/app/media/NEW_PHOTOS_VIDEO/bright-dental-care-2-1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE SERVICES & SPECIALTIES -->
+  <section id="services" class="py-20 bg-slate-50 border-y border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-600 text-sm font-bold uppercase tracking-widest block mb-2">Our Services & Solutions</span>
+        <h2 class="font-display font-extrabold text-3xl md:text-5xl text-slate-900 tracking-tight">Exceptional Dental Services Tailored For You</h2>
+        <p class="text-slate-500 mt-4 text-base md:text-lg">We deliver comfortable, high-tech dental procedures spanning preventative treatments to advanced implants and teeth restorations.</p>
+      </div>
+
+      <!-- Tabs Navigation (Mobile Scrollable) -->
+      <div class="flex overflow-x-auto pb-4 mb-12 scrollbar-none justify-start md:justify-center border-b border-slate-200">
+        <div class="flex gap-2 p-1.5 bg-slate-100 rounded-2xl">
+          <button onclick="switchTab('general')" id="tab-btn-general" class="tab-btn active px-6 py-3 rounded-xl font-bold text-sm tracking-wide transition-all duration-300 bg-white text-brand-900 shadow-sm">
+            <i class="fa-solid fa-teeth-open mr-2"></i> General Dentistry
+          </button>
+          <button onclick="switchTab('cosmetic')" id="tab-btn-cosmetic" class="tab-btn px-6 py-3 rounded-xl font-bold text-sm tracking-wide transition-all duration-300 text-slate-600 hover:text-brand-600">
+            <i class="fa-solid fa-sparkles mr-2"></i> Cosmetic Specialties
+          </button>
+          <button onclick="switchTab('implants')" id="tab-btn-implants" class="tab-btn px-6 py-3 rounded-xl font-bold text-sm tracking-wide transition-all duration-300 text-slate-600 hover:text-brand-600">
+            <i class="fa-solid fa-screwdriver mr-2"></i> Dental Implants
+          </button>
+          <button onclick="switchTab('surgical')" id="tab-btn-surgical" class="tab-btn px-6 py-3 rounded-xl font-bold text-sm tracking-wide transition-all duration-300 text-slate-600 hover:text-brand-600">
+            <i class="fa-solid fa-notes-medical mr-2"></i> Surgery & Technology
+          </button>
+        </div>
+      </div>
+
+      <!-- Tab Content Area -->
+      <div class="relative min-h-[400px]">
+        
+        <!-- Tab 1: General Dentistry -->
+        <div id="tab-content-general" class="tab-content block transition-opacity duration-300 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <div class="bg-white p-8 rounded-3xl shadow-glass border border-slate-100 hover:border-brand-300 transition-all duration-300 group hover:-translate-y-1">
+            <div class="bg-brand-50 text-brand-600 w-14 h-14 rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors">
+              <i class="fa-solid fa-brush"></i>
+            </div>
+            <h3 class="font-display font-bold text-xl text-slate-900 mb-3">Hygiene & Periodontal Health</h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">Routine checkups, plaque cleaning, and diagnostic processes built to guard your gums and maintain long-term smiles.</p>
+            <button onclick="openBookingModal()" class="text-brand-600 font-bold text-sm hover:text-brand-800 flex items-center gap-2 group/btn">
+              Book Appointment <i class="fa-solid fa-arrow-right group-hover/btn:translate-x-1 transition-transform"></i>
+            </button>
+          </div>
+
+          <div class="bg-white p-8 rounded-3xl shadow-glass border border-slate-100 hover:border-brand-300 transition-all duration-300 group hover:-translate-y-1">
+            <div class="bg-brand-50 text-brand-600 w-14 h-14 rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors">
+              <i class="fa-solid fa-shield"></i>
+            </div>
+            <h3 class="font-display font-bold text-xl text-slate-900 mb-3">Bonding & White Fillings</h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">Strengthen compromised teeth utilizing natural, composite bondings that visually integrate seamlessly into your mouth.</p>
+            <button onclick="openBookingModal()" class="text-brand-600 font-bold text-sm hover:text-brand-800 flex items-center gap-2 group/btn">
+              Book Appointment <i class="fa-solid fa-arrow-right group-hover/btn:translate-x-1 transition-transform"></i>
+            </button>
+          </div>
+
+          <div class="bg-white p-8 rounded-3xl shadow-glass border border-slate-100 hover:border-brand-300 transition-all duration-300 group hover:-translate-y-1">
+            <div class="bg-brand-50 text-brand-600 w-14 h-14 rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors">
+              <i class="fa-solid fa-crown"></i>
+            </div>
+            <h3 class="font-display font-bold text-xl text-slate-900 mb-3">Crowns & Bridges</h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">Expert restorative solutions that securely anchor and bridge gap regions, instantly renewing optimal biting capacity.</p>
+            <button onclick="openBookingModal()" class="text-brand-600 font-bold text-sm hover:text-brand-800 flex items-center gap-2 group/btn">
+              Book Appointment <i class="fa-solid fa-arrow-right group-hover/btn:translate-x-1 transition-transform"></i>
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Tab 2: Cosmetic Specialties -->
+        <div id="tab-content-cosmetic" class="tab-content hidden transition-opacity duration-300 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <div class="bg-white p-8 rounded-3xl shadow-glass border border-slate-100 hover:border-brand-300 transition-all duration-300 group hover:-translate-y-1">
+            <div class="bg-brand-50 text-brand-600 w-14 h-14 rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <h3 class="font-display font-bold text-xl text-slate-900 mb-3">Lumineers & Veneers</h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">Ultrathin custom shells bonded perfectly onto primary surfaces to hide cracks, shape alignments, or discoloration.</p>
+            <button onclick="openBookingModal()" class="text-brand-600 font-bold text-sm hover:text-brand-800 flex items-center gap-2 group/btn">
+              Book Appointment <i class="fa-solid fa-arrow-right group-hover/btn:translate-x-1 transition-transform"></i>
+            </button>
+          </div>
+
+          <div class="bg-white p-8 rounded-3xl shadow-glass border border-slate-100 hover:border-brand-300 transition-all duration-300 group hover:-translate-y-1">
+            <div class="bg-brand-50 text-brand-600 w-14 h-14 rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors">
+              <i class="fa-solid fa-bolt-lightning"></i>
+            </div>
+            <h3 class="font-display font-bold text-xl text-slate-900 mb-3">ZOOM! Whitening</h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">Rapid in-office whitening procedure capable of lifting deep surface stains multiple full shades in a single hour.</p>
+            <button onclick="openBookingModal()" class="text-brand-600 font-bold text-sm hover:text-brand-800 flex items-center gap-2 group/btn">
+              Book Appointment <i class="fa-solid fa-arrow-right group-hover/btn:translate-x-1 transition-transform"></i>
+            </button>
+          </div>
+
+          <div class="bg-white p-8 rounded-3xl shadow-glass border border-slate-100 hover:border-brand-300 transition-all duration-300 group hover:-translate-y-1">
+            <div class="bg-brand-50 text-brand-600 w-14 h-14 rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors">
+              <i class="fa-solid fa-align-center"></i>
+            </div>
+            <h3 class="font-display font-bold text-xl text-slate-900 mb-3">Invisalign Clear Braces</h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">Straighten uneven alignment issues dynamically with modern, practically invisible aligners that require no metal work.</p>
+            <button onclick="openBookingModal()" class="text-brand-600 font-bold text-sm hover:text-brand-800 flex items-center gap-2 group/btn">
+              Book Appointment <i class="fa-solid fa-arrow-right group-hover/btn:translate-x-1 transition-transform"></i>
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Tab 3: Dental Implants -->
+        <div id="tab-content-implants" class="tab-content hidden transition-opacity duration-300 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <div class="bg-white p-8 rounded-3xl shadow-glass border border-slate-100 hover:border-brand-300 transition-all duration-300 group hover:-translate-y-1">
+            <div class="bg-brand-50 text-brand-600 w-14 h-14 rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors">
+              <i class="fa-solid fa-screwdriver"></i>
+            </div>
+            <h3 class="font-display font-bold text-xl text-slate-900 mb-3">Premium Dental Implants</h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">Permanent anchor posts modeled after natural root patterns, providing complete structural backing to secure fresh porcelain teeth.</p>
+            <button onclick="openBookingModal()" class="text-brand-600 font-bold text-sm hover:text-brand-800 flex items-center gap-2 group/btn">
+              Book Appointment <i class="fa-solid fa-arrow-right group-hover/btn:translate-x-1 transition-transform"></i>
+            </button>
+          </div>
+
+          <div class="bg-white p-8 rounded-3xl shadow-glass border border-slate-100 hover:border-brand-300 transition-all duration-300 group hover:-translate-y-1">
+            <div class="bg-brand-50 text-brand-600 w-14 h-14 rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors">
+              <i class="fa-solid fa-microchip"></i>
+            </div>
+            <h3 class="font-display font-bold text-xl text-slate-900 mb-3">Mini Dental Implants</h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">Miniaturized implant options requiring simplified, less invasive bone integration processes for secure setups.</p>
+            <button onclick="openBookingModal()" class="text-brand-600 font-bold text-sm hover:text-brand-800 flex items-center gap-2 group/btn">
+              Book Appointment <i class="fa-solid fa-arrow-right group-hover/btn:translate-x-1 transition-transform"></i>
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Tab 4: Surgery & Technology -->
+        <div id="tab-content-surgical" class="tab-content hidden transition-opacity duration-300 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <div class="bg-white p-8 rounded-3xl shadow-glass border border-slate-100 hover:border-brand-300 transition-all duration-300 group hover:-translate-y-1">
+            <div class="bg-brand-50 text-brand-600 w-14 h-14 rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors">
+              <i class="fa-solid fa-camera"></i>
+            </div>
+            <h3 class="font-display font-bold text-xl text-slate-900 mb-3">Intraoral Camera & Digital X-Ray</h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">Advanced, high-definition photography and instant imaging with ultra-low radiation to safely analyze deep-rooted anomalies.</p>
+            <button onclick="openBookingModal()" class="text-brand-600 font-bold text-sm hover:text-brand-800 flex items-center gap-2 group/btn">
+              Book Appointment <i class="fa-solid fa-arrow-right group-hover/btn:translate-x-1 transition-transform"></i>
+            </button>
+          </div>
+
+          <div class="bg-white p-8 rounded-3xl shadow-glass border border-slate-100 hover:border-brand-300 transition-all duration-300 group hover:-translate-y-1">
+            <div class="bg-brand-50 text-brand-600 w-14 h-14 rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors">
+              <i class="fa-solid fa-bone"></i>
+            </div>
+            <h3 class="font-display font-bold text-xl text-slate-900 mb-3">Bone Grafting & Wisdom Teeth</h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">Precision oral surgeries designed to handle structural bone rebuilding and comfortable extractions of wisdom teeth.</p>
+            <button onclick="openBookingModal()" class="text-brand-600 font-bold text-sm hover:text-brand-800 flex items-center gap-2 group/btn">
+              Book Appointment <i class="fa-solid fa-arrow-right group-hover/btn:translate-x-1 transition-transform"></i>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MEET THE DOCTOR SECTION -->
+  <section id="meet-doctor" class="py-20 bg-white overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Interactive Visual Showcase -->
+        <div class="lg:col-span-5 relative">
+          <div class="absolute -left-12 -bottom-12 w-64 h-64 bg-brand-100 rounded-full blur-3xl -z-10"></div>
+          <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-100 aspect-[4/5]">
+            <img src="https://cdcssl.ibsrv.net/ibimg/smb/1200x1200_80/webmgr/0b/7/9/67cf5df834898_2SLIDER.jpg.webp" alt="Dr. Koroush Bassiri" class="w-full h-full object-cover">
+            
+            <div class="absolute bottom-6 left-6 right-6 glassmorphism p-5 rounded-2xl border border-white/20 shadow-lg">
+              <span class="text-xs font-bold text-brand-600 uppercase tracking-widest block mb-0.5">Lead Dentist</span>
+              <span class="text-lg font-extrabold text-slate-900 block">Koroush Bassiri, D.D.S.</span>
+              <span class="text-xs font-medium text-slate-500">Bright Dental Care Newport Beach</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Detailed Bios and Credentials -->
+        <div class="lg:col-span-7 space-y-6">
+          <span class="text-brand-600 text-sm font-bold uppercase tracking-widest block">Quality Compassionate Care</span>
+          <h2 class="font-display font-extrabold text-3xl md:text-5xl text-slate-900 tracking-tight">Meet Dr. Koroush Bassiri</h2>
+          <div class="w-16 h-1 bg-brand-500 rounded-full mb-6"></div>
+          
+          <p class="text-slate-600 text-base md:text-lg leading-relaxed">
+            Welcome to Bright Dental Care. Dr. Koroush Bassiri is a well-trained, caring clinician specializing in providing complete, advanced dental health services. With decades of hands-on experience, Dr. Bassiri and our warm staff ensure every patient feels like family.
+          </p>
+
+          <p class="text-slate-600 text-base md:text-lg leading-relaxed">
+            Our number one priority is delivering top-tier, comfortable care while making treatments affordable. That's why we accept a vast range of PPO insurance plans and common HMO options.
+          </p>
+
+          <!-- Core stats / values -->
+          <div class="grid grid-cols-2 gap-6 pt-4 border-t border-slate-100">
+            <div>
+              <span class="font-display font-black text-3xl md:text-4xl text-brand-600 block">100%</span>
+              <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Patient Satisfaction Focused</span>
+            </div>
+            <div>
+              <span class="font-display font-black text-3xl md:text-4xl text-brand-600 block">All PPOs</span>
+              <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">And Major HMOs Accepted</span>
+            </div>
+          </div>
+
+          <div class="pt-6">
+            <button onclick="openBookingModal()" class="bg-brand-900 hover:bg-brand-800 text-white font-bold px-8 py-3.5 rounded-xl transition-all duration-300 shadow-md">
+              Schedule A Visit With Dr. Bassiri
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS & TESTIMONIALS SECTION -->
+  <section class="py-20 bg-slate-900 text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(14,165,233,0.15),transparent)]"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-brand-400 text-xs font-bold uppercase tracking-widest block mb-2">Our Patients Love Us</span>
+        <h2 class="font-display font-extrabold text-3xl md:text-4xl text-glow">Patient Testimonials</h2>
+        <div class="w-12 h-1 bg-brand-500 mx-auto mt-4 rounded-full"></div>
+      </div>
+
+      <!-- Testimonial Slider Wrapper -->
+      <div class="max-w-4xl mx-auto relative px-8">
+        
+        <!-- Slides -->
+        <div class="overflow-hidden min-h-[220px] relative">
+          <!-- Slide 1 -->
+          <div class="testimonial-slide absolute inset-x-0 opacity-100 transition-opacity duration-500 flex flex-col items-center text-center space-y-6">
+            <div class="flex text-amber-400 gap-1 text-lg">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-lg md:text-xl font-light italic leading-relaxed text-slate-200">
+              "Dr. Bassiri and his entire staff are absolute professionals. The environment is extremely clean and welcoming. Best dentist in Newport Beach!"
+            </p>
+            <div>
+              <span class="font-bold text-white block">Sarah M.</span>
+              <span class="text-xs text-brand-400 font-semibold tracking-wide uppercase">Verified Patient Review</span>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="testimonial-slide absolute inset-x-0 opacity-0 transition-opacity duration-500 flex flex-col items-center text-center space-y-6">
+            <div class="flex text-amber-400 gap-1 text-lg">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-lg md:text-xl font-light italic leading-relaxed text-slate-200">
+              "Extremely gentle care, especially for someone who gets dental anxiety. The treatment process was flawless and highly supportive."
+            </p>
+            <div>
+              <span class="font-bold text-white block">James D.</span>
+              <span class="text-xs text-brand-400 font-semibold tracking-wide uppercase">Verified Patient Review</span>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="testimonial-slide absolute inset-x-0 opacity-0 transition-opacity duration-500 flex flex-col items-center text-center space-y-6">
+            <div class="flex text-amber-400 gap-1 text-lg">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-lg md:text-xl font-light italic leading-relaxed text-slate-200">
+              "Amazing clean environment. Accepting our PPO plan made complex treatment extremely budget-friendly. Recommend them to everyone."
+            </p>
+            <div>
+              <span class="font-bold text-white block">John L.</span>
+              <span class="text-xs text-brand-400 font-semibold tracking-wide uppercase">Verified Patient Review</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <button onclick="prevTestimonial()" class="absolute left-0 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 p-3 rounded-full transition-colors" aria-label="Previous Review">
+          <i class="fa-solid fa-chevron-left text-xl"></i>
+        </button>
+        <button onclick="nextTestimonial()" class="absolute right-0 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 p-3 rounded-full transition-colors" aria-label="Next Review">
+          <i class="fa-solid fa-chevron-right text-xl"></i>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DYNAMIC BOOKING MODAL -->
+  <div id="booking-modal" class="fixed inset-0 z-50 bg-slate-950/60 backdrop-blur-sm flex items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-300">
+    <div class="bg-white rounded-3xl max-w-xl w-full p-6 md:p-8 shadow-2xl relative transform scale-95 transition-transform duration-300 overflow-y-auto max-h-[90vh]">
+      
+      <!-- Close -->
+      <button onclick="closeBookingModal()" class="absolute right-5 top-5 text-slate-400 hover:text-slate-700 p-2">
+        <i class="fa-solid fa-xmark text-2xl"></i>
+      </button>
+
+      <div class="mb-6">
+        <span class="text-brand-600 text-xs font-bold uppercase tracking-wider block mb-1">Easy Appointments</span>
+        <h3 class="font-display font-extrabold text-2xl text-slate-900">Request Appointment</h3>
+        <p class="text-slate-500 text-sm">Submit your info, and our office staff will call back shortly to confirm.</p>
+      </div>
+
+      <!-- Booking Form -->
+      <form id="appointment-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label for="form-name" class="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1">Full Name</label>
+            <input type="text" id="form-name" required placeholder="John Doe" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:border-brand-500 focus:bg-white focus:outline-none transition-colors">
+          </div>
+          <div>
+            <label for="form-phone" class="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1">Phone Number</label>
+            <input type="tel" id="form-phone" required placeholder="(949) 555-0199" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:border-brand-500 focus:bg-white focus:outline-none transition-colors">
+          </div>
+        </div>
+
+        <div>
+          <label for="form-email" class="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1">Email Address</label>
+          <input type="email" id="form-email" placeholder="john@example.com" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:border-brand-500 focus:bg-white focus:outline-none transition-colors">
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label for="form-date" class="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1">Preferred Date</label>
+            <input type="date" id="form-date" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:border-brand-500 focus:bg-white focus:outline-none transition-colors">
+          </div>
+          <div>
+            <label for="form-time" class="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1">Preferred Time Window</label>
+            <select id="form-time" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:border-brand-500 focus:bg-white focus:outline-none transition-colors">
+              <option value="" disabled selected>Select window</option>
+              <option value="morning">Morning (8:00 AM - 12:00 PM)</option>
+              <option value="afternoon">Afternoon (12:00 PM - 4:00 PM)</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label for="form-insurance" class="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1">Insurance Provider (HMO/PPO/None)</label>
+          <input type="text" id="form-insurance" placeholder="e.g. Delta Dental PPO" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:border-brand-500 focus:bg-white focus:outline-none transition-colors">
+        </div>
+
+        <div>
+          <label for="form-notes" class="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1">Additional Message / Concern</label>
+          <textarea id="form-notes" rows="2" placeholder="Tell us if you have pain, need a general checkup, whitening, etc." class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:border-brand-500 focus:bg-white focus:outline-none transition-colors"></textarea>
+        </div>
+
+        <button type="submit" class="w-full bg-brand-900 hover:bg-brand-800 text-white font-bold py-3.5 rounded-xl transition-all duration-300 shadow-md">
+          Submit Appointment Request
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- SUCCESS DIALOG -->
+  <dialog id="success-dialog" class="backdrop:bg-slate-950/60 rounded-3xl p-6 md:p-8 max-w-md w-full shadow-2xl border border-slate-100">
+    <div class="text-center space-y-4">
+      <div class="w-16 h-16 bg-emerald-50 rounded-full flex items-center justify-center text-emerald-600 text-3xl mx-auto border border-emerald-100">
+        <i class="fa-solid fa-circle-check"></i>
+      </div>
+      <h3 class="font-display font-extrabold text-2xl text-slate-900">Request Sent!</h3>
+      <p class="text-slate-500 text-sm leading-relaxed">
+        Thank you! Your preferred slot request has been sent. Our team will reach out to confirm your reservation shortly.
+      </p>
+      <button onclick="document.getElementById('success-dialog').close()" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 rounded-xl transition-colors">
+        Close
+      </button>
+    </div>
+  </dialog>
+
+  <!-- HOURS & LOCATION MAP SECTION -->
+  <section id="contact" class="py-20 bg-slate-50 border-t border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12">
+        
+        <!-- Left Column: Address, Hours, Contact info -->
+        <div class="lg:col-span-5 space-y-8">
+          <div>
+            <span class="text-brand-600 text-xs font-bold uppercase tracking-widest block mb-1">Our Location</span>
+            <h2 class="font-display font-extrabold text-3xl text-slate-900 tracking-tight">Hours & Operation</h2>
+            <div class="w-12 h-1 bg-brand-500 mt-3 rounded-full"></div>
+          </div>
+
+          <!-- Address card -->
+          <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-glass flex items-start gap-4">
+            <div class="bg-brand-50 text-brand-600 p-3.5 rounded-xl"><i class="fa-solid fa-map-location-dot text-lg"></i></div>
+            <div>
+              <h4 class="font-bold text-slate-900">Clinic Address</h4>
+              <p class="text-sm text-slate-500 mt-1">250 Newport Center Dr. Suite 104</p>
+              <p class="text-sm text-slate-500">Newport Beach, CA 92660</p>
+              <a href="https://maps.google.com/?q=250+Newport+Center+Dr.+Suite+104,+Newport+Beach,+CA+92660" target="_blank" class="text-brand-600 hover:text-brand-800 font-bold text-xs inline-flex items-center gap-1.5 mt-2 transition-colors">
+                Get Directions <i class="fa-solid fa-diamond-turn-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Hours table -->
+          <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-glass space-y-3.5">
+            <h4 class="font-bold text-slate-900 border-b border-slate-100 pb-2 flex items-center gap-2">
+              <i class="fa-solid fa-clock text-brand-600"></i> Operating Hours
+            </h4>
+            <div class="space-y-2 text-sm text-slate-600">
+              <div class="flex justify-between"><span>Monday:</span><span class="font-bold text-slate-900">8:00 am - 4:00 pm</span></div>
+              <div class="flex justify-between"><span>Tuesday:</span><span class="font-bold text-slate-900">8:00 am - 4:00 pm</span></div>
+              <div class="flex justify-between"><span>Wednesday:</span><span class="font-bold text-slate-900">8:00 am - 4:00 pm</span></div>
+              <div class="flex justify-between"><span>Thursday:</span><span class="font-bold text-slate-900">8:00 am - 4:00 pm</span></div>
+              <div class="flex justify-between"><span>Friday:</span><span class="font-bold text-slate-900">8:00 am - 2:00 pm</span></div>
+              <div class="flex justify-between text-slate-400"><span>Saturday:</span><span class="font-semibold">Closed</span></div>
+              <div class="flex justify-between text-slate-400"><span>Sunday:</span><span class="font-semibold">Closed</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Map Widget -->
+        <div class="lg:col-span-7 flex flex-col h-full min-h-[400px]">
+          <div class="rounded-3xl overflow-hidden shadow-2xl border border-slate-200 relative flex-1 h-full min-h-[400px]">
+            <!-- Embedded Google Map -->
+            <iframe class="absolute inset-0 w-full h-full border-0" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m13!1d3320.127458600877!2d-117.87612492429913!3d33.61181737332711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcdfe1fb8d6af5%3A0xe54d86b6a88b5ec2!2s250%20Newport%20Center%20Dr%20%23104%2C%20Newport%20Beach%2C%20CA%2092660!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 text-slate-400 pt-16 pb-24 md:pb-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 mb-12">
+        
+        <!-- Logo & Brand Statement -->
+        <div class="lg:col-span-4 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="bg-white/5 p-2 rounded-xl border border-white/10">
+              <img src="https://www.brightdentalcare.com/storage/app/media/Logo-Dental-Black.png" alt="Bright Dental Care Logo" class="h-7 w-auto invert">
+            </div>
+            <div>
+              <span class="font-display font-extrabold text-lg text-white block">Bright Dental Care</span>
+              <span class="text-[10px] font-semibold tracking-widest text-slate-500 uppercase block">Koroush Bassiri, D.D.S.</span>
+            </div>
+          </div>
+          <p class="text-xs md:text-sm text-slate-400 leading-relaxed font-light">
+            Compassionate, expert dental care in Newport Beach, California. From routine wellness to implants and visual smile styling, your comfort remains our highest focus.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="lg:col-span-2 space-y-4">
+          <h4 class="font-display font-bold text-white text-sm tracking-wide">Quick Navigation</h4>
+          <ul class="space-y-2 text-xs md:text-sm">
+            <li><a href="#welcome" class="hover:text-brand-500 transition-colors">Welcome</a></li>
+            <li><a href="#services" class="hover:text-brand-500 transition-colors">Our Services</a></li>
+            <li><a href="#meet-doctor" class="hover:text-brand-500 transition-colors">Meet the Dentist</a></li>
+            <li><a href="#contact" class="hover:text-brand-500 transition-colors">Directions & Hours</a></li>
+          </ul>
+        </div>
+
+        <!-- Patient Help -->
+        <div class="lg:col-span-3 space-y-4">
+          <h4 class="font-display font-bold text-white text-sm tracking-wide">Patient Resources</h4>
+          <ul class="space-y-2 text-xs md:text-sm">
+            <li><a href="https://mform.us/aVBHKkUkOTg0" target="_blank" class="hover:text-brand-500 transition-colors flex items-center gap-1.5"><i class="fa-solid fa-file-invoice"></i> New Patient Forms</a></li>
+            <li><a href="https://bcpay.online?Profile=brightdentalcare" target="_blank" class="hover:text-brand-500 transition-colors flex items-center gap-1.5"><i class="fa-solid fa-credit-card"></i> Pay Online</a></li>
+            <li><a href="tel:9498490260" class="hover:text-brand-500 transition-colors flex items-center gap-1.5"><i class="fa-solid fa-phone"></i> Emergency Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Detail Info -->
+        <div class="lg:col-span-3 space-y-4">
+          <h4 class="font-display font-bold text-white text-sm tracking-wide">Contact Info</h4>
+          <p class="text-xs md:text-sm text-slate-400 font-light flex items-start gap-2">
+            <i class="fa-solid fa-location-dot text-brand-500 mt-1"></i>
+            <span>250 Newport Center Dr. Suite 104,<br>Newport Beach, CA 92660</span>
+          </p>
+          <p class="text-xs md:text-sm text-slate-400 font-light flex items-center gap-2">
+            <i class="fa-solid fa-phone text-brand-500"></i>
+            <a href="tel:9498490260" class="hover:text-brand-500 transition-colors">(949) 849-0260</a>
+          </p>
+          <p class="text-xs md:text-sm text-slate-400 font-light flex items-center gap-2">
+            <i class="fa-solid fa-envelope text-brand-500"></i>
+            <a href="mailto:bdcnewportbeach@gmail.com" class="hover:text-brand-500 transition-colors">bdcnewportbeach@gmail.com</a>
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Footer bottom bar -->
+      <div class="border-t border-slate-800/80 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
+        <p class="text-slate-500 font-light">
+          Copyright &copy; 2026 Bright Dental Care. All Rights Reserved. Redesigned with premium mobile-first features.
+        </p>
+        <div class="flex items-center gap-4 text-slate-500">
+          <a href="#" class="hover:text-brand-500 transition-colors">Privacy Policy</a>
+          <span>&middot;</span>
+          <a href="#" class="hover:text-brand-500 transition-colors">Terms of Service</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- CORE INTERACTIVE JAVASCRIPT -->
+  <script>
+    // MOBILE NAV DRAWER
+    const mobileMenu = document.getElementById('mobile-menu');
+    function toggleMobileMenu() {
+      const drawer = mobileMenu.querySelector('.absolute');
+      if (mobileMenu.classList.contains('opacity-0')) {
+        mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+        drawer.classList.remove('translate-x-full');
+      } else {
+        mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+        drawer.classList.add('translate-x-full');
+      }
+    }
+
+    // STICKY HEADER STYLING ON SCROLL
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) {
+        header.classList.add('shadow-md', 'bg-white/95');
+        header.classList.remove('bg-white/90');
+      } else {
+        header.classList.remove('shadow-md', 'bg-white/95');
+        header.classList.add('bg-white/90');
+      }
+    });
+
+    // HERO SLIDER CAROUSEL LOGIC
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.hero-slide');
+    const slideTitles = [
+      "Your Brightest <span class='text-brand-500'>Smile</span> Starts Here",
+      "A Team You <span class='text-brand-500'>Can Rely On</span>",
+      "Protect <span class='text-brand-500'>Your Precious Teeth</span>",
+      "Healthy Teeth For A <span class='text-brand-500'>Lifetime</span>"
+    ];
+    const slideCaptions = [
+      "Make a brilliant first impression with exceptional, compassionate general and cosmetic dentistry.",
+      "Quality, compassionate care delivered by experienced staff members focused on absolute safety.",
+      "Talk to your dentist today for easy, actionable tips to keep your teeth completely cavity-free.",
+      "Annual preventative checkups keep teeth happy and healthy. Request your friendly consultation today!"
+    ];
+
+    const titleEl = document.getElementById('hero-title');
+    const captionEl = document.getElementById('hero-caption');
+
+    function changeSlide() {
+      slides[currentSlide].classList.add('opacity-0');
+      slides[currentSlide].classList.remove('opacity-100');
+      
+      currentSlide = (currentSlide + 1) % slides.length;
+      
+      slides[currentSlide].classList.add('opacity-100');
+      slides[currentSlide].classList.remove('opacity-0');
+      
+      // Update Texts with soft visual fade
+      titleEl.style.opacity = 0;
+      captionEl.style.opacity = 0;
+      setTimeout(() => {
+        titleEl.innerHTML = slideTitles[currentSlide];
+        captionEl.textContent = slideCaptions[currentSlide];
+        titleEl.style.opacity = 1;
+        captionEl.style.opacity = 1;
+      }, 300);
+    }
+    
+    // Auto cycle hero images every 5 seconds
+    setInterval(changeSlide, 5000);
+
+    // SERVICES TAB SWITCHER
+    function switchTab(tabId) {
+      // Hide all contents
+      document.querySelectorAll('.tab-content').forEach(content => {
+        content.classList.add('hidden');
+        content.classList.remove('block');
+      });
+      // Show matching content
+      const targetContent = document.getElementById(`tab-content-${tabId}`);
+      if (targetContent) {
+        targetContent.classList.remove('hidden');
+        targetContent.classList.add('block');
+      }
+      
+      // Toggle button states
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.className = 'tab-btn px-6 py-3 rounded-xl font-bold text-sm tracking-wide transition-all duration-300 text-slate-600 hover:text-brand-600';
+      });
+      const activeBtn = document.getElementById(`tab-btn-${tabId}`);
+      if (activeBtn) {
+        activeBtn.className = 'tab-btn active px-6 py-3 rounded-xl font-bold text-sm tracking-wide transition-all duration-300 bg-white text-brand-900 shadow-sm';
+      }
+    }
+
+    // TESTIMONIAL SLIDER LOGIC
+    let currentTestimonial = 0;
+    const testimonials = document.querySelectorAll('.testimonial-slide');
+    
+    function showTestimonial(index) {
+      testimonials.forEach(slide => {
+        slide.classList.add('opacity-0');
+        slide.classList.remove('opacity-100');
+      });
+      testimonials[index].classList.remove('opacity-0');
+      testimonials[index].classList.add('opacity-100');
+    }
+
+    function nextTestimonial() {
+      currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+      showTestimonial(currentTestimonial);
+    }
+
+    function prevTestimonial() {
+      currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+      showTestimonial(currentTestimonial);
+    }
+
+    // DYNAMIC BOOKING MODAL
+    const bookingModal = document.getElementById('booking-modal');
+    function openBookingModal() {
+      // Set tomorrow's date as min
+      const tomorrow = new Date();
+      tomorrow.setDate(tomorrow.getDate() + 1);
+      document.getElementById('form-date').min = tomorrow.toISOString().split('T')[0];
+      
+      bookingModal.classList.remove('opacity-0', 'pointer-events-none');
+      bookingModal.querySelector('.max-w-xl').classList.remove('scale-95');
+    }
+
+    function closeBookingModal() {
+      bookingModal.classList.add('opacity-0', 'pointer-events-none');
+      bookingModal.querySelector('.max-w-xl').classList.add('scale-95');
+    }
+
+    // APPOINTMENT FORM SUBMISSION
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      closeBookingModal();
+      
+      // Trigger success dialog modal
+      const successDialog = document.getElementById('success-dialog');
+      successDialog.showModal();
+      
+      // Reset form fields
+      document.getElementById('appointment-form').reset();
+    }
+  </script>
+
+  <!-- Sticky WhatsApp CTA -->
+  <a href="https://wa.me/918708528150?text=Hi%20Cora%20Team%2C%20I%20saw%20my%20demo%20page%20and%20would%20love%20to%20discuss%20further." target="_blank" rel="noopener noreferrer" id="whatsapp-sticky"
+     class="fixed bottom-6 right-6 z-50 flex items-center gap-2.5 bg-[#25D366] hover:bg-[#20BD5A] text-white shadow-lg shadow-[#25D366]/25 hover:shadow-xl hover:shadow-[#25D366]/30 px-5 py-3 rounded-full transition-all duration-300 hover:scale-105 active:scale-95 group"
+     aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp text-xl group-hover:rotate-12 transition-transform duration-300"></i>
+    <span class="text-[10px] font-bold tracking-widest uppercase hidden sm:inline">Let's Talk</span>
+  </a>
+
+</body>
+</html>

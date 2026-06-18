@@ -1,0 +1,1961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luxe Captures — Mumbai's Premier Wedding Photography Studio</title>
+  <meta name="description" content="24+ years. 2100+ weddings. 18 countries. Luxe Captures is Mumbai's most trusted founder-led wedding photography studio. Book your consultation today." />
+  <meta name="keywords" content="wedding photographer Mumbai, luxury wedding photography India, destination wedding photography, Luxe Captures" />
+  <meta property="og:title" content="Luxe Captures — Where Every Frame Tells Your Forever" />
+  <meta property="og:description" content="24+ years. 2100+ weddings. 18 countries. Book Mumbai's most trusted wedding photography studio." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://demo.claraverse.in/luxe-captures/assets/hero_thumb.jpg" />
+  <meta property="og:url" content="https://demo.claraverse.in/luxe-captures" />
+
+  <!-- Fonts: Switzer via Fontshare CDN -->
+  <link href="https://api.fontshare.com/v2/css?f[]=switzer&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Switzer', 'Switzer Placeholder', 'sans-serif'],
+            sans: ['Switzer', 'Switzer Placeholder', 'sans-serif'],
+          },
+          colors: {
+            neutral: {
+              50:  '#fafafa',
+              100: '#f5f5f5',
+              200: '#e5e5e5',
+              300: '#d4d4d4',
+              450: '#a3a3a3',
+              500: '#737373',
+              600: '#525252',
+              700: '#404040',
+              800: '#262626',
+              900: '#171717',
+              950: '#0a0a0a',
+            }
+          },
+          animation: {
+            'fade-up': 'fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+            'fade-in': 'fadeIn 1s ease forwards',
+            'float': 'float 6s ease-in-out infinite',
+            'shimmer': 'shimmer 2.5s ease-in-out infinite',
+          },
+          keyframes: {
+            fadeUp: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-8px)' },
+            },
+            shimmer: {
+              '0%': { backgroundPosition: '-200% center' },
+              '100%': { backgroundPosition: '200% center' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    @import url('https://api.fontshare.com/v2/css?f[]=switzer&display=swap');
+
+    /* ─── Base ─── */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Switzer', 'Switzer Placeholder', system-ui, sans-serif;
+      background: #ffffff;
+      color: #171717;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── Absolute Switzer Font Override ─── */
+    h1, h2, h3, h4, h5, h6, p, li, span, a, button, input, select, textarea, label, .font-display, .stat-number, .font-serif {
+      font-family: 'Switzer', 'Switzer Placeholder', system-ui, sans-serif !important;
+    }
+
+    /* ─── Monochrome gradient text ─── */
+    .text-mono-gradient {
+      background: linear-gradient(135deg, #0a0a0a 0%, #525252 50%, #171717 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      background-size: 200% auto;
+    }
+
+    /* ─── Shimmer text ─── */
+    .text-shimmer {
+      background: linear-gradient(90deg, #171717 0%, #737373 25%, #171717 50%, #a3a3a3 75%, #171717 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 4s linear infinite;
+    }
+
+    /* ─── Divider ornament ─── */
+    .ornament {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+    .ornament::before, .ornament::after {
+      content: '';
+      flex: 1;
+      max-width: 60px;
+      height: 1px;
+      background: linear-gradient(to right, transparent, #a3a3a3);
+    }
+    .ornament::after {
+      background: linear-gradient(to left, transparent, #a3a3a3);
+    }
+
+    /* ─── Light glassmorphism card ─── */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.78);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.45);
+    }
+
+    /* ─── Section fade-in on scroll ─── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ─── Parallax hero ─── */
+    .hero-bg {
+      will-change: transform;
+    }
+
+    /* ─── Buttons ─── */
+    .btn-primary {
+      background: #000000;
+      color: #ffffff;
+      border: 1px solid #000000;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn-primary:hover {
+      background: transparent;
+      color: #000000;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 1px solid #171717;
+      color: #171717;
+      background: transparent;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn-outline:hover {
+      background: #171717;
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    /* ─── Scroll indicator ─── */
+    @keyframes bounce-slow {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(6px); }
+    }
+    .scroll-bounce { animation: bounce-slow 2s ease-in-out infinite; }
+
+    /* ─── Sticky nav ─── */
+    .nav-scrolled {
+      background: rgba(255, 255, 255, 0.85) !important;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    /* ─── Timeline ─── */
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -1px;
+      top: 0;
+      bottom: -24px;
+      width: 1px;
+      background: linear-gradient(to bottom, #171717, transparent);
+    }
+
+    /* ─── Package card hover ─── */
+    .package-card {
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .package-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    }
+
+    /* ─── FAQ accordion ─── */
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .faq-answer.open {
+      max-height: 400px;
+    }
+    .faq-icon { transition: transform 0.3s ease; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+    /* ─── Testimonial ─── */
+    .testimonial-track {
+      display: flex;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* ─── Image Zoom Effect (Natural Colors) ─── */
+    .img-grayscale-trigger {
+      position: relative;
+      overflow: hidden;
+    }
+    .img-grayscale-trigger img {
+      transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .img-grayscale-trigger:hover img {
+      transform: scale(1.04);
+    }
+
+    /* ─── Form input ─── */
+    .form-input {
+      background: #fafafa;
+      border: 1px solid #e5e5e5;
+      color: #171717;
+      transition: border-color 0.3s ease, background 0.3s ease;
+    }
+    .form-input:focus {
+      outline: none;
+      border-color: #000000;
+      background: #ffffff;
+    }
+    .form-input::placeholder { color: #a3a3a3; }
+
+    /* ─── Mobile menu (Sliding & Hidden when closed) ─── */
+    #mobile-menu {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transform: translateY(-12px);
+      transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.35s;
+    }
+    #mobile-menu.open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    /* Animated Hamburger Button */
+    #hamburger span {
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+    }
+    #hamburger.open span:nth-child(1) {
+      transform: translateY(6.5px) rotate(45deg);
+    }
+    #hamburger.open span:nth-child(2) {
+      opacity: 0;
+    }
+    #hamburger.open span:nth-child(3) {
+      transform: translateY(-6.5px) rotate(-45deg);
+    }
+
+    /* ─── Reduced motion ─── */
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { transition: none; }
+      .btn-primary, .btn-outline { transition: none; }
+      .img-grayscale-trigger img { transition: none; }
+    }
+
+    /* ─── Fairy Lights ─── */
+    .fairy-bulb {
+      filter: drop-shadow(0 0 6px rgba(254, 240, 138, 0.95)) drop-shadow(0 0 12px rgba(250, 204, 21, 0.6));
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ════════════════════════════════════════════════ -->
+<!--  SECTION 1 — STICKY NAVIGATION                  -->
+<!-- ════════════════════════════════════════════════ -->
+<header id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-500 py-4 px-6 bg-transparent bg-gradient-to-b from-white/35 to-transparent">
+  <div class="max-w-6xl mx-auto flex items-center justify-between">
+    <!-- Logo -->
+    <a href="#hero" class="flex flex-col leading-none z-50">
+      <span class="font-sans text-2xl font-extrabold tracking-tight text-neutral-900">LUXE</span>
+      <span class="font-sans text-[8px] tracking-[0.45em] text-neutral-500 uppercase font-light mt-0.5">CAPTURES</span>
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="hidden md:flex items-center gap-8 text-sm font-semibold tracking-wide">
+      <a href="#about" class="text-neutral-700 hover:text-black transition-colors">About</a>
+      <a href="#portfolio" class="text-neutral-700 hover:text-black transition-colors">Portfolio</a>
+      <a href="#celebrations" class="text-neutral-700 hover:text-black transition-colors">Celebrations</a>
+      <a href="#memories" class="text-neutral-700 hover:text-black transition-colors">Memories</a>
+      <a href="#testimonials" class="text-neutral-700 hover:text-black transition-colors">Stories</a>
+      <a href="#contact" class="btn-primary px-6 py-2.5 rounded-full font-bold text-xs tracking-wider uppercase">Book Now</a>
+    </nav>
+
+    <!-- Hamburger (Animated) -->
+    <button id="hamburger" aria-label="Open menu" class="md:hidden flex flex-col justify-center items-center gap-1 w-10 h-10 rounded-full hover:bg-neutral-100/50 transition-colors z-50">
+      <span class="block w-5 h-0.5 bg-neutral-900"></span>
+      <span class="block w-5 h-0.5 bg-neutral-900"></span>
+      <span class="block w-5 h-0.5 bg-neutral-900"></span>
+    </button>
+  </div>
+
+  <!-- Mobile menu (Hidden from display and layout when closed to prevent overlap bug) -->
+  <div id="mobile-menu" class="md:hidden absolute top-full left-0 right-0 bg-white border-t border-neutral-100 shadow-xl px-6 py-8 flex flex-col gap-6 text-center">
+    <a href="#about" class="text-neutral-700 hover:text-black transition-colors py-1 text-base font-semibold" onclick="closeMobileMenu()">About</a>
+    <a href="#portfolio" class="text-neutral-700 hover:text-black transition-colors py-1 text-base font-semibold" onclick="closeMobileMenu()">Portfolio</a>
+    <a href="#celebrations" class="text-neutral-700 hover:text-black transition-colors py-1 text-base font-semibold" onclick="closeMobileMenu()">Celebrations</a>
+    <a href="#memories" class="text-neutral-700 hover:text-black transition-colors py-1 text-base font-semibold" onclick="closeMobileMenu()">Memories</a>
+    <a href="#testimonials" class="text-neutral-700 hover:text-black transition-colors py-1 text-base font-semibold" onclick="closeMobileMenu()">Stories</a>
+    <a href="#contact" class="btn-primary px-6 py-3.5 rounded-full font-bold text-xs uppercase tracking-widest mt-2" onclick="closeMobileMenu()">Book Consultation</a>
+  </div>
+</header>
+
+
+<!-- ════════════════════════════════════════════════ -->
+<!--  SECTION 2 — HERO                               -->
+<!-- ════════════════════════════════════════════════ -->
+<section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-neutral-50">
+
+  <!-- Hero Content: Split layout with clean off-white background -->
+  <div class="relative z-10 px-6 max-w-6xl mx-auto pt-32 pb-16 w-full min-h-screen flex items-center">
+    <div class="grid md:grid-cols-12 gap-12 lg:gap-16 items-center w-full">
+      
+      <!-- Left Column: Copy & CTAs -->
+      <div class="md:col-span-7 reveal">
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 bg-white/80 backdrop-blur-md rounded-full px-4 py-1.5 mb-6 text-[9px] font-sans tracking-[0.2em] uppercase text-neutral-800 font-bold border border-neutral-200/40 shadow-sm">
+          <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 animate-pulse"></span>
+          Mumbai · Est. 2000 · 18 Countries
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl lg:text-[70px] font-extrabold leading-[1.1] mb-6 tracking-tight text-neutral-900">
+          Where Every <span class="italic font-light text-shimmer block sm:inline">Frame Tells</span> Your Forever
+        </h1>
+
+        <p class="font-sans text-sm sm:text-base text-neutral-600 max-w-lg mb-8 font-light leading-relaxed">
+          Mumbai's premier founder-led wedding photography studio. 24+ years of preserving raw, authentic love stories that transcend borders.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-3 max-w-md">
+          <a href="#contact" id="hero-cta" class="btn-primary px-6 py-3.5 rounded-full font-bold tracking-widest text-[10px] uppercase text-center shadow-sm">
+            Book Your Free Consultation
+          </a>
+          <a href="#portfolio" class="btn-outline px-6 py-3.5 rounded-full font-bold tracking-widest text-[10px] uppercase text-center bg-white/50 hover:bg-neutral-900 shadow-sm">
+            View Our Work
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: Visual Frame Showcase (Full color lookbook style) -->
+      <div class="md:col-span-5 reveal" style="transition-delay: 0.1s">
+        <div class="relative w-full aspect-[4/5] md:aspect-auto md:h-[500px] rounded-2xl overflow-hidden border border-neutral-200/80 shadow-xl group bg-white p-2">
+          <div class="w-full h-full rounded-xl overflow-hidden relative">
+            <img
+              src="../assets/hero.png"
+              alt="Luxurious Indian wedding couple"
+              fetchpriority="high"
+              class="w-full h-full object-cover object-center transition-transform duration-750 group-hover:scale-[1.01]"
+            />
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scroll indicator absolute bottom -->
+  <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1.5 scroll-bounce opacity-50">
+    <span class="text-[8px] tracking-[0.25em] text-neutral-500 uppercase font-light">Discover</span>
+    <svg width="12" height="18" viewBox="0 0 16 24" fill="none" class="text-neutral-500">
+      <rect x="1" y="1" width="14" height="22" rx="7" stroke="currentColor" stroke-width="1.5"/>
+      <circle cx="8" cy="8" r="2" fill="currentColor" class="animate-bounce"/>
+    </svg>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════ -->
+<!--  SECTION 3 — STATS STRIP                        -->
+<!-- ════════════════════════════════════════════════ -->
+<section id="stats" class="py-16 px-6 border-y border-neutral-200 bg-white">
+  <div class="max-w-5xl mx-auto">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <!-- Stat 1 -->
+      <div class="reveal">
+        <div class="flex items-baseline justify-center">
+          <p class="stat-number text-5xl sm:text-6xl font-light text-neutral-900" data-target="24">0</p>
+          <span class="text-xl text-neutral-400 ml-0.5 font-light">+</span>
+        </div>
+        <p class="text-[9px] tracking-[0.2em] uppercase text-neutral-500 mt-2.5 font-sans font-semibold">Years of Legacy</p>
+      </div>
+      <!-- Stat 2 -->
+      <div class="reveal" style="transition-delay:0.1s">
+        <div class="flex items-baseline justify-center">
+          <p class="stat-number text-5xl sm:text-6xl font-light text-neutral-900" data-target="2100">0</p>
+          <span class="text-xl text-neutral-400 ml-0.5 font-light">+</span>
+        </div>
+        <p class="text-[9px] tracking-[0.2em] uppercase text-neutral-500 mt-2.5 font-sans font-semibold">Weddings Captured</p>
+      </div>
+      <!-- Stat 3 -->
+      <div class="reveal" style="transition-delay:0.2s">
+        <div class="flex items-baseline justify-center">
+          <p class="stat-number text-5xl sm:text-6xl font-light text-neutral-900" data-target="18">0</p>
+          <span class="text-xl text-neutral-400 ml-0.5 font-light">+</span>
+        </div>
+        <p class="text-[9px] tracking-[0.2em] uppercase text-neutral-500 mt-2.5 font-sans font-semibold">Countries</p>
+      </div>
+      <!-- Stat 4 -->
+      <div class="reveal" style="transition-delay:0.3s">
+        <div class="flex items-baseline justify-center">
+          <p class="stat-number text-5xl sm:text-6xl font-light text-neutral-900" data-target="20">0</p>
+          <span class="text-xl text-neutral-400 ml-0.5 font-light">+</span>
+        </div>
+        <p class="text-[9px] tracking-[0.2em] uppercase text-neutral-500 mt-2.5 font-sans font-semibold">Team Artists</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════ -->
+<!--  SECTION 4 — ABOUT / FOUNDER                    -->
+<!-- ════════════════════════════════════════════════ -->
+<section id="about" class="py-16 md:py-28 px-6 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <div class="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+      <!-- Image side -->
+      <div class="reveal order-2 md:order-1">
+        <div class="relative">
+          <!-- Main image in natural colors -->
+          <div class="img-grayscale-trigger rounded-2xl border border-neutral-200 shadow-sm">
+            <img src="../assets/bridal.png" alt="Luxe Captures signature bridal portrait" class="w-full h-80 md:h-[500px] object-cover" loading="lazy" />
+          </div>
+          <!-- Floating badge -->
+          <div class="absolute -bottom-5 -right-5 glass-card rounded-2xl p-5 shadow-sm">
+            <p class="text-3xl font-light text-neutral-900">24<span class="text-lg text-neutral-400 font-sans">+</span></p>
+            <p class="text-[8px] tracking-[0.15em] uppercase text-neutral-500 font-sans mt-0.5 leading-tight font-semibold">Years of<br>Excellence</p>
+          </div>
+          <!-- Floating ornament dot -->
+          <div class="absolute -top-4 -left-4 w-6 h-6 rounded-full border border-neutral-300 bg-neutral-50/50 animate-float"></div>
+        </div>
+      </div>
+
+      <!-- Text side -->
+      <div class="reveal order-1 md:order-2" style="transition-delay:0.15s">
+        <div class="ornament justify-start mb-6">
+          <span class="text-[9px] tracking-[0.3em] uppercase text-neutral-500 font-sans font-semibold">Our Story</span>
+        </div>
+
+        <h2 class="text-4xl sm:text-5xl font-extrabold leading-tight mb-6 text-neutral-900">
+          A Founder's <em class="italic font-light text-neutral-500">Obsession</em><br>With Your Story
+        </h2>
+
+        <p class="text-neutral-600 font-light leading-relaxed mb-6 text-sm sm:text-base">
+          Luxe Captures was born from a singular artistic vision: to capture fleeting wedding moments and immortalize them as family heirlooms. Founded in Mumbai, we've spent over two decades crafting a distinct documentary-meets-fine-art photography style.
+        </p>
+
+        <p class="text-neutral-600 font-light leading-relaxed mb-8 text-sm sm:text-base">
+          With a collective of 20+ specialized visual artists — photographers, cinematographers, drone pilots, and editors — we operate as a single creative heartbeat. Whether capturing coastal vows in Goa, palace celebrations in Udaipur, or destination weddings across 18 countries, our lens focuses on the core of human emotion.
+        </p>
+
+        <!-- Signature values -->
+        <div class="grid grid-cols-2 gap-6 mb-10">
+          <div class="flex items-start gap-3">
+            <span class="text-neutral-900 mt-1 flex-shrink-0 text-xs">◆</span>
+            <div>
+              <p class="text-neutral-900 text-sm font-semibold">Founder-Led Creative</p>
+              <p class="text-neutral-500 text-xs mt-0.5 font-light">Personal direction on every curation.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-neutral-900 mt-1 flex-shrink-0 text-xs">◆</span>
+            <div>
+              <p class="text-neutral-900 text-sm font-semibold">Documentary Focus</p>
+              <p class="text-neutral-500 text-xs mt-0.5 font-light">Real emotions, zero forced poses.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-neutral-900 mt-1 flex-shrink-0 text-xs">◆</span>
+            <div>
+              <p class="text-neutral-900 text-sm font-semibold">Editorial Aesthetic</p>
+              <p class="text-neutral-500 text-xs mt-0.5 font-light">Timeless black-and-white curation.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-neutral-900 mt-1 flex-shrink-0 text-xs">◆</span>
+            <div>
+              <p class="text-neutral-900 text-sm font-semibold">Archive Delivery</p>
+              <p class="text-neutral-500 text-xs mt-0.5 font-light">Lifetime secure cloud storage.</p>
+            </div>
+          </div>
+        </div>
+
+        <a href="#contact" class="btn-primary inline-flex px-8 py-3.5 rounded-full font-bold text-xs tracking-widest uppercase">
+          Meet The Team
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════ -->
+<!--  SECTION 5 — PORTFOLIO SHOWCASE                 -->
+<!-- ════════════════════════════════════════════════ -->
+<section id="portfolio" class="py-16 md:py-28 px-6 bg-neutral-50 border-t border-neutral-200">
+  <div class="max-w-6xl mx-auto">
+
+    <div class="text-center mb-16 reveal">
+      <div class="ornament mb-4">
+        <span class="text-[9px] tracking-[0.3em] uppercase text-neutral-500 font-sans font-semibold">Our Portfolio</span>
+      </div>
+      <h2 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-neutral-900 mb-4">
+        Stories We've <em class="italic font-light text-neutral-500">Captured</em>
+      </h2>
+      <p class="text-neutral-500 font-light max-w-md mx-auto text-sm sm:text-base">
+        A curated glimpse into our visual history spanning over 2,100 weddings.
+      </p>
+    </div>
+
+    <!-- Corrected Full-Width Portfolio grid using a single responsive Tailwind grid -->
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 reveal w-full md:grid-rows-[240px_240px]">
+      <!-- Item 1: Wide on desktop, full span on mobile -->
+      <div class="img-grayscale-trigger rounded-xl border border-neutral-200 shadow-sm col-span-2 md:col-span-2 md:row-span-1">
+        <img src="../assets/portfolio.png" alt="Luxe Captures wedding portfolio" class="w-full h-48 sm:h-64 md:h-full object-cover" loading="lazy" />
+      </div>
+      <!-- Item 2: Tall on desktop, span 1 on mobile -->
+      <div class="img-grayscale-trigger rounded-xl border border-neutral-200 shadow-sm col-span-1 md:col-span-1 md:row-span-2">
+        <img src="../assets/bridal.png" alt="Bridal portrait" class="w-full h-48 sm:h-64 md:h-full object-cover" loading="lazy" />
+      </div>
+      <!-- Item 3: Span 1 on desktop and mobile -->
+      <div class="img-grayscale-trigger rounded-xl border border-neutral-200 shadow-sm col-span-1">
+        <img src="../assets/hero.png" alt="Ceremony golden hour" class="w-full h-48 sm:h-64 md:h-full object-cover object-top" loading="lazy" />
+      </div>
+      <!-- Item 4: Span 1 on desktop and mobile -->
+      <div class="img-grayscale-trigger rounded-xl border border-neutral-200 shadow-sm col-span-2 md:col-span-1">
+        <img src="../assets/destination.png" alt="Destination wedding" class="w-full h-48 sm:h-64 md:h-full object-cover object-center" loading="lazy" />
+      </div>
+    </div>
+
+    <div class="text-center mt-12 reveal">
+      <a href="https://www.instagram.com/luxe_captures" target="_blank" rel="noopener" class="btn-outline inline-flex items-center gap-3 px-8 py-3.5 rounded-full font-bold text-xs tracking-widest uppercase">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        View Full Portfolio on Instagram
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════ -->
+<!--  SECTION 6 — DESTINATION WEDDINGS               -->
+<!-- ════════════════════════════════════════════════ -->
+<section id="destinations" class="py-16 md:py-28 px-6 relative overflow-hidden bg-neutral-950">
+
+  <!-- Faint textured background image in natural colors -->
+  <div class="absolute inset-0">
+    <img src="../assets/destination.png" alt="Destination wedding background" class="w-full h-full object-cover brightness-[0.6] opacity-10 blur-[2px]" loading="lazy" />
+    <div class="absolute inset-0 bg-neutral-950/90"></div>
+  </div>
+
+  <div class="relative z-10 max-w-6xl mx-auto">
+    <div class="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <!-- Left Column: Copy + CTA -->
+      <div class="reveal">
+        <div class="ornament justify-start mb-6">
+          <span class="text-[9px] tracking-[0.3em] uppercase text-neutral-400 font-sans font-semibold">Global Operations</span>
+        </div>
+
+        <h2 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
+          We Travel <em class="italic font-light text-neutral-400">Wherever</em><br>Love Guides You
+        </h2>
+
+        <p class="text-neutral-300 font-light text-sm sm:text-base leading-relaxed mb-8">
+          From remote coastal cliffs in the Mediterranean to historic palatial courtyards across Rajasthan, our team is equipped to capture weddings globally. We manage all travel logistics internally, ensuring a seamless, worry-free experience for you and your family.
+        </p>
+
+        <a href="#contact" class="btn-primary inline-flex px-8 py-4 rounded-full font-bold text-xs tracking-widest uppercase bg-white text-black border-white hover:bg-transparent hover:text-white shadow-lg">
+          Plan Your Destination Wedding
+        </a>
+      </div>
+
+      <!-- Right Column: Featured Destination Color Image Card (Resolves the empty void on desktop) -->
+      <div class="reveal md:pl-6" style="transition-delay:0.15s">
+        <div class="relative group">
+          <!-- Main color image with zoom effect -->
+          <div class="rounded-2xl overflow-hidden border border-neutral-800 shadow-2xl transition-transform duration-700 group-hover:scale-[1.02] bg-neutral-900">
+            <img src="../assets/destination.png" alt="Lake Como Destination Wedding" class="w-full h-80 md:h-[420px] object-cover" />
+          </div>
+          <!-- Floating location badge -->
+          <div class="absolute bottom-5 left-5 bg-black/70 backdrop-blur-md text-white text-[10px] tracking-widest uppercase py-2 px-4 rounded-xl border border-white/10 font-bold flex items-center gap-1.5 shadow-lg">
+            <span>📍</span> Lake Como, Italy
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Country strip: Ticker scroll across the full width, moved to the bottom of the section -->
+    <div class="overflow-hidden border-t border-neutral-800 pt-8 mt-16 bg-transparent">
+      <div class="strip-track flex gap-8 whitespace-nowrap text-[11px] text-neutral-400 font-sans tracking-[0.15em] uppercase font-semibold">
+        <span>🇮🇳 India</span><span>·</span>
+        <span>🇮🇹 Italy</span><span>·</span>
+        <span>🇫🇷 France</span><span>·</span>
+        <span>🇬🇧 United Kingdom</span><span>·</span>
+        <span>🇦🇪 United Arab Emirates</span><span>·</span>
+        <span>🇸🇬 Singapore</span><span>·</span>
+        <span>🇺🇸 United States</span><span>·</span>
+        <span>🇲🇻 Maldives</span><span>·</span>
+        <span>🇨🇭 Switzerland</span><span>·</span>
+        <span>🇹🇭 Thailand</span><span>·</span>
+        <!-- Duplicated for seamless loop -->
+        <span>🇮🇳 India</span><span>·</span>
+        <span>🇮🇹 Italy</span><span>·</span>
+        <span>🇫🇷 France</span><span>·</span>
+        <span>🇬🇧 United Kingdom</span><span>·</span>
+        <span>🇦🇪 United Arab Emirates</span><span>·</span>
+        <span>🇸🇬 Singapore</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════ -->
+<!--  SECTION 7 — HOW WE WORK (PROCESS)              -->
+<!-- ════════════════════════════════════════════════ -->
+<section id="process" class="py-16 md:py-28 px-6 bg-white border-t border-neutral-150">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16 reveal">
+      <div class="ornament mb-4">
+        <span class="text-[9px] tracking-[0.3em] uppercase text-neutral-500 font-sans font-semibold">Our Process</span>
+      </div>
+      <h2 class="text-4xl sm:text-5xl font-extrabold text-neutral-900 mb-4">
+        The Creative <em class="italic font-light text-neutral-500">Journey</em>
+      </h2>
+      <p class="text-neutral-500 font-light text-sm sm:text-base">Meticulous planning behind every cinematic gallery.</p>
+    </div>
+
+    <div class="grid md:grid-cols-12 gap-12 lg:gap-20 items-start">
+      <!-- Left Column: Steps -->
+      <div class="md:col-span-7 space-y-0">
+        <!-- Step 1 -->
+        <div class="flex gap-6 md:gap-8 reveal group">
+          <div class="flex flex-col items-center">
+            <div class="w-10 h-10 rounded-full border border-neutral-900 flex items-center justify-center flex-shrink-0 bg-neutral-900 transition-colors duration-300 group-hover:bg-transparent group-hover:text-black">
+              <span class="text-white text-xs font-sans font-bold transition-colors duration-300 group-hover:text-black">01</span>
+            </div>
+            <div class="w-px flex-1 bg-gradient-to-b from-neutral-300 to-transparent mt-2"></div>
+          </div>
+          <div class="pb-10">
+            <h3 class="text-lg sm:text-xl text-neutral-900 font-bold mb-2">Discovery Consultation</h3>
+            <p class="text-neutral-600 font-light text-xs sm:text-sm leading-relaxed">We arrange a private call to discuss your itinerary, aesthetic preferences, and family dynamics. This helps us customize our coverage to match your unique event flow.</p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="flex gap-6 md:gap-8 reveal group" style="transition-delay:0.1s">
+          <div class="flex flex-col items-center">
+            <div class="w-10 h-10 rounded-full border border-neutral-900 flex items-center justify-center flex-shrink-0 bg-neutral-900 transition-colors duration-300 group-hover:bg-transparent group-hover:text-black">
+              <span class="text-white text-xs font-sans font-bold transition-colors duration-300 group-hover:text-black">02</span>
+            </div>
+            <div class="w-px flex-1 bg-gradient-to-b from-neutral-300 to-transparent mt-2"></div>
+          </div>
+          <div class="pb-10">
+            <h3 class="text-lg sm:text-xl text-neutral-900 font-bold mb-2">Bespoke Proposal</h3>
+            <p class="text-neutral-600 font-light text-xs sm:text-sm leading-relaxed">We construct a detailed visual roadmap and transparent quotation tailored precisely to the number of events, team scale, and deliverables required.</p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="flex gap-6 md:gap-8 reveal group" style="transition-delay:0.2s">
+          <div class="flex flex-col items-center">
+            <div class="w-10 h-10 rounded-full border border-neutral-900 flex items-center justify-center flex-shrink-0 bg-neutral-900 transition-colors duration-300 group-hover:bg-transparent group-hover:text-black">
+              <span class="text-white text-xs font-sans font-bold transition-colors duration-300 group-hover:text-black">03</span>
+            </div>
+            <div class="w-px flex-1 bg-gradient-to-b from-neutral-300 to-transparent mt-2"></div>
+          </div>
+          <div class="pb-10">
+            <h3 class="text-lg sm:text-xl text-neutral-900 font-bold mb-2">The Production</h3>
+            <p class="text-neutral-600 font-light text-xs sm:text-sm leading-relaxed">Our team coordinates directly with your wedding planners. On-site, we operate unobtrusively, prioritizing raw moments over structured disruptions.</p>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="flex gap-6 md:gap-8 reveal group" style="transition-delay:0.3s">
+          <div class="flex flex-col items-center">
+            <div class="w-10 h-10 rounded-full border border-neutral-900 flex items-center justify-center flex-shrink-0 bg-neutral-900 transition-colors duration-300 group-hover:bg-transparent group-hover:text-black">
+              <span class="text-white text-xs font-sans font-bold transition-colors duration-300 group-hover:text-black">04</span>
+            </div>
+            <div class="w-px h-0 mt-2"></div>
+          </div>
+          <div class="pb-4">
+            <h3 class="text-lg sm:text-xl text-neutral-900 font-bold mb-2">Editorial Curation</h3>
+            <p class="text-neutral-600 font-light text-xs sm:text-sm leading-relaxed">Each photograph undergoes custom color grading. The final package is delivered in a sleek digital vault alongside physical custom-bound art books.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Editorial Photo Showcase -->
+      <div class="md:col-span-5 sticky top-28 hidden md:block reveal" style="transition-delay: 0.15s">
+        <div class="relative group">
+          <div class="rounded-2xl overflow-hidden border border-neutral-200 shadow-md transition-transform duration-750 group-hover:scale-[1.01] bg-neutral-50">
+            <img src="../assets/team.png" alt="Luxe Captures collective at work" class="w-full h-[440px] object-cover" />
+          </div>
+          <div class="absolute inset-0 border border-black/5 rounded-2xl pointer-events-none"></div>
+          <div class="mt-4 text-center">
+            <p class="text-[9px] tracking-[0.25em] uppercase text-neutral-400 font-sans font-bold">Behind The Lens</p>
+            <p class="text-neutral-500 text-[11px] mt-1 font-light italic">"Operating as a single creative heartbeat across 18 countries."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════ -->
+<!--  SECTION 8 — CELEBRATION CHAPTERS               -->
+<!-- ════════════════════════════════════════════════ -->
+<section id="celebrations" class="py-16 md:py-32 px-6 bg-[#FAF9F6] border-y border-neutral-200/80 relative overflow-hidden">
+  
+  <!-- Section Title -->
+  <div class="max-w-6xl mx-auto text-center mb-20 relative z-10 reveal">
+    <div class="ornament mb-4">
+      <span class="text-[9px] tracking-[0.3em] uppercase text-neutral-500 font-sans font-semibold">The Narrative</span>
+    </div>
+    <h2 class="text-4xl sm:text-5xl font-extrabold text-neutral-900 mb-4 leading-tight">
+      Celebration <em class="italic font-light text-neutral-500">Chapters</em>
+    </h2>
+    <p class="text-neutral-500 font-light text-xs sm:text-sm max-w-sm mx-auto leading-relaxed">
+      Every wedding is a symphony of distinct events. We document each custom chapter with a dedicated visual approach.
+    </p>
+  </div>
+
+  <!-- Central Timeline Track & Chapters -->
+  <div class="max-w-5xl mx-auto relative z-10 space-y-20 md:space-y-36">
+    
+    <!-- Central dotted line (Desktop only) -->
+    <div class="absolute left-1/2 top-10 bottom-10 w-px bg-neutral-200/85 hidden md:block -translate-x-1/2 z-0"></div>
+
+    <!-- Chapter I: Pre-Wedding & Portraits -->
+    <div class="grid md:grid-cols-2 gap-10 md:gap-20 items-center relative z-10">
+      <!-- Background Line Art (Lakeside landscape) -->
+      <svg viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="0.3" class="text-neutral-300/40 absolute w-80 h-80 -top-16 -left-16 pointer-events-none z-0">
+        <circle cx="100" cy="80" r="22" />
+        <path d="M100 48 V 53 M100 107 V 112 M73 80 H 78 M122 80 H 127 M81 59 L 84 62 M119 101 L 116 98 M81 101 L 84 98 M119 59 L 116 62" />
+        <path d="M20 140 L 70 95 L 110 135 L 150 80 L 190 145" />
+        <path d="M50 140 L 95 105 L 130 138" />
+        <path d="M25 155 Q 50 151 75 155 T 125 155 T 175 155" />
+        <path d="M40 163 Q 65 159 90 163 T 140 163" />
+      </svg>
+      
+      <!-- Image side -->
+      <div class="reveal z-10 order-1 md:order-1">
+        <div class="relative group max-w-[270px] sm:max-w-[310px] mx-auto">
+          <!-- Offset decorative arch outline behind the main card -->
+          <div class="absolute inset-0 rounded-t-full border border-neutral-300/60 translate-x-3 translate-y-3 pointer-events-none z-0 transition-transform duration-500 group-hover:translate-x-1.5 group-hover:translate-y-1.5"></div>
+          
+          <!-- Main Arch Card -->
+          <div class="relative z-10 bg-white p-3 rounded-t-full border border-neutral-200/80 shadow-sm flex flex-col transition-all duration-500 group-hover:shadow-md">
+            <!-- Image with arch clipping -->
+            <div class="relative aspect-[3/4] rounded-t-full overflow-hidden w-full bg-neutral-100">
+              <img src="../assets/destination.png" alt="Pre-wedding editorial couple session" class="w-full h-full object-cover transition-transform duration-750 group-hover:scale-103" loading="lazy" />
+              
+              <!-- Viewfinder Corners inside the image -->
+              <div class="absolute inset-4 pointer-events-none rounded-t-full">
+                <!-- Tiny corner brackets inside the image for a viewfinder vibe -->
+                <div class="absolute top-2 left-2 w-2.5 h-2.5 border-t border-l border-white/60"></div>
+                <div class="absolute top-2 right-2 w-2.5 h-2.5 border-t border-r border-white/60"></div>
+                <div class="absolute bottom-2 left-2 w-2.5 h-2.5 border-b border-l border-white/60"></div>
+                <div class="absolute bottom-2 right-2 w-2.5 h-2.5 border-b border-r border-white/60"></div>
+              </div>
+            </div>
+            
+            <!-- Gallery/Placard Metadata at the bottom of the card -->
+            <div class="pt-3 pb-0.5 px-2 border-t border-neutral-100/60 mt-3 flex items-center justify-between text-neutral-400 font-mono text-[7.5px] tracking-widest uppercase">
+              <span>50mm f/1.2</span>
+              <span class="text-neutral-300">◆</span>
+              <span>1/1000s</span>
+              <span class="text-neutral-300">◆</span>
+              <span>ISO 100</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Text side -->
+      <div class="reveal z-10 order-2 md:order-2 text-center md:text-left">
+        <span class="text-[9px] uppercase tracking-[0.25em] text-neutral-400 font-sans font-bold block mb-2">Chapter I</span>
+        <h3 class="text-2xl font-extrabold text-neutral-900 mb-4">Pre-Wedding & Portraits</h3>
+        <p class="text-neutral-600 font-light text-xs sm:text-sm leading-relaxed mb-6">
+          Thoughtfully directed, fine-art portraiture set against dramatic architectural landmarks or intimate natural landscapes. We focus on genuine interaction, movement, and soft, natural golden hour lighting to capture your relationship before the wedding celebrations begin.
+        </p>
+        <div class="flex flex-wrap gap-2 justify-center md:justify-start items-center text-[8px] uppercase tracking-widest font-sans font-bold text-neutral-400">
+          <span>Fine Art Vibe</span>
+          <span>◆</span>
+          <span>Natural Direction</span>
+          <span>◆</span>
+          <span>Scenic Scales</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chapter II: Intimate Rituals -->
+    <div class="grid md:grid-cols-2 gap-10 md:gap-20 items-center relative z-10">
+      <!-- Background Line Art (Henna mandala wreath) -->
+      <svg viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="0.35" class="text-neutral-300/40 absolute w-72 h-72 -bottom-16 -left-10 pointer-events-none z-0">
+        <circle cx="100" cy="100" r="25" />
+        <circle cx="100" cy="100" r="38" stroke-dasharray="1 3" />
+        <circle cx="100" cy="100" r="50" />
+        <path d="M100 40 C 96 52 104 52 100 40 Z" />
+        <path d="M100 160 C 96 148 104 148 100 160 Z" />
+        <path d="M40 100 C 52 96 52 104 40 100 Z" />
+        <path d="M160 100 C 148 96 148 104 160 100 Z" />
+        <path d="M58 58 C 67 67 74 60 58 58 Z" />
+        <path d="M142 142 C 133 133 126 140 142 142 Z" />
+        <path d="M58 142 C 67 133 74 140 58 142 Z" />
+        <path d="M142 58 C 133 67 126 60 142 58 Z" />
+        <circle cx="100" cy="30" r="1.2" fill="currentColor" />
+        <circle cx="100" cy="170" r="1.2" fill="currentColor" />
+        <circle cx="30" cy="100" r="1.2" fill="currentColor" />
+        <circle cx="170" cy="100" r="1.2" fill="currentColor" />
+      </svg>
+      
+      <!-- Text side -->
+      <div class="reveal z-10 order-2 md:order-1 text-center md:text-left">
+        <span class="text-[9px] uppercase tracking-[0.25em] text-neutral-400 font-sans font-bold block mb-2">Chapter II</span>
+        <h3 class="text-2xl font-extrabold text-neutral-900 mb-4">Intimate Rituals</h3>
+        <p class="text-neutral-600 font-light text-xs sm:text-sm leading-relaxed mb-6">
+          Capturing the raw joy, colors, and emotional depth of intimate family rituals. We focus on candid expressions, the vibrant yellow splash of turmeric, detailed henna patterns, and the silent, loving glances shared between family members.
+        </p>
+        <div class="flex flex-wrap gap-2 justify-center md:justify-start items-center text-[8px] uppercase tracking-widest font-sans font-bold text-neutral-400">
+          <span>Candid Journalism</span>
+          <span>◆</span>
+          <span>Rich Color Grading</span>
+          <span>◆</span>
+          <span>Henna Details</span>
+        </div>
+      </div>
+      <!-- Image side -->
+      <div class="reveal z-10 order-1 md:order-2">
+        <div class="relative group max-w-[270px] sm:max-w-[310px] mx-auto">
+          <!-- Offset decorative arch outline behind the main card -->
+          <div class="absolute inset-0 rounded-t-full border border-neutral-300/60 translate-x-3 translate-y-3 pointer-events-none z-0 transition-transform duration-500 group-hover:translate-x-1.5 group-hover:translate-y-1.5"></div>
+          
+          <!-- Main Arch Card -->
+          <div class="relative z-10 bg-white p-3 rounded-t-full border border-neutral-200/80 shadow-sm flex flex-col transition-all duration-500 group-hover:shadow-md">
+            <!-- Image with arch clipping -->
+            <div class="relative aspect-[3/4] rounded-t-full overflow-hidden w-full bg-neutral-100">
+              <img src="../assets/bridal.png" alt="Henna ceremony and haldi details" class="w-full h-full object-cover transition-transform duration-750 group-hover:scale-103" loading="lazy" />
+              
+              <!-- Viewfinder Corners inside the image -->
+              <div class="absolute inset-4 pointer-events-none rounded-t-full">
+                <!-- Tiny corner brackets inside the image for a viewfinder vibe -->
+                <div class="absolute top-2 left-2 w-2.5 h-2.5 border-t border-l border-white/60"></div>
+                <div class="absolute top-2 right-2 w-2.5 h-2.5 border-t border-r border-white/60"></div>
+                <div class="absolute bottom-2 left-2 w-2.5 h-2.5 border-b border-l border-white/60"></div>
+                <div class="absolute bottom-2 right-2 w-2.5 h-2.5 border-b border-r border-white/60"></div>
+              </div>
+            </div>
+            
+            <!-- Gallery/Placard Metadata at the bottom of the card -->
+            <div class="pt-3 pb-0.5 px-2 border-t border-neutral-100/60 mt-3 flex items-center justify-between text-neutral-400 font-mono text-[7.5px] tracking-widest uppercase">
+              <span>85mm f/1.4</span>
+              <span class="text-neutral-300">◆</span>
+              <span>1/250s</span>
+              <span class="text-neutral-300">◆</span>
+              <span>ISO 200</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chapter III: Sangeet & Revelry -->
+    <div class="grid md:grid-cols-2 gap-10 md:gap-20 items-center relative z-10">
+      <!-- Background Line Art (Sparkles / Celestial energy) -->
+      <svg viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="0.3" class="text-neutral-300/40 absolute w-82 h-82 -top-16 -right-12 pointer-events-none z-0">
+        <path d="M90 60 Q 90 75 75 75 Q 90 75 90 90 Q 90 75 105 75 Q 90 75 90 60 Z" />
+        <path d="M145 115 Q 145 125 135 125 Q 145 125 145 135 Q 145 125 155 125 Q 145 125 145 115 Z" />
+        <path d="M45 135 L 45 143 M 41 139 H 49" />
+        <path d="M115 45 L 115 51 M 112 48 H 118" />
+        <circle cx="102" cy="115" r="0.8" fill="currentColor" />
+        <circle cx="109" cy="120" r="1.2" fill="currentColor" />
+        <circle cx="72" cy="100" r="0.8" fill="currentColor" />
+      </svg>
+      
+      <!-- Image side -->
+      <div class="reveal z-10 order-1 md:order-1">
+        <div class="relative group max-w-[270px] sm:max-w-[310px] mx-auto">
+          <!-- Offset decorative arch outline behind the main card -->
+          <div class="absolute inset-0 rounded-t-full border border-neutral-300/60 translate-x-3 translate-y-3 pointer-events-none z-0 transition-transform duration-500 group-hover:translate-x-1.5 group-hover:translate-y-1.5"></div>
+          
+          <!-- Main Arch Card -->
+          <div class="relative z-10 bg-white p-3 rounded-t-full border border-neutral-200/80 shadow-sm flex flex-col transition-all duration-500 group-hover:shadow-md">
+            <!-- Image with arch clipping -->
+            <div class="relative aspect-[3/4] rounded-t-full overflow-hidden w-full bg-neutral-100">
+              <img src="../assets/portfolio.png" alt="Sangeet celebration dance floor" class="w-full h-full object-cover transition-transform duration-750 group-hover:scale-103" loading="lazy" />
+              
+              <!-- Viewfinder Corners inside the image -->
+              <div class="absolute inset-4 pointer-events-none rounded-t-full">
+                <!-- Tiny corner brackets inside the image for a viewfinder vibe -->
+                <div class="absolute top-2 left-2 w-2.5 h-2.5 border-t border-l border-white/60"></div>
+                <div class="absolute top-2 right-2 w-2.5 h-2.5 border-t border-r border-white/60"></div>
+                <div class="absolute bottom-2 left-2 w-2.5 h-2.5 border-b border-l border-white/60"></div>
+                <div class="absolute bottom-2 right-2 w-2.5 h-2.5 border-b border-r border-white/60"></div>
+              </div>
+            </div>
+            
+            <!-- Gallery/Placard Metadata at the bottom of the card -->
+            <div class="pt-3 pb-0.5 px-2 border-t border-neutral-100/60 mt-3 flex items-center justify-between text-neutral-400 font-mono text-[7.5px] tracking-widest uppercase">
+              <span>35mm f/1.8</span>
+              <span class="text-neutral-300">◆</span>
+              <span>1/160s</span>
+              <span class="text-neutral-300">◆</span>
+              <span>ISO 1600</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Text side -->
+      <div class="reveal z-10 order-2 md:order-2 text-center md:text-left">
+        <span class="text-[9px] uppercase tracking-[0.25em] text-neutral-400 font-sans font-bold block mb-2">Chapter III</span>
+        <h3 class="text-2xl font-extrabold text-neutral-900 mb-4">Sangeet & Revelry</h3>
+        <p class="text-neutral-600 font-light text-xs sm:text-sm leading-relaxed mb-6">
+          The glamour, high-voltage dance choreographies, and celebration of the evening. Using specialized low-light camera configurations and fast shutter speeds, we freeze motion dynamically to deliver crisp, energetic candids of your guests dancing and celebrating.
+        </p>
+        <div class="flex flex-wrap gap-2 justify-center md:justify-start items-center text-[8px] uppercase tracking-widest font-sans font-bold text-neutral-400">
+          <span>High-Speed Shutter</span>
+          <span>◆</span>
+          <span>Low-Light Motion</span>
+          <span>◆</span>
+          <span>Glamour Lighting</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chapter IV: The Vows & Pheras -->
+    <div class="grid md:grid-cols-2 gap-10 md:gap-20 items-center relative z-10">
+      <!-- Background Line Art (Cathedral Wedding Arch outline) -->
+      <svg viewBox="0 0 200 400" fill="none" stroke="currentColor" stroke-width="0.3" class="text-neutral-300/35 absolute w-72 h-[410px] -bottom-12 -right-8 pointer-events-none z-0">
+        <path d="M35 380 V 170 A 65 65 0 0 1 165 170 V 380" />
+        <path d="M25 380 V 170 A 75 75 0 0 1 175 170 V 380" />
+        <path d="M100 110 V 140" />
+        <circle cx="100" cy="143" r="2.5" fill="currentColor" />
+        <path d="M100 146 L 97 151 H 103 Z" />
+        <path d="M15 380 H 185" />
+        <path d="M15 375 H 185" stroke-dasharray="1 3" />
+      </svg>
+      
+      <!-- Text side -->
+      <div class="reveal z-10 order-2 md:order-1 text-center md:text-left">
+        <span class="text-[9px] uppercase tracking-[0.25em] text-neutral-400 font-sans font-bold block mb-2">Chapter IV</span>
+        <h3 class="text-2xl font-extrabold text-neutral-900 mb-4">The Vows (Pheras)</h3>
+        <p class="text-neutral-600 font-light text-xs sm:text-sm leading-relaxed mb-6">
+          The grand wedding ceremony in its ultimate emotional peak. We document the sacred rituals, the pheras around the holy fire, and the bidai (farewell) with documentary discretion and cinematic scale, preserving these timeless family heirlooms.
+        </p>
+        <div class="flex flex-wrap gap-2 justify-center md:justify-start items-center text-[8px] uppercase tracking-widest font-sans font-bold text-neutral-400">
+          <span>Grand Ceremony</span>
+          <span>◆</span>
+          <span>Emotional Peaks</span>
+          <span>◆</span>
+          <span>Timeless Portraits</span>
+        </div>
+      </div>
+      <!-- Image side -->
+      <div class="reveal z-10 order-1 md:order-2">
+        <div class="relative group max-w-[270px] sm:max-w-[310px] mx-auto">
+          <!-- Offset decorative arch outline behind the main card -->
+          <div class="absolute inset-0 rounded-t-full border border-neutral-300/60 translate-x-3 translate-y-3 pointer-events-none z-0 transition-transform duration-500 group-hover:translate-x-1.5 group-hover:translate-y-1.5"></div>
+          
+          <!-- Main Arch Card -->
+          <div class="relative z-10 bg-white p-3 rounded-t-full border border-neutral-200/80 shadow-sm flex flex-col transition-all duration-500 group-hover:shadow-md">
+            <!-- Image with arch clipping -->
+            <div class="relative aspect-[3/4] rounded-t-full overflow-hidden w-full bg-neutral-100">
+              <img src="../assets/hero.png" alt="Sacred vows ceremony and traditional wedding couple" class="w-full h-full object-cover transition-transform duration-750 group-hover:scale-103" loading="lazy" />
+              
+              <!-- Viewfinder Corners inside the image -->
+              <div class="absolute inset-4 pointer-events-none rounded-t-full">
+                <!-- Tiny corner brackets inside the image for a viewfinder vibe -->
+                <div class="absolute top-2 left-2 w-2.5 h-2.5 border-t border-l border-white/60"></div>
+                <div class="absolute top-2 right-2 w-2.5 h-2.5 border-t border-r border-white/60"></div>
+                <div class="absolute bottom-2 left-2 w-2.5 h-2.5 border-b border-l border-white/60"></div>
+                <div class="absolute bottom-2 right-2 w-2.5 h-2.5 border-b border-r border-white/60"></div>
+              </div>
+            </div>
+            
+            <!-- Gallery/Placard Metadata at the bottom of the card -->
+            <div class="pt-3 pb-0.5 px-2 border-t border-neutral-100/60 mt-3 flex items-center justify-between text-neutral-400 font-mono text-[7.5px] tracking-widest uppercase">
+              <span>70-200mm f/2.8</span>
+              <span class="text-neutral-300">◆</span>
+              <span>1/400s</span>
+              <span class="text-neutral-300">◆</span>
+              <span>ISO 400</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bespoke Proposal Call to Action -->
+  <div class="mt-24 text-center relative z-10 reveal">
+    <a href="#contact" class="btn-primary inline-block px-8 py-3.5 rounded-xl font-bold text-xs tracking-widest uppercase transition-all shadow-md shadow-neutral-900/10">Request Bespoke Proposal</a>
+    <p class="text-neutral-400 text-[9px] mt-4 font-light tracking-wider">
+      *All photography collections are custom-tailored to your celebrations. Crew logistics and travel costs are calculated based on itinerary specifics.
+    </p>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════ -->
+<!--  SECTION 9 — WALL OF MEMORIES                   -->
+<!-- ════════════════════════════════════════════════ -->
+<section id="memories" class="py-16 md:py-28 px-6 bg-[#FAF9F5] border-t border-neutral-200/80 relative overflow-hidden">
+  
+  <div class="max-w-6xl mx-auto relative z-10">
+    <!-- Header -->
+    <div class="text-center mb-10 reveal">
+      <div class="ornament mb-4">
+        <span class="text-[9px] tracking-[0.3em] uppercase text-neutral-500 font-sans font-semibold">Mood Board</span>
+      </div>
+      <h2 class="text-4xl sm:text-5xl font-extrabold text-neutral-900 mb-4 leading-tight">
+        Wall of <em class="italic font-light text-neutral-500">Memories</em>
+      </h2>
+      <p class="text-neutral-500 font-light text-xs sm:text-sm max-w-md mx-auto leading-relaxed">
+        A hand-taped collection of raw whispers, laughing tears, and quiet milestones. Real frames from real celebrations, illuminated by soft studio lights.
+      </p>
+      
+      <!-- Explore helper indicator for mobile -->
+      <p class="text-neutral-400 font-mono text-[8px] tracking-widest uppercase mt-4 md:hidden">
+        ↓ Scroll to explore the memories ↓
+      </p>
+    </div>
+
+    <!-- Desktop Wall Container wrapper (visible on md+) -->
+    <div class="hidden md:block w-full py-6">
+      <div class="relative w-full aspect-[10/6.5] bg-[#EAE8E0] rounded-[2rem] border border-neutral-300/70 overflow-hidden shadow-inner p-6">
+        
+        <!-- Plaster Wall Texture Layer (Soft grid pattern/dots simulating wall hooks or pinboards) -->
+        <div class="absolute inset-0 bg-[radial-gradient(#CFCBBA_1px,transparent_1px)] [background-size:24px_24px] opacity-20 pointer-events-none"></div>
+        
+        <!-- Fairy Lights Glowing Strings (SVG Path in background) -->
+        <svg viewBox="0 0 1000 650" fill="none" class="absolute inset-0 w-full h-full pointer-events-none z-0">
+          <!-- Main Wire Path -->
+          <path d="M 30,120 Q 150,50 300,150 T 500,140 T 700,160 T 970,110 M 970,110 Q 940,320 800,310 T 520,330 T 240,320 T 30,360 M 30,360 Q 100,530 250,500 T 500,530 T 750,500 T 970,540" stroke="#B0AB9A" stroke-width="1.2" opacity="0.65" />
+          
+          <!-- Twinkling Glowing LED Bulbs (Fairy Lights) -->
+          <!-- Row 1 lights -->
+          <circle cx="100" cy="88" r="3.5" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 2.1s;" />
+          <circle cx="200" cy="95" r="3.5" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 1.8s;" />
+          <circle cx="300" cy="150" r="3.5" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 2.5s;" />
+          <circle cx="400" cy="145" r="3.5" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 2.3s;" />
+          <circle cx="500" cy="140" r="3.5" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 1.9s;" />
+          <circle cx="600" cy="150" r="3.5" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 2.7s;" />
+          <circle cx="700" cy="160" r="3.5" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 2.2s;" />
+          <circle cx="800" cy="138" r="3.5" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 1.6s;" />
+          <circle cx="900" cy="120" r="3.5" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 2.4s;" />
+          
+          <!-- Row 2 lights -->
+          <circle cx="910" cy="270" r="3.5" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 1.5s;" />
+          <circle cx="800" cy="310" r="3.5" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 2.8s;" />
+          <circle cx="710" cy="322" r="3.5" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 2.0s;" />
+          <circle cx="610" cy="328" r="3.5" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 2.3s;" />
+          <circle cx="520" cy="330" r="3.5" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 1.7s;" />
+          <circle cx="430" cy="326" r="3.5" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 2.6s;" />
+          <circle cx="340" cy="322" r="3.5" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 2.1s;" />
+          <circle cx="240" cy="320" r="3.5" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 1.9s;" />
+          <circle cx="140" cy="336" r="3.5" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 2.5s;" />
+          
+          <!-- Row 3 lights -->
+          <circle cx="100" cy="460" r="3.5" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 2.7s;" />
+          <circle cx="180" cy="495" r="3.5" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 2.2s;" />
+          <circle cx="250" cy="500" r="3.5" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 1.8s;" />
+          <circle cx="330" cy="512" r="3.5" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 2.4s;" />
+          <circle cx="410" cy="520" r="3.5" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 2.1s;" />
+          <circle cx="500" cy="530" r="3.5" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 2.6s;" />
+          <circle cx="590" cy="520" r="3.5" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 1.9s;" />
+          <circle cx="680" cy="510" r="3.5" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 2.9s;" />
+          <circle cx="750" cy="500" r="3.5" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 1.6s;" />
+          <circle cx="830" cy="516" r="3.5" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 2.3s;" />
+          <circle cx="910" cy="528" r="3.5" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 2.5s;" />
+        </svg>
+
+        <!-- Polaroids Container (Absolute Cluster) -->
+        <div class="absolute inset-0 z-10 w-full h-full pointer-events-none">
+
+          <!-- Polaroid 1: Groom Ready (B&W) -->
+          <div class="absolute pointer-events-auto w-[12.5%] aspect-[1/1.22] p-2 sm:p-2.5 bg-[#FAF9F5] border border-neutral-300/40 shadow-[2px_6px_15px_rgba(0,0,0,0.12)] group hover:-translate-y-3 hover:scale-105 hover:shadow-[4px_12px_22px_rgba(0,0,0,0.16)] hover:rotate-0 transition-all duration-300 ease-out z-10" style="top: 10%; left: 8%; transform: rotate(-3.5deg);">
+            <!-- Blue tape -->
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-8 h-3.5 bg-cyan-400/35 border border-cyan-400/5 backdrop-blur-[0.5px] rotate-[-5deg] mix-blend-multiply pointer-events-none"></div>
+            <div class="w-full aspect-square overflow-hidden bg-neutral-100">
+              <img src="../assets/groom_ready.png" alt="Indian groom adjusting sherwani collar" class="w-full h-full object-cover grayscale" loading="lazy" />
+            </div>
+            <div class="mt-2 text-center text-neutral-600 font-sans italic text-[6.5px] tracking-wide truncate">
+              The Anticipation · Mumbai
+            </div>
+          </div>
+
+          <!-- Polaroid 2: Haldi Sunshine (Color) -->
+          <div class="absolute pointer-events-auto w-[12.5%] aspect-[1/1.22] p-2 sm:p-2.5 bg-[#FAF9F5] border border-neutral-300/40 shadow-[2px_6px_15px_rgba(0,0,0,0.12)] group hover:-translate-y-3 hover:scale-105 hover:shadow-[4px_12px_22px_rgba(0,0,0,0.16)] hover:rotate-0 transition-all duration-300 ease-out z-10" style="top: 6%; left: 26%; transform: rotate(2.5deg);">
+            <!-- Yellow tape -->
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-8 h-3.5 bg-yellow-400/35 border border-yellow-400/5 backdrop-blur-[0.5px] rotate-[4deg] mix-blend-multiply pointer-events-none"></div>
+            <div class="w-full aspect-square overflow-hidden bg-neutral-100">
+              <img src="../assets/laughter_candid.png" alt="Haldi ceremony candidate couple" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div class="mt-2 text-center text-neutral-600 font-sans italic text-[6.5px] tracking-wide truncate">
+              Haldi Sunshine · Udaipur
+            </div>
+          </div>
+
+          <!-- Polaroid 3: Detail Jewelry (Color) -->
+          <div class="absolute pointer-events-auto w-[12.5%] aspect-[1/1.22] p-2 sm:p-2.5 bg-[#FAF9F5] border border-neutral-300/40 shadow-[2px_6px_15px_rgba(0,0,0,0.12)] group hover:-translate-y-3 hover:scale-105 hover:shadow-[4px_12px_22px_rgba(0,0,0,0.16)] hover:rotate-0 transition-all duration-300 ease-out z-10" style="top: 8%; left: 44%; transform: rotate(-1.5deg);">
+            <!-- Red tape -->
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-8 h-3.5 bg-red-400/35 border border-red-400/5 backdrop-blur-[0.5px] rotate-[-3deg] mix-blend-multiply pointer-events-none"></div>
+            <div class="w-full aspect-square overflow-hidden bg-neutral-100">
+              <img src="../assets/detail_jewelry.png" alt="Bridal henna hands details" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div class="mt-2 text-center text-neutral-600 font-sans italic text-[6.5px] tracking-wide truncate">
+              Henna Details · Leela
+            </div>
+          </div>
+
+          <!-- Polaroid 4: Bridal Makeup (Color) -->
+          <div class="absolute pointer-events-auto w-[12.5%] aspect-[1/1.22] p-2 sm:p-2.5 bg-[#FAF9F5] border border-neutral-300/40 shadow-[2px_6px_15px_rgba(0,0,0,0.12)] group hover:-translate-y-3 hover:scale-105 hover:shadow-[4px_12px_22px_rgba(0,0,0,0.16)] hover:rotate-0 transition-all duration-300 ease-out z-10" style="top: 14%; left: 62%; transform: rotate(3deg);">
+            <!-- Green tape -->
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-8 h-3.5 bg-green-400/35 border border-green-400/5 backdrop-blur-[0.5px] rotate-[2deg] mix-blend-multiply pointer-events-none"></div>
+            <div class="w-full aspect-square overflow-hidden bg-neutral-100">
+              <img src="../assets/bridal.png" alt="Bridal makeup preparation portrait" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div class="mt-2 text-center text-neutral-600 font-sans italic text-[6.5px] tracking-wide truncate">
+              The Adornment · Udaipur
+            </div>
+          </div>
+
+          <!-- Polaroid 5: Decor Detail (Color) -->
+          <div class="absolute pointer-events-auto w-[12.5%] aspect-[1/1.22] p-2 sm:p-2.5 bg-[#FAF9F5] border border-neutral-300/40 shadow-[2px_6px_15px_rgba(0,0,0,0.12)] group hover:-translate-y-3 hover:scale-105 hover:shadow-[4px_12px_22px_rgba(0,0,0,0.16)] hover:rotate-0 transition-all duration-300 ease-out z-10" style="top: 10%; left: 80%; transform: rotate(-2.5deg);">
+            <!-- Cyan tape -->
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-8 h-3.5 bg-cyan-400/35 border border-cyan-400/5 backdrop-blur-[0.5px] rotate-[-4deg] mix-blend-multiply pointer-events-none"></div>
+            <div class="w-full aspect-square overflow-hidden bg-neutral-100">
+              <img src="../assets/decor_detail.png" alt="Wedding floral decor arrangements" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div class="mt-2 text-center text-neutral-600 font-sans italic text-[6.5px] tracking-wide truncate">
+              Marigolds & Lights
+            </div>
+          </div>
+
+          <!-- Polaroid 6: Bidai Departure (B&W) -->
+          <div class="absolute pointer-events-auto w-[12.5%] aspect-[1/1.22] p-2 sm:p-2.5 bg-[#FAF9F5] border border-neutral-300/40 shadow-[2px_6px_15px_rgba(0,0,0,0.12)] group hover:-translate-y-3 hover:scale-105 hover:shadow-[4px_12px_22px_rgba(0,0,0,0.16)] hover:rotate-0 transition-all duration-300 ease-out z-10" style="top: 48%; left: 6%; transform: rotate(3deg);">
+            <!-- Red tape -->
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-8 h-3.5 bg-red-400/35 border border-red-400/5 backdrop-blur-[0.5px] rotate-[3deg] mix-blend-multiply pointer-events-none"></div>
+            <div class="w-full aspect-square overflow-hidden bg-neutral-100">
+              <img src="../assets/bidai_emotion.png" alt="Emotional bride farewell mother bidai" class="w-full h-full object-cover grayscale" loading="lazy" />
+            </div>
+            <div class="mt-2 text-center text-neutral-600 font-sans italic text-[6.5px] tracking-wide truncate">
+              Quiet Farewells
+            </div>
+          </div>
+
+          <!-- Polaroid 7: Destination Lake Como (Color) -->
+          <div class="absolute pointer-events-auto w-[12.5%] aspect-[1/1.22] p-2 sm:p-2.5 bg-[#FAF9F5] border border-neutral-300/40 shadow-[2px_6px_15px_rgba(0,0,0,0.12)] group hover:-translate-y-3 hover:scale-105 hover:shadow-[4px_12px_22px_rgba(0,0,0,0.16)] hover:rotate-0 transition-all duration-300 ease-out z-10" style="top: 44%; left: 24%; transform: rotate(-3deg);">
+            <!-- Green tape -->
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-8 h-3.5 bg-green-400/35 border border-green-400/5 backdrop-blur-[0.5px] rotate-[-5deg] mix-blend-multiply pointer-events-none"></div>
+            <div class="w-full aspect-square overflow-hidden bg-neutral-100">
+              <img src="../assets/destination.png" alt="Destination wedding Lake Como couple" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div class="mt-2 text-center text-neutral-600 font-sans italic text-[6.5px] tracking-wide truncate">
+              Lake Como Vows
+            </div>
+          </div>
+
+          <!-- Polaroid 8: Sacred Vows Pheras (Color) -->
+          <div class="absolute pointer-events-auto w-[12.5%] aspect-[1/1.22] p-2 sm:p-2.5 bg-[#FAF9F5] border border-neutral-300/40 shadow-[2px_6px_15px_rgba(0,0,0,0.12)] group hover:-translate-y-3 hover:scale-105 hover:shadow-[4px_12px_22px_rgba(0,0,0,0.16)] hover:rotate-0 transition-all duration-300 ease-out z-10" style="top: 46%; left: 42%; transform: rotate(1.5deg);">
+            <!-- Yellow tape -->
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-8 h-3.5 bg-yellow-400/35 border border-yellow-400/5 backdrop-blur-[0.5px] rotate-[3deg] mix-blend-multiply pointer-events-none"></div>
+            <div class="w-full aspect-square overflow-hidden bg-neutral-100">
+              <img src="../assets/hero.png" alt="Sacred fire vows pheras ceremony couple" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div class="mt-2 text-center text-neutral-600 font-sans italic text-[6.5px] tracking-wide truncate">
+              Sacred Fire · Mumbai
+            </div>
+          </div>
+
+          <!-- Polaroid 9: Sangeet Revelry (Color) -->
+          <div class="absolute pointer-events-auto w-[12.5%] aspect-[1/1.22] p-2 sm:p-2.5 bg-[#FAF9F5] border border-neutral-300/40 shadow-[2px_6px_15px_rgba(0,0,0,0.12)] group hover:-translate-y-3 hover:scale-105 hover:shadow-[4px_12px_22px_rgba(0,0,0,0.16)] hover:rotate-0 transition-all duration-300 ease-out z-10" style="top: 50%; left: 60%; transform: rotate(-4deg);">
+            <!-- Blue tape -->
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-8 h-3.5 bg-cyan-400/35 border border-cyan-400/5 backdrop-blur-[0.5px] rotate-[-2deg] mix-blend-multiply pointer-events-none"></div>
+            <div class="w-full aspect-square overflow-hidden bg-neutral-100">
+              <img src="../assets/portfolio.png" alt="Sangeet dancing guests party" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div class="mt-2 text-center text-neutral-600 font-sans italic text-[6.5px] tracking-wide truncate">
+              Sangeet Revelry
+            </div>
+          </div>
+
+          <!-- Polaroid 10: Behind The Lens Crew (Color) -->
+          <div class="absolute pointer-events-auto w-[12.5%] aspect-[1/1.22] p-2 sm:p-2.5 bg-[#FAF9F5] border border-neutral-300/40 shadow-[2px_6px_15px_rgba(0,0,0,0.12)] group hover:-translate-y-3 hover:scale-105 hover:shadow-[4px_12px_22px_rgba(0,0,0,0.16)] hover:rotate-0 transition-all duration-300 ease-out z-10" style="top: 44%; left: 78%; transform: rotate(3.5deg);">
+            <!-- Red tape -->
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-8 h-3.5 bg-red-400/35 border border-red-400/5 backdrop-blur-[0.5px] rotate-[4deg] mix-blend-multiply pointer-events-none"></div>
+            <div class="w-full aspect-square overflow-hidden bg-neutral-100">
+              <img src="../assets/team.png" alt="Luxe Captures photography team at work" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div class="mt-2 text-center text-neutral-600 font-sans italic text-[6.5px] tracking-wide truncate">
+              Behind the Lens
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Wall Container wrapper (visible on mobile <md) -->
+    <div class="block md:hidden py-4 -mx-2">
+      <div class="relative w-full h-[1900px] bg-[#EAE8E0] rounded-[1.5rem] border border-neutral-300/70 overflow-hidden shadow-inner p-4">
+        
+        <!-- Plaster Wall Texture Layer -->
+        <div class="absolute inset-0 bg-[radial-gradient(#CFCBBA_1px,transparent_1px)] [background-size:20px_20px] opacity-20 pointer-events-none"></div>
+        
+        <!-- Vertical Fairy Lights SVG -->
+        <svg viewBox="0 0 375 1900" fill="none" class="absolute inset-0 w-full h-full pointer-events-none z-0" preserveAspectRatio="none">
+          <path d="M 187,20 Q 150,110 187,200 T 187,380 T 187,560 T 187,740 T 187,920 T 187,1100 T 187,1280 T 187,1460 T 187,1640 T 187,1850" stroke="#B0AB9A" stroke-width="1.5" opacity="0.65" />
+          
+          <!-- Twinkling Glowing LED Bulbs (Fairy Lights) -->
+          <circle cx="187" cy="20" r="4" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 2.1s;" />
+          <circle cx="165" cy="110" r="4" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 1.8s;" />
+          <circle cx="187" cy="200" r="4" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 2.5s;" />
+          <circle cx="209" cy="290" r="4" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 2.3s;" />
+          <circle cx="187" cy="380" r="4" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 1.9s;" />
+          <circle cx="165" cy="470" r="4" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 2.7s;" />
+          <circle cx="187" cy="560" r="4" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 2.2s;" />
+          <circle cx="209" cy="650" r="4" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 1.6s;" />
+          <circle cx="187" cy="740" r="4" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 2.4s;" />
+          <circle cx="165" cy="830" r="4" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 1.5s;" />
+          <circle cx="187" cy="920" r="4" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 2.8s;" />
+          <circle cx="209" cy="1010" r="4" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 2.0s;" />
+          <circle cx="187" cy="1100" r="4" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 2.3s;" />
+          <circle cx="165" cy="1190" r="4" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 1.7s;" />
+          <circle cx="187" cy="1280" r="4" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 2.6s;" />
+          <circle cx="209" cy="1370" r="4" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 2.1s;" />
+          <circle cx="187" cy="1460" r="4" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 1.9s;" />
+          <circle cx="165" cy="1550" r="4" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 2.5s;" />
+          <circle cx="187" cy="1640" r="4" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 2.7s;" />
+          <circle cx="209" cy="1745" r="4" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 2.2s;" />
+          <circle cx="187" cy="1850" r="4" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 1.8s;" />
+        </svg>
+        
+        <!-- Polaroids Container for Mobile -->
+        <div class="absolute inset-0 z-10 w-full h-full pointer-events-none">
+          
+          <!-- Polaroid 1: Groom Ready (B&W) -->
+          <div class="absolute pointer-events-auto w-[42%] aspect-[1/1.22] p-2 bg-[#FAF9F5] border border-neutral-300/40 shadow-[2px_6px_15px_rgba(0,0,0,0.12)] group hover:-translate-y-2 hover:scale-105 hover:shadow-[4px_12px_22px_rgba(0,0,0,0.16)] hover:rotate-0 transition-all duration-300 ease-out z-10" style="top: 2%; left: 6%; transform: rotate(-3deg);">
+            <!-- Blue tape -->
+            <div class="absolute -top-2.5 left-1/2 -translate-x-1/2 w-6 h-2.5 bg-cyan-400/35 border border-cyan-400/5 backdrop-blur-[0.5px] rotate-[-5deg] mix-blend-multiply pointer-events-none"></div>
+            <div class="w-full aspect-square overflow-hidden bg-neutral-100">
+              <img src="../assets/groom_ready.png" alt="Indian groom adjusting sherwani collar" class="w-full h-full object-cover grayscale" loading="lazy" />
+            </div>
+            <div class="mt-1.5 text-center text-neutral-600 font-sans italic text-[8px] tracking-wide truncate">
+              The Anticipation · Mumbai
+            </div>
+          </div>
+
+          <!-- Polaroid 2: Haldi Sunshine (Color) -->
+          <div class="absolute pointer-events-auto w-[42%] aspect-[1/1.22] p-2 bg-[#FAF9F5] border border-neutral-300/40 shadow-[2px_6px_15px_rgba(0,0,0,0.12)] group hover:-translate-y-2 hover:scale-105 hover:shadow-[4px_12px_22px_rgba(0,0,0,0.16)] hover:rotate-0 transition-all duration-300 ease-out z-10" style="top: 11%; right: 6%; transform: rotate(2.5deg);">
+            <!-- Yellow tape -->
+            <div class="absolute -top-2.5 left-1/2 -translate-x-1/2 w-6 h-2.5 bg-yellow-400/35 border border-yellow-400/5 backdrop-blur-[0.5px] rotate-[4deg] mix-blend-multiply pointer-events-none"></div>
+            <div class="w-full aspect-square overflow-hidden bg-neutral-100">
+              <img src="../assets/laughter_candid.png" alt="Haldi ceremony candidate couple" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div class="mt-1.5 text-center text-neutral-600 font-sans italic text-[8px] tracking-wide truncate">
+              Haldi Sunshine · Udaipur
+            </div>
+          </div>
+
+          <!-- Polaroid 3: Detail Jewelry (Color) -->
+          <div class="absolute pointer-events-auto w-[42%] aspect-[1/1.22] p-2 bg-[#FAF9F5] border border-neutral-300/40 shadow-[2px_6px_15px_rgba(0,0,0,0.12)] group hover:-translate-y-2 hover:scale-105 hover:shadow-[4px_12px_22px_rgba(0,0,0,0.16)] hover:rotate-0 transition-all duration-300 ease-out z-10" style="top: 20%; left: 8%; transform: rotate(-1.5deg);">
+            <!-- Red tape -->
+            <div class="absolute -top-2.5 left-1/2 -translate-x-1/2 w-6 h-2.5 bg-red-400/35 border border-red-400/5 backdrop-blur-[0.5px] rotate-[-3deg] mix-blend-multiply pointer-events-none"></div>
+            <div class="w-full aspect-square overflow-hidden bg-neutral-100">
+              <img src="../assets/detail_jewelry.png" alt="Bridal henna hands details" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div class="mt-1.5 text-center text-neutral-600 font-sans italic text-[8px] tracking-wide truncate">
+              Henna Details · Leela
+            </div>
+          </div>
+
+          <!-- Polaroid 4: Bridal Makeup (Color) -->
+          <div class="absolute pointer-events-auto w-[42%] aspect-[1/1.22] p-2 bg-[#FAF9F5] border border-neutral-300/40 shadow-[2px_6px_15px_rgba(0,0,0,0.12)] group hover:-translate-y-2 hover:scale-105 hover:shadow-[4px_12px_22px_rgba(0,0,0,0.16)] hover:rotate-0 transition-all duration-300 ease-out z-10" style="top: 29%; right: 8%; transform: rotate(3deg);">
+            <!-- Green tape -->
+            <div class="absolute -top-2.5 left-1/2 -translate-x-1/2 w-6 h-2.5 bg-green-400/35 border border-green-400/5 backdrop-blur-[0.5px] rotate-[2deg] mix-blend-multiply pointer-events-none"></div>
+            <div class="w-full aspect-square overflow-hidden bg-neutral-100">
+              <img src="../assets/bridal.png" alt="Bridal makeup preparation portrait" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div class="mt-1.5 text-center text-neutral-600 font-sans italic text-[8px] tracking-wide truncate">
+              The Adornment · Udaipur
+            </div>
+          </div>
+
+          <!-- Polaroid 5: Decor Detail (Color) -->
+          <div class="absolute pointer-events-auto w-[42%] aspect-[1/1.22] p-2 bg-[#FAF9F5] border border-neutral-300/40 shadow-[2px_6px_15px_rgba(0,0,0,0.12)] group hover:-translate-y-2 hover:scale-105 hover:shadow-[4px_12px_22px_rgba(0,0,0,0.16)] hover:rotate-0 transition-all duration-300 ease-out z-10" style="top: 38%; left: 6%; transform: rotate(-2deg);">
+            <!-- Cyan tape -->
+            <div class="absolute -top-2.5 left-1/2 -translate-x-1/2 w-6 h-2.5 bg-cyan-400/35 border border-cyan-400/5 backdrop-blur-[0.5px] rotate-[-4deg] mix-blend-multiply pointer-events-none"></div>
+            <div class="w-full aspect-square overflow-hidden bg-neutral-100">
+              <img src="../assets/decor_detail.png" alt="Wedding floral decor arrangements" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div class="mt-1.5 text-center text-neutral-600 font-sans italic text-[8px] tracking-wide truncate">
+              Marigolds & Lights
+            </div>
+          </div>
+
+          <!-- Polaroid 6: Bidai Departure (B&W) -->
+          <div class="absolute pointer-events-auto w-[42%] aspect-[1/1.22] p-2 bg-[#FAF9F5] border border-neutral-300/40 shadow-[2px_6px_15px_rgba(0,0,0,0.12)] group hover:-translate-y-2 hover:scale-105 hover:shadow-[4px_12px_22px_rgba(0,0,0,0.16)] hover:rotate-0 transition-all duration-300 ease-out z-10" style="top: 47%; right: 6%; transform: rotate(3.5deg);">
+            <!-- Red tape -->
+            <div class="absolute -top-2.5 left-1/2 -translate-x-1/2 w-6 h-2.5 bg-red-400/35 border border-red-400/5 backdrop-blur-[0.5px] rotate-[3deg] mix-blend-multiply pointer-events-none"></div>
+            <div class="w-full aspect-square overflow-hidden bg-neutral-100">
+              <img src="../assets/bidai_emotion.png" alt="Emotional bride farewell mother bidai" class="w-full h-full object-cover grayscale" loading="lazy" />
+            </div>
+            <div class="mt-1.5 text-center text-neutral-600 font-sans italic text-[8px] tracking-wide truncate">
+              Quiet Farewells
+            </div>
+          </div>
+
+          <!-- Polaroid 7: Destination Lake Como (Color) -->
+          <div class="absolute pointer-events-auto w-[42%] aspect-[1/1.22] p-2 bg-[#FAF9F5] border border-neutral-300/40 shadow-[2px_6px_15px_rgba(0,0,0,0.12)] group hover:-translate-y-2 hover:scale-105 hover:shadow-[4px_12px_22px_rgba(0,0,0,0.16)] hover:rotate-0 transition-all duration-300 ease-out z-10" style="top: 56%; left: 8%; transform: rotate(-3.5deg);">
+            <!-- Green tape -->
+            <div class="absolute -top-2.5 left-1/2 -translate-x-1/2 w-6 h-2.5 bg-green-400/35 border border-green-400/5 backdrop-blur-[0.5px] rotate-[-5deg] mix-blend-multiply pointer-events-none"></div>
+            <div class="w-full aspect-square overflow-hidden bg-neutral-100">
+              <img src="../assets/destination.png" alt="Destination wedding Lake Como couple" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div class="mt-1.5 text-center text-neutral-600 font-sans italic text-[8px] tracking-wide truncate">
+              Lake Como Vows
+            </div>
+          </div>
+
+          <!-- Polaroid 8: Sacred Vows Pheras (Color) -->
+          <div class="absolute pointer-events-auto w-[42%] aspect-[1/1.22] p-2 bg-[#FAF9F5] border border-neutral-300/40 shadow-[2px_6px_15px_rgba(0,0,0,0.12)] group hover:-translate-y-2 hover:scale-105 hover:shadow-[4px_12px_22px_rgba(0,0,0,0.16)] hover:rotate-0 transition-all duration-300 ease-out z-10" style="top: 65%; right: 8%; transform: rotate(1.5deg);">
+            <!-- Yellow tape -->
+            <div class="absolute -top-2.5 left-1/2 -translate-x-1/2 w-6 h-2.5 bg-yellow-400/35 border border-yellow-400/5 backdrop-blur-[0.5px] rotate-[3deg] mix-blend-multiply pointer-events-none"></div>
+            <div class="w-full aspect-square overflow-hidden bg-neutral-100">
+              <img src="../assets/hero.png" alt="Sacred fire vows pheras ceremony couple" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div class="mt-1.5 text-center text-neutral-600 font-sans italic text-[8px] tracking-wide truncate">
+              Sacred Fire · Mumbai
+            </div>
+          </div>
+
+          <!-- Polaroid 9: Sangeet Revelry (Color) -->
+          <div class="absolute pointer-events-auto w-[42%] aspect-[1/1.22] p-2 bg-[#FAF9F5] border border-neutral-300/40 shadow-[2px_6px_15px_rgba(0,0,0,0.12)] group hover:-translate-y-2 hover:scale-105 hover:shadow-[4px_12px_22px_rgba(0,0,0,0.16)] hover:rotate-0 transition-all duration-300 ease-out z-10" style="top: 74%; left: 6%; transform: rotate(-2.5deg);">
+            <!-- Blue tape -->
+            <div class="absolute -top-2.5 left-1/2 -translate-x-1/2 w-6 h-2.5 bg-cyan-400/35 border border-cyan-400/5 backdrop-blur-[0.5px] rotate-[-2deg] mix-blend-multiply pointer-events-none"></div>
+            <div class="w-full aspect-square overflow-hidden bg-neutral-100">
+              <img src="../assets/portfolio.png" alt="Sangeet dancing guests party" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div class="mt-1.5 text-center text-neutral-600 font-sans italic text-[8px] tracking-wide truncate">
+              Sangeet Revelry
+            </div>
+          </div>
+
+          <!-- Polaroid 10: Behind The Lens Crew (Color) -->
+          <div class="absolute pointer-events-auto w-[42%] aspect-[1/1.22] p-2 bg-[#FAF9F5] border border-neutral-300/40 shadow-[2px_6px_15px_rgba(0,0,0,0.12)] group hover:-translate-y-2 hover:scale-105 hover:shadow-[4px_12px_22px_rgba(0,0,0,0.16)] hover:rotate-0 transition-all duration-300 ease-out z-10" style="top: 83%; right: 6%; transform: rotate(3deg);">
+            <!-- Red tape -->
+            <div class="absolute -top-2.5 left-1/2 -translate-x-1/2 w-6 h-2.5 bg-red-400/35 border border-red-400/5 backdrop-blur-[0.5px] rotate-[4deg] mix-blend-multiply pointer-events-none"></div>
+            <div class="w-full aspect-square overflow-hidden bg-neutral-100">
+              <img src="../assets/team.png" alt="Luxe Captures photography team at work" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div class="mt-1.5 text-center text-neutral-600 font-sans italic text-[8px] tracking-wide truncate">
+              Behind the Lens
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════ -->
+<!--  SECTION 10 — TEAM AT WORK                      -->
+<!-- ════════════════════════════════════════════════ -->
+<section id="team" class="py-16 md:py-28 px-6 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <div class="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+      <!-- Text side -->
+      <div class="reveal">
+        <div class="ornament justify-start mb-6">
+          <span class="text-[9px] tracking-[0.3em] uppercase text-neutral-500 font-sans font-semibold">The Collective</span>
+        </div>
+        <h2 class="text-4xl sm:text-5xl font-extrabold text-neutral-900 mb-6 leading-tight">
+          20+ Artists.<br>
+          <em class="italic font-light text-neutral-500">One Vision.</em>
+        </h2>
+        <p class="text-neutral-600 font-light text-sm sm:text-base leading-relaxed mb-6">
+          Every frame we deliver is the result of seamless team coordination. Lead artists, lighting technicians, post-production designers, and drone navigators work under a singular aesthetic direction to capture the essence of your celebrations.
+        </p>
+        <p class="text-neutral-600 font-light text-sm sm:text-base leading-relaxed mb-8">
+          We approach each event with strict technical backups, thorough layout reconnaissance, and pre-aligned coordinate lists to prevent missing unscripted interactions.
+        </p>
+
+        <!-- Mini team stats -->
+        <div class="grid grid-cols-3 gap-4">
+          <div class="bg-neutral-50 rounded-xl p-4 text-center border border-neutral-200 shadow-sm font-sans">
+            <p class="text-3xl text-neutral-900 font-light font-display">6</p>
+            <p class="text-[8px] uppercase tracking-widest text-neutral-500 font-sans font-semibold mt-1">Lead Shooters</p>
+          </div>
+          <div class="bg-neutral-50 rounded-xl p-4 text-center border border-neutral-200 shadow-sm font-sans">
+            <p class="text-3xl text-neutral-900 font-light font-display">8</p>
+            <p class="text-[8px] uppercase tracking-widest text-neutral-500 font-sans font-semibold mt-1">Editors</p>
+          </div>
+          <div class="bg-neutral-50 rounded-xl p-4 text-center border border-neutral-200 shadow-sm font-sans">
+            <p class="text-3xl text-neutral-900 font-light font-display">4</p>
+            <p class="text-[8px] uppercase tracking-widest text-neutral-500 font-sans font-semibold mt-1">Cinematographers</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image side -->
+      <div class="reveal" style="transition-delay:0.1s">
+        <div class="rounded-2xl overflow-hidden border border-neutral-200/60 shadow-sm aspect-video bg-neutral-100 p-2">
+          <img src="../assets/team.png" alt="Luxe Captures photography team at work during Indian wedding" class="w-full h-80 md:h-[500px] object-cover rounded-xl" loading="lazy" />
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════ -->
+<!--  SECTION 11 — TESTIMONIALS                      -->
+<!-- ════════════════════════════════════════════════ -->
+<section id="testimonials" class="py-16 md:py-28 px-6 bg-neutral-50 border-t border-neutral-200">
+  <div class="max-w-6xl mx-auto">
+    <!-- Header -->
+    <div class="text-center mb-16 reveal">
+      <div class="ornament mb-4">
+        <span class="text-[9px] tracking-[0.3em] uppercase text-neutral-500 font-sans font-semibold">Stories</span>
+      </div>
+      <h2 class="text-4xl sm:text-5xl font-extrabold text-neutral-900 mb-4 leading-tight">
+        Words From Our <em class="italic font-light text-neutral-500">Couples</em>
+      </h2>
+      <p class="text-neutral-500 font-light text-xs sm:text-sm max-w-sm mx-auto leading-relaxed">
+        The true measure of our work lies in the quiet glances and raw emotions that we preserve for a lifetime.
+      </p>
+    </div>
+
+    <!-- Testimonials Grid -->
+    <div class="grid md:grid-cols-3 gap-8 items-stretch">
+
+      <!-- Testimonial 1 -->
+      <div class="bg-white rounded-2xl border border-neutral-200 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden flex flex-col justify-between reveal">
+        <div>
+          <!-- Wedding Photo -->
+          <div class="h-64 overflow-hidden relative border-b border-neutral-100">
+            <img src="../assets/hero.png" alt="Priya and Karthik wedding in Mumbai" class="w-full h-full object-cover hover:scale-103 transition-transform duration-700" />
+            <div class="absolute bottom-4 left-4 bg-white/95 backdrop-blur px-2.5 py-1 rounded text-[8px] uppercase tracking-widest font-bold font-sans text-neutral-800 shadow-sm">
+              Grand Hyatt Mumbai
+            </div>
+          </div>
+          
+          <!-- Quote Content -->
+          <div class="p-6 sm:p-8">
+            <div class="flex gap-1 mb-4 text-[10px] text-neutral-900">
+              <span>✦</span><span>✦</span><span>✦</span><span>✦</span><span>✦</span>
+            </div>
+            <p class="text-neutral-700 font-light italic text-xs sm:text-sm leading-relaxed">
+              "Luxe Captures documented raw atmosphere, not just static layouts. Looking through our visual collection recreates the emotional texture of our vows. An exceptional artistic partnership."
+            </p>
+          </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="px-6 sm:p-8 pb-6 sm:pb-8 pt-0">
+          <div class="flex items-center gap-3.5 border-t border-neutral-100 pt-4">
+            <div class="w-8 h-8 rounded-full bg-neutral-950 flex items-center justify-center text-white text-[9px] font-bold font-sans">PK</div>
+            <div>
+              <p class="text-neutral-900 text-xs font-semibold leading-none">Priya & Karthik</p>
+              <p class="text-neutral-450 text-[9px] mt-1 font-light leading-none">Mumbai · March 2024</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="bg-white rounded-2xl border border-neutral-200 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden flex flex-col justify-between reveal" style="transition-delay:0.1s">
+        <div>
+          <!-- Wedding Photo -->
+          <div class="h-64 overflow-hidden relative border-b border-neutral-100">
+            <img src="../assets/destination.png" alt="Ananya and Rahul wedding in Lake Como" class="w-full h-full object-cover hover:scale-103 transition-transform duration-700" />
+            <div class="absolute bottom-4 left-4 bg-white/95 backdrop-blur px-2.5 py-1 rounded text-[8px] uppercase tracking-widest font-bold font-sans text-neutral-800 shadow-sm">
+              Lake Como, Italy
+            </div>
+          </div>
+          
+          <!-- Quote Content -->
+          <div class="p-6 sm:p-8">
+            <div class="flex gap-1 mb-4 text-[10px] text-neutral-900">
+              <span>✦</span><span>✦</span><span>✦</span><span>✦</span><span>✦</span>
+            </div>
+            <p class="text-neutral-700 font-light italic text-xs sm:text-sm leading-relaxed">
+              "They joined our destination family group in Lake Como and operated with extreme professionalism. Their candid approach ensured guests were photographed naturally and authentically."
+            </p>
+          </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="px-6 sm:p-8 pb-6 sm:pb-8 pt-0">
+          <div class="flex items-center gap-3.5 border-t border-neutral-100 pt-4">
+            <div class="w-8 h-8 rounded-full bg-neutral-950 flex items-center justify-center text-white text-[9px] font-bold font-sans">AR</div>
+            <div>
+              <p class="text-neutral-900 text-xs font-semibold leading-none">Ananya & Rahul</p>
+              <p class="text-neutral-450 text-[9px] mt-1 font-light leading-none">Lake Como · September 2023</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="bg-white rounded-2xl border border-neutral-200 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden flex flex-col justify-between reveal" style="transition-delay:0.2s">
+        <div>
+          <!-- Wedding Photo -->
+          <div class="h-64 overflow-hidden relative border-b border-neutral-100">
+            <img src="../assets/bridal.png" alt="Simran and Dev wedding in Udaipur" class="w-full h-full object-cover hover:scale-103 transition-transform duration-700" />
+            <div class="absolute bottom-4 left-4 bg-white/95 backdrop-blur px-2.5 py-1 rounded text-[8px] uppercase tracking-widest font-bold font-sans text-neutral-800 shadow-sm">
+              Leela Palace Udaipur
+            </div>
+          </div>
+          
+          <!-- Quote Content -->
+          <div class="p-6 sm:p-8">
+            <div class="flex gap-1 mb-4 text-[10px] text-neutral-900">
+              <span>✦</span><span>✦</span><span>✦</span><span>✦</span><span>✦</span>
+            </div>
+            <p class="text-neutral-700 font-light italic text-xs sm:text-sm leading-relaxed">
+              "Their team anticipation is unmatched. We immediately recognized their two decades of expertise — they navigated dynamic family situations and lighting transitions with total composure."
+            </p>
+          </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="px-6 sm:p-8 pb-6 sm:pb-8 pt-0">
+          <div class="flex items-center gap-3.5 border-t border-neutral-100 pt-4">
+            <div class="w-8 h-8 rounded-full bg-neutral-950 flex items-center justify-center text-white text-[9px] font-bold font-sans">SD</div>
+            <div>
+              <p class="text-neutral-900 text-xs font-semibold leading-none">Simran & Dev</p>
+              <p class="text-neutral-450 text-[9px] mt-1 font-light leading-none">Udaipur · January 2024</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════ -->
+<!--  SECTION 12 — FAQ                               -->
+<!-- ════════════════════════════════════════════════ -->
+<section id="faq" class="py-16 md:py-28 px-6 bg-white">
+  <div class="max-w-3xl mx-auto">
+
+    <div class="text-center mb-16 reveal">
+      <div class="ornament mb-4">
+        <span class="text-[9px] tracking-[0.3em] uppercase text-neutral-500 font-sans font-semibold">Information</span>
+      </div>
+      <h2 class="text-4xl sm:text-5xl font-extrabold text-neutral-900 mb-4">
+        Client <em class="italic font-light text-neutral-500">Queries</em>
+      </h2>
+    </div>
+
+    <div class="space-y-4 reveal">
+
+      <!-- FAQ 1 -->
+      <div class="faq-item bg-white border-b border-neutral-200 overflow-hidden" id="faq-1">
+        <button class="w-full flex items-center justify-between py-6 text-left group" onclick="toggleFaq('faq-1')" aria-expanded="false">
+          <span class="font-sans text-sm text-neutral-900 font-semibold group-hover:text-neutral-600 transition-colors pr-4">How early should we secure our booking?</span>
+          <span class="faq-icon text-neutral-900 flex-shrink-0 text-lg font-light">+</span>
+        </button>
+        <div class="faq-answer">
+          <p class="text-neutral-500 text-sm font-light leading-relaxed pb-6">We accept commissions up to 12 months in advance. Due to limited calendar allocations and founder direct involvement, peak wedding season blocks (October to March) fill quickly.</p>
+        </div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div class="faq-item bg-white border-b border-neutral-200 overflow-hidden" id="faq-2">
+        <button class="w-full flex items-center justify-between py-6 text-left group" onclick="toggleFaq('faq-2')" aria-expanded="false">
+          <span class="font-sans text-sm text-neutral-900 font-semibold group-hover:text-neutral-600 transition-colors pr-4">Do you document smaller pre-wedding functions?</span>
+          <span class="faq-icon text-neutral-900 flex-shrink-0 text-lg font-light">+</span>
+        </button>
+        <div class="faq-answer">
+          <p class="text-neutral-500 text-sm font-light leading-relaxed pb-6">Yes. Pre-wedding sessions, Mehendi, Sangeet, and intimate family dinners are regular components of our customized legacy curations.</p>
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div class="faq-item bg-white border-b border-neutral-200 overflow-hidden" id="faq-3">
+        <button class="w-full flex items-center justify-between py-6 text-left group" onclick="toggleFaq('faq-3')" aria-expanded="false">
+          <span class="font-sans text-sm text-neutral-900 font-semibold group-hover:text-neutral-600 transition-colors pr-4">What is the timeline for asset delivery?</span>
+          <span class="faq-icon text-neutral-900 flex-shrink-0 text-lg font-light">+</span>
+        </button>
+        <div class="faq-answer">
+          <p class="text-neutral-500 text-sm font-light leading-relaxed pb-6">A preview batch of edited portraits (50-100 images) is delivered within 2 weeks of the wedding. Complete color-graded collections and cinematic files are delivered within 6 to 10 weeks.</p>
+        </div>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div class="faq-item bg-white border-b border-neutral-200 overflow-hidden" id="faq-4">
+        <button class="w-full flex items-center justify-between py-6 text-left group" onclick="toggleFaq('faq-4')" aria-expanded="false">
+          <span class="font-sans text-sm text-neutral-900 font-semibold group-hover:text-neutral-600 transition-colors pr-4">How are travel arrangements managed for destination weddings?</span>
+          <span class="faq-icon text-neutral-900 flex-shrink-0 text-lg font-light">+</span>
+        </button>
+        <div class="faq-answer">
+          <p class="text-neutral-500 text-sm font-light leading-relaxed pb-6">We oversee our crew's transport arrangements. Logistics costs (flights and crew lodging) are calculated based on destination specifics and finalized in our primary agreement.</p>
+        </div>
+      </div>
+
+      <!-- FAQ 5 -->
+      <div class="faq-item bg-white border-b border-neutral-200 overflow-hidden" id="faq-5">
+        <button class="w-full flex items-center justify-between py-6 text-left group" onclick="toggleFaq('faq-5')" aria-expanded="false">
+          <span class="font-sans text-sm text-neutral-900 font-semibold group-hover:text-neutral-600 transition-colors pr-4">What is your date adjustment policy?</span>
+          <span class="faq-icon text-neutral-900 flex-shrink-0 text-lg font-light">+</span>
+        </button>
+        <div class="faq-answer">
+          <p class="text-neutral-500 text-sm font-light leading-relaxed pb-6">A retainer allocation secures your date. In the event of date revisions, we transfer the retainer to alternative open dates, provided we receive notice at least 90 days before the scheduled date.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════ -->
+<!--  SECTION 13 — CONTACT / BOOKING CTA             -->
+<!-- ════════════════════════════════════════════════ -->
+<section id="contact" class="py-16 md:py-28 px-6 bg-neutral-50 border-t border-neutral-200">
+  <div class="max-w-5xl mx-auto">
+
+    <div class="grid md:grid-cols-2 gap-12 lg:gap-20 items-start">
+
+      <!-- Left: Copy + details -->
+      <div class="reveal">
+        <div class="ornament justify-start mb-6">
+          <span class="text-[9px] tracking-[0.3em] uppercase text-neutral-500 font-sans font-semibold">Enquiries</span>
+        </div>
+
+        <h2 class="text-4xl sm:text-5xl font-extrabold text-neutral-900 mb-6 leading-tight">
+          Let's Secure Your<br>
+          <em class="italic font-light text-neutral-500">Visual Legacy</em>
+        </h2>
+
+        <p class="text-neutral-600 font-light text-sm sm:text-base leading-relaxed mb-8 font-light">
+          Submit details regarding your celebration itinerary, and our team will contact you within 24 hours to schedule a video call.
+        </p>
+
+        <!-- Contact details -->
+        <div class="space-y-4 mb-8">
+          <a href="https://www.instagram.com/luxe_captures" target="_blank" rel="noopener"
+             class="flex items-center gap-3 text-neutral-600 hover:text-black transition-colors group">
+            <div class="w-9 h-9 rounded-full border border-neutral-200 bg-white flex items-center justify-center group-hover:border-neutral-900 transition-colors">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="text-neutral-900"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </div>
+            <span class="text-sm font-semibold">@luxe_captures</span>
+          </a>
+          <div class="flex items-center gap-3 text-neutral-600">
+            <div class="w-9 h-9 rounded-full border border-neutral-200 bg-white flex items-center justify-center">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-neutral-900"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <span class="text-sm font-semibold">Mumbai, Maharashtra</span>
+          </div>
+        </div>
+
+        <!-- Limit notice -->
+        <div class="bg-white border border-neutral-200 rounded-xl p-4 shadow-sm">
+          <p class="text-neutral-700 text-xs font-sans tracking-wide leading-relaxed font-light">
+            <span class="font-bold">⚡ Limited Calendar allocations:</span> We accept a maximum of 40 commissions per calendar year to preserve direct founder allocation for our clients.
+          </p>
+        </div>
+      </div>
+
+      <!-- Right: Contact form -->
+      <div class="reveal" style="transition-delay:0.15s">
+        <form id="contact-form" class="bg-white rounded-2xl p-7 border border-neutral-200 space-y-5 shadow-sm" onsubmit="handleSubmit(event)" novalidate>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label for="first-name" class="block text-[8px] uppercase tracking-widest text-neutral-500 font-sans font-semibold mb-1.5">First Name</label>
+              <input type="text" id="first-name" name="first_name" required
+                     placeholder="Priya"
+                     class="form-input w-full rounded-lg px-4 py-3 text-sm font-semibold" />
+            </div>
+            <div>
+              <label for="last-name" class="block text-[8px] uppercase tracking-widest text-neutral-500 font-sans font-semibold mb-1.5">Last Name</label>
+              <input type="text" id="last-name" name="last_name"
+                     placeholder="Sharma"
+                     class="form-input w-full rounded-lg px-4 py-3 text-sm font-semibold" />
+            </div>
+          </div>
+
+          <div>
+            <label for="email" class="block text-[8px] uppercase tracking-widest text-neutral-500 font-sans font-semibold mb-1.5">Email Address</label>
+            <input type="email" id="email" name="email" required
+                   placeholder="priya@example.com"
+                   class="form-input w-full rounded-lg px-4 py-3 text-sm font-semibold" />
+          </div>
+
+          <div>
+            <label for="phone" class="block text-[8px] uppercase tracking-widest text-neutral-500 font-sans font-semibold mb-1.5">Phone / WhatsApp</label>
+            <input type="tel" id="phone" name="phone"
+                   placeholder="+91 98765 43210"
+                   class="form-input w-full rounded-lg px-4 py-3 text-sm font-semibold" />
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label for="wedding-date" class="block text-[8px] uppercase tracking-widest text-neutral-500 font-sans font-semibold mb-1.5">Wedding Date</label>
+              <input type="date" id="wedding-date" name="wedding_date"
+                     class="form-input w-full rounded-lg px-4 py-3 text-sm font-semibold" />
+            </div>
+            <div>
+              <label for="package" class="block text-[8px] uppercase tracking-widest text-neutral-500 font-sans font-semibold mb-1.5">Celebration Scale</label>
+              <select id="package" name="package"
+                      class="form-input w-full rounded-lg px-4 py-3 text-sm font-semibold">
+                <option value="" class="bg-white">Select Celebration Scale</option>
+                <option value="intimate" class="bg-white">Intimate Wedding (Single Day)</option>
+                <option value="multiday" class="bg-white">Multi-Day Celebration</option>
+                <option value="destination" class="bg-white">Destination Wedding</option>
+                <option value="prewedding" class="bg-white">Pre-Wedding Session</option>
+                <option value="custom" class="bg-white">Custom Requirements</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label for="message" class="block text-[8px] uppercase tracking-widest text-neutral-500 font-sans font-semibold mb-1.5">Event Details (Optional)</label>
+            <textarea id="message" name="message" rows="3"
+                      placeholder="Share details regarding your venue and general wedding vision..."
+                      class="form-input w-full rounded-lg px-4 py-3 text-sm resize-none font-semibold"></textarea>
+          </div>
+
+          <button type="submit" id="submit-btn" class="btn-primary w-full py-4 rounded-xl font-bold text-xs tracking-widest uppercase">
+            Send Enquiry & Book Consultation
+          </button>
+
+          <p class="text-center text-neutral-400 text-[9px] font-sans">
+            🔒 Privacy secured. Information is shared strictly internally.
+          </p>
+        </form>
+
+        <!-- Success state -->
+        <div id="form-success" class="hidden bg-white rounded-2xl p-10 border border-neutral-200 text-center shadow-sm">
+          <div class="text-4xl mb-4">✨</div>
+          <h3 class="font-display text-2xl text-neutral-900 mb-3">Thank You</h3>
+          <p class="text-neutral-600 text-sm font-light">We have logged your request details and will reach out personally within 24 hours to schedule your consultation call.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════ -->
+<!--  FOOTER                                         -->
+<!-- ════════════════════════════════════════════════ -->
+<footer class="bg-white border-t border-neutral-200 py-12 px-6">
+  <div class="max-w-5xl mx-auto">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6 mb-8">
+      <!-- Logo -->
+      <div class="flex flex-col leading-none text-center md:text-left">
+        <span class="font-sans text-2xl font-extrabold tracking-tight text-neutral-900">LUXE</span>
+        <span class="text-[9px] tracking-[0.4em] text-neutral-500 uppercase font-light -mt-0.5">CAPTURES</span>
+      </div>
+
+      <!-- Nav links -->
+      <nav class="flex flex-wrap justify-center gap-6 text-xs text-neutral-500 font-sans tracking-wider uppercase font-semibold">
+        <a href="#about" class="hover:text-black transition-colors">About</a>
+        <a href="#portfolio" class="hover:text-black transition-colors">Portfolio</a>
+        <a href="#celebrations" class="hover:text-black transition-colors">Celebrations</a>
+        <a href="#memories" class="hover:text-black transition-colors">Memories</a>
+        <a href="#process" class="hover:text-black transition-colors">Process</a>
+        <a href="#faq" class="hover:text-black transition-colors">FAQ</a>
+        <a href="#contact" class="hover:text-black transition-colors">Contact</a>
+      </nav>
+
+      <!-- Social -->
+      <a href="https://www.instagram.com/luxe_captures" target="_blank" rel="noopener"
+         class="flex items-center gap-2 text-neutral-600 hover:text-black transition-colors text-sm font-semibold">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        @luxe_captures
+      </a>
+    </div>
+
+    <div class="border-t border-neutral-100 pt-6 text-center">
+      <p class="text-neutral-400 text-[10px] font-sans">
+        © 2026 Luxe Captures. Mumbai, India. All rights reserved.
+        &nbsp;·&nbsp; 24+ Years · 2100+ Weddings · 18 Countries
+      </p>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ════════════════════════════════════════════════ -->
+<!--  JAVASCRIPT                                     -->
+<!-- ════════════════════════════════════════════════ -->
+<script>
+  // ── Sticky nav ──────────────────────────────────
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) {
+      navbar.classList.add('nav-scrolled');
+      navbar.classList.remove('bg-transparent');
+    } else {
+      navbar.classList.remove('nav-scrolled');
+      navbar.classList.add('bg-transparent');
+    }
+  }, { passive: true });
+
+  // ── Mobile menu ─────────────────────────────────
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+  let menuOpen = false;
+
+  hamburger.addEventListener('click', () => {
+    menuOpen = !menuOpen;
+    mobileMenu.classList.toggle('open', menuOpen);
+    hamburger.classList.toggle('open', menuOpen);
+  });
+
+  function closeMobileMenu() {
+    menuOpen = false;
+    mobileMenu.classList.remove('open');
+    hamburger.classList.remove('open');
+  }
+
+  // ── Scroll reveal ───────────────────────────────
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  // ── Counter animation ───────────────────────────
+  function animateCounter(el) {
+    const target = parseInt(el.getAttribute('data-target'));
+    const duration = 1800;
+    const step = target / (duration / 16);
+    let current = 0;
+
+    const timer = setInterval(() => {
+      current += step;
+      if (current >= target) {
+        current = target;
+        clearInterval(timer);
+      }
+      el.textContent = Math.floor(current).toLocaleString();
+    }, 16);
+  }
+
+  const statObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !entry.target.dataset.animated) {
+        entry.target.dataset.animated = 'true';
+        animateCounter(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  document.querySelectorAll('[data-target]').forEach(el => statObserver.observe(el));
+
+
+
+  // ── FAQ accordion ───────────────────────────────
+  function toggleFaq(id) {
+    const item = document.getElementById(id);
+    const answer = item.querySelector('.faq-answer');
+    const icon = item.querySelector('.faq-icon');
+    const btn = item.querySelector('button');
+    const isOpen = item.classList.contains('open');
+
+    // Close all
+    document.querySelectorAll('.faq-item').forEach(el => {
+      el.classList.remove('open');
+      el.querySelector('.faq-answer').classList.remove('open');
+      el.querySelector('button').setAttribute('aria-expanded', 'false');
+      el.querySelector('.faq-icon').textContent = '+';
+    });
+
+    if (!isOpen) {
+      item.classList.add('open');
+      answer.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+      icon.textContent = '−';
+    }
+  }
+
+  // ── Form submission ─────────────────────────────
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = document.getElementById('submit-btn');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+
+    // Simulate async submission
+    setTimeout(() => {
+      document.getElementById('contact-form').classList.add('hidden');
+      document.getElementById('form-success').classList.remove('hidden');
+    }, 1200);
+  }
+
+
+
+
+</script>
+
+
+  <!-- Sticky WhatsApp CTA -->
+  <a href="https://wa.me/918708528150?text=Hi%20Cora%20Team%2C%20I%20saw%20my%20demo%20page%20and%20would%20love%20to%20discuss%20further." target="_blank" rel="noopener noreferrer" id="whatsapp-sticky"
+     class="fixed bottom-6 right-6 z-50 flex items-center gap-2.5 bg-[#25D366] hover:bg-[#20BD5A] text-white shadow-lg shadow-[#25D366]/25 hover:shadow-xl hover:shadow-[#25D366]/30 px-5 py-3 rounded-full transition-all duration-300 hover:scale-105 active:scale-95 group"
+     aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp text-xl group-hover:rotate-12 transition-transform duration-300"></i>
+    <span class="text-[10px] font-bold tracking-widest uppercase hidden sm:inline">Let's Talk</span>
+  </a>
+
+</body>
+</html>

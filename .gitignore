@@ -1,0 +1,7 @@
+.vercel
+.DS_Store
+agent_memory/
+Prospet Vault/
+**/__pycache__/
+*.pyc
+*.log

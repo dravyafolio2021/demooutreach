@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{PROSPECT_NAME}} — Exclusive Luxury Residential Showcase | {{FOUNDERS}}</title>
+  <meta name="description" content="Handcrafted real estate portfolio by {{PROSPECT_NAME}}. Managed by principal broker {{FOUNDERS}}. Showcasing luxury apartments, penthouses, and estates." />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{PROSPECT_NAME}} — Luxury Property Portfolio" />
+  <meta property="og:description" content="Discover premium, co-founder curated residential listings. Fast, immersive walkthroughs and direct agent booking." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://demo.claraverse.in/{{PROSPECT_FOLDER}}/assets/hero_thumb.jpg" />
+  <meta property="og:url" content="https://demo.claraverse.in/{{PROSPECT_FOLDER}}" />
+
+  <!-- Font Setup: Outfit (Display) and Inter (Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Outfit', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              gold: '#B89A74',
+              goldLight: '#D4C3A3',
+              darkBg: '#0A0A0A',
+              lightBg: '#FAF9F6', // Luxury Warm White
+              cardBg: '#FFFFFF',
+              border: '#E8E6E1',
+            }
+          },
+          animation: {
+            'fade-up': 'fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+            'fade-in': 'fadeIn 1s ease forwards',
+          },
+          keyframes: {
+            fadeUp: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #FAF9F6;
+      color: #1C1B19;
+    }
+    /* Hide spinner */
+    input[type=number]::-webkit-inner-spin-button, 
+    input[type=number]::-webkit-outer-spin-button { 
+      -webkit-appearance: none; 
+      margin: 0; 
+    }
+    /* Smooth transitions */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* 3D Carousel Perspective Styling */
+    .carousel-container {
+      perspective: 1200px;
+    }
+    .carousel-slide {
+      transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+      transform-style: preserve-3d;
+    }
+    .carousel-slide.active {
+      transform: translate3d(0, 0, 0) rotateY(0deg) scale(1);
+      opacity: 1;
+      filter: blur(0);
+      z-index: 30;
+    }
+    .carousel-slide.left {
+      transform: translate3d(-35%, 0, -150px) rotateY(25deg) scale(0.9);
+      opacity: 0.45;
+      filter: blur(4px);
+      z-index: 10;
+      pointer-events: none;
+    }
+    .carousel-slide.right {
+      transform: translate3d(35%, 0, -150px) rotateY(-25deg) scale(0.9);
+      opacity: 0.45;
+      filter: blur(4px);
+      z-index: 10;
+      pointer-events: none;
+    }
+    .carousel-slide.hidden-left {
+      transform: translate3d(-80%, 0, -300px) rotateY(45deg) scale(0.8);
+      opacity: 0;
+      z-index: 5;
+      pointer-events: none;
+    }
+    .carousel-slide.hidden-right {
+      transform: translate3d(80%, 0, -300px) rotateY(-45deg) scale(0.8);
+      opacity: 0;
+      z-index: 5;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body class="font-sans antialiased selection:bg-brand-gold selection:text-white min-h-screen flex flex-col justify-between overflow-x-hidden">
+
+  <!-- HEADER -->
+  <header class="absolute top-0 left-0 right-0 z-50 bg-transparent">
+    <div class="max-w-7xl mx-auto px-8 h-20 flex items-center justify-between">
+      <div class="text-white text-xl font-display font-medium tracking-tight">
+        {{PROSPECT_NAME}}<span class="text-brand-gold font-light">*</span>
+      </div>
+      <a href="https://wa.me/918708528150" target="_blank" class="text-white hover:text-brand-goldLight text-2xl font-light transition-colors">
+        <i class="fa-light fa-plus font-light">+</i>
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION (Inspired by Screen 1) -->
+  <section class="relative min-h-screen flex flex-col justify-between pt-32 pb-8 px-6 bg-[#A1C4FD] overflow-hidden">
+    <!-- Light Sky Gradient Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-b from-[#A1C4FD]/20 via-[#C2E9FB]/30 to-[#FAF9F6]"></div>
+    
+    <!-- Hero Architecture Image Rising from Bottom -->
+    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[1200px] h-[55vh] md:h-[65vh] flex items-end justify-center z-10 select-none">
+      <img src="/{{PROSPECT_FOLDER}}/assets/hero.png" alt="Luxury Architecture" class="w-full h-full object-contain object-bottom" />
+    </div>
+
+    <!-- Center Content -->
+    <div class="max-w-4xl mx-auto text-center relative z-20 mt-12">
+      <h2 class="text-5xl sm:text-6xl md:text-7xl font-display font-light text-white tracking-tight leading-[1.05] mb-6 drop-shadow-sm">
+        Extraordinary<br>living begins here.
+      </h2>
+      <p class="text-white/80 text-sm sm:text-base max-w-xl mx-auto font-light leading-relaxed drop-shadow-sm mb-8">
+        Timeless architecture, exclusive locations, and luxury homes designed to inspire your next chapter.
+      </p>
+    </div>
+
+    <!-- Scroll Down indicator / spacing -->
+    <div class="w-full text-center relative z-20">
+      <a href="#vision" class="inline-block text-white/50 hover:text-white transition-colors">
+        <i class="fa-solid fa-chevron-down text-lg animate-bounce"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- VISION HUB (Inspired by Screen 2) -->
+  <section id="vision" class="py-32 px-6 bg-brand-lightBg relative z-20 border-b border-brand-border">
+    <div class="max-w-4xl mx-auto text-center">
+      <h3 class="text-4xl sm:text-5xl font-display font-light text-[#1C1B19] tracking-tight leading-[1.15] mb-6 flex flex-wrap items-center justify-center gap-3">
+        Where your vision finds its 
+        <!-- Leaf Shape container with project preview -->
+        <span class="inline-block w-20 h-10 rounded-full overflow-hidden border border-brand-gold/30 bg-neutral-200 align-middle shadow-inner">
+          <img src="/{{PROSPECT_FOLDER}}/assets/still.png" alt="Estate preview" class="w-full h-full object-cover scale-110" />
+        </span>
+        home.
+      </h3>
+      <p class="text-neutral-500 text-xs sm:text-sm font-light max-w-2xl mx-auto leading-relaxed mb-10">
+        {{PROSPECT_NAME}} offers more than just a place to live—it's a space designed to reflect your unique style, crafted with timeless precision, and built to inspire for generations to come.
+      </p>
+
+      <!-- Signature Off-Market Newsletter bar (WhatsApp Focus) -->
+      <div class="max-w-lg mx-auto bg-white rounded-full p-1 border border-brand-border shadow-sm flex items-center justify-between">
+        <input type="tel" id="update-whatsapp" placeholder="WhatsApp Number" class="w-full bg-transparent px-6 text-xs text-[#1C1B19] placeholder-neutral-400 outline-none border-none" />
+        <button onclick="handleWhatsAppUpdate()" class="bg-black hover:bg-neutral-800 text-white text-[10px] font-medium tracking-wider uppercase px-6 py-3.5 rounded-full transition-all duration-300 whitespace-nowrap">
+          Get WhatsApp Updates
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- LUXURY PROPERTY VIDEO SECTION (Inspired by Screen Video) -->
+  <section class="py-24 px-6 bg-white relative z-20">
+    <div class="max-w-6xl mx-auto">
+      <div class="relative w-full h-[60vh] sm:h-[70vh] rounded-3xl overflow-hidden shadow-2xl group">
+        <!-- Background Loop Video -->
+        <video id="promoVideo" autoplay muted loop playsinline class="w-full h-full object-cover">
+          <source src="https://videos.pexels.com/video-files/3773486/3773486-uhd_2560_1440_30fps.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        
+        <!-- Dark Overlay -->
+        <div class="absolute inset-0 bg-black/35 group-hover:bg-black/25 transition-colors duration-500"></div>
+
+        <!-- Video Text Overlay -->
+        <div class="absolute inset-0 flex items-center justify-center p-6 text-center z-10">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-light text-white tracking-tight leading-tight max-w-3xl drop-shadow-md">
+            Step inside a world where exceptional design and timeless luxury meet.
+          </h2>
+        </div>
+
+        <!-- Working Play/Pause Button in Bottom Right -->
+        <button onclick="toggleVideoPlayback()" class="absolute bottom-6 right-6 z-20 w-12 h-12 rounded-full bg-white/15 hover:bg-white/30 backdrop-blur-md border border-white/20 text-white flex items-center justify-center shadow-lg transition-transform duration-355 active:scale-90" aria-label="Toggle Playback">
+          <i id="playPauseIcon" class="fa-solid fa-pause text-sm"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROPERTY GALLERY 3D CAROUSEL (Inspired by Screen 3) -->
+  <section id="listings" class="py-32 px-6 bg-[#FAF9F6] relative z-20 overflow-hidden border-t border-brand-border">
+    <div class="max-w-7xl mx-auto">
+      
+      <!-- Top Title and Description Row -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-20">
+        <div class="max-w-xl">
+          <h2 class="text-4xl sm:text-5xl font-display font-light tracking-tight text-[#1C1B19]">
+            Discover homes<br>designed to inspire.
+          </h2>
+        </div>
+        <div class="max-w-xs">
+          <p class="text-neutral-500 text-xs sm:text-sm font-light leading-relaxed">
+            Handpicked residences where luxury, design, and comfort meet. Vetted exclusively by {{FOUNDERS}}.
+          </p>
+        </div>
+      </div>
+
+      <!-- 3D Carousel Area -->
+      <div class="relative min-h-[550px] flex items-center justify-center carousel-container">
+        
+        <!-- Left Control Button -->
+        <button onclick="prevSlide()" class="absolute left-4 md:left-24 z-40 w-12 h-12 rounded-full bg-black hover:bg-neutral-850 text-white flex items-center justify-center shadow-lg transition-transform duration-300 hover:scale-105 active:scale-95">
+          <i class="fa-solid fa-chevron-left text-sm"></i>
+        </button>
+
+        <!-- Right Control Button -->
+        <button onclick="nextSlide()" class="absolute right-4 md:right-24 z-40 w-12 h-12 rounded-full bg-black hover:bg-neutral-850 text-white flex items-center justify-center shadow-lg transition-transform duration-300 hover:scale-105 active:scale-95">
+          <i class="fa-solid fa-chevron-right text-sm"></i>
+        </button>
+
+        <!-- Dynamic Carousel List -->
+        <div class="relative w-full max-w-[680px] h-[480px]">
+          
+          <!-- Slide 1 (Skyline Heights) -->
+          <div id="slide-0" class="carousel-slide absolute inset-0 bg-white rounded-3xl border border-brand-border p-6 shadow-xl flex flex-col justify-between hover:shadow-2xl">
+            <div class="relative w-full h-[65%] rounded-2xl overflow-hidden bg-neutral-100">
+              <img src="/{{PROSPECT_FOLDER}}/assets/still.png" alt="The Skyline Heights" class="w-full h-full object-cover" />
+              <span class="absolute top-4 left-4 bg-[#A1C4FD] text-white text-[7.5px] font-mono tracking-widest uppercase font-semibold px-2.5 py-1 rounded-full">
+                FOR SALE
+              </span>
+            </div>
+            <div class="pt-6 flex-1 flex flex-col justify-between">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <h3 class="text-xl font-display font-medium text-[#1C1B19]">The Skyline Heights</h3>
+                  <p class="text-neutral-500 text-xs font-light mt-1.5 leading-relaxed">
+                    A luxury duplex sanctuary with wrap-around balconies, private elevator access, and views.
+                  </p>
+                </div>
+                <div class="text-right">
+                  <span class="block text-xl font-semibold text-[#1C1B19] font-mono">{{RE_3BHK_PRICE_RANGE}}</span>
+                  <span class="text-[9px] font-mono text-neutral-400 uppercase tracking-widest block mt-0.5">Pricing Band</span>
+                </div>
+              </div>
+              <div class="pt-4 border-t border-brand-border flex items-center justify-between text-xs text-neutral-500">
+                <div class="flex gap-4">
+                  <span>3 Bedrooms</span>
+                  <span>•</span>
+                  <span>3.5 Bathrooms</span>
+                </div>
+                <a href="https://wa.me/918708528150?text=Hi%20Cora%20Team%2C%20I%2520am%2520interested%2520in%252520booking%252520a%252520private%252520tour%25252520for%25252520The%25252520Skyline%25252520Heights." target="_blank" class="text-black hover:text-brand-gold text-[10px] font-mono tracking-wider uppercase font-semibold flex items-center gap-1">
+                  Book Tour <i class="fa-solid fa-arrow-right text-[8px]"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 (Oceanfront Vista) -->
+          <div id="slide-1" class="carousel-slide absolute inset-0 bg-white rounded-3xl border border-brand-border p-6 shadow-xl flex flex-col justify-between hover:shadow-2xl">
+            <div class="relative w-full h-[65%] rounded-2xl overflow-hidden bg-neutral-100">
+              <img src="/{{PROSPECT_FOLDER}}/assets/emotion.png" alt="The Oceanfront Vista" class="w-full h-full object-cover" />
+              <span class="absolute top-4 left-4 bg-black text-white text-[7.5px] font-mono tracking-widest uppercase font-semibold px-2.5 py-1 rounded-full">
+                PENTHOUSE
+              </span>
+            </div>
+            <div class="pt-6 flex-1 flex flex-col justify-between">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <h3 class="text-xl font-display font-medium text-[#1C1B19]">The Oceanfront Vista</h3>
+                  <p class="text-neutral-500 text-xs font-light mt-1.5 leading-relaxed">
+                    Direct beachfront penthouse featuring private deck, glass pool, and premium home automation.
+                  </p>
+                </div>
+                <div class="text-right">
+                  <span class="block text-xl font-semibold text-[#1C1B19] font-mono">{{RE_PENTHOUSE_PRICE_RANGE}}</span>
+                  <span class="text-[9px] font-mono text-neutral-400 uppercase tracking-widest block mt-0.5">Pricing Band</span>
+                </div>
+              </div>
+              <div class="pt-4 border-t border-brand-border flex items-center justify-between text-xs text-neutral-500">
+                <div class="flex gap-4">
+                  <span>4 Bedrooms</span>
+                  <span>•</span>
+                  <span>4.5 Bathrooms</span>
+                </div>
+                <a href="https://wa.me/918708528150?text=Hi%20Cora%20Team%2C%20I%2520am%2520interested%2520in%252520booking%25252525for%25252525The%25252525Oceanfront%25252525Vista." target="_blank" class="text-black hover:text-brand-gold text-[10px] font-mono tracking-wider uppercase font-semibold flex items-center gap-1">
+                  Book Tour <i class="fa-solid fa-arrow-right text-[8px]"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 (Suburban Sanctuary) -->
+          <div id="slide-2" class="carousel-slide absolute inset-0 bg-white rounded-3xl border border-brand-border p-6 shadow-xl flex flex-col justify-between hover:shadow-2xl">
+            <div class="relative w-full h-[65%] rounded-2xl overflow-hidden bg-neutral-100">
+              <img src="/{{PROSPECT_FOLDER}}/assets/shoot.png" alt="The Suburban Sanctuary" class="w-full h-full object-cover" />
+              <span class="absolute top-4 left-4 bg-brand-gold text-white text-[7.5px] font-mono tracking-widest uppercase font-semibold px-2.5 py-1 rounded-full">
+                FOR SALE
+              </span>
+            </div>
+            <div class="pt-6 flex-1 flex flex-col justify-between">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <h3 class="text-xl font-display font-medium text-[#1C1B19]">The Suburban Sanctuary</h3>
+                  <p class="text-neutral-500 text-xs font-light mt-1.5 leading-relaxed">
+                    Sleek minimalist layouts tailored with community green belt parks, and smart energy.
+                  </p>
+                </div>
+                <div class="text-right">
+                  <span class="block text-xl font-semibold text-[#1C1B19] font-mono">{{RE_2BHK_PRICE_RANGE}}</span>
+                  <span class="text-[9px] font-mono text-neutral-400 uppercase tracking-widest block mt-0.5">Pricing Band</span>
+                </div>
+              </div>
+              <div class="pt-4 border-t border-brand-border flex items-center justify-between text-xs text-neutral-500">
+                <div class="flex gap-4">
+                  <span>2 Bedrooms</span>
+                  <span>•</span>
+                  <span>2 Bathrooms</span>
+                </div>
+                <a href="https://wa.me/918708528150?text=Hi%20Cora%20Team%2C%20I%2520am%2520interested%2520in%252520booking%252520a%252520private%252520tour%25252520for%25252520The%25252525Suburban%25252525Sanctuary." target="_blank" class="text-black hover:text-brand-gold text-[10px] font-mono tracking-wider uppercase font-semibold flex items-center gap-1">
+                  Book Tour <i class="fa-solid fa-arrow-right text-[8px]"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSIGHTS GRID SECTION (Clean 3-column Layout) -->
+  <section class="py-32 px-6 bg-white relative z-20 border-t border-brand-border">
+    <div class="max-w-6xl mx-auto">
+      
+      <!-- Section Header -->
+      <div class="mb-16">
+        <span class="text-[9px] tracking-[0.4em] uppercase text-brand-gold font-bold block mb-2">Insights &amp; Trends</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-light text-[#1C1B19] tracking-tight">Luxury Estate Journal</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="bg-[#FAF9F6] border border-brand-border rounded-3xl p-6 hover:shadow-md transition-shadow duration-300 flex flex-col justify-between">
+          <div>
+            <div class="rounded-2xl overflow-hidden h-52 mb-6 bg-neutral-100">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Boutique Architecture" class="w-full h-full object-cover" />
+            </div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="bg-amber-100 text-amber-800 text-[8px] font-semibold tracking-widest uppercase px-3 py-1 rounded-full">
+                Lifestyle
+              </span>
+            </div>
+            <h3 class="text-lg font-semibold text-[#1C1B19] leading-snug mb-3">
+              The Rise of Boutique Architecture in Luxury Living
+            </h3>
+            <p class="text-neutral-500 text-xs font-light leading-relaxed">
+              Discover how boutique architecture is redefining luxury living with its focus on uniqueness and timeless design.
+            </p>
+          </div>
+          <!-- Author Block -->
+          <div class="flex items-center gap-3 mt-6 pt-4 border-t border-brand-border/60">
+            <div class="w-8 h-8 rounded-full overflow-hidden bg-neutral-200">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80" alt="Anjali Sharma" class="w-full h-full object-cover" />
+            </div>
+            <div>
+              <span class="block text-xs font-semibold text-[#1C1B19]">Anjali Sharma</span>
+              <span class="block text-[9px] text-neutral-400 font-light">Senior Advisor</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-[#FAF9F6] border border-brand-border rounded-3xl p-6 hover:shadow-md transition-shadow duration-300 flex flex-col justify-between">
+          <div>
+            <div class="rounded-2xl overflow-hidden h-52 mb-6 bg-neutral-100">
+              <img src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=600&q=80" alt="AI Home Design" class="w-full h-full object-cover" />
+            </div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="bg-blue-100 text-blue-800 text-[8px] font-semibold tracking-widest uppercase px-3 py-1 rounded-full">
+                Innovation
+              </span>
+            </div>
+            <h3 class="text-lg font-semibold text-[#1C1B19] leading-snug mb-3">
+              The Future of Luxury: AI &amp; Automation in Home Design
+            </h3>
+            <p class="text-neutral-500 text-xs font-light leading-relaxed">
+              Explore smart-home automations merging seamless tech stacks with bespoke luxury design choices.
+            </p>
+          </div>
+          <!-- Author Block -->
+          <div class="flex items-center gap-3 mt-6 pt-4 border-t border-brand-border/60">
+            <div class="w-8 h-8 rounded-full overflow-hidden bg-neutral-200">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80" alt="Anjali Sharma" class="w-full h-full object-cover" />
+            </div>
+            <div>
+              <span class="block text-xs font-semibold text-[#1C1B19]">Anjali Sharma</span>
+              <span class="block text-[9px] text-neutral-400 font-light">Senior Advisor</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-[#FAF9F6] border border-brand-border rounded-3xl p-6 hover:shadow-md transition-shadow duration-300 flex flex-col justify-between">
+          <div>
+            <div class="rounded-2xl overflow-hidden h-52 mb-6 bg-neutral-100">
+              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80" alt="Sustainable Materials" class="w-full h-full object-cover" />
+            </div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="bg-emerald-100 text-emerald-800 text-[8px] font-semibold tracking-widest uppercase px-3 py-1 rounded-full">
+                Sustainability
+              </span>
+            </div>
+            <h3 class="text-lg font-semibold text-[#1C1B19] leading-snug mb-3">
+              Are Sustainable Materials the Future of Luxury Homes?
+            </h3>
+            <p class="text-neutral-500 text-xs font-light leading-relaxed">
+              Analyze how premium organic wood, stone finishes, and layouts are leading the eco-luxury wave.
+            </p>
+          </div>
+          <!-- Author Block -->
+          <div class="flex items-center gap-3 mt-6 pt-4 border-t border-brand-border/60">
+            <div class="w-8 h-8 rounded-full overflow-hidden bg-neutral-200">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80" alt="Anjali Sharma" class="w-full h-full object-cover" />
+            </div>
+            <div>
+              <span class="block text-xs font-semibold text-[#1C1B19]">Anjali Sharma</span>
+              <span class="block text-[9px] text-neutral-400 font-light">Senior Advisor</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PREMIUM FOOTER (Inspired by Screen 3) -->
+  <footer class="relative min-h-[90vh] flex flex-col justify-between pt-32 pb-8 px-6 bg-[#A1C4FD] overflow-hidden z-20 border-t border-brand-border">
+    <!-- Sky Blue Backdrop Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-b from-[#A1C4FD]/20 via-[#C2E9FB]/30 to-[#FAF9F6]"></div>
+    
+    <!-- Render Image of Modern Villa overlooking Pool in Footer Background (Rising from Bottom) -->
+    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[1100px] h-[45vh] md:h-[55vh] flex items-end justify-center z-10 select-none opacity-90">
+      <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80" alt="Luxury Villa Pool" class="w-full h-full object-contain object-bottom" />
+    </div>
+
+    <!-- Center Call-to-Action Content -->
+    <div class="max-w-4xl mx-auto text-center relative z-20 mb-12">
+      <h2 class="text-4xl sm:text-5xl md:text-6xl font-display font-light text-white tracking-tight leading-none mb-6 drop-shadow-sm">
+        Your dream home awaits.
+      </h2>
+      <p class="text-white/80 text-xs sm:text-sm max-w-xl mx-auto font-light leading-relaxed mb-10 drop-shadow-sm">
+        Whether you're exploring our homes or envisioning something custom, we're here to bring your dream to life.
+      </p>
+      
+      <!-- Rounded White Button with arrow icon -> Links directly to WhatsApp chat -->
+      <a href="https://wa.me/918708528150?text=Hi%20Cora%20Team%2C%20I%20want%2520to%2520get%2520in%2520touch%2520about%252520the%252520{{PROSPECT_NAME}}%252520real%252520estate%252520funnel." target="_blank" class="inline-flex items-center gap-3 bg-white hover:bg-neutral-50 text-black text-xs font-semibold px-8 py-4 rounded-full transition-transform duration-300 hover:scale-105 active:scale-95 shadow-lg">
+        Get In Touch <span class="text-sm font-light">↗</span>
+      </a>
+    </div>
+
+    <!-- Bottom Information Row -->
+    <div class="relative z-20 w-full max-w-7xl mx-auto pt-8 border-t border-white/20 flex flex-col sm:flex-row items-center justify-between gap-6 text-[10px] text-white/70 font-mono">
+      <div class="flex gap-6">
+        <a href="https://wa.me/918708528150" target="_blank" class="hover:text-white transition-colors">Contact</a>
+        <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+        <a href="#" class="hover:text-white transition-colors font-light">Terms</a>
+      </div>
+      
+      <div class="text-white text-md font-display font-medium tracking-tight">
+        {{PROSPECT_NAME}}<span class="text-brand-gold font-light">*</span>
+      </div>
+      
+      <div>
+        <span>&copy; 2026 {{PROSPECT_NAME_UPPER}}. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Sticky WhatsApp Button -->
+  <a href="https://wa.me/918708528150?text=Hi%20Cora%20Team%2C%20I%20saw%20our%20real%20estate%20demo%20page%20for%20{{PROSPECT_NAME}}%20and%20want%20to%20reserve%20our%20broker%20funnel." target="_blank" rel="noopener noreferrer"
+     class="fixed bottom-6 right-6 z-50 flex items-center gap-2.5 bg-[#25D366] hover:bg-[#20BD5A] text-white shadow-lg shadow-[#25D366]/25 hover:shadow-xl hover:shadow-[#25D366]/30 px-5 py-3.5 rounded-full transition-all duration-300 hover:scale-105 active:scale-95 group"
+     aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp text-xl group-hover:rotate-12 transition-transform duration-300"></i>
+    <span class="text-[10px] font-bold tracking-widest uppercase hidden sm:inline">Reserve Funnel</span>
+  </a>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Promo Video Playback Control
+    function toggleVideoPlayback() {
+      const video = document.getElementById('promoVideo');
+      const icon = document.getElementById('playPauseIcon');
+      if (video.paused) {
+        video.play();
+        icon.className = 'fa-solid fa-pause';
+      } else {
+        video.pause();
+        icon.className = 'fa-solid fa-play';
+      }
+    }
+
+    // 3D Carousel Logic
+    let activeIndex = 1; // Start with the center one (Oceanfront Vista) active
+    const totalSlides = 3;
+
+    function updateCarousel() {
+      for (let i = 0; i < totalSlides; i++) {
+        const slide = document.getElementById(`slide-${i}`);
+        if (!slide) continue;
+        
+        // Remove all layout classes
+        slide.classList.remove('active', 'left', 'right', 'hidden-left', 'hidden-right');
+        
+        if (i === activeIndex) {
+          slide.classList.add('active');
+        } else if (i === (activeIndex - 1 + totalSlides) % totalSlides) {
+          slide.classList.add('left');
+        } else if (i === (activeIndex + 1) % totalSlides) {
+          slide.classList.add('right');
+        } else {
+          // Fallback hidden
+          if (i < activeIndex) {
+            slide.classList.add('hidden-left');
+          } else {
+            slide.classList.add('hidden-right');
+          }
+        }
+      }
+    }
+
+    function nextSlide() {
+      activeIndex = (activeIndex + 1) % totalSlides;
+      updateCarousel();
+    }
+
+    // WhatsApp updates subscription handler
+    function handleWhatsAppUpdate() {
+      const phone = document.getElementById('update-whatsapp').value;
+      if (!phone) {
+        alert('Please enter your WhatsApp number.');
+        return;
+      }
+      const text = `Hi Cora Team,\n\nI want to receive private off-market property updates on WhatsApp.\n\nMy WhatsApp Number: ${phone}`;
+      const url = `https://wa.me/918708528150?text=${encodeURIComponent(text)}`;
+      window.open(url, '_blank');
+    }
+
+    function prevSlide() {
+      activeIndex = (activeIndex - 1 + totalSlides) % totalSlides;
+      updateCarousel();
+    }
+
+    // Initialize carousel on load
+    window.addEventListener('DOMContentLoaded', () => {
+      updateCarousel();
+    });
+
+    // Reveal animation on scroll
+    window.addEventListener('scroll', () => {
+      const reveals = document.querySelectorAll('.reveal');
+      reveals.forEach(r => {
+        const windowHeight = window.innerHeight;
+        const revealTop = r.getBoundingClientRect().top;
+        const revealPoint = 80;
+        if (revealTop < windowHeight - revealPoint) {
+          r.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

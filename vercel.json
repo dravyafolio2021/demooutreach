@@ -1,0 +1,2862 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/10k-portraits-photography",
+      "destination": "/photography/10k-portraits-photography"
+    },
+    {
+      "source": "/10k-portraits-photography/:path*",
+      "destination": "/photography/10k-portraits-photography/:path*"
+    },
+    {
+      "source": "/10k-portraits-sector-43",
+      "destination": "/photography/10k-portraits-sector-43"
+    },
+    {
+      "source": "/10k-portraits-sector-43/:path*",
+      "destination": "/photography/10k-portraits-sector-43/:path*"
+    },
+    {
+      "source": "/3wings-photography",
+      "destination": "/photography/3wings-photography"
+    },
+    {
+      "source": "/3wings-photography/:path*",
+      "destination": "/photography/3wings-photography/:path*"
+    },
+    {
+      "source": "/7-iris-studio",
+      "destination": "/photography/7-iris-studio"
+    },
+    {
+      "source": "/7-iris-studio/:path*",
+      "destination": "/photography/7-iris-studio/:path*"
+    },
+    {
+      "source": "/a-a-photography",
+      "destination": "/photography/a-a-photography"
+    },
+    {
+      "source": "/a-a-photography/:path*",
+      "destination": "/photography/a-a-photography/:path*"
+    },
+    {
+      "source": "/aakriti-photo-studio",
+      "destination": "/photography/aakriti-photo-studio"
+    },
+    {
+      "source": "/aakriti-photo-studio/:path*",
+      "destination": "/photography/aakriti-photo-studio/:path*"
+    },
+    {
+      "source": "/aditya-ac-photography",
+      "destination": "/photography/aditya-ac-photography"
+    },
+    {
+      "source": "/aditya-ac-photography/:path*",
+      "destination": "/photography/aditya-ac-photography/:path*"
+    },
+    {
+      "source": "/akshay-kalbhor-photography",
+      "destination": "/photography/akshay-kalbhor-photography"
+    },
+    {
+      "source": "/akshay-kalbhor-photography/:path*",
+      "destination": "/photography/akshay-kalbhor-photography/:path*"
+    },
+    {
+      "source": "/allora-digital-color-lab-sector-14",
+      "destination": "/photography/allora-digital-color-lab-sector-14"
+    },
+    {
+      "source": "/allora-digital-color-lab-sector-14/:path*",
+      "destination": "/photography/allora-digital-color-lab-sector-14/:path*"
+    },
+    {
+      "source": "/allora-digital-color-lab-studio",
+      "destination": "/photography/allora-digital-color-lab-studio"
+    },
+    {
+      "source": "/allora-digital-color-lab-studio/:path*",
+      "destination": "/photography/allora-digital-color-lab-studio/:path*"
+    },
+    {
+      "source": "/amit-photography",
+      "destination": "/photography/amit-photography"
+    },
+    {
+      "source": "/amit-photography/:path*",
+      "destination": "/photography/amit-photography/:path*"
+    },
+    {
+      "source": "/anamika-singh-the-memory-keeper",
+      "destination": "/photography/anamika-singh-the-memory-keeper"
+    },
+    {
+      "source": "/anamika-singh-the-memory-keeper/:path*",
+      "destination": "/photography/anamika-singh-the-memory-keeper/:path*"
+    },
+    {
+      "source": "/anjali-digital",
+      "destination": "/photography/anjali-digital"
+    },
+    {
+      "source": "/anjali-digital/:path*",
+      "destination": "/photography/anjali-digital/:path*"
+    },
+    {
+      "source": "/ankit-goel-inside-ankit-goel",
+      "destination": "/photography/ankit-goel-inside-ankit-goel"
+    },
+    {
+      "source": "/ankit-goel-inside-ankit-goel/:path*",
+      "destination": "/photography/ankit-goel-inside-ankit-goel/:path*"
+    },
+    {
+      "source": "/anupam-studio",
+      "destination": "/photography/anupam-studio"
+    },
+    {
+      "source": "/anupam-studio/:path*",
+      "destination": "/photography/anupam-studio/:path*"
+    },
+    {
+      "source": "/anupam-studio-rd-city",
+      "destination": "/photography/anupam-studio-rd-city"
+    },
+    {
+      "source": "/anupam-studio-rd-city/:path*",
+      "destination": "/photography/anupam-studio-rd-city/:path*"
+    },
+    {
+      "source": "/anupam-studio-sector-52",
+      "destination": "/photography/anupam-studio-sector-52"
+    },
+    {
+      "source": "/anupam-studio-sector-52/:path*",
+      "destination": "/photography/anupam-studio-sector-52/:path*"
+    },
+    {
+      "source": "/arjun-mahajan-recnamorcen",
+      "destination": "/photography/arjun-mahajan-recnamorcen"
+    },
+    {
+      "source": "/arjun-mahajan-recnamorcen/:path*",
+      "destination": "/photography/arjun-mahajan-recnamorcen/:path*"
+    },
+    {
+      "source": "/artsylens",
+      "destination": "/photography/artsylens"
+    },
+    {
+      "source": "/artsylens/:path*",
+      "destination": "/photography/artsylens/:path*"
+    },
+    {
+      "source": "/ashish-creations-photography",
+      "destination": "/photography/ashish-creations-photography"
+    },
+    {
+      "source": "/ashish-creations-photography/:path*",
+      "destination": "/photography/ashish-creations-photography/:path*"
+    },
+    {
+      "source": "/aura-wedding-test",
+      "destination": "/photography/aura-wedding-test"
+    },
+    {
+      "source": "/aura-wedding-test/:path*",
+      "destination": "/photography/aura-wedding-test/:path*"
+    },
+    {
+      "source": "/avenoir-creations",
+      "destination": "/photography/avenoir-creations"
+    },
+    {
+      "source": "/avenoir-creations/:path*",
+      "destination": "/photography/avenoir-creations/:path*"
+    },
+    {
+      "source": "/avenoir-creations-gurgaon",
+      "destination": "/photography/avenoir-creations-gurgaon"
+    },
+    {
+      "source": "/avenoir-creations-gurgaon/:path*",
+      "destination": "/photography/avenoir-creations-gurgaon/:path*"
+    },
+    {
+      "source": "/badal-raja-company",
+      "destination": "/photography/badal-raja-company"
+    },
+    {
+      "source": "/badal-raja-company/:path*",
+      "destination": "/photography/badal-raja-company/:path*"
+    },
+    {
+      "source": "/batra-studio-batra-studios",
+      "destination": "/photography/batra-studio-batra-studios"
+    },
+    {
+      "source": "/batra-studio-batra-studios/:path*",
+      "destination": "/photography/batra-studio-batra-studios/:path*"
+    },
+    {
+      "source": "/batra-studio-sector-14",
+      "destination": "/photography/batra-studio-sector-14"
+    },
+    {
+      "source": "/batra-studio-sector-14/:path*",
+      "destination": "/photography/batra-studio-sector-14/:path*"
+    },
+    {
+      "source": "/bengal-in-frames",
+      "destination": "/photography/bengal-in-frames"
+    },
+    {
+      "source": "/bengal-in-frames/:path*",
+      "destination": "/photography/bengal-in-frames/:path*"
+    },
+    {
+      "source": "/bhumika-bhatia-photography",
+      "destination": "/photography/bhumika-bhatia-photography"
+    },
+    {
+      "source": "/bhumika-bhatia-photography/:path*",
+      "destination": "/photography/bhumika-bhatia-photography/:path*"
+    },
+    {
+      "source": "/big-day-filmer-teknas-photographic-effects",
+      "destination": "/photography/big-day-filmer-teknas-photographic-effects"
+    },
+    {
+      "source": "/big-day-filmer-teknas-photographic-effects/:path*",
+      "destination": "/photography/big-day-filmer-teknas-photographic-effects/:path*"
+    },
+    {
+      "source": "/bindal-studio-by-sandeep",
+      "destination": "/photography/bindal-studio-by-sandeep"
+    },
+    {
+      "source": "/bindal-studio-by-sandeep/:path*",
+      "destination": "/photography/bindal-studio-by-sandeep/:path*"
+    },
+    {
+      "source": "/c4-photographers",
+      "destination": "/photography/c4-photographers"
+    },
+    {
+      "source": "/c4-photographers/:path*",
+      "destination": "/photography/c4-photographers/:path*"
+    },
+    {
+      "source": "/candid-shutter-photography",
+      "destination": "/photography/candid-shutter-photography"
+    },
+    {
+      "source": "/candid-shutter-photography/:path*",
+      "destination": "/photography/candid-shutter-photography/:path*"
+    },
+    {
+      "source": "/candid-shutters",
+      "destination": "/photography/candid-shutters"
+    },
+    {
+      "source": "/candid-shutters/:path*",
+      "destination": "/photography/candid-shutters/:path*"
+    },
+    {
+      "source": "/candid-tales",
+      "destination": "/photography/candid-tales"
+    },
+    {
+      "source": "/candid-tales/:path*",
+      "destination": "/photography/candid-tales/:path*"
+    },
+    {
+      "source": "/capture-emotions",
+      "destination": "/photography/capture-emotions"
+    },
+    {
+      "source": "/capture-emotions/:path*",
+      "destination": "/photography/capture-emotions/:path*"
+    },
+    {
+      "source": "/capture-katha",
+      "destination": "/photography/capture-katha"
+    },
+    {
+      "source": "/capture-katha/:path*",
+      "destination": "/photography/capture-katha/:path*"
+    },
+    {
+      "source": "/cinelove",
+      "destination": "/photography/cinelove"
+    },
+    {
+      "source": "/cinelove/:path*",
+      "destination": "/photography/cinelove/:path*"
+    },
+    {
+      "source": "/clicks-by-bhavesh",
+      "destination": "/photography/clicks-by-bhavesh"
+    },
+    {
+      "source": "/clicks-by-bhavesh/:path*",
+      "destination": "/photography/clicks-by-bhavesh/:path*"
+    },
+    {
+      "source": "/clicks-unlimited-photography",
+      "destination": "/photography/clicks-unlimited-photography"
+    },
+    {
+      "source": "/clicks-unlimited-photography/:path*",
+      "destination": "/photography/clicks-unlimited-photography/:path*"
+    },
+    {
+      "source": "/coolbluez-photography",
+      "destination": "/photography/coolbluez-photography"
+    },
+    {
+      "source": "/coolbluez-photography/:path*",
+      "destination": "/photography/coolbluez-photography/:path*"
+    },
+    {
+      "source": "/covershot-studio",
+      "destination": "/photography/covershot-studio"
+    },
+    {
+      "source": "/covershot-studio/:path*",
+      "destination": "/photography/covershot-studio/:path*"
+    },
+    {
+      "source": "/covershot-studio-sector-14",
+      "destination": "/photography/covershot-studio-sector-14"
+    },
+    {
+      "source": "/covershot-studio-sector-14/:path*",
+      "destination": "/photography/covershot-studio-sector-14/:path*"
+    },
+    {
+      "source": "/creative-gandharvas-production",
+      "destination": "/photography/creative-gandharvas-production"
+    },
+    {
+      "source": "/creative-gandharvas-production/:path*",
+      "destination": "/photography/creative-gandharvas-production/:path*"
+    },
+    {
+      "source": "/cupcake-productions-jayant-shruti",
+      "destination": "/photography/cupcake-productions-jayant-shruti"
+    },
+    {
+      "source": "/cupcake-productions-jayant-shruti/:path*",
+      "destination": "/photography/cupcake-productions-jayant-shruti/:path*"
+    },
+    {
+      "source": "/da-photography",
+      "destination": "/photography/da-photography"
+    },
+    {
+      "source": "/da-photography/:path*",
+      "destination": "/photography/da-photography/:path*"
+    },
+    {
+      "source": "/das-studio",
+      "destination": "/photography/das-studio"
+    },
+    {
+      "source": "/das-studio/:path*",
+      "destination": "/photography/das-studio/:path*"
+    },
+    {
+      "source": "/deepak-photo-studio",
+      "destination": "/photography/deepak-photo-studio"
+    },
+    {
+      "source": "/deepak-photo-studio/:path*",
+      "destination": "/photography/deepak-photo-studio/:path*"
+    },
+    {
+      "source": "/deepak-photo-studio-nh48",
+      "destination": "/photography/deepak-photo-studio-nh48"
+    },
+    {
+      "source": "/deepak-photo-studio-nh48/:path*",
+      "destination": "/photography/deepak-photo-studio-nh48/:path*"
+    },
+    {
+      "source": "/deepak-photo-studio-sector-56",
+      "destination": "/photography/deepak-photo-studio-sector-56"
+    },
+    {
+      "source": "/deepak-photo-studio-sector-56/:path*",
+      "destination": "/photography/deepak-photo-studio-sector-56/:path*"
+    },
+    {
+      "source": "/depthz-the-photo-factory",
+      "destination": "/photography/depthz-the-photo-factory"
+    },
+    {
+      "source": "/depthz-the-photo-factory/:path*",
+      "destination": "/photography/depthz-the-photo-factory/:path*"
+    },
+    {
+      "source": "/deys-photography",
+      "destination": "/photography/deys-photography"
+    },
+    {
+      "source": "/deys-photography/:path*",
+      "destination": "/photography/deys-photography/:path*"
+    },
+    {
+      "source": "/dg-studio-photography",
+      "destination": "/photography/dg-studio-photography"
+    },
+    {
+      "source": "/dg-studio-photography/:path*",
+      "destination": "/photography/dg-studio-photography/:path*"
+    },
+    {
+      "source": "/dhiraj-jangid-photography",
+      "destination": "/photography/dhiraj-jangid-photography"
+    },
+    {
+      "source": "/dhiraj-jangid-photography/:path*",
+      "destination": "/photography/dhiraj-jangid-photography/:path*"
+    },
+    {
+      "source": "/dhruv-purohit-photography",
+      "destination": "/photography/dhruv-purohit-photography"
+    },
+    {
+      "source": "/dhruv-purohit-photography/:path*",
+      "destination": "/photography/dhruv-purohit-photography/:path*"
+    },
+    {
+      "source": "/digital-ramsons-photography",
+      "destination": "/photography/digital-ramsons-photography"
+    },
+    {
+      "source": "/digital-ramsons-photography/:path*",
+      "destination": "/photography/digital-ramsons-photography/:path*"
+    },
+    {
+      "source": "/dipak-studios",
+      "destination": "/photography/dipak-studios"
+    },
+    {
+      "source": "/dipak-studios/:path*",
+      "destination": "/photography/dipak-studios/:path*"
+    },
+    {
+      "source": "/divine-media-weddings",
+      "destination": "/photography/divine-media-weddings"
+    },
+    {
+      "source": "/divine-media-weddings/:path*",
+      "destination": "/photography/divine-media-weddings/:path*"
+    },
+    {
+      "source": "/dotdusk-studios",
+      "destination": "/photography/dotdusk-studios"
+    },
+    {
+      "source": "/dotdusk-studios/:path*",
+      "destination": "/photography/dotdusk-studios/:path*"
+    },
+    {
+      "source": "/dr-portraits",
+      "destination": "/photography/dr-portraits"
+    },
+    {
+      "source": "/dr-portraits/:path*",
+      "destination": "/photography/dr-portraits/:path*"
+    },
+    {
+      "source": "/dr-portraits-sector-57",
+      "destination": "/photography/dr-portraits-sector-57"
+    },
+    {
+      "source": "/dr-portraits-sector-57/:path*",
+      "destination": "/photography/dr-portraits-sector-57/:path*"
+    },
+    {
+      "source": "/dream-binders",
+      "destination": "/photography/dream-binders"
+    },
+    {
+      "source": "/dream-binders/:path*",
+      "destination": "/photography/dream-binders/:path*"
+    },
+    {
+      "source": "/dreamcraft-stories",
+      "destination": "/photography/dreamcraft-stories"
+    },
+    {
+      "source": "/dreamcraft-stories/:path*",
+      "destination": "/photography/dreamcraft-stories/:path*"
+    },
+    {
+      "source": "/dviti-creations",
+      "destination": "/photography/dviti-creations"
+    },
+    {
+      "source": "/dviti-creations/:path*",
+      "destination": "/photography/dviti-creations/:path*"
+    },
+    {
+      "source": "/dviti-creations-basai",
+      "destination": "/photography/dviti-creations-basai"
+    },
+    {
+      "source": "/dviti-creations-basai/:path*",
+      "destination": "/photography/dviti-creations-basai/:path*"
+    },
+    {
+      "source": "/eventgraphia",
+      "destination": "/photography/eventgraphia"
+    },
+    {
+      "source": "/eventgraphia/:path*",
+      "destination": "/photography/eventgraphia/:path*"
+    },
+    {
+      "source": "/expressions-and-beyond",
+      "destination": "/photography/expressions-and-beyond"
+    },
+    {
+      "source": "/expressions-and-beyond/:path*",
+      "destination": "/photography/expressions-and-beyond/:path*"
+    },
+    {
+      "source": "/fairytale-moments",
+      "destination": "/photography/fairytale-moments"
+    },
+    {
+      "source": "/fairytale-moments/:path*",
+      "destination": "/photography/fairytale-moments/:path*"
+    },
+    {
+      "source": "/first-light-photography",
+      "destination": "/photography/first-light-photography"
+    },
+    {
+      "source": "/first-light-photography/:path*",
+      "destination": "/photography/first-light-photography/:path*"
+    },
+    {
+      "source": "/foto-city-digital-color-lab-studio",
+      "destination": "/photography/foto-city-digital-color-lab-studio"
+    },
+    {
+      "source": "/foto-city-digital-color-lab-studio/:path*",
+      "destination": "/photography/foto-city-digital-color-lab-studio/:path*"
+    },
+    {
+      "source": "/foto-city-palam-vihar",
+      "destination": "/photography/foto-city-palam-vihar"
+    },
+    {
+      "source": "/foto-city-palam-vihar/:path*",
+      "destination": "/photography/foto-city-palam-vihar/:path*"
+    },
+    {
+      "source": "/foto-cruise",
+      "destination": "/photography/foto-cruise"
+    },
+    {
+      "source": "/foto-cruise/:path*",
+      "destination": "/photography/foto-cruise/:path*"
+    },
+    {
+      "source": "/foto-vision",
+      "destination": "/photography/foto-vision"
+    },
+    {
+      "source": "/foto-vision/:path*",
+      "destination": "/photography/foto-vision/:path*"
+    },
+    {
+      "source": "/foto-vision-sector-58",
+      "destination": "/photography/foto-vision-sector-58"
+    },
+    {
+      "source": "/foto-vision-sector-58/:path*",
+      "destination": "/photography/foto-vision-sector-58/:path*"
+    },
+    {
+      "source": "/fotoshine",
+      "destination": "/photography/fotoshine"
+    },
+    {
+      "source": "/fotoshine/:path*",
+      "destination": "/photography/fotoshine/:path*"
+    },
+    {
+      "source": "/fotowalle-the-story-folks",
+      "destination": "/photography/fotowalle-the-story-folks"
+    },
+    {
+      "source": "/fotowalle-the-story-folks/:path*",
+      "destination": "/photography/fotowalle-the-story-folks/:path*"
+    },
+    {
+      "source": "/frame-in-mind",
+      "destination": "/photography/frame-in-mind"
+    },
+    {
+      "source": "/frame-in-mind/:path*",
+      "destination": "/photography/frame-in-mind/:path*"
+    },
+    {
+      "source": "/frames-by-yadnesh",
+      "destination": "/photography/frames-by-yadnesh"
+    },
+    {
+      "source": "/frames-by-yadnesh/:path*",
+      "destination": "/photography/frames-by-yadnesh/:path*"
+    },
+    {
+      "source": "/fullframe-art",
+      "destination": "/photography/fullframe-art"
+    },
+    {
+      "source": "/fullframe-art/:path*",
+      "destination": "/photography/fullframe-art/:path*"
+    },
+    {
+      "source": "/gayatri-digital-photo-studio",
+      "destination": "/photography/gayatri-digital-photo-studio"
+    },
+    {
+      "source": "/gayatri-digital-photo-studio/:path*",
+      "destination": "/photography/gayatri-digital-photo-studio/:path*"
+    },
+    {
+      "source": "/gayatri-digital-photo-studio-sector-10a",
+      "destination": "/photography/gayatri-digital-photo-studio-sector-10a"
+    },
+    {
+      "source": "/gayatri-digital-photo-studio-sector-10a/:path*",
+      "destination": "/photography/gayatri-digital-photo-studio-sector-10a/:path*"
+    },
+    {
+      "source": "/genda-phool-photography",
+      "destination": "/photography/genda-phool-photography"
+    },
+    {
+      "source": "/genda-phool-photography/:path*",
+      "destination": "/photography/genda-phool-photography/:path*"
+    },
+    {
+      "source": "/girish-joshi-photography",
+      "destination": "/photography/girish-joshi-photography"
+    },
+    {
+      "source": "/girish-joshi-photography/:path*",
+      "destination": "/photography/girish-joshi-photography/:path*"
+    },
+    {
+      "source": "/girish-katkar-photography",
+      "destination": "/photography/girish-katkar-photography"
+    },
+    {
+      "source": "/girish-katkar-photography/:path*",
+      "destination": "/photography/girish-katkar-photography/:path*"
+    },
+    {
+      "source": "/going-bananas-photography-abhimanyu-prasheila",
+      "destination": "/photography/going-bananas-photography-abhimanyu-prasheila"
+    },
+    {
+      "source": "/going-bananas-photography-abhimanyu-prasheila/:path*",
+      "destination": "/photography/going-bananas-photography-abhimanyu-prasheila/:path*"
+    },
+    {
+      "source": "/happy-hour-photography",
+      "destination": "/photography/happy-hour-photography"
+    },
+    {
+      "source": "/happy-hour-photography/:path*",
+      "destination": "/photography/happy-hour-photography/:path*"
+    },
+    {
+      "source": "/happy-stillz",
+      "destination": "/photography/happy-stillz"
+    },
+    {
+      "source": "/happy-stillz/:path*",
+      "destination": "/photography/happy-stillz/:path*"
+    },
+    {
+      "source": "/happy-wedding-photography",
+      "destination": "/photography/happy-wedding-photography"
+    },
+    {
+      "source": "/happy-wedding-photography/:path*",
+      "destination": "/photography/happy-wedding-photography/:path*"
+    },
+    {
+      "source": "/hc-photography",
+      "destination": "/photography/hc-photography"
+    },
+    {
+      "source": "/hc-photography/:path*",
+      "destination": "/photography/hc-photography/:path*"
+    },
+    {
+      "source": "/hc-photography-gurgaon",
+      "destination": "/photography/hc-photography-gurgaon"
+    },
+    {
+      "source": "/hc-photography-gurgaon/:path*",
+      "destination": "/photography/hc-photography-gurgaon/:path*"
+    },
+    {
+      "source": "/hc-photography-himanshu-chauhan",
+      "destination": "/photography/hc-photography-himanshu-chauhan"
+    },
+    {
+      "source": "/hc-photography-himanshu-chauhan/:path*",
+      "destination": "/photography/hc-photography-himanshu-chauhan/:path*"
+    },
+    {
+      "source": "/hc-photography-himanshu-chauhan-photography",
+      "destination": "/photography/hc-photography-himanshu-chauhan-photography"
+    },
+    {
+      "source": "/hc-photography-himanshu-chauhan-photography/:path*",
+      "destination": "/photography/hc-photography-himanshu-chauhan-photography/:path*"
+    },
+    {
+      "source": "/hitched-clicked",
+      "destination": "/photography/hitched-clicked"
+    },
+    {
+      "source": "/hitched-clicked/:path*",
+      "destination": "/photography/hitched-clicked/:path*"
+    },
+    {
+      "source": "/house-on-the-clouds",
+      "destination": "/photography/house-on-the-clouds"
+    },
+    {
+      "source": "/house-on-the-clouds/:path*",
+      "destination": "/photography/house-on-the-clouds/:path*"
+    },
+    {
+      "source": "/illusion-studios",
+      "destination": "/photography/illusion-studios"
+    },
+    {
+      "source": "/illusion-studios/:path*",
+      "destination": "/photography/illusion-studios/:path*"
+    },
+    {
+      "source": "/impulse-dreamlight",
+      "destination": "/photography/impulse-dreamlight"
+    },
+    {
+      "source": "/impulse-dreamlight/:path*",
+      "destination": "/photography/impulse-dreamlight/:path*"
+    },
+    {
+      "source": "/infinite-studio-films",
+      "destination": "/photography/infinite-studio-films"
+    },
+    {
+      "source": "/infinite-studio-films/:path*",
+      "destination": "/photography/infinite-studio-films/:path*"
+    },
+    {
+      "source": "/joseph-radhik-stories",
+      "destination": "/photography/joseph-radhik-stories"
+    },
+    {
+      "source": "/joseph-radhik-stories/:path*",
+      "destination": "/photography/joseph-radhik-stories/:path*"
+    },
+    {
+      "source": "/kaamini-beauty-parlour",
+      "destination": "/photography/kaamini-beauty-parlour"
+    },
+    {
+      "source": "/kaamini-beauty-parlour/:path*",
+      "destination": "/photography/kaamini-beauty-parlour/:path*"
+    },
+    {
+      "source": "/karan-makker-studio",
+      "destination": "/photography/karan-makker-studio"
+    },
+    {
+      "source": "/karan-makker-studio/:path*",
+      "destination": "/photography/karan-makker-studio/:path*"
+    },
+    {
+      "source": "/karan-sidhu-photography",
+      "destination": "/photography/karan-sidhu-photography"
+    },
+    {
+      "source": "/karan-sidhu-photography/:path*",
+      "destination": "/photography/karan-sidhu-photography/:path*"
+    },
+    {
+      "source": "/karna-photography",
+      "destination": "/photography/karna-photography"
+    },
+    {
+      "source": "/karna-photography/:path*",
+      "destination": "/photography/karna-photography/:path*"
+    },
+    {
+      "source": "/kedarclicks-studio",
+      "destination": "/photography/kedarclicks-studio"
+    },
+    {
+      "source": "/kedarclicks-studio/:path*",
+      "destination": "/photography/kedarclicks-studio/:path*"
+    },
+    {
+      "source": "/khodiyar-arts",
+      "destination": "/photography/khodiyar-arts"
+    },
+    {
+      "source": "/khodiyar-arts/:path*",
+      "destination": "/photography/khodiyar-arts/:path*"
+    },
+    {
+      "source": "/kingdom-madness-photography",
+      "destination": "/photography/kingdom-madness-photography"
+    },
+    {
+      "source": "/kingdom-madness-photography/:path*",
+      "destination": "/photography/kingdom-madness-photography/:path*"
+    },
+    {
+      "source": "/kings-photography",
+      "destination": "/photography/kings-photography"
+    },
+    {
+      "source": "/kings-photography/:path*",
+      "destination": "/photography/kings-photography/:path*"
+    },
+    {
+      "source": "/kiran-mali-photography",
+      "destination": "/photography/kiran-mali-photography"
+    },
+    {
+      "source": "/kiran-mali-photography/:path*",
+      "destination": "/photography/kiran-mali-photography/:path*"
+    },
+    {
+      "source": "/kkpixelarts-photography",
+      "destination": "/photography/kkpixelarts-photography"
+    },
+    {
+      "source": "/kkpixelarts-photography/:path*",
+      "destination": "/photography/kkpixelarts-photography/:path*"
+    },
+    {
+      "source": "/knotsbyamp-anupam-soumi",
+      "destination": "/photography/knotsbyamp-anupam-soumi"
+    },
+    {
+      "source": "/knotsbyamp-anupam-soumi/:path*",
+      "destination": "/photography/knotsbyamp-anupam-soumi/:path*"
+    },
+    {
+      "source": "/krimson-shutter-tales",
+      "destination": "/photography/krimson-shutter-tales"
+    },
+    {
+      "source": "/krimson-shutter-tales/:path*",
+      "destination": "/photography/krimson-shutter-tales/:path*"
+    },
+    {
+      "source": "/ks-studio",
+      "destination": "/photography/ks-studio"
+    },
+    {
+      "source": "/ks-studio/:path*",
+      "destination": "/photography/ks-studio/:path*"
+    },
+    {
+      "source": "/kshitiji-vision",
+      "destination": "/photography/kshitiji-vision"
+    },
+    {
+      "source": "/kshitiji-vision/:path*",
+      "destination": "/photography/kshitiji-vision/:path*"
+    },
+    {
+      "source": "/life-moments-productions",
+      "destination": "/photography/life-moments-productions"
+    },
+    {
+      "source": "/life-moments-productions/:path*",
+      "destination": "/photography/life-moments-productions/:path*"
+    },
+    {
+      "source": "/lifestyle-photography",
+      "destination": "/photography/lifestyle-photography"
+    },
+    {
+      "source": "/lifestyle-photography/:path*",
+      "destination": "/photography/lifestyle-photography/:path*"
+    },
+    {
+      "source": "/lifestyle-photography-sector-47",
+      "destination": "/photography/lifestyle-photography-sector-47"
+    },
+    {
+      "source": "/lifestyle-photography-sector-47/:path*",
+      "destination": "/photography/lifestyle-photography-sector-47/:path*"
+    },
+    {
+      "source": "/little-moments-by",
+      "destination": "/photography/little-moments-by"
+    },
+    {
+      "source": "/little-moments-by/:path*",
+      "destination": "/photography/little-moments-by/:path*"
+    },
+    {
+      "source": "/lovedove-studios",
+      "destination": "/photography/lovedove-studios"
+    },
+    {
+      "source": "/lovedove-studios/:path*",
+      "destination": "/photography/lovedove-studios/:path*"
+    },
+    {
+      "source": "/lucky-photo-studio-eventbazaar",
+      "destination": "/photography/lucky-photo-studio-eventbazaar"
+    },
+    {
+      "source": "/lucky-photo-studio-eventbazaar/:path*",
+      "destination": "/photography/lucky-photo-studio-eventbazaar/:path*"
+    },
+    {
+      "source": "/lucky-photo-studio-sector-14",
+      "destination": "/photography/lucky-photo-studio-sector-14"
+    },
+    {
+      "source": "/lucky-photo-studio-sector-14/:path*",
+      "destination": "/photography/lucky-photo-studio-sector-14/:path*"
+    },
+    {
+      "source": "/luv-studio",
+      "destination": "/photography/luv-studio"
+    },
+    {
+      "source": "/luv-studio/:path*",
+      "destination": "/photography/luv-studio/:path*"
+    },
+    {
+      "source": "/luxe-captures",
+      "destination": "/photography/luxe-captures"
+    },
+    {
+      "source": "/luxe-captures/:path*",
+      "destination": "/photography/luxe-captures/:path*"
+    },
+    {
+      "source": "/maha-siri-3d-kids-studio",
+      "destination": "/photography/maha-siri-3d-kids-studio"
+    },
+    {
+      "source": "/maha-siri-3d-kids-studio/:path*",
+      "destination": "/photography/maha-siri-3d-kids-studio/:path*"
+    },
+    {
+      "source": "/malik-photo-studio",
+      "destination": "/photography/malik-photo-studio"
+    },
+    {
+      "source": "/malik-photo-studio/:path*",
+      "destination": "/photography/malik-photo-studio/:path*"
+    },
+    {
+      "source": "/mandar-pande-photography",
+      "destination": "/photography/mandar-pande-photography"
+    },
+    {
+      "source": "/mandar-pande-photography/:path*",
+      "destination": "/photography/mandar-pande-photography/:path*"
+    },
+    {
+      "source": "/mani-sharma-photography",
+      "destination": "/photography/mani-sharma-photography"
+    },
+    {
+      "source": "/mani-sharma-photography/:path*",
+      "destination": "/photography/mani-sharma-photography/:path*"
+    },
+    {
+      "source": "/manisha-shrotriya-photography",
+      "destination": "/photography/manisha-shrotriya-photography"
+    },
+    {
+      "source": "/manisha-shrotriya-photography/:path*",
+      "destination": "/photography/manisha-shrotriya-photography/:path*"
+    },
+    {
+      "source": "/manjiri-photography",
+      "destination": "/photography/manjiri-photography"
+    },
+    {
+      "source": "/manjiri-photography/:path*",
+      "destination": "/photography/manjiri-photography/:path*"
+    },
+    {
+      "source": "/masterpicsin",
+      "destination": "/photography/masterpicsin"
+    },
+    {
+      "source": "/masterpicsin/:path*",
+      "destination": "/photography/masterpicsin/:path*"
+    },
+    {
+      "source": "/mavrick-productions",
+      "destination": "/photography/mavrick-productions"
+    },
+    {
+      "source": "/mavrick-productions/:path*",
+      "destination": "/photography/mavrick-productions/:path*"
+    },
+    {
+      "source": "/mavrick-productions-sushant-lok",
+      "destination": "/photography/mavrick-productions-sushant-lok"
+    },
+    {
+      "source": "/mavrick-productions-sushant-lok/:path*",
+      "destination": "/photography/mavrick-productions-sushant-lok/:path*"
+    },
+    {
+      "source": "/mavricks-photography",
+      "destination": "/photography/mavricks-photography"
+    },
+    {
+      "source": "/mavricks-photography/:path*",
+      "destination": "/photography/mavricks-photography/:path*"
+    },
+    {
+      "source": "/mavricks-photography-south-city-2",
+      "destination": "/photography/mavricks-photography-south-city-2"
+    },
+    {
+      "source": "/mavricks-photography-south-city-2/:path*",
+      "destination": "/photography/mavricks-photography-south-city-2/:path*"
+    },
+    {
+      "source": "/mazel-tov-studio",
+      "destination": "/photography/mazel-tov-studio"
+    },
+    {
+      "source": "/mazel-tov-studio/:path*",
+      "destination": "/photography/mazel-tov-studio/:path*"
+    },
+    {
+      "source": "/meet-vartaks-photo-and-films",
+      "destination": "/photography/meet-vartaks-photo-and-films"
+    },
+    {
+      "source": "/meet-vartaks-photo-and-films/:path*",
+      "destination": "/photography/meet-vartaks-photo-and-films/:path*"
+    },
+    {
+      "source": "/meghna-rathore-photography",
+      "destination": "/photography/meghna-rathore-photography"
+    },
+    {
+      "source": "/meghna-rathore-photography/:path*",
+      "destination": "/photography/meghna-rathore-photography/:path*"
+    },
+    {
+      "source": "/memories-by-barkha",
+      "destination": "/photography/memories-by-barkha"
+    },
+    {
+      "source": "/memories-by-barkha/:path*",
+      "destination": "/photography/memories-by-barkha/:path*"
+    },
+    {
+      "source": "/memories-maker",
+      "destination": "/photography/memories-maker"
+    },
+    {
+      "source": "/memories-maker/:path*",
+      "destination": "/photography/memories-maker/:path*"
+    },
+    {
+      "source": "/mg-photography",
+      "destination": "/photography/mg-photography"
+    },
+    {
+      "source": "/mg-photography/:path*",
+      "destination": "/photography/mg-photography/:path*"
+    },
+    {
+      "source": "/mh12-weddings",
+      "destination": "/photography/mh12-weddings"
+    },
+    {
+      "source": "/mh12-weddings/:path*",
+      "destination": "/photography/mh12-weddings/:path*"
+    },
+    {
+      "source": "/moment-photo-clickers",
+      "destination": "/photography/moment-photo-clickers"
+    },
+    {
+      "source": "/moment-photo-clickers/:path*",
+      "destination": "/photography/moment-photo-clickers/:path*"
+    },
+    {
+      "source": "/moments-capture-grace-city",
+      "destination": "/photography/moments-capture-grace-city"
+    },
+    {
+      "source": "/moments-capture-grace-city/:path*",
+      "destination": "/photography/moments-capture-grace-city/:path*"
+    },
+    {
+      "source": "/moments-creator-by-anushka",
+      "destination": "/photography/moments-creator-by-anushka"
+    },
+    {
+      "source": "/moments-creator-by-anushka/:path*",
+      "destination": "/photography/moments-creator-by-anushka/:path*"
+    },
+    {
+      "source": "/moments-kart",
+      "destination": "/photography/moments-kart"
+    },
+    {
+      "source": "/moments-kart/:path*",
+      "destination": "/photography/moments-kart/:path*"
+    },
+    {
+      "source": "/moments-kart-sector-31",
+      "destination": "/photography/moments-kart-sector-31"
+    },
+    {
+      "source": "/moments-kart-sector-31/:path*",
+      "destination": "/photography/moments-kart-sector-31/:path*"
+    },
+    {
+      "source": "/moments-photography-corporate-moments",
+      "destination": "/photography/moments-photography-corporate-moments"
+    },
+    {
+      "source": "/moments-photography-corporate-moments/:path*",
+      "destination": "/photography/moments-photography-corporate-moments/:path*"
+    },
+    {
+      "source": "/morvi-images-morvi-kumari",
+      "destination": "/photography/morvi-images-morvi-kumari"
+    },
+    {
+      "source": "/morvi-images-morvi-kumari/:path*",
+      "destination": "/photography/morvi-images-morvi-kumari/:path*"
+    },
+    {
+      "source": "/ms-studio",
+      "destination": "/photography/ms-studio"
+    },
+    {
+      "source": "/ms-studio/:path*",
+      "destination": "/photography/ms-studio/:path*"
+    },
+    {
+      "source": "/my-beauty-salon",
+      "destination": "/photography/my-beauty-salon"
+    },
+    {
+      "source": "/my-beauty-salon/:path*",
+      "destination": "/photography/my-beauty-salon/:path*"
+    },
+    {
+      "source": "/nachiket-sonawane-photography",
+      "destination": "/photography/nachiket-sonawane-photography"
+    },
+    {
+      "source": "/nachiket-sonawane-photography/:path*",
+      "destination": "/photography/nachiket-sonawane-photography/:path*"
+    },
+    {
+      "source": "/naman-verma-photography",
+      "destination": "/photography/naman-verma-photography"
+    },
+    {
+      "source": "/naman-verma-photography/:path*",
+      "destination": "/photography/naman-verma-photography/:path*"
+    },
+    {
+      "source": "/natraj-films-and-photography",
+      "destination": "/photography/natraj-films-and-photography"
+    },
+    {
+      "source": "/natraj-films-and-photography/:path*",
+      "destination": "/photography/natraj-films-and-photography/:path*"
+    },
+    {
+      "source": "/natraj-films-sector-53",
+      "destination": "/photography/natraj-films-sector-53"
+    },
+    {
+      "source": "/natraj-films-sector-53/:path*",
+      "destination": "/photography/natraj-films-sector-53/:path*"
+    },
+    {
+      "source": "/natraj-photo-studio-sector-14",
+      "destination": "/photography/natraj-photo-studio-sector-14"
+    },
+    {
+      "source": "/natraj-photo-studio-sector-14/:path*",
+      "destination": "/photography/natraj-photo-studio-sector-14/:path*"
+    },
+    {
+      "source": "/navin-varma-photography",
+      "destination": "/photography/navin-varma-photography"
+    },
+    {
+      "source": "/navin-varma-photography/:path*",
+      "destination": "/photography/navin-varma-photography/:path*"
+    },
+    {
+      "source": "/neeraj-singh-photography",
+      "destination": "/photography/neeraj-singh-photography"
+    },
+    {
+      "source": "/neeraj-singh-photography/:path*",
+      "destination": "/photography/neeraj-singh-photography/:path*"
+    },
+    {
+      "source": "/niraj-patil-photography-films",
+      "destination": "/photography/niraj-patil-photography-films"
+    },
+    {
+      "source": "/niraj-patil-photography-films/:path*",
+      "destination": "/photography/niraj-patil-photography-films/:path*"
+    },
+    {
+      "source": "/nitin-arora-photography",
+      "destination": "/photography/nitin-arora-photography"
+    },
+    {
+      "source": "/nitin-arora-photography/:path*",
+      "destination": "/photography/nitin-arora-photography/:path*"
+    },
+    {
+      "source": "/ojasvi-photos",
+      "destination": "/photography/ojasvi-photos"
+    },
+    {
+      "source": "/ojasvi-photos/:path*",
+      "destination": "/photography/ojasvi-photos/:path*"
+    },
+    {
+      "source": "/om-photo-studio",
+      "destination": "/photography/om-photo-studio"
+    },
+    {
+      "source": "/om-photo-studio/:path*",
+      "destination": "/photography/om-photo-studio/:path*"
+    },
+    {
+      "source": "/om-photo-studio-sector-14",
+      "destination": "/photography/om-photo-studio-sector-14"
+    },
+    {
+      "source": "/om-photo-studio-sector-14/:path*",
+      "destination": "/photography/om-photo-studio-sector-14/:path*"
+    },
+    {
+      "source": "/pankaj-rokade-photography",
+      "destination": "/photography/pankaj-rokade-photography"
+    },
+    {
+      "source": "/pankaj-rokade-photography/:path*",
+      "destination": "/photography/pankaj-rokade-photography/:path*"
+    },
+    {
+      "source": "/panorama-production-house",
+      "destination": "/photography/panorama-production-house"
+    },
+    {
+      "source": "/panorama-production-house/:path*",
+      "destination": "/photography/panorama-production-house/:path*"
+    },
+    {
+      "source": "/pastel-frames",
+      "destination": "/photography/pastel-frames"
+    },
+    {
+      "source": "/pastel-frames/:path*",
+      "destination": "/photography/pastel-frames/:path*"
+    },
+    {
+      "source": "/peppy-production",
+      "destination": "/photography/peppy-production"
+    },
+    {
+      "source": "/peppy-production/:path*",
+      "destination": "/photography/peppy-production/:path*"
+    },
+    {
+      "source": "/photo-tantra-vinayak-snigdha",
+      "destination": "/photography/photo-tantra-vinayak-snigdha"
+    },
+    {
+      "source": "/photo-tantra-vinayak-snigdha/:path*",
+      "destination": "/photography/photo-tantra-vinayak-snigdha/:path*"
+    },
+    {
+      "source": "/photo-vision-sumant-jaiswal",
+      "destination": "/photography/photo-vision-sumant-jaiswal"
+    },
+    {
+      "source": "/photo-vision-sumant-jaiswal/:path*",
+      "destination": "/photography/photo-vision-sumant-jaiswal/:path*"
+    },
+    {
+      "source": "/photo-vision-sumant-jaiswal-photography",
+      "destination": "/photography/photo-vision-sumant-jaiswal-photography"
+    },
+    {
+      "source": "/photo-vision-sumant-jaiswal-photography/:path*",
+      "destination": "/photography/photo-vision-sumant-jaiswal-photography/:path*"
+    },
+    {
+      "source": "/pictales-production",
+      "destination": "/photography/pictales-production"
+    },
+    {
+      "source": "/pictales-production/:path*",
+      "destination": "/photography/pictales-production/:path*"
+    },
+    {
+      "source": "/picture-palette-productions",
+      "destination": "/photography/picture-palette-productions"
+    },
+    {
+      "source": "/picture-palette-productions/:path*",
+      "destination": "/photography/picture-palette-productions/:path*"
+    },
+    {
+      "source": "/pix-plus-studio-and-motion-pictures",
+      "destination": "/photography/pix-plus-studio-and-motion-pictures"
+    },
+    {
+      "source": "/pix-plus-studio-and-motion-pictures/:path*",
+      "destination": "/photography/pix-plus-studio-and-motion-pictures/:path*"
+    },
+    {
+      "source": "/pixeljak-photography",
+      "destination": "/photography/pixeljak-photography"
+    },
+    {
+      "source": "/pixeljak-photography/:path*",
+      "destination": "/photography/pixeljak-photography/:path*"
+    },
+    {
+      "source": "/pixelworks-photography",
+      "destination": "/photography/pixelworks-photography"
+    },
+    {
+      "source": "/pixelworks-photography/:path*",
+      "destination": "/photography/pixelworks-photography/:path*"
+    },
+    {
+      "source": "/play-the-novel",
+      "destination": "/photography/play-the-novel"
+    },
+    {
+      "source": "/play-the-novel/:path*",
+      "destination": "/photography/play-the-novel/:path*"
+    },
+    {
+      "source": "/portrait-master-india",
+      "destination": "/photography/portrait-master-india"
+    },
+    {
+      "source": "/portrait-master-india/:path*",
+      "destination": "/photography/portrait-master-india/:path*"
+    },
+    {
+      "source": "/portrait-master-india-sector-46",
+      "destination": "/photography/portrait-master-india-sector-46"
+    },
+    {
+      "source": "/portrait-master-india-sector-46/:path*",
+      "destination": "/photography/portrait-master-india-sector-46/:path*"
+    },
+    {
+      "source": "/prathamesh-pandit-photography",
+      "destination": "/photography/prathamesh-pandit-photography"
+    },
+    {
+      "source": "/prathamesh-pandit-photography/:path*",
+      "destination": "/photography/prathamesh-pandit-photography/:path*"
+    },
+    {
+      "source": "/prathamesh-toraskar-photography",
+      "destination": "/photography/prathamesh-toraskar-photography"
+    },
+    {
+      "source": "/prathamesh-toraskar-photography/:path*",
+      "destination": "/photography/prathamesh-toraskar-photography/:path*"
+    },
+    {
+      "source": "/preeti-diwan-photography",
+      "destination": "/photography/preeti-diwan-photography"
+    },
+    {
+      "source": "/preeti-diwan-photography/:path*",
+      "destination": "/photography/preeti-diwan-photography/:path*"
+    },
+    {
+      "source": "/priya-chhabra-photography",
+      "destination": "/photography/priya-chhabra-photography"
+    },
+    {
+      "source": "/priya-chhabra-photography/:path*",
+      "destination": "/photography/priya-chhabra-photography/:path*"
+    },
+    {
+      "source": "/priyal-digital",
+      "destination": "/photography/priyal-digital"
+    },
+    {
+      "source": "/priyal-digital/:path*",
+      "destination": "/photography/priyal-digital/:path*"
+    },
+    {
+      "source": "/pure-creations-studio",
+      "destination": "/photography/pure-creations-studio"
+    },
+    {
+      "source": "/pure-creations-studio/:path*",
+      "destination": "/photography/pure-creations-studio/:path*"
+    },
+    {
+      "source": "/rachna-niranjan",
+      "destination": "/photography/rachna-niranjan"
+    },
+    {
+      "source": "/rachna-niranjan/:path*",
+      "destination": "/photography/rachna-niranjan/:path*"
+    },
+    {
+      "source": "/rachna-niranjan-photography",
+      "destination": "/photography/rachna-niranjan-photography"
+    },
+    {
+      "source": "/rachna-niranjan-photography/:path*",
+      "destination": "/photography/rachna-niranjan-photography/:path*"
+    },
+    {
+      "source": "/raghav-production",
+      "destination": "/photography/raghav-production"
+    },
+    {
+      "source": "/raghav-production/:path*",
+      "destination": "/photography/raghav-production/:path*"
+    },
+    {
+      "source": "/rahul-arts-photography",
+      "destination": "/photography/rahul-arts-photography"
+    },
+    {
+      "source": "/rahul-arts-photography/:path*",
+      "destination": "/photography/rahul-arts-photography/:path*"
+    },
+    {
+      "source": "/rahul-kadam-photography",
+      "destination": "/photography/rahul-kadam-photography"
+    },
+    {
+      "source": "/rahul-kadam-photography/:path*",
+      "destination": "/photography/rahul-kadam-photography/:path*"
+    },
+    {
+      "source": "/rahul-more-photography",
+      "destination": "/photography/rahul-more-photography"
+    },
+    {
+      "source": "/rahul-more-photography/:path*",
+      "destination": "/photography/rahul-more-photography/:path*"
+    },
+    {
+      "source": "/rahul-movies",
+      "destination": "/photography/rahul-movies"
+    },
+    {
+      "source": "/rahul-movies/:path*",
+      "destination": "/photography/rahul-movies/:path*"
+    },
+    {
+      "source": "/raj-photo-studio",
+      "destination": "/photography/raj-photo-studio"
+    },
+    {
+      "source": "/raj-photo-studio/:path*",
+      "destination": "/photography/raj-photo-studio/:path*"
+    },
+    {
+      "source": "/raj-photo-studio-sector-14",
+      "destination": "/photography/raj-photo-studio-sector-14"
+    },
+    {
+      "source": "/raj-photo-studio-sector-14/:path*",
+      "destination": "/photography/raj-photo-studio-sector-14/:path*"
+    },
+    {
+      "source": "/ram-photography-islampur",
+      "destination": "/photography/ram-photography-islampur"
+    },
+    {
+      "source": "/ram-photography-islampur/:path*",
+      "destination": "/photography/ram-photography-islampur/:path*"
+    },
+    {
+      "source": "/ram-photography-islampur-village",
+      "destination": "/photography/ram-photography-islampur-village"
+    },
+    {
+      "source": "/ram-photography-islampur-village/:path*",
+      "destination": "/photography/ram-photography-islampur-village/:path*"
+    },
+    {
+      "source": "/ram-photography-solution",
+      "destination": "/photography/ram-photography-solution"
+    },
+    {
+      "source": "/ram-photography-solution/:path*",
+      "destination": "/photography/ram-photography-solution/:path*"
+    },
+    {
+      "source": "/ram-photography-solution-delhi",
+      "destination": "/photography/ram-photography-solution-delhi"
+    },
+    {
+      "source": "/ram-photography-solution-delhi/:path*",
+      "destination": "/photography/ram-photography-solution-delhi/:path*"
+    },
+    {
+      "source": "/ramit-batra-photography",
+      "destination": "/photography/ramit-batra-photography"
+    },
+    {
+      "source": "/ramit-batra-photography/:path*",
+      "destination": "/photography/ramit-batra-photography/:path*"
+    },
+    {
+      "source": "/ranjan-bhattacharya-photography",
+      "destination": "/photography/ranjan-bhattacharya-photography"
+    },
+    {
+      "source": "/ranjan-bhattacharya-photography/:path*",
+      "destination": "/photography/ranjan-bhattacharya-photography/:path*"
+    },
+    {
+      "source": "/rishabh-agarwal-magica",
+      "destination": "/photography/rishabh-agarwal-magica"
+    },
+    {
+      "source": "/rishabh-agarwal-magica/:path*",
+      "destination": "/photography/rishabh-agarwal-magica/:path*"
+    },
+    {
+      "source": "/rj-photography",
+      "destination": "/photography/rj-photography"
+    },
+    {
+      "source": "/rj-photography/:path*",
+      "destination": "/photography/rj-photography/:path*"
+    },
+    {
+      "source": "/rosapple-photography",
+      "destination": "/photography/rosapple-photography"
+    },
+    {
+      "source": "/rosapple-photography/:path*",
+      "destination": "/photography/rosapple-photography/:path*"
+    },
+    {
+      "source": "/royals-photospace",
+      "destination": "/photography/royals-photospace"
+    },
+    {
+      "source": "/royals-photospace/:path*",
+      "destination": "/photography/royals-photospace/:path*"
+    },
+    {
+      "source": "/rs-photo-studio",
+      "destination": "/photography/rs-photo-studio"
+    },
+    {
+      "source": "/rs-photo-studio/:path*",
+      "destination": "/photography/rs-photo-studio/:path*"
+    },
+    {
+      "source": "/sassy-soul-creation",
+      "destination": "/photography/sassy-soul-creation"
+    },
+    {
+      "source": "/sassy-soul-creation/:path*",
+      "destination": "/photography/sassy-soul-creation/:path*"
+    },
+    {
+      "source": "/saurabh-joshi-foto-clicks",
+      "destination": "/photography/saurabh-joshi-foto-clicks"
+    },
+    {
+      "source": "/saurabh-joshi-foto-clicks/:path*",
+      "destination": "/photography/saurabh-joshi-foto-clicks/:path*"
+    },
+    {
+      "source": "/saurabh-ombase-photography",
+      "destination": "/photography/saurabh-ombase-photography"
+    },
+    {
+      "source": "/saurabh-ombase-photography/:path*",
+      "destination": "/photography/saurabh-ombase-photography/:path*"
+    },
+    {
+      "source": "/select-photography-studio",
+      "destination": "/photography/select-photography-studio"
+    },
+    {
+      "source": "/select-photography-studio/:path*",
+      "destination": "/photography/select-photography-studio/:path*"
+    },
+    {
+      "source": "/shaadi-byah",
+      "destination": "/photography/shaadi-byah"
+    },
+    {
+      "source": "/shaadi-byah/:path*",
+      "destination": "/photography/shaadi-byah/:path*"
+    },
+    {
+      "source": "/shades-photography",
+      "destination": "/photography/shades-photography"
+    },
+    {
+      "source": "/shades-photography/:path*",
+      "destination": "/photography/shades-photography/:path*"
+    },
+    {
+      "source": "/shadow-capture-south-city-1",
+      "destination": "/photography/shadow-capture-south-city-1"
+    },
+    {
+      "source": "/shadow-capture-south-city-1/:path*",
+      "destination": "/photography/shadow-capture-south-city-1/:path*"
+    },
+    {
+      "source": "/shadow-capture-studio",
+      "destination": "/photography/shadow-capture-studio"
+    },
+    {
+      "source": "/shadow-capture-studio/:path*",
+      "destination": "/photography/shadow-capture-studio/:path*"
+    },
+    {
+      "source": "/sharma-photo-studio",
+      "destination": "/photography/sharma-photo-studio"
+    },
+    {
+      "source": "/sharma-photo-studio/:path*",
+      "destination": "/photography/sharma-photo-studio/:path*"
+    },
+    {
+      "source": "/sharma-photo-studio-khandsa-road",
+      "destination": "/photography/sharma-photo-studio-khandsa-road"
+    },
+    {
+      "source": "/sharma-photo-studio-khandsa-road/:path*",
+      "destination": "/photography/sharma-photo-studio-khandsa-road/:path*"
+    },
+    {
+      "source": "/shivam-bhutani-photography",
+      "destination": "/photography/shivam-bhutani-photography"
+    },
+    {
+      "source": "/shivam-bhutani-photography/:path*",
+      "destination": "/photography/shivam-bhutani-photography/:path*"
+    },
+    {
+      "source": "/shivani-mehta-photography",
+      "destination": "/photography/shivani-mehta-photography"
+    },
+    {
+      "source": "/shivani-mehta-photography/:path*",
+      "destination": "/photography/shivani-mehta-photography/:path*"
+    },
+    {
+      "source": "/shoot2dio-entertainment",
+      "destination": "/photography/shoot2dio-entertainment"
+    },
+    {
+      "source": "/shoot2dio-entertainment/:path*",
+      "destination": "/photography/shoot2dio-entertainment/:path*"
+    },
+    {
+      "source": "/shree-ganesh-digital-photo-studio",
+      "destination": "/photography/shree-ganesh-digital-photo-studio"
+    },
+    {
+      "source": "/shree-ganesh-digital-photo-studio/:path*",
+      "destination": "/photography/shree-ganesh-digital-photo-studio/:path*"
+    },
+    {
+      "source": "/shri-shyam-photo-studio-gift-gallery",
+      "destination": "/photography/shri-shyam-photo-studio-gift-gallery"
+    },
+    {
+      "source": "/shri-shyam-photo-studio-gift-gallery/:path*",
+      "destination": "/photography/shri-shyam-photo-studio-gift-gallery/:path*"
+    },
+    {
+      "source": "/shri-shyam-photo-studio-sector-14",
+      "destination": "/photography/shri-shyam-photo-studio-sector-14"
+    },
+    {
+      "source": "/shri-shyam-photo-studio-sector-14/:path*",
+      "destination": "/photography/shri-shyam-photo-studio-sector-14/:path*"
+    },
+    {
+      "source": "/shubham-hanumante-photography",
+      "destination": "/photography/shubham-hanumante-photography"
+    },
+    {
+      "source": "/shubham-hanumante-photography/:path*",
+      "destination": "/photography/shubham-hanumante-photography/:path*"
+    },
+    {
+      "source": "/shubham-mehta-photography",
+      "destination": "/photography/shubham-mehta-photography"
+    },
+    {
+      "source": "/shubham-mehta-photography/:path*",
+      "destination": "/photography/shubham-mehta-photography/:path*"
+    },
+    {
+      "source": "/shutter-bracket-sohna-road",
+      "destination": "/photography/shutter-bracket-sohna-road"
+    },
+    {
+      "source": "/shutter-bracket-sohna-road/:path*",
+      "destination": "/photography/shutter-bracket-sohna-road/:path*"
+    },
+    {
+      "source": "/shutter-bracket-studio",
+      "destination": "/photography/shutter-bracket-studio"
+    },
+    {
+      "source": "/shutter-bracket-studio/:path*",
+      "destination": "/photography/shutter-bracket-studio/:path*"
+    },
+    {
+      "source": "/shutterbugga",
+      "destination": "/photography/shutterbugga"
+    },
+    {
+      "source": "/shutterbugga/:path*",
+      "destination": "/photography/shutterbugga/:path*"
+    },
+    {
+      "source": "/shutterink",
+      "destination": "/photography/shutterink"
+    },
+    {
+      "source": "/shutterink/:path*",
+      "destination": "/photography/shutterink/:path*"
+    },
+    {
+      "source": "/shutterink-nitin-dangwal-sandeep-mohan",
+      "destination": "/photography/shutterink-nitin-dangwal-sandeep-mohan"
+    },
+    {
+      "source": "/shutterink-nitin-dangwal-sandeep-mohan/:path*",
+      "destination": "/photography/shutterink-nitin-dangwal-sandeep-mohan/:path*"
+    },
+    {
+      "source": "/simplypush-photography",
+      "destination": "/photography/simplypush-photography"
+    },
+    {
+      "source": "/simplypush-photography/:path*",
+      "destination": "/photography/simplypush-photography/:path*"
+    },
+    {
+      "source": "/square-canvas-photography",
+      "destination": "/photography/square-canvas-photography"
+    },
+    {
+      "source": "/square-canvas-photography/:path*",
+      "destination": "/photography/square-canvas-photography/:path*"
+    },
+    {
+      "source": "/srg-production",
+      "destination": "/photography/srg-production"
+    },
+    {
+      "source": "/srg-production/:path*",
+      "destination": "/photography/srg-production/:path*"
+    },
+    {
+      "source": "/srishti-manchanda-photography",
+      "destination": "/photography/srishti-manchanda-photography"
+    },
+    {
+      "source": "/srishti-manchanda-photography/:path*",
+      "destination": "/photography/srishti-manchanda-photography/:path*"
+    },
+    {
+      "source": "/stopblockframes",
+      "destination": "/photography/stopblockframes"
+    },
+    {
+      "source": "/stopblockframes/:path*",
+      "destination": "/photography/stopblockframes/:path*"
+    },
+    {
+      "source": "/stories-by-sandip",
+      "destination": "/photography/stories-by-sandip"
+    },
+    {
+      "source": "/stories-by-sandip/:path*",
+      "destination": "/photography/stories-by-sandip/:path*"
+    },
+    {
+      "source": "/storiesbyhari",
+      "destination": "/photography/storiesbyhari"
+    },
+    {
+      "source": "/storiesbyhari/:path*",
+      "destination": "/photography/storiesbyhari/:path*"
+    },
+    {
+      "source": "/studio-kelly-photography",
+      "destination": "/photography/studio-kelly-photography"
+    },
+    {
+      "source": "/studio-kelly-photography/:path*",
+      "destination": "/photography/studio-kelly-photography/:path*"
+    },
+    {
+      "source": "/studio-photo-vision",
+      "destination": "/photography/studio-photo-vision"
+    },
+    {
+      "source": "/studio-photo-vision/:path*",
+      "destination": "/photography/studio-photo-vision/:path*"
+    },
+    {
+      "source": "/studio-photo-vision-delhi",
+      "destination": "/photography/studio-photo-vision-delhi"
+    },
+    {
+      "source": "/studio-photo-vision-delhi/:path*",
+      "destination": "/photography/studio-photo-vision-delhi/:path*"
+    },
+    {
+      "source": "/studio-pomegranate",
+      "destination": "/photography/studio-pomegranate"
+    },
+    {
+      "source": "/studio-pomegranate/:path*",
+      "destination": "/photography/studio-pomegranate/:path*"
+    },
+    {
+      "source": "/studio-sourmi",
+      "destination": "/photography/studio-sourmi"
+    },
+    {
+      "source": "/studio-sourmi/:path*",
+      "destination": "/photography/studio-sourmi/:path*"
+    },
+    {
+      "source": "/studio-vision-photography",
+      "destination": "/photography/studio-vision-photography"
+    },
+    {
+      "source": "/studio-vision-photography/:path*",
+      "destination": "/photography/studio-vision-photography/:path*"
+    },
+    {
+      "source": "/studio-vision-photography-rohini",
+      "destination": "/photography/studio-vision-photography-rohini"
+    },
+    {
+      "source": "/studio-vision-photography-rohini/:path*",
+      "destination": "/photography/studio-vision-photography-rohini/:path*"
+    },
+    {
+      "source": "/sumit-soni-photography",
+      "destination": "/photography/sumit-soni-photography"
+    },
+    {
+      "source": "/sumit-soni-photography/:path*",
+      "destination": "/photography/sumit-soni-photography/:path*"
+    },
+    {
+      "source": "/sunil-chaudhari-photography",
+      "destination": "/photography/sunil-chaudhari-photography"
+    },
+    {
+      "source": "/sunil-chaudhari-photography/:path*",
+      "destination": "/photography/sunil-chaudhari-photography/:path*"
+    },
+    {
+      "source": "/sv-creations-studio-photo-vision",
+      "destination": "/photography/sv-creations-studio-photo-vision"
+    },
+    {
+      "source": "/sv-creations-studio-photo-vision/:path*",
+      "destination": "/photography/sv-creations-studio-photo-vision/:path*"
+    },
+    {
+      "source": "/sv-creations-studio-photo-vision-delhi",
+      "destination": "/photography/sv-creations-studio-photo-vision-delhi"
+    },
+    {
+      "source": "/sv-creations-studio-photo-vision-delhi/:path*",
+      "destination": "/photography/sv-creations-studio-photo-vision-delhi/:path*"
+    },
+    {
+      "source": "/t-talkies-ventures",
+      "destination": "/photography/t-talkies-ventures"
+    },
+    {
+      "source": "/t-talkies-ventures/:path*",
+      "destination": "/photography/t-talkies-ventures/:path*"
+    },
+    {
+      "source": "/tahi-photography-cinematics",
+      "destination": "/photography/tahi-photography-cinematics"
+    },
+    {
+      "source": "/tahi-photography-cinematics/:path*",
+      "destination": "/photography/tahi-photography-cinematics/:path*"
+    },
+    {
+      "source": "/tales-by-two",
+      "destination": "/photography/tales-by-two"
+    },
+    {
+      "source": "/tales-by-two/:path*",
+      "destination": "/photography/tales-by-two/:path*"
+    },
+    {
+      "source": "/tanuj-photography",
+      "destination": "/photography/tanuj-photography"
+    },
+    {
+      "source": "/tanuj-photography/:path*",
+      "destination": "/photography/tanuj-photography/:path*"
+    },
+    {
+      "source": "/tanuj-photography-sector-7",
+      "destination": "/photography/tanuj-photography-sector-7"
+    },
+    {
+      "source": "/tanuj-photography-sector-7/:path*",
+      "destination": "/photography/tanuj-photography-sector-7/:path*"
+    },
+    {
+      "source": "/tarun-chawla-photography",
+      "destination": "/photography/tarun-chawla-photography"
+    },
+    {
+      "source": "/tarun-chawla-photography/:path*",
+      "destination": "/photography/tarun-chawla-photography/:path*"
+    },
+    {
+      "source": "/the-bridal-photography",
+      "destination": "/photography/the-bridal-photography"
+    },
+    {
+      "source": "/the-bridal-photography/:path*",
+      "destination": "/photography/the-bridal-photography/:path*"
+    },
+    {
+      "source": "/the-candid-stories-photography",
+      "destination": "/photography/the-candid-stories-photography"
+    },
+    {
+      "source": "/the-candid-stories-photography/:path*",
+      "destination": "/photography/the-candid-stories-photography/:path*"
+    },
+    {
+      "source": "/the-clique-photography",
+      "destination": "/photography/the-clique-photography"
+    },
+    {
+      "source": "/the-clique-photography/:path*",
+      "destination": "/photography/the-clique-photography/:path*"
+    },
+    {
+      "source": "/the-divine-frames",
+      "destination": "/photography/the-divine-frames"
+    },
+    {
+      "source": "/the-divine-frames/:path*",
+      "destination": "/photography/the-divine-frames/:path*"
+    },
+    {
+      "source": "/the-film-sutra",
+      "destination": "/photography/the-film-sutra"
+    },
+    {
+      "source": "/the-film-sutra/:path*",
+      "destination": "/photography/the-film-sutra/:path*"
+    },
+    {
+      "source": "/the-flying-kite-studios",
+      "destination": "/photography/the-flying-kite-studios"
+    },
+    {
+      "source": "/the-flying-kite-studios/:path*",
+      "destination": "/photography/the-flying-kite-studios/:path*"
+    },
+    {
+      "source": "/the-impressio",
+      "destination": "/photography/the-impressio"
+    },
+    {
+      "source": "/the-impressio/:path*",
+      "destination": "/photography/the-impressio/:path*"
+    },
+    {
+      "source": "/the-impressio-impresio-studio",
+      "destination": "/photography/the-impressio-impresio-studio"
+    },
+    {
+      "source": "/the-impressio-impresio-studio/:path*",
+      "destination": "/photography/the-impressio-impresio-studio/:path*"
+    },
+    {
+      "source": "/the-ns-studio",
+      "destination": "/photography/the-ns-studio"
+    },
+    {
+      "source": "/the-ns-studio/:path*",
+      "destination": "/photography/the-ns-studio/:path*"
+    },
+    {
+      "source": "/the-ombre",
+      "destination": "/photography/the-ombre"
+    },
+    {
+      "source": "/the-ombre/:path*",
+      "destination": "/photography/the-ombre/:path*"
+    },
+    {
+      "source": "/the-petergomez-films",
+      "destination": "/photography/the-petergomez-films"
+    },
+    {
+      "source": "/the-petergomez-films/:path*",
+      "destination": "/photography/the-petergomez-films/:path*"
+    },
+    {
+      "source": "/the-vision-studio-photography",
+      "destination": "/photography/the-vision-studio-photography"
+    },
+    {
+      "source": "/the-vision-studio-photography/:path*",
+      "destination": "/photography/the-vision-studio-photography/:path*"
+    },
+    {
+      "source": "/the-wed-cafe-rajesh-luthra",
+      "destination": "/photography/the-wed-cafe-rajesh-luthra"
+    },
+    {
+      "source": "/the-wed-cafe-rajesh-luthra/:path*",
+      "destination": "/photography/the-wed-cafe-rajesh-luthra/:path*"
+    },
+    {
+      "source": "/the-wedding-conteurs",
+      "destination": "/photography/the-wedding-conteurs"
+    },
+    {
+      "source": "/the-wedding-conteurs/:path*",
+      "destination": "/photography/the-wedding-conteurs/:path*"
+    },
+    {
+      "source": "/the-wedding-conteurs-dlf-qutab-plaza",
+      "destination": "/photography/the-wedding-conteurs-dlf-qutab-plaza"
+    },
+    {
+      "source": "/the-wedding-conteurs-dlf-qutab-plaza/:path*",
+      "destination": "/photography/the-wedding-conteurs-dlf-qutab-plaza/:path*"
+    },
+    {
+      "source": "/the-wedding-files",
+      "destination": "/photography/the-wedding-files"
+    },
+    {
+      "source": "/the-wedding-files/:path*",
+      "destination": "/photography/the-wedding-files/:path*"
+    },
+    {
+      "source": "/the-wedding-reels",
+      "destination": "/photography/the-wedding-reels"
+    },
+    {
+      "source": "/the-wedding-reels/:path*",
+      "destination": "/photography/the-wedding-reels/:path*"
+    },
+    {
+      "source": "/the-wedding-shading",
+      "destination": "/photography/the-wedding-shading"
+    },
+    {
+      "source": "/the-wedding-shading/:path*",
+      "destination": "/photography/the-wedding-shading/:path*"
+    },
+    {
+      "source": "/the-wedding-story",
+      "destination": "/photography/the-wedding-story"
+    },
+    {
+      "source": "/the-wedding-story/:path*",
+      "destination": "/photography/the-wedding-story/:path*"
+    },
+    {
+      "source": "/tonny-color-lab-photo-studio",
+      "destination": "/photography/tonny-color-lab-photo-studio"
+    },
+    {
+      "source": "/tonny-color-lab-photo-studio/:path*",
+      "destination": "/photography/tonny-color-lab-photo-studio/:path*"
+    },
+    {
+      "source": "/tonny-color-lab-sector-14",
+      "destination": "/photography/tonny-color-lab-sector-14"
+    },
+    {
+      "source": "/tonny-color-lab-sector-14/:path*",
+      "destination": "/photography/tonny-color-lab-sector-14/:path*"
+    },
+    {
+      "source": "/tonny-color-lab-sector-14-2",
+      "destination": "/photography/tonny-color-lab-sector-14-2"
+    },
+    {
+      "source": "/tonny-color-lab-sector-14-2/:path*",
+      "destination": "/photography/tonny-color-lab-sector-14-2/:path*"
+    },
+    {
+      "source": "/trendy-wedding-tales",
+      "destination": "/photography/trendy-wedding-tales"
+    },
+    {
+      "source": "/trendy-wedding-tales/:path*",
+      "destination": "/photography/trendy-wedding-tales/:path*"
+    },
+    {
+      "source": "/twogether-studios-arjun-praerna-kartha",
+      "destination": "/photography/twogether-studios-arjun-praerna-kartha"
+    },
+    {
+      "source": "/twogether-studios-arjun-praerna-kartha/:path*",
+      "destination": "/photography/twogether-studios-arjun-praerna-kartha/:path*"
+    },
+    {
+      "source": "/twogether-studios-by-arjun",
+      "destination": "/photography/twogether-studios-by-arjun"
+    },
+    {
+      "source": "/twogether-studios-by-arjun/:path*",
+      "destination": "/photography/twogether-studios-by-arjun/:path*"
+    },
+    {
+      "source": "/ui-fotoclics-sector-58",
+      "destination": "/photography/ui-fotoclics-sector-58"
+    },
+    {
+      "source": "/ui-fotoclics-sector-58/:path*",
+      "destination": "/photography/ui-fotoclics-sector-58/:path*"
+    },
+    {
+      "source": "/ui-fotoclics-studios",
+      "destination": "/photography/ui-fotoclics-studios"
+    },
+    {
+      "source": "/ui-fotoclics-studios/:path*",
+      "destination": "/photography/ui-fotoclics-studios/:path*"
+    },
+    {
+      "source": "/upasna-studio",
+      "destination": "/photography/upasna-studio"
+    },
+    {
+      "source": "/upasna-studio/:path*",
+      "destination": "/photography/upasna-studio/:path*"
+    },
+    {
+      "source": "/vijay-solanki-photography",
+      "destination": "/photography/vijay-solanki-photography"
+    },
+    {
+      "source": "/vijay-solanki-photography/:path*",
+      "destination": "/photography/vijay-solanki-photography/:path*"
+    },
+    {
+      "source": "/vijay-sonar-photography",
+      "destination": "/photography/vijay-sonar-photography"
+    },
+    {
+      "source": "/vijay-sonar-photography/:path*",
+      "destination": "/photography/vijay-sonar-photography/:path*"
+    },
+    {
+      "source": "/vinay-manohar-photography",
+      "destination": "/photography/vinay-manohar-photography"
+    },
+    {
+      "source": "/vinay-manohar-photography/:path*",
+      "destination": "/photography/vinay-manohar-photography/:path*"
+    },
+    {
+      "source": "/vinita-nagrani-photography",
+      "destination": "/photography/vinita-nagrani-photography"
+    },
+    {
+      "source": "/vinita-nagrani-photography/:path*",
+      "destination": "/photography/vinita-nagrani-photography/:path*"
+    },
+    {
+      "source": "/virag-vision-photographers",
+      "destination": "/photography/virag-vision-photographers"
+    },
+    {
+      "source": "/virag-vision-photographers/:path*",
+      "destination": "/photography/virag-vision-photographers/:path*"
+    },
+    {
+      "source": "/visual-krishna-photography",
+      "destination": "/photography/visual-krishna-photography"
+    },
+    {
+      "source": "/visual-krishna-photography/:path*",
+      "destination": "/photography/visual-krishna-photography/:path*"
+    },
+    {
+      "source": "/voila-studio",
+      "destination": "/photography/voila-studio"
+    },
+    {
+      "source": "/voila-studio/:path*",
+      "destination": "/photography/voila-studio/:path*"
+    },
+    {
+      "source": "/vowframes",
+      "destination": "/photography/vowframes"
+    },
+    {
+      "source": "/vowframes/:path*",
+      "destination": "/photography/vowframes/:path*"
+    },
+    {
+      "source": "/we-chitra-photography",
+      "destination": "/photography/we-chitra-photography"
+    },
+    {
+      "source": "/we-chitra-photography/:path*",
+      "destination": "/photography/we-chitra-photography/:path*"
+    },
+    {
+      "source": "/wedding-diariess",
+      "destination": "/photography/wedding-diariess"
+    },
+    {
+      "source": "/wedding-diariess/:path*",
+      "destination": "/photography/wedding-diariess/:path*"
+    },
+    {
+      "source": "/wedding-dori",
+      "destination": "/photography/wedding-dori"
+    },
+    {
+      "source": "/wedding-dori/:path*",
+      "destination": "/photography/wedding-dori/:path*"
+    },
+    {
+      "source": "/wedding-function-photographer",
+      "destination": "/photography/wedding-function-photographer"
+    },
+    {
+      "source": "/wedding-function-photographer/:path*",
+      "destination": "/photography/wedding-function-photographer/:path*"
+    },
+    {
+      "source": "/wedding-klicks-by-shreyas",
+      "destination": "/photography/wedding-klicks-by-shreyas"
+    },
+    {
+      "source": "/wedding-klicks-by-shreyas/:path*",
+      "destination": "/photography/wedding-klicks-by-shreyas/:path*"
+    },
+    {
+      "source": "/wedding-mitrra",
+      "destination": "/photography/wedding-mitrra"
+    },
+    {
+      "source": "/wedding-mitrra/:path*",
+      "destination": "/photography/wedding-mitrra/:path*"
+    },
+    {
+      "source": "/wedding-tulips",
+      "destination": "/photography/wedding-tulips"
+    },
+    {
+      "source": "/wedding-tulips/:path*",
+      "destination": "/photography/wedding-tulips/:path*"
+    },
+    {
+      "source": "/weddingrams",
+      "destination": "/photography/weddingrams"
+    },
+    {
+      "source": "/weddingrams/:path*",
+      "destination": "/photography/weddingrams/:path*"
+    },
+    {
+      "source": "/weddings-by-prakasa",
+      "destination": "/photography/weddings-by-prakasa"
+    },
+    {
+      "source": "/weddings-by-prakasa/:path*",
+      "destination": "/photography/weddings-by-prakasa/:path*"
+    },
+    {
+      "source": "/weddings-by-sonders",
+      "destination": "/photography/weddings-by-sonders"
+    },
+    {
+      "source": "/weddings-by-sonders/:path*",
+      "destination": "/photography/weddings-by-sonders/:path*"
+    },
+    {
+      "source": "/weddings-cloud",
+      "destination": "/photography/weddings-cloud"
+    },
+    {
+      "source": "/weddings-cloud/:path*",
+      "destination": "/photography/weddings-cloud/:path*"
+    },
+    {
+      "source": "/weddring-photography",
+      "destination": "/photography/weddring-photography"
+    },
+    {
+      "source": "/weddring-photography/:path*",
+      "destination": "/photography/weddring-photography/:path*"
+    },
+    {
+      "source": "/wedpro-photography",
+      "destination": "/photography/wedpro-photography"
+    },
+    {
+      "source": "/wedpro-photography/:path*",
+      "destination": "/photography/wedpro-photography/:path*"
+    },
+    {
+      "source": "/yash-photo-studio",
+      "destination": "/photography/yash-photo-studio"
+    },
+    {
+      "source": "/yash-photo-studio/:path*",
+      "destination": "/photography/yash-photo-studio/:path*"
+    },
+    {
+      "source": "/z-studioworks",
+      "destination": "/photography/z-studioworks"
+    },
+    {
+      "source": "/z-studioworks/:path*",
+      "destination": "/photography/z-studioworks/:path*"
+    },
+    {
+      "source": "/bright-dental-care",
+      "destination": "/dental/bright-dental-care"
+    },
+    {
+      "source": "/bright-dental-care/:path*",
+      "destination": "/dental/bright-dental-care/:path*"
+    },
+    {
+      "source": "/fountainofyouthdental",
+      "destination": "/dental/fountainofyouthdental"
+    },
+    {
+      "source": "/fountainofyouthdental/:path*",
+      "destination": "/dental/fountainofyouthdental/:path*"
+    },
+    {
+      "source": "/hair-castle",
+      "destination": "/salon/hair-castle"
+    },
+    {
+      "source": "/hair-castle/:path*",
+      "destination": "/salon/hair-castle/:path*"
+    },
+    {
+      "source": "/happy-in-the-head",
+      "destination": "/salon/happy-in-the-head"
+    },
+    {
+      "source": "/happy-in-the-head/:path*",
+      "destination": "/salon/happy-in-the-head/:path*"
+    },
+    {
+      "source": "/misfits-by-noopur",
+      "destination": "/salon/misfits-by-noopur"
+    },
+    {
+      "source": "/misfits-by-noopur/:path*",
+      "destination": "/salon/misfits-by-noopur/:path*"
+    },
+    {
+      "source": "/ten-beauty-bar",
+      "destination": "/salon/ten-beauty-bar"
+    },
+    {
+      "source": "/ten-beauty-bar/:path*",
+      "destination": "/salon/ten-beauty-bar/:path*"
+    },
+    {
+      "source": "/the-hair-bar",
+      "destination": "/salon/the-hair-bar"
+    },
+    {
+      "source": "/the-hair-bar/:path*",
+      "destination": "/salon/the-hair-bar/:path*"
+    },
+    {
+      "source": "/aarsan-realtors",
+      "destination": "/real-estate/aarsan-realtors"
+    },
+    {
+      "source": "/aarsan-realtors/:path*",
+      "destination": "/real-estate/aarsan-realtors/:path*"
+    },
+    {
+      "source": "/amit-aggarwal-properties",
+      "destination": "/real-estate/amit-aggarwal-properties"
+    },
+    {
+      "source": "/amit-aggarwal-properties/:path*",
+      "destination": "/real-estate/amit-aggarwal-properties/:path*"
+    },
+    {
+      "source": "/anant-realtors",
+      "destination": "/real-estate/anant-realtors"
+    },
+    {
+      "source": "/anant-realtors/:path*",
+      "destination": "/real-estate/anant-realtors/:path*"
+    },
+    {
+      "source": "/aura-realty",
+      "destination": "/real-estate/aura-realty"
+    },
+    {
+      "source": "/aura-realty/:path*",
+      "destination": "/real-estate/aura-realty/:path*"
+    },
+    {
+      "source": "/bansal-properties",
+      "destination": "/real-estate/bansal-properties"
+    },
+    {
+      "source": "/bansal-properties/:path*",
+      "destination": "/real-estate/bansal-properties/:path*"
+    },
+    {
+      "source": "/bawa-estate",
+      "destination": "/real-estate/bawa-estate"
+    },
+    {
+      "source": "/bawa-estate/:path*",
+      "destination": "/real-estate/bawa-estate/:path*"
+    },
+    {
+      "source": "/baweja-properties-gurgaon-property-dealers",
+      "destination": "/real-estate/baweja-properties-gurgaon-property-dealers"
+    },
+    {
+      "source": "/baweja-properties-gurgaon-property-dealers/:path*",
+      "destination": "/real-estate/baweja-properties-gurgaon-property-dealers/:path*"
+    },
+    {
+      "source": "/cloud-realtors",
+      "destination": "/real-estate/cloud-realtors"
+    },
+    {
+      "source": "/cloud-realtors/:path*",
+      "destination": "/real-estate/cloud-realtors/:path*"
+    },
+    {
+      "source": "/design-well-estate-house",
+      "destination": "/real-estate/design-well-estate-house"
+    },
+    {
+      "source": "/design-well-estate-house/:path*",
+      "destination": "/real-estate/design-well-estate-house/:path*"
+    },
+    {
+      "source": "/dhangle-group-realtors",
+      "destination": "/real-estate/dhangle-group-realtors"
+    },
+    {
+      "source": "/dhangle-group-realtors/:path*",
+      "destination": "/real-estate/dhangle-group-realtors/:path*"
+    },
+    {
+      "source": "/dhingra-associates",
+      "destination": "/real-estate/dhingra-associates"
+    },
+    {
+      "source": "/dhingra-associates/:path*",
+      "destination": "/real-estate/dhingra-associates/:path*"
+    },
+    {
+      "source": "/g-k-global-realty",
+      "destination": "/real-estate/g-k-global-realty"
+    },
+    {
+      "source": "/g-k-global-realty/:path*",
+      "destination": "/real-estate/g-k-global-realty/:path*"
+    },
+    {
+      "source": "/ganpati-properties",
+      "destination": "/real-estate/ganpati-properties"
+    },
+    {
+      "source": "/ganpati-properties/:path*",
+      "destination": "/real-estate/ganpati-properties/:path*"
+    },
+    {
+      "source": "/gaurav-real-estate",
+      "destination": "/real-estate/gaurav-real-estate"
+    },
+    {
+      "source": "/gaurav-real-estate/:path*",
+      "destination": "/real-estate/gaurav-real-estate/:path*"
+    },
+    {
+      "source": "/greenwood-properties",
+      "destination": "/real-estate/greenwood-properties"
+    },
+    {
+      "source": "/greenwood-properties/:path*",
+      "destination": "/real-estate/greenwood-properties/:path*"
+    },
+    {
+      "source": "/gurgaon-home-solutions",
+      "destination": "/real-estate/gurgaon-home-solutions"
+    },
+    {
+      "source": "/gurgaon-home-solutions/:path*",
+      "destination": "/real-estate/gurgaon-home-solutions/:path*"
+    },
+    {
+      "source": "/guru-nanak-properties",
+      "destination": "/real-estate/guru-nanak-properties"
+    },
+    {
+      "source": "/guru-nanak-properties/:path*",
+      "destination": "/real-estate/guru-nanak-properties/:path*"
+    },
+    {
+      "source": "/home-associates",
+      "destination": "/real-estate/home-associates"
+    },
+    {
+      "source": "/home-associates/:path*",
+      "destination": "/real-estate/home-associates/:path*"
+    },
+    {
+      "source": "/homes-mart-realtech",
+      "destination": "/real-estate/homes-mart-realtech"
+    },
+    {
+      "source": "/homes-mart-realtech/:path*",
+      "destination": "/real-estate/homes-mart-realtech/:path*"
+    },
+    {
+      "source": "/isha-associates",
+      "destination": "/real-estate/isha-associates"
+    },
+    {
+      "source": "/isha-associates/:path*",
+      "destination": "/real-estate/isha-associates/:path*"
+    },
+    {
+      "source": "/j-m-k-associates",
+      "destination": "/real-estate/j-m-k-associates"
+    },
+    {
+      "source": "/j-m-k-associates/:path*",
+      "destination": "/real-estate/j-m-k-associates/:path*"
+    },
+    {
+      "source": "/kamal-properties",
+      "destination": "/real-estate/kamal-properties"
+    },
+    {
+      "source": "/kamal-properties/:path*",
+      "destination": "/real-estate/kamal-properties/:path*"
+    },
+    {
+      "source": "/leasing-gurgaon-ncrr",
+      "destination": "/real-estate/leasing-gurgaon-ncrr"
+    },
+    {
+      "source": "/leasing-gurgaon-ncrr/:path*",
+      "destination": "/real-estate/leasing-gurgaon-ncrr/:path*"
+    },
+    {
+      "source": "/lord-sai-properties",
+      "destination": "/real-estate/lord-sai-properties"
+    },
+    {
+      "source": "/lord-sai-properties/:path*",
+      "destination": "/real-estate/lord-sai-properties/:path*"
+    },
+    {
+      "source": "/manchanda-realtors-pvt-ltd",
+      "destination": "/real-estate/manchanda-realtors-pvt-ltd"
+    },
+    {
+      "source": "/manchanda-realtors-pvt-ltd/:path*",
+      "destination": "/real-estate/manchanda-realtors-pvt-ltd/:path*"
+    },
+    {
+      "source": "/narang-properties-pvt-ltd",
+      "destination": "/real-estate/narang-properties-pvt-ltd"
+    },
+    {
+      "source": "/narang-properties-pvt-ltd/:path*",
+      "destination": "/real-estate/narang-properties-pvt-ltd/:path*"
+    },
+    {
+      "source": "/pahwa-estate",
+      "destination": "/real-estate/pahwa-estate"
+    },
+    {
+      "source": "/pahwa-estate/:path*",
+      "destination": "/real-estate/pahwa-estate/:path*"
+    },
+    {
+      "source": "/poonji-the-capital",
+      "destination": "/real-estate/poonji-the-capital"
+    },
+    {
+      "source": "/poonji-the-capital/:path*",
+      "destination": "/real-estate/poonji-the-capital/:path*"
+    },
+    {
+      "source": "/prime-properties",
+      "destination": "/real-estate/prime-properties"
+    },
+    {
+      "source": "/prime-properties/:path*",
+      "destination": "/real-estate/prime-properties/:path*"
+    },
+    {
+      "source": "/property-search-point",
+      "destination": "/real-estate/property-search-point"
+    },
+    {
+      "source": "/property-search-point/:path*",
+      "destination": "/real-estate/property-search-point/:path*"
+    },
+    {
+      "source": "/r-p-associate",
+      "destination": "/real-estate/r-p-associate"
+    },
+    {
+      "source": "/r-p-associate/:path*",
+      "destination": "/real-estate/r-p-associate/:path*"
+    },
+    {
+      "source": "/raghav-properties",
+      "destination": "/real-estate/raghav-properties"
+    },
+    {
+      "source": "/raghav-properties/:path*",
+      "destination": "/real-estate/raghav-properties/:path*"
+    },
+    {
+      "source": "/raj-properties",
+      "destination": "/real-estate/raj-properties"
+    },
+    {
+      "source": "/raj-properties/:path*",
+      "destination": "/real-estate/raj-properties/:path*"
+    },
+    {
+      "source": "/ram-properties",
+      "destination": "/real-estate/ram-properties"
+    },
+    {
+      "source": "/ram-properties/:path*",
+      "destination": "/real-estate/ram-properties/:path*"
+    },
+    {
+      "source": "/realistic-realty",
+      "destination": "/real-estate/realistic-realty"
+    },
+    {
+      "source": "/realistic-realty/:path*",
+      "destination": "/real-estate/realistic-realty/:path*"
+    },
+    {
+      "source": "/rise-real-estates",
+      "destination": "/real-estate/rise-real-estates"
+    },
+    {
+      "source": "/rise-real-estates/:path*",
+      "destination": "/real-estate/rise-real-estates/:path*"
+    },
+    {
+      "source": "/rohini-real-estate",
+      "destination": "/real-estate/rohini-real-estate"
+    },
+    {
+      "source": "/rohini-real-estate/:path*",
+      "destination": "/real-estate/rohini-real-estate/:path*"
+    },
+    {
+      "source": "/s-b-s-developers",
+      "destination": "/real-estate/s-b-s-developers"
+    },
+    {
+      "source": "/s-b-s-developers/:path*",
+      "destination": "/real-estate/s-b-s-developers/:path*"
+    },
+    {
+      "source": "/s-k-real-estate",
+      "destination": "/real-estate/s-k-real-estate"
+    },
+    {
+      "source": "/s-k-real-estate/:path*",
+      "destination": "/real-estate/s-k-real-estate/:path*"
+    },
+    {
+      "source": "/sai-properties",
+      "destination": "/real-estate/sai-properties"
+    },
+    {
+      "source": "/sai-properties/:path*",
+      "destination": "/real-estate/sai-properties/:path*"
+    },
+    {
+      "source": "/sethi-properties",
+      "destination": "/real-estate/sethi-properties"
+    },
+    {
+      "source": "/sethi-properties/:path*",
+      "destination": "/real-estate/sethi-properties/:path*"
+    },
+    {
+      "source": "/shiv-associates",
+      "destination": "/real-estate/shiv-associates"
+    },
+    {
+      "source": "/shiv-associates/:path*",
+      "destination": "/real-estate/shiv-associates/:path*"
+    },
+    {
+      "source": "/shiv-shakti-properties",
+      "destination": "/real-estate/shiv-shakti-properties"
+    },
+    {
+      "source": "/shiv-shakti-properties/:path*",
+      "destination": "/real-estate/shiv-shakti-properties/:path*"
+    },
+    {
+      "source": "/shree-property",
+      "destination": "/real-estate/shree-property"
+    },
+    {
+      "source": "/shree-property/:path*",
+      "destination": "/real-estate/shree-property/:path*"
+    },
+    {
+      "source": "/shree-sai-homes",
+      "destination": "/real-estate/shree-sai-homes"
+    },
+    {
+      "source": "/shree-sai-homes/:path*",
+      "destination": "/real-estate/shree-sai-homes/:path*"
+    },
+    {
+      "source": "/singh-associates",
+      "destination": "/real-estate/singh-associates"
+    },
+    {
+      "source": "/singh-associates/:path*",
+      "destination": "/real-estate/singh-associates/:path*"
+    },
+    {
+      "source": "/star-realty",
+      "destination": "/real-estate/star-realty"
+    },
+    {
+      "source": "/star-realty/:path*",
+      "destination": "/real-estate/star-realty/:path*"
+    },
+    {
+      "source": "/surya-properties",
+      "destination": "/real-estate/surya-properties"
+    },
+    {
+      "source": "/surya-properties/:path*",
+      "destination": "/real-estate/surya-properties/:path*"
+    },
+    {
+      "source": "/test-agency",
+      "destination": "/real-estate/test-agency"
+    },
+    {
+      "source": "/test-agency/:path*",
+      "destination": "/real-estate/test-agency/:path*"
+    },
+    {
+      "source": "/the-adhrit",
+      "destination": "/real-estate/the-adhrit"
+    },
+    {
+      "source": "/the-adhrit/:path*",
+      "destination": "/real-estate/the-adhrit/:path*"
+    },
+    {
+      "source": "/town-realtors",
+      "destination": "/real-estate/town-realtors"
+    },
+    {
+      "source": "/town-realtors/:path*",
+      "destination": "/real-estate/town-realtors/:path*"
+    },
+    {
+      "source": "/yogmaya-realtors",
+      "destination": "/real-estate/yogmaya-realtors"
+    },
+    {
+      "source": "/yogmaya-realtors/:path*",
+      "destination": "/real-estate/yogmaya-realtors/:path*"
+    }
+  ]
+}

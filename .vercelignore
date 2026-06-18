@@ -1,0 +1,13 @@
+agent_memory
+.vercel
+Prospet Vault
+.git
+.github
+node_modules
+**/node_modules
+**/node_modules/**
+*.log
+*.py
+*.pyc
+.DS_Store
+engine

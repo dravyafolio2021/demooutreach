@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Test Agency — Exclusive Luxury Residential Showcase | Rohan & Kiara</title>
+  <meta name="description" content="Handcrafted real estate portfolio by Test Agency. Managed by principal broker Rohan & Kiara. Showcasing luxury apartments, penthouses, and estates." />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Test Agency — Luxury Property Portfolio" />
+  <meta property="og:description" content="Discover premium, co-founder curated residential listings. Fast, immersive walkthroughs and direct agent booking." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://demo.claraverse.in/test-agency/assets/hero_thumb.jpg" />
+  <meta property="og:url" content="https://demo.claraverse.in/test-agency" />
+
+  <!-- Font Setup: Outfit (Display) and Inter (Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Outfit', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              gold: '#B89A74',
+              goldLight: '#D4C3A3',
+              darkBg: '#0A0A0A',
+              lightBg: '#FAF9F6', // Luxury Warm White
+              cardBg: '#FFFFFF',
+              border: '#E8E6E1',
+            }
+          },
+          animation: {
+            'fade-up': 'fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+            'fade-in': 'fadeIn 1s ease forwards',
+          },
+          keyframes: {
+            fadeUp: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #FAF9F6;
+      color: #1C1B19;
+    }
+    /* Hide spinner */
+    input[type=number]::-webkit-inner-spin-button, 
+    input[type=number]::-webkit-outer-spin-button { 
+      -webkit-appearance: none; 
+      margin: 0; 
+    }
+    /* Smooth transitions */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* 3D Carousel Perspective Styling */
+    .carousel-container {
+      perspective: 1200px;
+    }
+    .carousel-slide {
+      transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+      transform-style: preserve-3d;
+    }
+    .carousel-slide.active {
+      transform: translate3d(0, 0, 0) rotateY(0deg) scale(1);
+      opacity: 1;
+      filter: blur(0);
+      z-index: 30;
+    }
+    .carousel-slide.left {
+      transform: translate3d(-35%, 0, -150px) rotateY(25deg) scale(0.9);
+      opacity: 0.45;
+      filter: blur(4px);
+      z-index: 10;
+      pointer-events: none;
+    }
+    .carousel-slide.right {
+      transform: translate3d(35%, 0, -150px) rotateY(-25deg) scale(0.9);
+      opacity: 0.45;
+      filter: blur(4px);
+      z-index: 10;
+      pointer-events: none;
+    }
+    .carousel-slide.hidden-left {
+      transform: translate3d(-80%, 0, -300px) rotateY(45deg) scale(0.8);
+      opacity: 0;
+      z-index: 5;
+      pointer-events: none;
+    }
+    .carousel-slide.hidden-right {
+      transform: translate3d(80%, 0, -300px) rotateY(-45deg) scale(0.8);
+      opacity: 0;
+      z-index: 5;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body class="font-sans antialiased selection:bg-brand-gold selection:text-white min-h-screen flex flex-col justify-between overflow-x-hidden">
+
+  <!-- HEADER -->
+  <header class="absolute top-0 left-0 right-0 z-50 bg-transparent">
+    <div class="max-w-7xl mx-auto px-8 h-20 flex items-center justify-between">
+      <div class="text-white text-xl font-display font-medium tracking-tight">
+        Test Agency<span class="text-brand-gold font-light">*</span>
+      </div>
+      <a href="https://wa.me/918708528150" target="_blank" class="text-white hover:text-brand-goldLight text-2xl font-light transition-colors">
+        <i class="fa-light fa-plus font-light">+</i>
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION (Inspired by Screen 1) -->
+  <section class="relative min-h-screen flex flex-col justify-between pt-32 pb-8 px-6 bg-[#A1C4FD] overflow-hidden">
+    <!-- Light Sky Gradient Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-b from-[#A1C4FD]/20 via-[#C2E9FB]/30 to-[#FAF9F6]"></div>
+    
+    <!-- Hero Architecture Image Rising from Bottom -->
+    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[1200px] h-[55vh] md:h-[65vh] flex items-end justify-center z-10 select-none">
+      <img src="/defaults/real-estate/hero.png" alt="Luxury Architecture" class="w-full h-full object-contain object-bottom" />
+    </div>
+
+    <!-- Center Content -->
+    <div class="max-w-4xl mx-auto text-center relative z-20 mt-12">
+      <h2 class="text-5xl sm:text-6xl md:text-7xl font-display font-light text-white tracking-tight leading-[1.05] mb-6 drop-shadow-sm">
+        Extraordinary<br>living begins here.
+      </h2>
+      <p class="text-white/80 text-sm sm:text-base max-w-xl mx-auto font-light leading-relaxed drop-shadow-sm mb-8">
+        Timeless architecture, exclusive locations, and luxury homes designed to inspire your next chapter.
+      </p>
+    </div>
+
+    <!-- Scroll Down indicator / spacing -->
+    <div class="w-full text-center relative z-20">
+      <a href="#vision" class="inline-block text-white/50 hover:text-white transition-colors">
+        <i class="fa-solid fa-chevron-down text-lg animate-bounce"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- VISION HUB (Inspired by Screen 2) -->
+  <section id="vision" class="py-32 px-6 bg-brand-lightBg relative z-20 border-b border-brand-border">
+    <div class="max-w-4xl mx-auto text-center">
+      <h3 class="text-4xl sm:text-5xl font-display font-light text-[#1C1B19] tracking-tight leading-[1.15] mb-6 flex flex-wrap items-center justify-center gap-3">
+        Where your vision finds its 
+        <!-- Leaf Shape container with project preview -->
+        <span class="inline-block w-20 h-10 rounded-full overflow-hidden border border-brand-gold/30 bg-neutral-200 align-middle shadow-inner">
+          <img src="/defaults/real-estate/still.png" alt="Estate preview" class="w-full h-full object-cover scale-110" />
+        </span>
+        home.
+      </h3>
+      <p class="text-neutral-500 text-xs sm:text-sm font-light max-w-2xl mx-auto leading-relaxed mb-10">
+        Test Agency offers more than just a place to live—it's a space designed to reflect your unique style, crafted with timeless precision, and built to inspire for generations to come.
+      </p>
+
+      <!-- Signature Off-Market Newsletter bar (WhatsApp Focus) -->
+      <div class="max-w-lg mx-auto bg-white rounded-full p-1 border border-brand-border shadow-sm flex items-center justify-between">
+        <input type="tel" id="update-whatsapp" placeholder="WhatsApp Number" class="w-full bg-transparent px-6 text-xs text-[#1C1B19] placeholder-neutral-400 outline-none border-none" />
+        <button onclick="handleWhatsAppUpdate()" class="bg-black hover:bg-neutral-800 text-white text-[10px] font-medium tracking-wider uppercase px-6 py-3.5 rounded-full transition-all duration-300 whitespace-nowrap">
+          Get WhatsApp Updates
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR VALUE SECTION -->
+  <section class="py-32 px-6 bg-white relative z-20 border-b border-brand-border">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+        
+        <!-- Left Side Column -->
+        <div class="md:col-span-5 flex flex-col items-start">
+          <span class="relative pl-4 text-[9px] tracking-[0.4em] uppercase text-brand-gold font-bold block mb-4">
+            <span class="absolute left-0 top-0 w-2 h-2 border-t-2 border-l-2 border-red-500"></span>
+            Our value
+          </span>
+          <h2 class="text-4xl sm:text-5xl font-display font-light text-[#1C1B19] tracking-tight leading-tight mb-6">
+            Live 10x better,<br>bolder, brighter.
+          </h2>
+          <p class="text-neutral-500 text-xs sm:text-sm font-light leading-relaxed mb-8 max-w-sm">
+            With years of market insight, we connect people to extraordinary spaces and craft standout campaigns that sell. From first glance to final keys, we deliver with confidence.
+          </p>
+          <a href="https://wa.me/918708528150?text=Hi%20Cora%20Team%2C%20I%20want%20to%20know%20more%20about%20your%20real%20estate%20campaigns." target="_blank" class="bg-black hover:bg-neutral-850 text-white text-[10px] font-bold uppercase tracking-widest px-8 py-3.5 rounded-full transition-transform duration-300 hover:scale-105 active:scale-95 shadow-md">
+            About us
+          </a>
+        </div>
+
+        <!-- Right Side Stats Grid -->
+        <div class="md:col-span-7 grid grid-cols-2 gap-x-12 gap-y-12 border-t border-brand-border/60 md:border-t-0 pt-12 md:pt-0">
+          <!-- Stat 1 -->
+          <div>
+            <span class="block text-4xl sm:text-5xl font-display font-light text-[#1C1B19] tracking-tight">150+</span>
+            <span class="block text-xs font-mono uppercase tracking-wider text-neutral-400 mt-2">Homes sold</span>
+          </div>
+          <!-- Stat 2 -->
+          <div>
+            <span class="block text-4xl sm:text-5xl font-display font-light text-[#1C1B19] tracking-tight">₹4,000 Cr+</span>
+            <span class="block text-xs font-mono uppercase tracking-wider text-neutral-400 mt-2">In property value closed</span>
+          </div>
+          <!-- Divider Line -->
+          <div class="col-span-2 border-t border-brand-border/60 my-2"></div>
+          <!-- Stat 3 -->
+          <div>
+            <span class="block text-4xl sm:text-5xl font-display font-light text-[#1C1B19] tracking-tight">6x</span>
+            <span class="block text-xs font-mono uppercase tracking-wider text-neutral-400 mt-2">Average return for investors</span>
+          </div>
+          <!-- Stat 4 -->
+          <div>
+            <span class="block text-4xl sm:text-5xl font-display font-light text-[#1C1B19] tracking-tight">₹350 Cr+</span>
+            <span class="block text-xs font-mono uppercase tracking-wider text-neutral-400 mt-2">In client equity gained</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Centered Modern Villa Asset -->
+      <div class="mt-20 w-full flex justify-center">
+        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80" alt="Modern Minimalist Architecture" class="w-full max-w-5xl h-[40vh] sm:h-[50vh] object-cover rounded-3xl shadow-lg brightness-95" />
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EXCEPTIONALITIES SECTION -->
+  <section class="py-32 px-6 bg-[#FAF9F6] relative z-20 border-b border-brand-border">
+    <div class="max-w-6xl mx-auto">
+      
+      <!-- Section Header -->
+      <div class="mb-16">
+        <span class="text-[9px] tracking-[0.4em] uppercase text-brand-gold font-bold block mb-2">Exceptionalities</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-light text-[#1C1B19] tracking-tight">The Art of Exceptional Living</h2>
+      </div>
+
+      <!-- Alternating Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <!-- Col 1: Elite Craftsmanship (Image top) -->
+        <div class="flex flex-col gap-6">
+          <div class="aspect-[4/5] rounded-3xl overflow-hidden bg-neutral-100 shadow-sm">
+            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=600&q=80" alt="Elite Craftsmanship" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-[#1C1B19]">Elite Craftsmanship</h3>
+            <p class="text-neutral-500 text-xs font-light mt-2.5 leading-relaxed">
+              Meticulously designed with the finest materials and attention to detail.
+            </p>
+          </div>
+        </div>
+
+        <!-- Col 2: Personalized Design (Image bottom) -->
+        <div class="flex flex-col justify-between gap-6">
+          <div>
+            <h3 class="text-lg font-semibold text-[#1C1B19]">Personalized Design</h3>
+            <p class="text-neutral-500 text-xs font-light mt-2.5 leading-relaxed">
+              Tailored spaces that reflect your unique style, vision, and personality.
+            </p>
+          </div>
+          <div class="aspect-[4/5] rounded-3xl overflow-hidden bg-neutral-100 shadow-sm">
+            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=600&q=80" alt="Personalized Design" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
+          </div>
+        </div>
+
+        <!-- Col 3: Exclusive Locations (Image top) -->
+        <div class="flex flex-col gap-6">
+          <div class="aspect-[4/5] rounded-3xl overflow-hidden bg-neutral-100 shadow-sm">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80" alt="Exclusive Locations" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-[#1C1B19]">Exclusive Locations</h3>
+            <p class="text-neutral-500 text-xs font-light mt-2.5 leading-relaxed">
+              Prestigious addresses offering convenience, privacy, and breathtaking views.
+            </p>
+          </div>
+        </div>
+
+        <!-- Col 4: Luxury Experience (Image bottom) -->
+        <div class="flex flex-col justify-between gap-6">
+          <div>
+            <h3 class="text-lg font-semibold text-[#1C1B19]">Luxury Experience</h3>
+            <p class="text-neutral-500 text-xs font-light mt-2.5 leading-relaxed">
+              A seamless blend of elegance, comfort, and world-class amenities.
+            </p>
+          </div>
+          <div class="aspect-[4/5] rounded-3xl overflow-hidden bg-neutral-100 shadow-sm">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=600&q=80" alt="Luxury Experience" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Statistics Row -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-20 mt-20 border-t border-brand-border">
+        <div>
+          <span class="block text-6xl font-display font-light text-[#1C1B19] tracking-tight">200+</span>
+          <span class="block text-[10px] font-mono uppercase tracking-wider text-neutral-400 mt-2">Premium Residences</span>
+        </div>
+        <div>
+          <span class="block text-6xl font-display font-light text-[#1C1B19] tracking-tight">50+</span>
+          <span class="block text-[10px] font-mono uppercase tracking-wider text-neutral-400 mt-2">Awards &amp; Recognitions</span>
+        </div>
+        <div>
+          <span class="block text-6xl font-display font-light text-[#1C1B19] tracking-tight">97%</span>
+          <span class="block text-[10px] font-mono uppercase tracking-wider text-neutral-400 mt-2">Client Satisfaction</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LUXURY PROPERTY VIDEO SECTION (Inspired by Screen Video) -->
+  <section class="py-24 px-6 bg-white relative z-20">
+    <div class="max-w-6xl mx-auto">
+      <div class="relative w-full h-[60vh] sm:h-[70vh] rounded-3xl overflow-hidden shadow-2xl group">
+        <!-- Background Loop Video -->
+        <video id="promoVideo" autoplay muted loop playsinline class="w-full h-full object-cover">
+          <source src="https://videos.pexels.com/video-files/3773486/3773486-uhd_2560_1440_30fps.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        
+        <!-- Dark Overlay -->
+        <div class="absolute inset-0 bg-black/35 group-hover:bg-black/25 transition-colors duration-500"></div>
+
+        <!-- Video Text Overlay -->
+        <div class="absolute inset-0 flex items-center justify-center p-6 text-center z-10">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-light text-white tracking-tight leading-tight max-w-3xl drop-shadow-md">
+            Step inside a world where exceptional design and timeless luxury meet.
+          </h2>
+        </div>
+
+        <!-- Working Play/Pause Button in Bottom Right -->
+        <button onclick="toggleVideoPlayback()" class="absolute bottom-6 right-6 z-20 w-12 h-12 rounded-full bg-white/15 hover:bg-white/30 backdrop-blur-md border border-white/20 text-white flex items-center justify-center shadow-lg transition-transform duration-350 active:scale-90" aria-label="Toggle Playback">
+          <i id="playPauseIcon" class="fa-solid fa-pause text-sm"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROPERTY GALLERY 3D CAROUSEL (Inspired by Screen 3) -->
+  <section id="listings" class="py-32 px-6 bg-[#FAF9F6] relative z-20 overflow-hidden border-t border-brand-border">
+    <div class="max-w-7xl mx-auto">
+      
+      <!-- Top Title and Description Row -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-20">
+        <div class="max-w-xl">
+          <h2 class="text-4xl sm:text-5xl font-display font-light tracking-tight text-[#1C1B19]">
+            Discover homes<br>designed to inspire.
+          </h2>
+        </div>
+        <div class="max-w-xs">
+          <p class="text-neutral-500 text-xs sm:text-sm font-light leading-relaxed">
+            Handpicked residences where luxury, design, and comfort meet. Vetted exclusively by Rohan & Kiara.
+          </p>
+        </div>
+      </div>
+
+      <!-- 3D Carousel Area -->
+      <div class="relative min-h-[550px] flex items-center justify-center carousel-container">
+        
+        <!-- Left Control Button -->
+        <button onclick="prevSlide()" class="absolute left-4 md:left-24 z-40 w-12 h-12 rounded-full bg-black hover:bg-neutral-850 text-white flex items-center justify-center shadow-lg transition-transform duration-300 hover:scale-105 active:scale-95">
+          <i class="fa-solid fa-chevron-left text-sm"></i>
+        </button>
+
+        <!-- Right Control Button -->
+        <button onclick="nextSlide()" class="absolute right-4 md:right-24 z-40 w-12 h-12 rounded-full bg-black hover:bg-neutral-850 text-white flex items-center justify-center shadow-lg transition-transform duration-300 hover:scale-105 active:scale-95">
+          <i class="fa-solid fa-chevron-right text-sm"></i>
+        </button>
+
+        <!-- Dynamic Carousel List -->
+        <div class="relative w-full max-w-[680px] h-[480px]">
+          
+          <!-- Slide 1 (Skyline Heights) -->
+          <div id="slide-0" class="carousel-slide absolute inset-0 bg-white rounded-3xl border border-brand-border p-6 shadow-xl flex flex-col justify-between hover:shadow-2xl">
+            <div class="relative w-full h-[65%] rounded-2xl overflow-hidden bg-neutral-100">
+              <img src="/defaults/real-estate/still.png" alt="The Skyline Heights" class="w-full h-full object-cover" />
+              <span class="absolute top-4 left-4 bg-[#A1C4FD] text-white text-[7.5px] font-mono tracking-widest uppercase font-semibold px-2.5 py-1 rounded-full">
+                FOR SALE
+              </span>
+            </div>
+            <div class="pt-6 flex-1 flex flex-col justify-between">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <h3 class="text-xl font-display font-medium text-[#1C1B19]">The Skyline Heights</h3>
+                  <p class="text-neutral-500 text-xs font-light mt-1.5 leading-relaxed">
+                    A luxury duplex sanctuary with wrap-around balconies, private elevator access, and views.
+                  </p>
+                </div>
+                <div class="text-right">
+                  <span class="block text-xl font-semibold text-[#1C1B19] font-mono">₹5.5 Cr - ₹9.1 Cr</span>
+                  <span class="text-[9px] font-mono text-neutral-400 uppercase tracking-widest block mt-0.5">Pricing Band</span>
+                </div>
+              </div>
+              <div class="pt-4 border-t border-brand-border flex items-center justify-between text-xs text-neutral-500">
+                <div class="flex gap-4">
+                  <span>3 Bedrooms</span>
+                  <span>•</span>
+                  <span>3.5 Bathrooms</span>
+                </div>
+                <a href="https://wa.me/918708528150?text=Hi%20Cora%20Team%2C%20I%2520am%2520interested%2520in%252520booking%252520a%252520private%252520tour%25252520for%25252520The%25252520Skyline%25252520Heights." target="_blank" class="text-black hover:text-brand-gold text-[10px] font-mono tracking-wider uppercase font-semibold flex items-center gap-1">
+                  Book Tour <i class="fa-solid fa-arrow-right text-[8px]"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 (Oceanfront Vista) -->
+          <div id="slide-1" class="carousel-slide absolute inset-0 bg-white rounded-3xl border border-brand-border p-6 shadow-xl flex flex-col justify-between hover:shadow-2xl">
+            <div class="relative w-full h-[65%] rounded-2xl overflow-hidden bg-neutral-100">
+              <img src="/defaults/real-estate/emotion.png" alt="The Oceanfront Vista" class="w-full h-full object-cover" />
+              <span class="absolute top-4 left-4 bg-black text-white text-[7.5px] font-mono tracking-widest uppercase font-semibold px-2.5 py-1 rounded-full">
+                PENTHOUSE
+              </span>
+            </div>
+            <div class="pt-6 flex-1 flex flex-col justify-between">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <h3 class="text-xl font-display font-medium text-[#1C1B19]">The Oceanfront Vista</h3>
+                  <p class="text-neutral-500 text-xs font-light mt-1.5 leading-relaxed">
+                    Direct beachfront penthouse featuring private deck, glass pool, and premium home automation.
+                  </p>
+                </div>
+                <div class="text-right">
+                  <span class="block text-xl font-semibold text-[#1C1B19] font-mono">₹12.7 Cr - ₹21.8 Cr</span>
+                  <span class="text-[9px] font-mono text-neutral-400 uppercase tracking-widest block mt-0.5">Pricing Band</span>
+                </div>
+              </div>
+              <div class="pt-4 border-t border-brand-border flex items-center justify-between text-xs text-neutral-500">
+                <div class="flex gap-4">
+                  <span>4 Bedrooms</span>
+                  <span>•</span>
+                  <span>4.5 Bathrooms</span>
+                </div>
+                <a href="https://wa.me/918708528150?text=Hi%20Cora%20Team%2C%20I%2520am%2520interested%2520in%252520booking%25252525for%25252525The%25252525Oceanfront%25252525Vista." target="_blank" class="text-black hover:text-brand-gold text-[10px] font-mono tracking-wider uppercase font-semibold flex items-center gap-1">
+                  Book Tour <i class="fa-solid fa-arrow-right text-[8px]"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 (Suburban Sanctuary) -->
+          <div id="slide-2" class="carousel-slide absolute inset-0 bg-white rounded-3xl border border-brand-border p-6 shadow-xl flex flex-col justify-between hover:shadow-2xl">
+            <div class="relative w-full h-[65%] rounded-2xl overflow-hidden bg-neutral-100">
+              <img src="/defaults/real-estate/shoot.png" alt="The Suburban Sanctuary" class="w-full h-full object-cover" />
+              <span class="absolute top-4 left-4 bg-brand-gold text-white text-[7.5px] font-mono tracking-widest uppercase font-semibold px-2.5 py-1 rounded-full">
+                FOR SALE
+              </span>
+            </div>
+            <div class="pt-6 flex-1 flex flex-col justify-between">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <h3 class="text-xl font-display font-medium text-[#1C1B19]">The Suburban Sanctuary</h3>
+                  <p class="text-neutral-500 text-xs font-light mt-1.5 leading-relaxed">
+                    Sleek minimalist layouts tailored with community green belt parks, and smart energy.
+                  </p>
+                </div>
+                <div class="text-right">
+                  <span class="block text-xl font-semibold text-[#1C1B19] font-mono">₹2.7 Cr - ₹4.5 Cr</span>
+                  <span class="text-[9px] font-mono text-neutral-400 uppercase tracking-widest block mt-0.5">Pricing Band</span>
+                </div>
+              </div>
+              <div class="pt-4 border-t border-brand-border flex items-center justify-between text-xs text-neutral-500">
+                <div class="flex gap-4">
+                  <span>2 Bedrooms</span>
+                  <span>•</span>
+                  <span>2 Bathrooms</span>
+                </div>
+                <a href="https://wa.me/918708528150?text=Hi%20Cora%20Team%2C%20I%2520am%2520interested%2520in%252520booking%252520a%252520private%252520tour%25252520for%25252520The%25252525Suburban%25252525Sanctuary." target="_blank" class="text-black hover:text-brand-gold text-[10px] font-mono tracking-wider uppercase font-semibold flex items-center gap-1">
+                  Book Tour <i class="fa-solid fa-arrow-right text-[8px]"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSIGHTS GRID SECTION (Clean 3-column Layout) -->
+  <section class="py-32 px-6 bg-white relative z-20 border-t border-brand-border">
+    <div class="max-w-6xl mx-auto">
+      
+      <!-- Section Header -->
+      <div class="mb-16">
+        <span class="text-[9px] tracking-[0.4em] uppercase text-brand-gold font-bold block mb-2">Insights &amp; Trends</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-light text-[#1C1B19] tracking-tight">Luxury Estate Journal</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="bg-[#FAF9F6] border border-brand-border rounded-3xl p-6 hover:shadow-md transition-shadow duration-300 flex flex-col justify-between">
+          <div>
+            <div class="rounded-2xl overflow-hidden h-52 mb-6 bg-neutral-100">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Boutique Architecture" class="w-full h-full object-cover" />
+            </div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="bg-amber-100 text-amber-800 text-[8px] font-semibold tracking-widest uppercase px-3 py-1 rounded-full">
+                Lifestyle
+              </span>
+            </div>
+            <h3 class="text-lg font-semibold text-[#1C1B19] leading-snug mb-3">
+              The Rise of Boutique Architecture in Luxury Living
+            </h3>
+            <p class="text-neutral-500 text-xs font-light leading-relaxed">
+              Discover how boutique architecture is redefining luxury living with its focus on uniqueness and timeless design.
+            </p>
+          </div>
+          <!-- Author Block -->
+          <div class="flex items-center gap-3 mt-6 pt-4 border-t border-brand-border/60">
+            <div class="w-8 h-8 rounded-full overflow-hidden bg-neutral-200">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80" alt="Anjali Sharma" class="w-full h-full object-cover" />
+            </div>
+            <div>
+              <span class="block text-xs font-semibold text-[#1C1B19]">Anjali Sharma</span>
+              <span class="block text-[9px] text-neutral-400 font-light">Senior Advisor</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-[#FAF9F6] border border-brand-border rounded-3xl p-6 hover:shadow-md transition-shadow duration-300 flex flex-col justify-between">
+          <div>
+            <div class="rounded-2xl overflow-hidden h-52 mb-6 bg-neutral-100">
+              <img src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=600&q=80" alt="AI Home Design" class="w-full h-full object-cover" />
+            </div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="bg-blue-100 text-blue-800 text-[8px] font-semibold tracking-widest uppercase px-3 py-1 rounded-full">
+                Innovation
+              </span>
+            </div>
+            <h3 class="text-lg font-semibold text-[#1C1B19] leading-snug mb-3">
+              The Future of Luxury: AI &amp; Automation in Home Design
+            </h3>
+            <p class="text-neutral-500 text-xs font-light leading-relaxed">
+              Explore smart-home automations merging seamless tech stacks with bespoke luxury design choices.
+            </p>
+          </div>
+          <!-- Author Block -->
+          <div class="flex items-center gap-3 mt-6 pt-4 border-t border-brand-border/60">
+            <div class="w-8 h-8 rounded-full overflow-hidden bg-neutral-200">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80" alt="Anjali Sharma" class="w-full h-full object-cover" />
+            </div>
+            <div>
+              <span class="block text-xs font-semibold text-[#1C1B19]">Anjali Sharma</span>
+              <span class="block text-[9px] text-neutral-400 font-light">Senior Advisor</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-[#FAF9F6] border border-brand-border rounded-3xl p-6 hover:shadow-md transition-shadow duration-300 flex flex-col justify-between">
+          <div>
+            <div class="rounded-2xl overflow-hidden h-52 mb-6 bg-neutral-100">
+              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80" alt="Sustainable Materials" class="w-full h-full object-cover" />
+            </div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="bg-emerald-100 text-emerald-800 text-[8px] font-semibold tracking-widest uppercase px-3 py-1 rounded-full">
+                Sustainability
+              </span>
+            </div>
+            <h3 class="text-lg font-semibold text-[#1C1B19] leading-snug mb-3">
+              Are Sustainable Materials the Future of Luxury Homes?
+            </h3>
+            <p class="text-neutral-500 text-xs font-light leading-relaxed">
+              Analyze how premium organic wood, stone finishes, and layouts are leading the eco-luxury wave.
+            </p>
+          </div>
+          <!-- Author Block -->
+          <div class="flex items-center gap-3 mt-6 pt-4 border-t border-brand-border/60">
+            <div class="w-8 h-8 rounded-full overflow-hidden bg-neutral-200">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80" alt="Anjali Sharma" class="w-full h-full object-cover" />
+            </div>
+            <div>
+              <span class="block text-xs font-semibold text-[#1C1B19]">Anjali Sharma</span>
+              <span class="block text-[9px] text-neutral-400 font-light">Senior Advisor</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS TIMELINE SECTION -->
+  <section class="py-32 px-6 bg-white relative z-20 border-t border-brand-border">
+    <div class="max-w-5xl mx-auto">
+      
+      <!-- Section Header -->
+      <div class="text-center mb-24">
+        <span class="text-[9px] tracking-[0.4em] uppercase text-brand-gold font-bold block mb-2">Process</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-light text-[#1C1B19] tracking-tight">Starting with browsing and ending with move-in day</h2>
+      </div>
+
+      <!-- Timeline Block -->
+      <div class="relative space-y-20">
+        <!-- Vertical Line -->
+        <div class="absolute left-1/2 top-0 bottom-0 w-[1px] bg-brand-border/80 -translate-x-1/2 hidden md:block"></div>
+
+        <!-- Step 1 -->
+        <div class="grid grid-cols-1 md:grid-cols-11 gap-8 items-center relative z-10">
+          <!-- Left: Image -->
+          <div class="md:col-span-5 aspect-[16/10] rounded-2xl overflow-hidden bg-neutral-100 shadow-sm">
+            <img src="https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?auto=format&fit=crop&w=600&q=80" alt="Search and explore" class="w-full h-full object-cover" />
+          </div>
+          <!-- Center: Number bubble -->
+          <div class="md:col-span-1 flex justify-center">
+            <div class="w-10 h-10 rounded-xl bg-black border border-brand-border flex items-center justify-center text-white text-xs font-mono font-bold shadow-md">01</div>
+          </div>
+          <!-- Right: Content -->
+          <div class="md:col-span-5 bg-[#FAF9F6] border border-brand-border rounded-2xl p-8 shadow-sm">
+            <span class="text-[8px] font-mono text-brand-gold uppercase tracking-wider block mb-2">Step 01</span>
+            <h3 class="text-lg font-semibold text-[#1C1B19] mb-2">Search &amp; explore</h3>
+            <p class="text-neutral-500 text-xs font-light leading-relaxed">
+              Browse verified property listings by price, location, and lifestyle. Filter easily with smart tools and discover homes that fit your vibe. Start your journey from anywhere, right on your screen.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="grid grid-cols-1 md:grid-cols-11 gap-8 items-center relative z-10 md:flex-row-reverse">
+          <!-- Left: Content -->
+          <div class="md:col-span-5 bg-[#FAF9F6] border border-brand-border rounded-2xl p-8 shadow-sm md:order-1">
+            <span class="text-[8px] font-mono text-brand-gold uppercase tracking-wider block mb-2">Step 02</span>
+            <h3 class="text-lg font-semibold text-[#1C1B19] mb-2">Book a tour</h3>
+            <p class="text-neutral-500 text-xs font-light leading-relaxed">
+              Pick your favorite properties and schedule tours online in seconds. Our team confirms quickly and arranges convenient times for you. See homes in person or through guided virtual tours.
+            </p>
+          </div>
+          <!-- Center: Number bubble -->
+          <div class="md:col-span-1 flex justify-center md:order-2">
+            <div class="w-10 h-10 rounded-xl bg-black border border-brand-border flex items-center justify-center text-white text-xs font-mono font-bold shadow-md">02</div>
+          </div>
+          <!-- Right: Image -->
+          <div class="md:col-span-5 aspect-[16/10] rounded-2xl overflow-hidden bg-neutral-100 shadow-sm md:order-3">
+            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=600&q=80" alt="Book a tour" class="w-full h-full object-cover" />
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="grid grid-cols-1 md:grid-cols-11 gap-8 items-center relative z-10">
+          <!-- Left: Image -->
+          <div class="md:col-span-5 aspect-[16/10] rounded-2xl overflow-hidden bg-neutral-100 shadow-sm">
+            <img src="https://images.unsplash.com/photo-1560520031-3a4dc4e9de0c?auto=format&fit=crop&w=600&q=80" alt="Close confidently" class="w-full h-full object-cover" />
+          </div>
+          <!-- Center: Number bubble -->
+          <div class="md:col-span-1 flex justify-center">
+            <div class="w-10 h-10 rounded-xl bg-black border border-brand-border flex items-center justify-center text-white text-xs font-mono font-bold shadow-md">03</div>
+          </div>
+          <!-- Right: Content -->
+          <div class="md:col-span-5 bg-[#FAF9F6] border border-brand-border rounded-2xl p-8 shadow-sm">
+            <span class="text-[8px] font-mono text-brand-gold uppercase tracking-wider block mb-2">Step 03</span>
+            <h3 class="text-lg font-semibold text-[#1C1B19] mb-2">Close confidently</h3>
+            <p class="text-neutral-500 text-xs font-light leading-relaxed">
+              We'll handle the negotiation, paperwork, and final steps—so you can move in or move on with confidence. Dedicated support representing your interest all the way.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS SECTION -->
+  <section class="py-32 px-6 bg-[#FAF9F6] relative z-20 border-t border-brand-border">
+    <div class="max-w-7xl mx-auto">
+      
+      <!-- Section Header -->
+      <div class="mb-16">
+        <span class="text-[9px] tracking-[0.4em] uppercase text-brand-gold font-bold block mb-2">Reviews</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-light text-[#1C1B19] tracking-tight">Stories from people who found their place with us</h2>
+      </div>
+
+      <!-- Horizontal Scrollable Reviews List -->
+      <div class="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-8 scrollbar-thin select-none">
+        
+        <!-- Review Card 1 (Text heavy) -->
+        <div class="min-w-[300px] md:min-w-[380px] bg-white border border-brand-border rounded-3xl p-8 flex flex-col justify-between snap-start hover:shadow-md transition-shadow">
+          <div>
+            <span class="text-3xl text-brand-gold font-serif leading-none block mb-4">“</span>
+            <h4 class="text-base font-bold text-[#1C1B19] mb-4">Found my dream home without losing my sanity!</h4>
+            <p class="text-neutral-500 text-xs font-light leading-relaxed">
+              I had dealt with agents before who only pushed properties they wanted to sell, not what I needed. This was totally different. They asked the right questions, showed me homes that matched my lifestyle, and never rushed me to decide. By the end, I felt like they knew my taste better than I did.
+            </p>
+          </div>
+          <div class="flex items-center gap-3 mt-8 pt-4 border-t border-brand-border/60">
+            <div class="w-8 h-8 rounded-full overflow-hidden bg-neutral-200">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="Malcolm Reeves" class="w-full h-full object-cover" />
+            </div>
+            <div>
+              <span class="block text-xs font-semibold text-[#1C1B19]">Malcolm Reeves</span>
+              <span class="block text-[9px] text-neutral-400 font-light font-mono">Home Owner, Mumbai</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review Card 2 (Image Card) -->
+        <div class="min-w-[300px] md:min-w-[380px] aspect-[4/5] md:aspect-auto md:h-[400px] rounded-3xl overflow-hidden relative snap-start group shadow-sm">
+          <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=600&q=80" alt="Mark T" class="absolute inset-0 w-full h-full object-cover z-10 transition-transform duration-700 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/20 z-20"></div>
+          
+          <div class="absolute inset-x-8 bottom-8 z-30 text-white flex flex-col justify-end h-full">
+            <span class="text-3xl text-brand-gold font-serif leading-none block mb-2">“</span>
+            <p class="text-white text-xs font-light leading-relaxed mb-6">
+              I recommend them to everyone—even my picky cousin. Handled all property inspections and closed within weeks.
+            </p>
+            <div class="flex items-center gap-3 pt-4 border-t border-white/10">
+              <div class="w-8 h-8 rounded-full overflow-hidden border border-white/20 bg-neutral-200">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" alt="Mark T" class="w-full h-full object-cover" />
+              </div>
+              <div>
+                <span class="block text-xs font-semibold text-white">Mark T.</span>
+                <span class="block text-[9px] text-white/60 font-light font-mono">Bespoke Buyer, Bandra</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review Card 3 (Text heavy) -->
+        <div class="min-w-[300px] md:min-w-[380px] bg-white border border-brand-border rounded-3xl p-8 flex flex-col justify-between snap-start hover:shadow-md transition-shadow">
+          <div>
+            <span class="text-3xl text-brand-gold font-serif leading-none block mb-4">“</span>
+            <h4 class="text-base font-bold text-[#1C1B19] mb-4">Working with them changed everything!</h4>
+            <p class="text-neutral-500 text-xs font-light leading-relaxed">
+              I thought the buying process would be stressful and overwhelming, but they structured every step, and even reminded us about things we didn't think of. The title check and registration were done before I knew it, and they even helped us map the right designers.
+            </p>
+          </div>
+          <div class="flex items-center gap-3 mt-8 pt-4 border-t border-brand-border/60">
+            <div class="w-8 h-8 rounded-full overflow-hidden bg-neutral-200">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80" alt="Donovan Price" class="w-full h-full object-cover" />
+            </div>
+            <div>
+              <span class="block text-xs font-semibold text-[#1C1B19]">Donovan Price</span>
+              <span class="block text-[9px] text-neutral-400 font-light font-mono">Home Owner, Pune</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review Card 4 (Image Card) -->
+        <div class="min-w-[300px] md:min-w-[380px] aspect-[4/5] md:aspect-auto md:h-[400px] rounded-3xl overflow-hidden relative snap-start group shadow-sm">
+          <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=600&q=80" alt="Evander Cruz" class="absolute inset-0 w-full h-full object-cover z-10 transition-transform duration-700 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/20 z-20"></div>
+          
+          <div class="absolute inset-x-8 bottom-8 z-30 text-white flex flex-col justify-end h-full">
+            <span class="text-3xl text-brand-gold font-serif leading-none block mb-2">“</span>
+            <p class="text-white text-xs font-light leading-relaxed mb-6">
+              They made me feel like my time actually mattered. Extremely respectful and transparent throughout the process.
+            </p>
+            <div class="flex items-center gap-3 pt-4 border-t border-white/10">
+              <div class="w-8 h-8 rounded-full overflow-hidden border border-white/20 bg-neutral-200">
+                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=120&q=80" alt="Evander Cruz" class="w-full h-full object-cover" />
+              </div>
+              <div>
+                <span class="block text-xs font-semibold text-white">Evander Cruz</span>
+                <span class="block text-[9px] text-white/60 font-light font-mono">Investor, Thane</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PREMIUM FOOTER (Swaarg-inspired Luxury Layout) -->
+  <footer class="bg-[#0A0A0A] text-white pt-24 pb-0 relative z-20 border-t border-brand-border/10 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-8">
+      
+      <!-- Main Content Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-20">
+        
+        <!-- Left Side Column (CTA) -->
+        <div class="md:col-span-6 flex flex-col items-start justify-between">
+          <h2 class="text-4xl sm:text-5xl font-display font-light text-white tracking-tight leading-tight mb-8">
+            Making Luxury <br>Living Effortless.
+          </h2>
+          <!-- Rounded White Button with arrow icon -> Links directly to WhatsApp chat -->
+          <a href="https://wa.me/918708528150?text=Hi%20Cora%20Team%2C%20I%20saw%20our%20real%20estate%20demo%20page%20for%20Test Agency%20and%20want%2520to%2520book%2520a%2520private%2520visit." target="_blank" class="inline-flex items-center gap-2 bg-white hover:bg-neutral-100 text-black text-xs font-semibold px-8 py-3.5 rounded-full transition-transform duration-300 hover:scale-105 active:scale-95 shadow-lg">
+            Book Visit <span class="text-sm font-light">→</span>
+          </a>
+        </div>
+
+        <!-- Right Side Columns (Links) -->
+        <div class="md:col-span-6 grid grid-cols-3 gap-8">
+          <!-- Column 1: Pages -->
+          <div>
+            <h4 class="text-[10px] font-mono tracking-widest uppercase text-white/40 mb-6">Pages</h4>
+            <div class="flex flex-col gap-3.5 text-xs text-neutral-400 font-light">
+              <a href="#listings" class="hover:text-white transition-colors">Listings <span class="text-[9px] font-light text-neutral-600">↗</span></a>
+              <a href="#vision" class="hover:text-white transition-colors">Vision <span class="text-[9px] font-light text-neutral-600">↗</span></a>
+              <a href="https://wa.me/918708528150" target="_blank" class="hover:text-white transition-colors">Contact <span class="text-[9px] font-light text-neutral-600">↗</span></a>
+            </div>
+          </div>
+          <!-- Column 2: Info -->
+          <div>
+            <h4 class="text-[10px] font-mono tracking-widest uppercase text-white/40 mb-6">Info</h4>
+            <div class="flex flex-col gap-3.5 text-xs text-neutral-400 font-light">
+              <a href="#" class="hover:text-white transition-colors">Privacy Policy <span class="text-[9px] font-light text-neutral-600">↗</span></a>
+              <a href="#" class="hover:text-white transition-colors">Terms <span class="text-[9px] font-light text-neutral-600">↗</span></a>
+            </div>
+          </div>
+          <!-- Column 3: Social -->
+          <div>
+            <h4 class="text-[10px] font-mono tracking-widest uppercase text-white/40 mb-6">Social</h4>
+            <div class="flex flex-col gap-3.5 text-xs text-neutral-400 font-light">
+              <a href="#" class="hover:text-white transition-colors">Instagram <span class="text-[9px] font-light text-neutral-600">↗</span></a>
+              <a href="#" class="hover:text-white transition-colors">Facebook <span class="text-[9px] font-light text-neutral-600">↗</span></a>
+              <a href="#" class="hover:text-white transition-colors">Linkedin <span class="text-[9px] font-light text-neutral-600">↗</span></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Divider -->
+      <div class="border-t border-white/10 w-full py-8 flex flex-col sm:flex-row items-center justify-between text-[9px] text-neutral-500 font-mono gap-4">
+        <div>
+          <span>&copy; 2026 TEST AGENCY (server@Cora)</span>
+        </div>
+        <div>
+          <span>Design and developed by Cora Platform</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Massive Overlay Branding and Asset Block -->
+    <div class="relative w-full h-[45vh] md:h-[55vh] mt-12 overflow-hidden flex items-end justify-center select-none">
+      <!-- Background Luxury Villa Pool Image -->
+      <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80" alt="Luxury Villa sunset" class="absolute inset-0 w-full h-full object-cover z-10 brightness-[0.4] opacity-90" />
+      
+      <!-- Gradient overlay to fade top edge into the footer background and darken bottom for text contrast -->
+      <div class="absolute inset-0 bg-gradient-to-b from-[#0A0A0A] via-transparent to-[#0A0A0A]/90 z-20"></div>
+      
+      <!-- Big transparent text sitting on top of the image and blending with mix-blend-overlay -->
+      <div class="absolute bottom-0 left-0 right-0 text-center pointer-events-none select-none z-30 translate-y-[20%]">
+        <h1 class="text-[14vw] font-display font-black text-white/20 leading-none tracking-tighter uppercase whitespace-nowrap select-none mix-blend-overlay">
+          Test Agency
+        </h1>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Sticky WhatsApp Button -->
+  <a href="https://wa.me/918708528150?text=Hi%20Cora%20Team%2C%20I%20saw%20our%20real%20estate%20demo%20page%20for%20Test Agency%20and%20want%20to%20reserve%20our%20broker%20funnel." target="_blank" rel="noopener noreferrer"
+     class="fixed bottom-6 right-6 z-50 flex items-center gap-2.5 bg-[#25D366] hover:bg-[#20BD5A] text-white shadow-lg shadow-[#25D366]/25 hover:shadow-xl hover:shadow-[#25D366]/30 px-5 py-3.5 rounded-full transition-all duration-300 hover:scale-105 active:scale-95 group"
+     aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp text-xl group-hover:rotate-12 transition-transform duration-300"></i>
+    <span class="text-[10px] font-bold tracking-widest uppercase hidden sm:inline">Reserve Funnel</span>
+  </a>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Promo Video Playback Control
+    function toggleVideoPlayback() {
+      const video = document.getElementById('promoVideo');
+      const icon = document.getElementById('playPauseIcon');
+      if (video.paused) {
+        video.play();
+        icon.className = 'fa-solid fa-pause';
+      } else {
+        video.pause();
+        icon.className = 'fa-solid fa-play';
+      }
+    }
+
+    // 3D Carousel Logic
+    let activeIndex = 1; // Start with the center one (Oceanfront Vista) active
+    const totalSlides = 3;
+
+    function updateCarousel() {
+      for (let i = 0; i < totalSlides; i++) {
+        const slide = document.getElementById(`slide-${i}`);
+        if (!slide) continue;
+        
+        // Remove all layout classes
+        slide.classList.remove('active', 'left', 'right', 'hidden-left', 'hidden-right');
+        
+        if (i === activeIndex) {
+          slide.classList.add('active');
+        } else if (i === (activeIndex - 1 + totalSlides) % totalSlides) {
+          slide.classList.add('left');
+        } else if (i === (activeIndex + 1) % totalSlides) {
+          slide.classList.add('right');
+        } else {
+          // Fallback hidden
+          if (i < activeIndex) {
+            slide.classList.add('hidden-left');
+          } else {
+            slide.classList.add('hidden-right');
+          }
+        }
+      }
+    }
+
+    function nextSlide() {
+      activeIndex = (activeIndex + 1) % totalSlides;
+      updateCarousel();
+    }
+
+    // WhatsApp updates subscription handler
+    function handleWhatsAppUpdate() {
+      const phone = document.getElementById('update-whatsapp').value;
+      if (!phone) {
+        alert('Please enter your WhatsApp number.');
+        return;
+      }
+      const text = `Hi Cora Team,\n\nI want to receive private off-market property updates on WhatsApp.\n\nMy WhatsApp Number: ${phone}`;
+      const url = `https://wa.me/918708528150?text=${encodeURIComponent(text)}`;
+      window.open(url, '_blank');
+    }
+
+    function prevSlide() {
+      activeIndex = (activeIndex - 1 + totalSlides) % totalSlides;
+      updateCarousel();
+    }
+
+    // Initialize carousel on load
+    window.addEventListener('DOMContentLoaded', () => {
+      updateCarousel();
+    });
+
+    // Reveal animation on scroll
+    window.addEventListener('scroll', () => {
+      const reveals = document.querySelectorAll('.reveal');
+      reveals.forEach(r => {
+        const windowHeight = window.innerHeight;
+        const revealTop = r.getBoundingClientRect().top;
+        const revealPoint = 80;
+        if (revealTop < windowHeight - revealPoint) {
+          r.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
