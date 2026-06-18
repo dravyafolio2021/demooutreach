@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>{{STUDIO_NAME}} - Admin Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --surface-color: #fafafa;
+            --border-color: #e5e5e5;
+            --text-main: #111111;
+            --text-muted: #666666;
+            --accent-color: #000000;
+            --success-color: #0d9488; /* Teal */
+            --nav-height: 64px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: var(--surface-color);
+            color: var(--text-main);
+            padding-bottom: calc(var(--nav-height) + 20px);
+            overscroll-behavior-y: none;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background-color: var(--bg-color);
+            padding: 16px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .studio-name {
+            font-weight: 600;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .studio-name svg {
+            width: 18px;
+            height: 18px;
+            color: var(--text-muted);
+        }
+
+        .top-bar-icons {
+            display: flex;
+            gap: 16px;
+            color: var(--text-main);
+        }
+
+        /* Container */
+        .container {
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+            margin-top: 24px;
+        }
+
+        .section-title:first-child {
+            margin-top: 0;
+        }
+
+        /* Overview Cards */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .metric-card {
+            background-color: var(--bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .metric-label {
+            font-size: 13px;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .metric-label svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        .metric-value {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .metric-trend {
+            font-size: 12px;
+            color: var(--success-color);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .metric-trend svg {
+            width: 12px;
+            height: 12px;
+        }
+
+        /* Unified Inbox */
+        .lead-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .lead-card {
+            background-color: var(--bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            transition: background-color 0.2s;
+        }
+
+        .lead-card:active {
+            background-color: #f5f5f5;
+        }
+
+        .lead-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .lead-name {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .lead-meta {
+            font-size: 13px;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .source-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+        }
+
+        .source-justdial {
+            background-color: #fff1f2;
+            color: #be123c;
+            border: 1px solid #ffe4e6;
+        }
+
+        .source-instagram {
+            background-color: #fdf4ff;
+            color: #c026d3;
+            border: 1px solid #fae8ff;
+        }
+
+        .source-website {
+            background-color: #f0fdf4;
+            color: #15803d;
+            border: 1px solid #dcfce7;
+        }
+
+        .lead-inquiry {
+            font-size: 14px;
+            color: var(--text-main);
+            line-height: 1.4;
+            padding: 12px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            border: 1px solid #f0f0f0;
+        }
+
+        .lead-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 4px;
+        }
+
+        .action-btn {
+            flex: 1;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-size: 13px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            cursor: pointer;
+        }
+
+        .action-btn.primary {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+        }
+
+        .action-btn svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        /* Bottom Nav */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: var(--nav-height);
+            background-color: var(--bg-color);
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding-bottom: env(safe-area-inset-bottom);
+            z-index: 100;
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 10px;
+            font-weight: 500;
+            padding: 8px 16px;
+        }
+
+        .nav-item.active {
+            color: var(--text-main);
+        }
+
+        .nav-item svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* Banner */
+        .demo-banner {
+            background-color: #eff6ff;
+            border: 1px solid #bfdbfe;
+            color: #1e3a8a;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 13px;
+            line-height: 1.5;
+            margin-bottom: 24px;
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+        
+        .demo-banner svg {
+            flex-shrink: 0;
+            width: 18px;
+            height: 18px;
+            margin-top: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="studio-name">
+            <i data-feather="box"></i>
+            {{STUDIO_NAME}}
+        </div>
+        <div class="top-bar-icons">
+            <i data-feather="bell"></i>
+        </div>
+    </div>
+
+    <div class="container">
+        
+        <div class="demo-banner">
+            <i data-feather="info"></i>
+            <div>
+                <strong>Claraverse Admin Demo</strong><br>
+                This is a preview of the backend dashboard you get when you upgrade. Leads from your Website, JustDial, and Instagram are automatically synced here.
+            </div>
+        </div>
+
+        <div class="section-title">Overview (Last 30 Days)</div>
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-label"><i data-feather="eye"></i> Profile Views</div>
+                <div class="metric-value">1,402</div>
+                <div class="metric-trend"><i data-feather="trending-up"></i> +34%</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label"><i data-feather="users"></i> Unified Leads</div>
+                <div class="metric-value">28</div>
+                <div class="metric-trend"><i data-feather="trending-up"></i> +12%</div>
+            </div>
+        </div>
+
+        <div class="section-title">Unified Inbox</div>
+        <div class="lead-list">
+            
+            <!-- Lead 1: Website -->
+            <div class="lead-card">
+                <div class="lead-header">
+                    <div>
+                        <div class="lead-name">Neha & Rohan</div>
+                        <div class="lead-meta">2 mins ago • Dec 2026 Wedding</div>
+                    </div>
+                    <div class="source-badge source-website">
+                        <i data-feather="globe" style="width:10px;height:10px;"></i> Website
+                    </div>
+                </div>
+                <div class="lead-inquiry">
+                    "Hi! We loved the Udaipur wedding gallery on your site. Looking for candid photography and cinematic film. Budget is around 1.5L. Are you free on Dec 14th?"
+                </div>
+                <div class="lead-actions">
+                    <button class="action-btn primary"><i data-feather="message-circle"></i> Reply on WhatsApp</button>
+                    <button class="action-btn"><i data-feather="calendar"></i> Check Dates</button>
+                </div>
+            </div>
+
+            <!-- Lead 2: Instagram -->
+            <div class="lead-card">
+                <div class="lead-header">
+                    <div>
+                        <div class="lead-name">Anjali Verma</div>
+                        <div class="lead-meta">1 hour ago • Pre-Wedding</div>
+                    </div>
+                    <div class="source-badge source-instagram">
+                        <i data-feather="instagram" style="width:10px;height:10px;"></i> Instagram DM
+                    </div>
+                </div>
+                <div class="lead-inquiry">
+                    "Sent 'PRICE' to your latest reel. Can you send the brochure for pre-wedding shoots in Goa?"
+                </div>
+                <div class="lead-actions">
+                    <button class="action-btn primary"><i data-feather="send"></i> Send Brochure</button>
+                </div>
+            </div>
+
+            <!-- Lead 3: JustDial -->
+            <div class="lead-card">
+                <div class="lead-header">
+                    <div>
+                        <div class="lead-name">Siddharth Kapoor</div>
+                        <div class="lead-meta">Yesterday • Unspecified Event</div>
+                    </div>
+                    <div class="source-badge source-justdial">
+                        <i data-feather="phone-call" style="width:10px;height:10px;"></i> JustDial
+                    </div>
+                </div>
+                <div class="lead-inquiry">
+                    *Automated Sync*: Lead matched from JustDial search for "Photographers in Sector 83 / Vatika". Phone: +91 98765 XXXXX.
+                </div>
+                <div class="lead-actions">
+                    <button class="action-btn primary"><i data-feather="phone"></i> Call Now</button>
+                    <button class="action-btn"><i data-feather="message-square"></i> SMS Intro</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bottom Navigation -->
+    <div class="bottom-nav">
+        <a href="#" class="nav-item active">
+            <i data-feather="home"></i>
+            Home
+        </a>
+        <a href="#" class="nav-item">
+            <i data-feather="inbox"></i>
+            Inbox
+            <span style="position:absolute; top:6px; right:30%; background:red; width:8px; height:8px; border-radius:50%;"></span>
+        </a>
+        <a href="#" class="nav-item">
+            <i data-feather="bar-chart-2"></i>
+            Traffic
+        </a>
+        <a href="#" class="nav-item">
+            <i data-feather="settings"></i>
+            Settings
+        </a>
+    </div>
+
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>

@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Shutterbugga - Admin Dashboard</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Feather Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
     <style>
         :root {
@@ -15,7 +14,7 @@
             --text-main: #111111;
             --text-muted: #666666;
             --accent-color: #000000;
-            --success-color: #0d9488; /* Teal */
+            --success-color: #0d9488; 
             --nav-height: 64px;
         }
 
@@ -67,11 +66,25 @@
             color: var(--text-main);
         }
 
-        /* Container */
+        /* Container & Tabs */
         .container {
             padding: 20px;
             max-width: 600px;
             margin: 0 auto;
+        }
+        
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.2s ease-in-out;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .section-title {
@@ -88,11 +101,24 @@
             margin-top: 0;
         }
 
-        /* Overview Cards */
+        /* Shared Cards */
+        .card {
+            background-color: var(--bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        /* Metrics Grid */
         .metrics-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 12px;
+            margin-bottom: 24px;
         }
 
         .metric-card {
@@ -112,204 +138,70 @@
             align-items: center;
             gap: 6px;
         }
+        .metric-label svg { width: 14px; height: 14px; }
+        .metric-value { font-size: 24px; font-weight: 600; color: var(--text-main); }
+        .metric-trend { font-size: 12px; color: var(--success-color); font-weight: 500; display: flex; align-items: center; gap: 4px; }
+        .metric-trend svg { width: 12px; height: 12px; }
 
-        .metric-label svg {
-            width: 14px;
-            height: 14px;
-        }
-
-        .metric-value {
-            font-size: 24px;
-            font-weight: 600;
-            color: var(--text-main);
-        }
-
-        .metric-trend {
-            font-size: 12px;
-            color: var(--success-color);
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            gap: 4px;
-        }
-
-        .metric-trend svg {
-            width: 12px;
-            height: 12px;
-        }
-
-        /* Unified Inbox */
-        .lead-list {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .lead-card {
-            background-color: var(--bg-color);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 16px;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            transition: background-color 0.2s;
-        }
-
-        .lead-card:active {
-            background-color: #f5f5f5;
-        }
-
-        .lead-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-        }
-
-        .lead-name {
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 4px;
-        }
-
-        .lead-meta {
-            font-size: 13px;
-            color: var(--text-muted);
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
+        /* Unified Inbox & Badges */
+        .lead-header { display: flex; justify-content: space-between; align-items: flex-start; }
+        .lead-name { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+        .lead-meta { font-size: 13px; color: var(--text-muted); display: flex; align-items: center; gap: 6px; }
 
         .source-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-            padding: 4px 8px;
-            border-radius: 6px;
-            font-size: 11px;
-            font-weight: 500;
-            letter-spacing: 0.3px;
+            display: inline-flex; align-items: center; gap: 4px;
+            padding: 4px 8px; border-radius: 6px; font-size: 11px; font-weight: 500; letter-spacing: 0.3px;
+        }
+        .source-justdial { background-color: #fff1f2; color: #be123c; border: 1px solid #ffe4e6; }
+        .source-instagram { background-color: #fdf4ff; color: #c026d3; border: 1px solid #fae8ff; }
+        .source-website { background-color: #f0fdf4; color: #15803d; border: 1px solid #dcfce7; }
+        .source-ai { background-color: #eff6ff; color: #1d4ed8; border: 1px solid #dbeafe; }
+
+        .info-box {
+            font-size: 14px; color: var(--text-main); line-height: 1.4;
+            padding: 12px; background-color: #f9f9f9; border-radius: 8px; border: 1px solid #f0f0f0;
         }
 
-        .source-justdial {
-            background-color: #fff1f2;
-            color: #be123c;
-            border: 1px solid #ffe4e6;
-        }
-
-        .source-instagram {
-            background-color: #fdf4ff;
-            color: #c026d3;
-            border: 1px solid #fae8ff;
-        }
-
-        .source-website {
-            background-color: #f0fdf4;
-            color: #15803d;
-            border: 1px solid #dcfce7;
-        }
-
-        .lead-inquiry {
-            font-size: 14px;
-            color: var(--text-main);
-            line-height: 1.4;
-            padding: 12px;
-            background-color: #f9f9f9;
-            border-radius: 8px;
-            border: 1px solid #f0f0f0;
-        }
-
-        .lead-actions {
-            display: flex;
-            gap: 8px;
-            margin-top: 4px;
-        }
-
+        .action-row { display: flex; gap: 8px; margin-top: 4px; }
         .action-btn {
-            flex: 1;
-            padding: 10px;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            font-size: 13px;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-            cursor: pointer;
+            flex: 1; padding: 10px; border-radius: 8px; border: 1px solid var(--border-color);
+            background-color: var(--bg-color); color: var(--text-main);
+            font-size: 13px; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 6px; cursor: pointer;
         }
+        .action-btn.primary { background-color: var(--accent-color); color: white; border: none; }
+        .action-btn svg { width: 14px; height: 14px; }
 
-        .action-btn.primary {
-            background-color: var(--accent-color);
-            color: white;
-            border: none;
+        /* Project Status */
+        .status-badge {
+            display: inline-block; padding: 4px 8px; border-radius: 6px; font-size: 11px; font-weight: 600;
         }
-
-        .action-btn svg {
-            width: 14px;
-            height: 14px;
-        }
+        .status-editing { background-color: #fef9c3; color: #854d0e; }
+        .status-delivered { background-color: #dcfce7; color: #166534; }
+        .status-upcoming { background-color: #f3f4f6; color: #374151; }
 
         /* Bottom Nav */
         .bottom-nav {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: var(--nav-height);
-            background-color: var(--bg-color);
-            border-top: 1px solid var(--border-color);
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            padding-bottom: env(safe-area-inset-bottom);
-            z-index: 100;
+            position: fixed; bottom: 0; left: 0; right: 0; height: var(--nav-height);
+            background-color: var(--bg-color); border-top: 1px solid var(--border-color);
+            display: flex; justify-content: space-around; align-items: center;
+            padding-bottom: env(safe-area-inset-bottom); z-index: 100;
         }
-
         .nav-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 4px;
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 10px;
-            font-weight: 500;
-            padding: 8px 16px;
+            display: flex; flex-direction: column; align-items: center; gap: 4px;
+            color: var(--text-muted); text-decoration: none; font-size: 10px; font-weight: 500;
+            padding: 8px 16px; cursor: pointer; position: relative;
         }
-
-        .nav-item.active {
-            color: var(--text-main);
-        }
-
-        .nav-item svg {
-            width: 20px;
-            height: 20px;
-        }
+        .nav-item.active { color: var(--text-main); }
+        .nav-item svg { width: 20px; height: 20px; }
+        .nav-badge { position:absolute; top:6px; right:25%; background:red; width:8px; height:8px; border-radius:50%; }
 
         /* Banner */
         .demo-banner {
-            background-color: #eff6ff;
-            border: 1px solid #bfdbfe;
-            color: #1e3a8a;
-            padding: 12px;
-            border-radius: 8px;
-            font-size: 13px;
-            line-height: 1.5;
-            margin-bottom: 24px;
-            display: flex;
-            gap: 12px;
-            align-items: flex-start;
+            background-color: #eff6ff; border: 1px solid #bfdbfe; color: #1e3a8a;
+            padding: 12px; border-radius: 8px; font-size: 13px; line-height: 1.5; margin-bottom: 24px;
+            display: flex; gap: 12px; align-items: flex-start;
         }
-        
-        .demo-banner svg {
-            flex-shrink: 0;
-            width: 18px;
-            height: 18px;
-            margin-top: 2px;
-        }
+        .demo-banner svg { flex-shrink: 0; width: 18px; height: 18px; margin-top: 2px; }
     </style>
 </head>
 <body>
@@ -326,33 +218,56 @@
 
     <div class="container">
         
-        <div class="demo-banner">
-            <i data-feather="info"></i>
-            <div>
-                <strong>Claraverse Admin Demo</strong><br>
-                This is a preview of the backend dashboard you get when you upgrade. Leads from your Website, JustDial, and Instagram are automatically synced here.
+        <!-- HOME TAB -->
+        <div id="tab-home" class="tab-content active">
+            <div class="demo-banner">
+                <i data-feather="info"></i>
+                <div>
+                    <strong>Claraverse Admin Demo</strong><br>
+                    Welcome to your personalized backend. Navigate the tabs below to see how Claraverse manages your leads, post-production, and SEO traffic automatically.
+                </div>
+            </div>
+
+            <div class="section-title">Revenue Pipeline</div>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-label"><i data-feather="dollar-sign"></i> Qualified Pipeline</div>
+                    <div class="metric-value">₹12.5L</div>
+                    <div class="metric-trend"><i data-feather="trending-up"></i> +15% vs last month</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label"><i data-feather="users"></i> Hot Leads</div>
+                    <div class="metric-value">14</div>
+                    <div class="metric-trend"><i data-feather="trending-up"></i> +4 new this week</div>
+                </div>
+            </div>
+
+            <div class="section-title">AI Automation Activity</div>
+            <div class="card">
+                <div class="lead-header">
+                    <div>
+                        <div class="lead-name">Midnight Lead Captured</div>
+                        <div class="lead-meta">Yesterday at 11:42 PM</div>
+                    </div>
+                    <div class="source-badge source-ai">
+                        <i data-feather="cpu" style="width:10px;height:10px;"></i> AI Chatbot
+                    </div>
+                </div>
+                <div class="info-box">
+                    <strong>Lead:</strong> Sneha Reddy (Pre-Wedding)<br>
+                    <strong>Action:</strong> Your AI chatbot answered pricing FAQs, captured her WhatsApp number, and sent your brochure while you were asleep.
+                </div>
+                <div class="action-row">
+                    <button class="action-btn primary" onclick="switchTab('tab-inbox')">View Lead in Inbox</button>
+                </div>
             </div>
         </div>
 
-        <div class="section-title">Overview (Last 30 Days)</div>
-        <div class="metrics-grid">
-            <div class="metric-card">
-                <div class="metric-label"><i data-feather="eye"></i> Profile Views</div>
-                <div class="metric-value">1,402</div>
-                <div class="metric-trend"><i data-feather="trending-up"></i> +34%</div>
-            </div>
-            <div class="metric-card">
-                <div class="metric-label"><i data-feather="users"></i> Unified Leads</div>
-                <div class="metric-value">28</div>
-                <div class="metric-trend"><i data-feather="trending-up"></i> +12%</div>
-            </div>
-        </div>
-
-        <div class="section-title">Unified Inbox</div>
-        <div class="lead-list">
+        <!-- INBOX TAB -->
+        <div id="tab-inbox" class="tab-content">
+            <div class="section-title">Unified Inbox</div>
             
-            <!-- Lead 1: Website -->
-            <div class="lead-card">
+            <div class="card">
                 <div class="lead-header">
                     <div>
                         <div class="lead-name">Neha & Rohan</div>
@@ -362,81 +277,183 @@
                         <i data-feather="globe" style="width:10px;height:10px;"></i> Website
                     </div>
                 </div>
-                <div class="lead-inquiry">
-                    "Hi! We loved the Udaipur wedding gallery on your site. Looking for candid photography and cinematic film. Budget is around 1.5L. Are you free on Dec 14th?"
+                <div class="info-box">
+                    <strong>Budget:</strong> ₹1.5L - ₹2.5L<br>
+                    <strong>Venue:</strong> Udaipur (Destination)<br><br>
+                    "Hi! We loved the Udaipur gallery on your site. Are you free on Dec 14th?"
                 </div>
-                <div class="lead-actions">
-                    <button class="action-btn primary"><i data-feather="message-circle"></i> Reply on WhatsApp</button>
-                    <button class="action-btn"><i data-feather="calendar"></i> Check Dates</button>
+                <div class="action-row">
+                    <button class="action-btn primary"><i data-feather="message-circle"></i> WhatsApp</button>
+                    <button class="action-btn"><i data-feather="calendar"></i> Dates</button>
                 </div>
             </div>
 
-            <!-- Lead 2: Instagram -->
-            <div class="lead-card">
+            <div class="card">
                 <div class="lead-header">
                     <div>
                         <div class="lead-name">Anjali Verma</div>
                         <div class="lead-meta">1 hour ago • Pre-Wedding</div>
                     </div>
                     <div class="source-badge source-instagram">
-                        <i data-feather="instagram" style="width:10px;height:10px;"></i> Instagram DM
+                        <i data-feather="instagram" style="width:10px;height:10px;"></i> Instagram
                     </div>
                 </div>
-                <div class="lead-inquiry">
+                <div class="info-box">
                     "Sent 'PRICE' to your latest reel. Can you send the brochure for pre-wedding shoots in Goa?"
                 </div>
-                <div class="lead-actions">
+                <div class="action-row">
                     <button class="action-btn primary"><i data-feather="send"></i> Send Brochure</button>
                 </div>
             </div>
 
-            <!-- Lead 3: JustDial -->
-            <div class="lead-card">
+            <div class="card">
                 <div class="lead-header">
                     <div>
                         <div class="lead-name">Siddharth Kapoor</div>
-                        <div class="lead-meta">Yesterday • Unspecified Event</div>
+                        <div class="lead-meta">Yesterday • Unspecified</div>
                     </div>
                     <div class="source-badge source-justdial">
                         <i data-feather="phone-call" style="width:10px;height:10px;"></i> JustDial
                     </div>
                 </div>
-                <div class="lead-inquiry">
-                    *Automated Sync*: Lead matched from JustDial search for "Photographers in Vashi, Navi Mumbai". Phone: +91 98765 XXXXX.
+                <div class="info-box">
+                    *Automated Sync*: Lead matched from JustDial search for "Photographers in Vashi, Navi Mumbai".
                 </div>
-                <div class="lead-actions">
-                    <button class="action-btn primary"><i data-feather="phone"></i> Call Now</button>
-                    <button class="action-btn"><i data-feather="message-square"></i> SMS Intro</button>
+                <div class="action-row">
+                    <button class="action-btn primary"><i data-feather="phone"></i> Call Lead</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROJECTS TAB -->
+        <div id="tab-projects" class="tab-content">
+            <div class="section-title">Active Projects & Delivery</div>
+            <p style="font-size:13px; color:var(--text-muted); margin-bottom:16px;">Manage your post-production workflow and request referrals automatically when galleries are delivered.</p>
+            
+            <div class="card">
+                <div class="lead-header">
+                    <div class="lead-name">Aarav & Meera</div>
+                    <div class="status-badge status-editing">Editing - 60%</div>
+                </div>
+                <div class="lead-meta" style="margin-bottom:8px;">Wedding Date: Nov 12, 2025</div>
+                <div class="info-box">
+                    <strong>Current Stage:</strong> Color Grading<br>
+                    <strong>Est. Delivery:</strong> Dec 20, 2025
+                </div>
+                <div class="action-row">
+                    <button class="action-btn"><i data-feather="clock"></i> Update Client</button>
                 </div>
             </div>
 
+            <div class="card">
+                <div class="lead-header">
+                    <div class="lead-name">Kunal & Riya</div>
+                    <div class="status-badge status-delivered">Delivered</div>
+                </div>
+                <div class="lead-meta" style="margin-bottom:8px;">Wedding Date: Oct 05, 2025</div>
+                <div class="info-box">
+                    Client downloaded full gallery 2 days ago.
+                </div>
+                <div class="action-row">
+                    <button class="action-btn primary"><i data-feather="share-2"></i> Request Google Review</button>
+                    <button class="action-btn"><i data-feather="gift"></i> Send Anniversary Offer</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- TRAFFIC TAB -->
+        <div id="tab-traffic" class="tab-content">
+            <div class="section-title">Organic Traffic & SEO</div>
+            <p style="font-size:13px; color:var(--text-muted); margin-bottom:16px;">See how many leads are finding you organically on Google instead of relying on paid JustDial ads.</p>
+
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-label"><i data-feather="search"></i> Google Searches</div>
+                    <div class="metric-value">3,142</div>
+                    <div class="metric-trend"><i data-feather="trending-up"></i> +45% (SEO Ranking)</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label"><i data-feather="map-pin"></i> Maps Views</div>
+                    <div class="metric-value">1,890</div>
+                    <div class="metric-trend"><i data-feather="trending-up"></i> +22%</div>
+                </div>
+            </div>
+
+            <div class="section-title">Top Converting Keywords</div>
+            <div class="card">
+                <div style="display:flex; justify-content:space-between; margin-bottom:8px; border-bottom:1px solid #f0f0f0; padding-bottom:8px;">
+                    <span style="font-size:14px;">"Best candid wedding photographer in Vashi, Navi Mumbai"</span>
+                    <span style="font-size:14px; font-weight:600; color:var(--success-color);">Rank #3</span>
+                </div>
+                <div style="display:flex; justify-content:space-between; margin-bottom:8px; border-bottom:1px solid #f0f0f0; padding-bottom:8px;">
+                    <span style="font-size:14px;">"Pre-wedding shoot locations Vashi, Navi Mumbai"</span>
+                    <span style="font-size:14px; font-weight:600; color:var(--success-color);">Rank #1</span>
+                </div>
+                <div style="display:flex; justify-content:space-between;">
+                    <span style="font-size:14px;">"Luxury wedding studio near me"</span>
+                    <span style="font-size:14px; font-weight:600; color:var(--success-color);">Rank #5</span>
+                </div>
+            </div>
         </div>
 
     </div>
 
     <!-- Bottom Navigation -->
     <div class="bottom-nav">
-        <a href="#" class="nav-item active">
+        <div class="nav-item active" onclick="switchTab('tab-home', this)">
             <i data-feather="home"></i>
             Home
-        </a>
-        <a href="#" class="nav-item">
+        </div>
+        <div class="nav-item" onclick="switchTab('tab-inbox', this)">
             <i data-feather="inbox"></i>
             Inbox
-            <span style="position:absolute; top:6px; right:30%; background:red; width:8px; height:8px; border-radius:50%;"></span>
-        </a>
-        <a href="#" class="nav-item">
+            <span class="nav-badge"></span>
+        </div>
+        <div class="nav-item" onclick="switchTab('tab-projects', this)">
+            <i data-feather="folder"></i>
+            Projects
+        </div>
+        <div class="nav-item" onclick="switchTab('tab-traffic', this)">
             <i data-feather="bar-chart-2"></i>
             Traffic
-        </a>
-        <a href="#" class="nav-item">
-            <i data-feather="settings"></i>
-            Settings
-        </a>
+        </div>
     </div>
 
     <script>
         feather.replace();
+
+        function switchTab(tabId, navElement) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            // Show target tab
+            document.getElementById(tabId).classList.add('active');
+
+            // Update nav styles
+            if (navElement) {
+                document.querySelectorAll('.nav-item').forEach(nav => {
+                    nav.classList.remove('active');
+                });
+                navElement.classList.add('active');
+                
+                // Clear notification badge if Inbox is clicked
+                if (tabId === 'tab-inbox') {
+                    const badge = navElement.querySelector('.nav-badge');
+                    if (badge) badge.style.display = 'none';
+                }
+            } else {
+                // Manual switch from code (e.g. from Home tab button)
+                document.querySelectorAll('.nav-item').forEach(nav => {
+                    nav.classList.remove('active');
+                });
+                // Find corresponding nav item
+                const allNavs = document.querySelectorAll('.nav-item');
+                if(tabId === 'tab-inbox') allNavs[1].classList.add('active');
+            }
+            
+            window.scrollTo(0, 0);
+        }
     </script>
 </body>
 </html>
