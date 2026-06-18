@@ -2731,8 +2731,12 @@
         }
 
         function updatePersonalizedBranding() {
-            const studioName = 'Leasing Gurgaon NCRR';
-            const studioCity = 'DLF Phase 1';
+            let studioName = 'Leasing Gurgaon NCRR';
+            if (studioName.startsWith('{{')) studioName = 'Aura Realty';
+            
+            let studioCity = 'DLF Phase 1';
+            if (studioCity.startsWith('{{')) studioCity = 'Gurgaon';
+            
             const initials = studioName.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase();
 
             const sidebarName = document.getElementById('sidebar-studio-name');
@@ -2761,8 +2765,11 @@
         }
 
         function updateWhatsAppCTALink() {
-            const studioName = 'Leasing Gurgaon NCRR';
-            const studioCity = 'DLF Phase 1';
+            let studioName = 'Leasing Gurgaon NCRR';
+            if (studioName.startsWith('{{')) studioName = 'Aura Realty';
+            
+            let studioCity = 'DLF Phase 1';
+            if (studioCity.startsWith('{{')) studioCity = 'Gurgaon';
 
             const message = `Hi Cora Team, I just went through the demo for ${studioName} based in ${studioCity}. I'm interested in deploying this sales funnel and CRM system for my photography studio!`;
             const encodedMsg = encodeURIComponent(message);
