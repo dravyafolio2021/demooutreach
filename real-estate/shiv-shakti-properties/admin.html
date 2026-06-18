@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karan Makker Studio — Lead Kanban CRM</title>
+    <title>Shiv Shakti Properties — Real Estate CRM</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -109,6 +109,10 @@
             transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
+        .tab-content.hidden {
+            display: none !important;
+        }
+
         @media print {
             body * {
                 visibility: hidden;
@@ -185,7 +189,7 @@
                                 class="text-[9px] font-mono text-neutral-400 uppercase tracking-widest leading-none block font-semibold">CRM
                                 BOARD V2.6</span>
                             <h1 class="text-sm font-bold tracking-tight text-slate-900 mt-1 uppercase"
-                                id="sidebar-studio-name">Karan Makker Studio</h1>
+                                id="sidebar-studio-name">Shiv Shakti Properties</h1>
                         </div>
                     </div>
                 </div>
@@ -197,11 +201,11 @@
                         &amp; Pipeline</span>
                     <button onclick="switchTab('overview')" id="nav-btn-overview"
                         class="w-full text-left px-3 py-2 rounded-xl text-xs font-semibold tracking-wide flex items-center gap-3 transition-all bg-slate-900 text-white">
-                        <i class="fa-solid fa-chart-pie text-sm"></i> Studio Overview
+                        <i class="fa-solid fa-chart-pie text-sm"></i> Agency Overview
                     </button>
                     <button onclick="switchTab('kanban')" id="nav-btn-kanban"
                         class="w-full text-left px-3 py-2 rounded-xl text-xs font-semibold tracking-wide flex items-center gap-3 transition-all text-slate-650 hover:bg-slate-100">
-                        <i class="fa-solid fa-table-columns text-sm"></i> Leads Pipeline
+                        <i class="fa-solid fa-table-columns text-sm"></i> Open Leads
                     </button>
                     <button onclick="switchTab('calendar')" id="nav-btn-calendar"
                         class="w-full text-left px-3 py-2 rounded-xl text-xs font-semibold tracking-wide flex items-center gap-3 transition-all text-slate-650 hover:bg-slate-100">
@@ -209,7 +213,7 @@
                     </button>
                     <button onclick="switchTab('contracts')" id="nav-btn-contracts"
                         class="w-full text-left px-3 py-2 rounded-xl text-xs font-semibold tracking-wide flex items-center gap-3 transition-all text-slate-650 hover:bg-slate-100">
-                        <i class="fa-solid fa-file-signature text-sm"></i> Retainers &amp; Contracts
+                        <i class="fa-solid fa-file-signature text-sm"></i> Contracts &amp; Leases
                     </button>
 
                     <span
@@ -229,19 +233,19 @@
                     <span
                         class="block text-[8px] font-mono uppercase text-neutral-400 tracking-widest px-3 pt-4 mb-2 font-bold">Studio
                         Execution</span>
-                    <button onclick="showFeatureLock('Deliverable Catalog Editor')"
+                    <button onclick="showFeatureLock('Property Inventory Editor')"
                         class="w-full text-left px-3 py-2 rounded-xl text-xs font-semibold tracking-wide flex items-center justify-between text-slate-500 hover:bg-slate-50 opacity-45 hover:opacity-80 transition-all">
                         <span class="flex items-center gap-3"><i class="fa-solid fa-photo-film text-sm"></i> Deliverable
                             Edits</span>
                         <i class="fa-solid fa-lock text-[10px]"></i>
                     </button>
-                    <button onclick="showFeatureLock('Sony & Red Equipment Locker')"
+                    <button onclick="showFeatureLock('Site Visit Fleet Allocation')"
                         class="w-full text-left px-3 py-2 rounded-xl text-xs font-semibold tracking-wide flex items-center justify-between text-slate-500 hover:bg-slate-50 opacity-45 hover:opacity-80 transition-all">
                         <span class="flex items-center gap-3"><i class="fa-solid fa-camera-retro text-sm"></i> Equipment
                             Locker</span>
                         <i class="fa-solid fa-lock text-[10px]"></i>
                     </button>
-                    <button onclick="showFeatureLock('Roster & Crew Assignment Hub')"
+                    <button onclick="showFeatureLock('Broker & Agent Assignment')"
                         class="w-full text-left px-3 py-2 rounded-xl text-xs font-semibold tracking-wide flex items-center justify-between text-slate-500 hover:bg-slate-50 opacity-45 hover:opacity-80 transition-all">
                         <span class="flex items-center gap-3"><i class="fa-solid fa-users text-sm"></i> Crew
                             Assignment</span>
@@ -251,13 +255,13 @@
                     <span
                         class="block text-[8px] font-mono uppercase text-neutral-400 tracking-widest px-3 pt-4 mb-2 font-bold">Client
                         Portals</span>
-                    <button onclick="showFeatureLock('Client Proofing Galleries')"
+                    <button onclick="showFeatureLock('99acres & MagicBricks Sync')"
                         class="w-full text-left px-3 py-2 rounded-xl text-xs font-semibold tracking-wide flex items-center justify-between text-slate-500 hover:bg-slate-50 opacity-45 hover:opacity-80 transition-all">
-                        <span class="flex items-center gap-3"><i class="fa-regular fa-images text-sm"></i> Client
+                        <span class="flex items-center gap-3"><i class="fa-regular fa-photos text-sm"></i> Client
                             Galleries</span>
                         <i class="fa-solid fa-lock text-[10px]"></i>
                     </button>
-                    <button onclick="showFeatureLock('Client Portal Access Portal')"
+                    <button onclick="showFeatureLock('Virtual Tour Hosting')"
                         class="w-full text-left px-3 py-2 rounded-xl text-xs font-semibold tracking-wide flex items-center justify-between text-slate-500 hover:bg-slate-50 opacity-45 hover:opacity-80 transition-all">
                         <span class="flex items-center gap-3"><i class="fa-solid fa-user-shield text-sm"></i> Client
                             Portals</span>
@@ -314,7 +318,7 @@
                     KM
                 </div>
                 <div>
-                    <span class="text-xs font-bold block text-slate-800" id="footer-studio-name">Karan Makker</span>
+                    <span class="text-xs font-bold block text-slate-800" id="footer-studio-name">Shiv Shakti Properties</span>
                     <span class="text-[9px] font-mono text-slate-400 studio-personalized-city">Lucknow, IN</span>
                 </div>
             </div>
@@ -327,7 +331,7 @@
             <header
                 class="bg-[#FAF9F5] border-b border-kbBorder px-6 py-4 flex flex-col md:flex-row md:items-center justify-between gap-4 shrink-0">
                 <div>
-                    <h2 class="text-base font-bold text-slate-900" id="section-title">Leads Pipeline</h2>
+                    <h2 class="text-base font-bold text-slate-900" id="section-title">Open Leads</h2>
                     <p class="text-[10px] text-neutral-400 font-mono tracking-wider" id="section-desc">Manage inbound
                         leads and wedding client pipelines</p>
                 </div>
@@ -370,7 +374,7 @@
                         <span
                             class="text-[9px] font-mono text-neutral-400 uppercase tracking-widest block font-bold mb-1">Studio
                             Analytics Center</span>
-                        <h2 class="text-xl font-bold text-white tracking-tight uppercase">Welcome back, Karan Makker
+                        <h2 class="text-xl font-bold text-white tracking-tight uppercase">Welcome back, Shiv Shakti Properties Team
                         </h2>
                         <p class="text-[11px] text-neutral-400 font-light mt-1">Here is a real-time overview of your
                             studio's pipeline, organic growth, and shoot rosters.</p>
@@ -390,42 +394,42 @@
                         <span class="text-[9px] font-mono text-neutral-450 uppercase tracking-wider">Booked
                             Revenue</span>
                         <div class="flex items-baseline gap-2 mt-1">
-                            <h4 class="text-xl font-black text-slate-900" id="overview-booked-revenue">₹28.5L</h4>
+                            <h4 class="text-xl font-black text-slate-900" id="overview-booked-revenue">₹45.5 Cr</h4>
                             <span class="text-[9.5px] font-bold text-emerald-600 font-mono"><i
                                     class="fa-solid fa-caret-up"></i> +12%</span>
                         </div>
-                        <p class="text-[10px] text-neutral-400 mt-1">Active contracts</p>
+                        <p class="text-[10px] text-neutral-400 mt-1">Sold & Leased Properties</p>
                     </div>
 
                     <div class="bg-white border border-kbBorder p-5 rounded-2xl shadow-xs">
                         <span class="text-[9px] font-mono text-neutral-450 uppercase tracking-wider">Outstanding
-                            Retainers</span>
+                            Tokens</span>
                         <div class="flex items-baseline gap-2 mt-1">
-                            <h4 class="text-xl font-black text-slate-900" id="overview-outstanding-revenue">₹12.0L</h4>
-                            <span class="text-[9.5px] font-bold text-neutral-450 font-mono">50% due</span>
+                            <h4 class="text-xl font-black text-slate-900" id="overview-outstanding-revenue">24</h4>
+                            <span class="text-[9.5px] font-bold text-neutral-450 font-mono">Premium</span>
                         </div>
-                        <p class="text-[10px] text-neutral-400 mt-1">Post-production stage</p>
+                        <p class="text-[10px] text-neutral-400 mt-1">Live on 99acres & MB</p>
                     </div>
 
                     <div class="bg-white border border-kbBorder p-5 rounded-2xl shadow-xs">
                         <span class="text-[9px] font-mono text-neutral-450 uppercase tracking-wider">Leads
                             Pipeline</span>
                         <div class="flex items-baseline gap-2 mt-1">
-                            <h4 class="text-xl font-black text-slate-900" id="overview-leads-count">10 Open</h4>
-                            <span class="text-[9.5px] font-bold text-blue-600 font-mono">3 New today</span>
+                            <h4 class="text-xl font-black text-slate-900" id="overview-leads-count">42 Active</h4>
+                            <span class="text-[9.5px] font-bold text-blue-600 font-mono">12 Site Visits Pending</span>
                         </div>
-                        <p class="text-[10px] text-neutral-400 mt-1">Inbound webform entries</p>
+                        <p class="text-[10px] text-neutral-400 mt-1">From Website & Portals</p>
                     </div>
 
                     <div class="bg-white border border-kbBorder p-5 rounded-2xl shadow-xs">
                         <span class="text-[9px] font-mono text-neutral-450 uppercase tracking-wider">Organic Clicks
                             (GBP)</span>
                         <div class="flex items-baseline gap-2 mt-1">
-                            <h4 class="text-xl font-black text-slate-900">12.4K</h4>
+                            <h4 class="text-xl font-black text-slate-900">145K</h4>
                             <span class="text-[9.5px] font-bold text-emerald-600 font-mono"><i
                                     class="fa-solid fa-caret-up"></i> +18%</span>
                         </div>
-                        <p class="text-[10px] text-neutral-400 mt-1">Google Search &amp; Maps</p>
+                        <p class="text-[10px] text-neutral-400 mt-1">99acres + MagicBricks</p>
                     </div>
                 </div>
 
@@ -485,7 +489,7 @@
                             <div class="space-y-4">
                                 <div>
                                     <div class="flex justify-between text-[11px] mb-1">
-                                        <span class="font-semibold text-slate-700">1. Inbound Inquiries</span>
+                                        <span class="font-semibold text-slate-700">1. Portal & Web Inquiries</span>
                                         <span class="font-mono text-neutral-500" id="overview-funnel-inbound">10 leads
                                             (100%)</span>
                                     </div>
@@ -495,7 +499,7 @@
                                 </div>
                                 <div>
                                     <div class="flex justify-between text-[11px] mb-1">
-                                        <span class="font-semibold text-slate-700">2. Proposal Customization</span>
+                                        <span class="font-semibold text-slate-700">2. Site Visits Conducted</span>
                                         <span class="font-mono text-neutral-500" id="overview-funnel-proposals">5
                                             proposals (50%)</span>
                                     </div>
@@ -506,7 +510,7 @@
                                 </div>
                                 <div>
                                     <div class="flex justify-between text-[11px] mb-1">
-                                        <span class="font-semibold text-slate-700">3. Confirmed Bookings (Retainer
+                                        <span class="font-semibold text-slate-700">3. Confirmed Bookings (Token
                                             Paid)</span>
                                         <span class="font-mono text-neutral-500" id="overview-funnel-booked">2 booked
                                             (20%)</span>
@@ -524,8 +528,8 @@
                         <div class="bg-white border border-kbBorder p-5 rounded-2xl shadow-xs space-y-4">
                             <h3
                                 class="font-bold text-xs uppercase tracking-wider text-slate-900 border-b border-kbBorder pb-2">
-                                Active Shoots</h3>
-                            <div class="space-y-3" id="overview-active-shoots">
+                                Upcoming Site Visits</h3>
+                            <div class="space-y-3" id="overview-upcoming-visits">
                                 <!-- Javascript populated -->
                             </div>
                         </div>
@@ -541,11 +545,11 @@
                                 </button>
                                 <button onclick="switchTab('calendar')"
                                     class="p-3 border border-kbBorder rounded-xl hover:border-slate-800 transition-colors uppercase bg-neutral-50 flex flex-col items-center gap-1.5">
-                                    <i class="fa-regular fa-calendar-days text-sm text-slate-800"></i> Shoot Schedule
+                                    <i class="fa-regular fa-calendar-days text-sm text-slate-800"></i> Site Visits
                                 </button>
                                 <button onclick="switchTab('contracts')"
                                     class="p-3 border border-kbBorder rounded-xl hover:border-slate-800 transition-colors uppercase bg-neutral-50 flex flex-col items-center gap-1.5">
-                                    <i class="fa-solid fa-file-signature text-sm text-slate-800"></i> Retainers list
+                                    <i class="fa-solid fa-file-signature text-sm text-slate-800"></i> Leases & Contracts
                                 </button>
                                 <button onclick="switchTab('automations')"
                                     class="p-3 border border-kbBorder rounded-xl hover:border-slate-800 transition-colors uppercase bg-neutral-50 flex flex-col items-center gap-1.5">
@@ -618,7 +622,7 @@
                         <div class="flex justify-between items-center px-2 pb-3 border-b border-kbBorder">
                             <div class="flex items-center gap-2">
                                 <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
-                                <h3 class="text-xs font-bold uppercase tracking-wider text-slate-700">2. Proposal Sent
+                                <h3 class="text-xs font-bold uppercase tracking-wider text-slate-700">2. Site Visit Done
                                 </h3>
                                 <span
                                     class="text-[10px] font-mono bg-[#E4E4E0] text-slate-600 px-1.5 py-0.2 rounded-full"
@@ -628,13 +632,13 @@
                         <div id="lane-2" class="space-y-3 overflow-y-auto mt-3 flex-1 pb-2"></div>
                     </div>
 
-                    <!-- 3. Booked -->
+                    <!-- 3. Negotiation / Token -->
                     <div
                         class="w-80 bg-neutral-200/50 border border-kbBorder/80 rounded-2xl p-3 flex flex-col max-h-full shrink-0">
                         <div class="flex justify-between items-center px-2 pb-3 border-b border-kbBorder">
                             <div class="flex items-center gap-2">
                                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                                <h3 class="text-xs font-bold uppercase tracking-wider text-slate-700">3. Booked</h3>
+                                <h3 class="text-xs font-bold uppercase tracking-wider text-slate-700">3. Negotiation / Token</h3>
                                 <span
                                     class="text-[10px] font-mono bg-[#E4E4E0] text-slate-600 px-1.5 py-0.2 rounded-full"
                                     id="lane-count-3">0</span>
@@ -643,13 +647,13 @@
                         <div id="lane-3" class="space-y-3 overflow-y-auto mt-3 flex-1 pb-2"></div>
                     </div>
 
-                    <!-- 4. Archive -->
+                    <!-- 4. Closed / Won -->
                     <div
                         class="w-80 bg-neutral-200/50 border border-kbBorder/80 rounded-2xl p-3 flex flex-col max-h-full shrink-0">
                         <div class="flex justify-between items-center px-2 pb-3 border-b border-kbBorder">
                             <div class="flex items-center gap-2">
                                 <span class="w-1.5 h-1.5 rounded-full bg-neutral-400"></span>
-                                <h3 class="text-xs font-bold uppercase tracking-wider text-slate-700">4. Archive</h3>
+                                <h3 class="text-xs font-bold uppercase tracking-wider text-slate-700">4. Closed / Won</h3>
                                 <span
                                     class="text-[10px] font-mono bg-[#E4E4E0] text-slate-600 px-1.5 py-0.2 rounded-full"
                                     id="lane-count-4">0</span>
@@ -667,10 +671,10 @@
                             <thead>
                                 <tr
                                     class="bg-[#FAF9F5] border-b border-kbBorder text-[9.5px] font-mono uppercase text-neutral-400 sticky top-0 z-10">
-                                    <th class="p-4 font-bold">Couple Name</th>
+                                    <th class="p-4 font-bold">Buyer Name</th>
                                     <th class="p-4 font-bold">Location</th>
                                     <th class="p-4 font-bold">Scale</th>
-                                    <th class="p-4 font-bold">Ceremonies</th>
+                                    <th class="p-4 font-bold">Requirements</th>
                                     <th class="p-4 font-bold">Pipeline Value</th>
                                     <th class="p-4 font-bold">Lead Stage</th>
                                     <th class="p-4 font-bold text-center">Channels</th>
@@ -841,7 +845,7 @@
                                 <th class="p-4 font-bold">Client / Couple</th>
                                 <th class="p-4 font-bold">Contract Status</th>
                                 <th class="p-4 font-bold">Quoted Budget</th>
-                                <th class="p-4 font-bold">Retainer Paid</th>
+                                <th class="p-4 font-bold">Token Received</th>
                                 <th class="p-4 font-bold">Balance Due</th>
                                 <th class="p-4 font-bold">Due Date</th>
                             </tr>
@@ -941,7 +945,7 @@
                                 class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center font-bold text-slate-700">
                                 KM</div>
                             <div>
-                                <h4 class="text-xs font-bold text-slate-800">Karan Makker</h4>
+                                <h4 class="text-xs font-bold text-slate-800">Shiv Shakti Properties</h4>
                                 <p class="text-[9.5px] text-neutral-400">Lead Photojournalist</p>
                                 <span
                                     class="inline-block mt-2 bg-emerald-100 text-emerald-800 text-[8px] font-bold px-1.5 py-0.2 rounded uppercase">Active
@@ -1007,7 +1011,7 @@
                     <div class="bg-white border border-kbBorder p-5 rounded-2xl shadow-xs">
                         <span class="text-[9px] font-mono text-neutral-400 uppercase tracking-widest">Outstanding
                             Payments</span>
-                        <h4 class="text-2xl font-black text-slate-900 mt-1" id="financials-outstanding">₹12.0L</h4>
+                        <h4 class="text-2xl font-black text-slate-900 mt-1" id="financials-outstanding">24</h4>
                     </div>
                 </div>
 
@@ -1151,7 +1155,7 @@
                                 </div>
 
                                 <div class="flex justify-between items-center mt-2">
-                                    <span>3. Retainers Paid (Booked Commissions)</span>
+                                    <span>3. Tokens Paid (Booked Commissions)</span>
                                     <span class="font-bold text-slate-800" id="diag-booked">0</span>
                                 </div>
                                 <div class="w-full bg-neutral-100 h-2 rounded-full overflow-hidden">
@@ -1253,11 +1257,11 @@
                     <select id="drawer-status-select" onchange="updateSelectedLeadStatus(this.value)"
                         class="w-full bg-neutral-50 border border-kbBorder focus:border-slate-800 text-xs font-semibold px-2 py-1.5 rounded-lg outline-none cursor-pointer">
                         <option value="New">1. New Inquiry</option>
-                        <option value="In Review">2. Proposal (In Review)</option>
-                        <option value="Quotation Sent">2. Proposal (Sent)</option>
-                        <option value="Booked">3. Booked</option>
-                        <option value="Completed">4. Archive (Completed)</option>
-                        <option value="Lost">4. Archive (Lost)</option>
+                        <option value="Negotiation / Token">2. Proposal (Negotiation / Token)</option>
+                        <option value="Site Visit Done">2. Proposal (Sent)</option>
+                        <option value="Booked">3. Negotiation / Token</option>
+                        <option value="Completed">4. Closed / Won (Completed)</option>
+                        <option value="Lost">4. Closed / Won (Lost)</option>
                     </select>
                 </div>
                 <div>
@@ -1279,7 +1283,7 @@
 
             <!-- Ceremony Schedule Breakdown -->
             <div>
-                <span class="block text-[8.5px] font-mono uppercase tracking-widest text-neutral-400 mb-3">Ceremonies
+                <span class="block text-[8.5px] font-mono uppercase tracking-widest text-neutral-400 mb-3">Requirements
                     &amp; Schedule Breakdown</span>
                 <div id="drawer-events-list" class="space-y-3">
                     <!-- Dynamic events -->
@@ -1341,77 +1345,77 @@
         const sampleInitialLeads = [
             {
                 id: 'lead_karan_makker_studio_1',
-                coupleNames: 'Aanya & Kabir',
+                clientName: 'Aanya & Kabir',
                 email: 'aanyakabir@gmail.com',
-                scale: 'multi-day',
-                city: 'Lucknow',
-                notes: 'Hello, We would like to get a quotation for wedding photojournalism.',
+                propertyType: 'multi-day',
+                location: 'Lucknow',
+                notes: 'Hello, We would like to get a quotation for a 4BHK Villa.',
                 status: 'New',
                 submittedAt: new Date(Date.now() - 2 * 3600000).toISOString(),
                 source: 'Website Form',
                 events: [
-                    { name: 'Sangeet & Mehendi', date: '2026-11-30', time: 'Evening', guests: 100 },
-                    { name: 'Wedding Ceremony', date: '2026-12-02', time: 'Full Day', guests: 100 }
+                    { name: 'Site Visit', date: '2026-11-30', time: 'Evening', guests: 100 },
+                    { name: 'Final Negotiation', date: '2026-12-02', time: 'Full Day', guests: 100 }
                 ],
-                quoteBreakdown: { 'Sangeet & Mehendi': 120000, 'Wedding Ceremony': 250000 },
-                totalBudget: 370000
+                quoteBreakdown: { 'Site Visit': 120000, 'Final Negotiation': 250000 },
+                budget: 370000
             },
             {
                 id: 'lead_karan_makker_studio_2',
-                coupleNames: 'Rhea & Rohan',
+                clientName: 'Rhea & Rohan',
                 email: 'rhea.rohan@gmail.com',
-                scale: 'destination',
-                city: 'Udaipur, Rajasthan',
-                notes: '3 days destination wedding in Udaipur. We love co-founder led execution.',
+                propertyType: 'destination',
+                location: 'Udaipur, Rajasthan',
+                notes: '3 days premium apartment in Udaipur. We love co-founder led execution.',
                 status: 'Booked',
                 submittedAt: new Date(Date.now() - 48 * 3600000).toISOString(),
                 source: 'Website Form',
                 events: [
-                    { name: 'Welcome Dinner', date: '2026-12-15', time: 'Evening', guests: 150 },
+                    { name: 'Virtual Tour', date: '2026-12-15', time: 'Evening', guests: 150 },
                     { name: 'Wedding & Reception', date: '2026-12-17', time: 'Full Day', guests: 200 }
                 ],
-                quoteBreakdown: { 'Welcome Dinner': 250000, 'Wedding & Reception': 650000 },
-                totalBudget: 900000
+                quoteBreakdown: { 'Virtual Tour': 250000, 'Wedding & Reception': 650000 },
+                budget: 900000
             },
             {
                 id: 'lead_karan_makker_studio_3',
-                coupleNames: 'Divya & Varun',
+                clientName: 'Divya & Varun',
                 email: 'divya.v@outlook.com',
-                scale: 'intimate',
-                city: 'Gurgaon',
-                notes: 'Looking for a single day intimate coverage.',
-                status: 'Quotation Sent',
+                propertyType: 'intimate',
+                location: 'Gurgaon',
+                notes: 'Looking for a ready-to-move-in builder floor.',
+                status: 'Site Visit Done',
                 submittedAt: new Date(Date.now() - 24 * 3600000).toISOString(),
                 source: 'Website Form',
                 events: [
                     { name: 'Wedding & Reception', date: '2026-11-20', time: 'Full Day', guests: 80 }
                 ],
                 quoteBreakdown: { 'Wedding & Reception': 180000 },
-                totalBudget: 180000
+                budget: 180000
             },
             {
                 id: 'lead_karan_makker_studio_4',
-                coupleNames: 'Meera & Sid',
+                clientName: 'Meera & Sid',
                 email: 'meerasid@gmail.com',
-                scale: 'destination',
-                city: 'Goa',
+                propertyType: 'destination',
+                location: 'Goa',
                 notes: 'Sunset beach wedding in South Goa.',
-                status: 'In Review',
+                status: 'Negotiation / Token',
                 submittedAt: new Date(Date.now() - 5 * 24 * 3600000).toISOString(),
                 source: 'Website Form',
                 events: [
-                    { name: 'Sundowner Party', date: '2026-11-22', time: 'Evening', guests: 120 },
-                    { name: 'Wedding Ceremony', date: '2026-11-23', time: 'Evening', guests: 120 }
+                    { name: 'Property Handover', date: '2026-11-22', time: 'Evening', guests: 120 },
+                    { name: 'Final Negotiation', date: '2026-11-23', time: 'Evening', guests: 120 }
                 ],
-                quoteBreakdown: { 'Sundowner Party': 200000, 'Wedding Ceremony': 350000 },
-                totalBudget: 550000
+                quoteBreakdown: { 'Property Handover': 200000, 'Final Negotiation': 350000 },
+                budget: 550000
             },
             {
                 id: 'lead_karan_makker_studio_5',
-                coupleNames: 'Ishita & Dev',
+                clientName: 'Ishita & Dev',
                 email: 'ishita.dev@gmail.com',
-                scale: 'multi-day',
-                city: 'Lucknow',
+                propertyType: 'multi-day',
+                location: 'Lucknow',
                 notes: 'Finished editing and delivered final catalog.',
                 status: 'New',
                 submittedAt: new Date(Date.now() - 30 * 24 * 3600000).toISOString(),
@@ -1421,63 +1425,63 @@
                     { name: 'Wedding', date: '2026-05-11', time: 'Full Day', guests: 300 }
                 ],
                 quoteBreakdown: { 'Sangeet': 150000, 'Wedding': 350000 },
-                totalBudget: 500000
+                budget: 500000
             },
             {
                 id: 'lead_karan_makker_studio_6',
-                coupleNames: 'Pooja & Kunal',
+                clientName: 'Pooja & Kunal',
                 email: 'pooja.k@gmail.com',
-                scale: 'destination',
-                city: 'Jaipur',
-                notes: 'Grand destination wedding inquiry.',
-                status: 'In Review',
+                propertyType: 'destination',
+                location: 'Jaipur',
+                notes: 'Grand premium apartment inquiry.',
+                status: 'Negotiation / Token',
                 submittedAt: new Date(Date.now() - 15 * 24 * 3600000).toISOString(),
                 source: 'Website Form',
                 events: [
-                    { name: 'Engagement & Wedding', date: '2026-12-02', time: 'Full Day', guests: 400 }
+                    { name: 'Token Payment', date: '2026-12-02', time: 'Full Day', guests: 400 }
                 ],
-                quoteBreakdown: { 'Engagement & Wedding': 400000 },
-                totalBudget: 400000
+                quoteBreakdown: { 'Token Payment': 400000 },
+                budget: 400000
             },
             {
                 id: 'lead_karan_makker_studio_7',
-                coupleNames: 'Kiara & Advait',
+                clientName: 'Kiara & Advait',
                 email: 'kiara.advait@yahoo.com',
-                scale: 'multi-day',
-                city: 'Gurgaon',
+                propertyType: 'multi-day',
+                location: 'Gurgaon',
                 notes: 'Inquiry submitted for multi-day premium setup.',
                 status: 'New',
                 submittedAt: new Date(Date.now() - 3 * 3600000).toISOString(),
                 source: 'Website Form',
                 events: [
                     { name: 'Mehendi & Sangeet', date: '2026-11-12', time: 'Evening', guests: 150 },
-                    { name: 'Wedding Ceremony', date: '2026-11-13', time: 'Full Day', guests: 250 }
+                    { name: 'Final Negotiation', date: '2026-11-13', time: 'Full Day', guests: 250 }
                 ],
-                quoteBreakdown: { 'Mehendi & Sangeet': 180000, 'Wedding Ceremony': 380000 },
-                totalBudget: 560000
+                quoteBreakdown: { 'Mehendi & Sangeet': 180000, 'Final Negotiation': 380000 },
+                budget: 560000
             },
             {
                 id: 'lead_karan_makker_studio_8',
-                coupleNames: 'Sneha & Arjun',
+                clientName: 'Sneha & Arjun',
                 email: 'arjun.sneha@gmail.com',
-                scale: 'intimate',
-                city: 'Lucknow',
-                notes: 'Intimate rooftop ceremony.',
-                status: 'Quotation Sent',
+                propertyType: 'intimate',
+                location: 'Lucknow',
+                notes: 'Intimate penthouse.',
+                status: 'Site Visit Done',
                 submittedAt: new Date(Date.now() - 12 * 3600000).toISOString(),
                 source: 'Website Form',
                 events: [
                     { name: 'Engagement & Ring Ceremony', date: '2026-11-05', time: 'Evening', guests: 60 }
                 ],
                 quoteBreakdown: { 'Engagement & Ring Ceremony': 120000 },
-                totalBudget: 120000
+                budget: 120000
             },
             {
                 id: 'lead_karan_makker_studio_9',
-                coupleNames: 'Neha & Vikrant',
+                clientName: 'Neha & Vikrant',
                 email: 'nehavikrant@gmail.com',
-                scale: 'destination',
-                city: 'Goa',
+                propertyType: 'destination',
+                location: 'Goa',
                 notes: 'Beach resort wedding.',
                 status: 'Booked',
                 submittedAt: new Date(Date.now() - 10 * 24 * 3600000).toISOString(),
@@ -1487,14 +1491,14 @@
                     { name: 'Wedding Rituals', date: '2026-12-21', time: 'Full Day', guests: 120 }
                 ],
                 quoteBreakdown: { 'Sundowner Welcome': 180000, 'Wedding Rituals': 420000 },
-                totalBudget: 600000
+                budget: 600000
             },
             {
                 id: 'lead_karan_makker_studio_10',
-                coupleNames: 'Kritika & Sameer',
+                clientName: 'Kritika & Sameer',
                 email: 'kritsam@gmail.com',
-                scale: 'multi-day',
-                city: 'Lucknow',
+                propertyType: 'multi-day',
+                location: 'Lucknow',
                 notes: 'Traditional nawabi style wedding.',
                 status: 'New',
                 submittedAt: new Date(Date.now() - 1 * 3600000).toISOString(),
@@ -1504,7 +1508,7 @@
                     { name: 'Nikah Ceremony', date: '2026-12-06', time: 'Full Day', guests: 300 }
                 ],
                 quoteBreakdown: { 'Sangeet & Haldi': 160000, 'Nikah Ceremony': 340000 },
-                totalBudget: 500000
+                budget: 500000
             }
         ];
 
@@ -1540,12 +1544,12 @@
             const toggleContainer = document.getElementById('view-toggle-container');
 
             if (tabId === 'overview') {
-                title.textContent = "Studio Overview";
+                title.textContent = "Agency Overview";
                 desc.textContent = "Complete overview of studio operations, growth, and conversion analytics";
                 toggleContainer.classList.add('hidden');
                 searchBox.classList.add('hidden');
             } else if (tabId === 'kanban') {
-                title.textContent = "Leads Pipeline";
+                title.textContent = "Open Leads";
                 desc.textContent = "Manage inbound leads and wedding client pipelines";
                 searchBox.classList.remove('hidden');
                 toggleContainer.classList.remove('hidden');
@@ -1556,9 +1560,9 @@
 
             if (tabId === 'calendar') {
                 title.textContent = "Calendar Schedule";
-                desc.textContent = "Assigned shoots and co-founder coverage schedules";
+                desc.textContent = "Assigned Site Visits and agent coverage schedules";
             } else if (tabId === 'contracts') {
-                title.textContent = "Retainers & Contracts";
+                title.textContent = "Tokens & Contracts";
                 desc.textContent = "Signed agreements and crm billing details";
             } else if (tabId === 'automations') {
                 title.textContent = "Smart Automations";
@@ -1567,16 +1571,16 @@
                 title.textContent = "Financial Insights";
                 desc.textContent = "Average ticket size, studio expenditures log, and billing analytics";
             } else if (tabId === 'deliverables') {
-                title.textContent = "Deliverable Edits";
+                title.textContent = "Property Inventory";
                 desc.textContent = "Raw dumps culling, color grading and highlight timeline progress";
             } else if (tabId === 'equipment') {
-                title.textContent = "Equipment Locker";
+                title.textContent = "Fleet & Logistics";
                 desc.textContent = "Check camera bodies, prime lens allocations and gimbal availability";
             } else if (tabId === 'crew') {
-                title.textContent = "Crew Assignment";
-                desc.textContent = "Assigned photographers, cinematographers, second shooters and editors";
+                title.textContent = "Agent Routing";
+                desc.textContent = "Assigned senior brokers, field agents, second shooters and editors";
             } else if (tabId === 'galleries') {
-                title.textContent = "Client Galleries";
+                title.textContent = "Portal Syndication";
                 desc.textContent = "Online portals for image proofing, selection pins, and downloads";
             } else if (tabId === 'reviews') {
                 title.textContent = "Reviews & Social";
@@ -1617,8 +1621,8 @@
             leads.forEach(lead => {
                 const query = document.getElementById('boardSearch').value.toLowerCase();
                 if (query) {
-                    const match = lead.coupleNames.toLowerCase().includes(query) ||
-                        lead.city.toLowerCase().includes(query) ||
+                    const match = lead.clientName.toLowerCase().includes(query) ||
+                        lead.location.toLowerCase().includes(query) ||
                         lead.email.toLowerCase().includes(query);
                     if (!match) return;
                 }
@@ -1631,9 +1635,9 @@
                 const pricingText = lead.status === 'Lost' ? '—' : '₹' + (lead.totalBudget / 100000).toFixed(1) + 'L';
 
                 tr.innerHTML = `
-          <td class="p-4 font-bold text-slate-900">${lead.coupleNames}</td>
-          <td class="p-4 font-medium text-neutral-500">${lead.city}</td>
-          <td class="p-4 font-sans uppercase text-[10px] text-neutral-600">${lead.scale.replace('-', ' ')}</td>
+          <td class="p-4 font-bold text-slate-900">${lead.clientName}</td>
+          <td class="p-4 font-medium text-neutral-500">${lead.location}</td>
+          <td class="p-4 font-sans uppercase text-[10px] text-neutral-600">${lead.propertyType.replace('-', ' ')}</td>
           <td class="p-4 font-mono font-medium">${lead.events.length} events</td>
           <td class="p-4 font-mono font-bold">${pricingText}</td>
           <td class="p-4"><span class="${badgeColor} font-sans font-bold px-1.5 py-0.5 rounded text-[8.5px] uppercase tracking-wider">${lead.status}</span></td>
@@ -1692,9 +1696,9 @@
                     const mainEvent = lead.events[0];
                     item.innerHTML = `
             <span class="text-[9px] font-mono text-slate-450 uppercase">${mainEvent ? mainEvent.date : 'TBD'}</span>
-            <h5 class="text-xs font-bold text-slate-850 mt-1">${lead.coupleNames} Destination</h5>
-            <p class="text-[10.5px] text-neutral-500 mt-0.5">Location: ${lead.city}</p>
-            <span class="inline-block mt-2 bg-emerald-100 text-emerald-800 text-[9px] font-semibold px-2 py-0.5 rounded">Retainer Paid</span>
+            <h5 class="text-xs font-bold text-slate-850 mt-1">${lead.clientName} Destination</h5>
+            <p class="text-[10.5px] text-neutral-500 mt-0.5">Location: ${lead.location}</p>
+            <span class="inline-block mt-2 bg-emerald-100 text-emerald-800 text-[9px] font-semibold px-2 py-0.5 rounded">Token Received</span>
           `;
                     upcomingContainer.appendChild(item);
                 });
@@ -1710,23 +1714,23 @@
                 const contractStatus = isLost ? 'Archived' : (isSigned ? 'Signed' : 'Proposal Sent');
                 const badgeClass = isLost ? 'bg-neutral-100 text-neutral-400' : (isSigned ? 'bg-emerald-100 text-emerald-800' : 'bg-amber-100 text-amber-800');
 
-                const retainer = isSigned ? lead.totalBudget * 0.5 : 0;
-                const balance = lead.totalBudget - retainer;
+                const token = isSigned ? lead.totalBudget * 0.5 : 0;
+                const balance = lead.totalBudget - token;
 
                 const tr = document.createElement('tr');
                 tr.className = 'hover:bg-neutral-50 transition-colors';
                 tr.innerHTML = `
-          <td class="p-4 font-bold text-slate-900">${lead.coupleNames}</td>
+          <td class="p-4 font-bold text-slate-900">${lead.clientName}</td>
           <td class="p-4"><span class="${badgeClass} font-semibold px-2.5 py-0.5 rounded-full text-[9px]">${contractStatus}</span></td>
           <td class="p-4 font-mono font-semibold">₹${lead.totalBudget.toLocaleString('en-IN')}</td>
-          <td class="p-4 font-mono">${isSigned ? `₹${retainer.toLocaleString('en-IN')} (50%)` : '₹0 (0%)'}</td>
+          <td class="p-4 font-mono">${isSigned ? `₹${token.toLocaleString('en-IN')} (50%)` : '₹0 (0%)'}</td>
           <td class="p-4 font-mono ${balance > 0 && !isLost ? 'text-rose-500 font-bold' : 'text-neutral-400'}">₹${isLost ? 0 : balance.toLocaleString('en-IN')}</td>
           <td class="p-4 font-mono text-neutral-500">10 Nov 2026</td>
         `;
                 contractsBody.appendChild(tr);
             });
 
-            // 3. Deliverables list
+            // 3. Inventory Status
             const delContainer = document.getElementById('deliverables-container');
             delContainer.innerHTML = '';
             leads.filter(l => l.status === 'Booked' || l.status === 'Completed').forEach(lead => {
@@ -1740,7 +1744,7 @@
                 card.innerHTML = `
           <div class="flex justify-between items-start border-b border-kbBorder pb-3">
             <div>
-              <h4 class="font-bold text-sm text-slate-900">${lead.coupleNames}</h4>
+              <h4 class="font-bold text-sm text-slate-900">${lead.clientName}</h4>
               <p class="text-[10px] text-neutral-400 font-mono">Status: ${isCompleted ? 'DELIVERED' : 'POST-PRODUCTION'}</p>
             </div>
             <span class="text-[10px] font-mono bg-neutral-100 px-2 py-0.5 rounded">Wedding: ${lead.events[0] ? new Date(lead.events[0].date).toLocaleDateString('en-IN', { day: 'numeric', month: 'short' }) : 'TBD'}</span>
@@ -1748,7 +1752,7 @@
           <div class="space-y-3.5">
             <div>
               <div class="flex justify-between text-[11px] mb-1">
-                <span class="font-semibold text-slate-700">Raw Catalog Culling</span>
+                <span class="font-semibold text-slate-700">Title Search & Legals</span>
                 <span class="font-mono text-neutral-500">${progress1}%</span>
               </div>
               <div class="w-full bg-neutral-100 h-1.5 rounded-full overflow-hidden">
@@ -1757,7 +1761,7 @@
             </div>
             <div>
               <div class="flex justify-between text-[11px] mb-1">
-                <span class="font-semibold text-slate-700">Color Grading &amp; Curation</span>
+                <span class="font-semibold text-slate-700">Property Inspection</span>
                 <span class="font-mono text-neutral-500">${progress2}%</span>
               </div>
               <div class="w-full bg-neutral-100 h-1.5 rounded-full overflow-hidden">
@@ -1769,31 +1773,31 @@
                 delContainer.appendChild(card);
             });
 
-            // 4. Galleries proofing
+            // 4. Portal Sync Status
             const galContainer = document.getElementById('galleries-container');
             galContainer.innerHTML = '';
             leads.filter(l => l.status === 'Booked' || l.status === 'Completed').forEach(lead => {
                 const item = document.createElement('div');
                 item.className = 'bg-white border border-kbBorder rounded-2xl shadow-xs overflow-hidden flex flex-col justify-between';
 
-                const photosCount = lead.scale === 'destination' ? 1200 : 750;
+                const photosCount = lead.propertyType === 'destination' ? 1200 : 750;
                 const choices = lead.status === 'Completed' ? '150 / 150 selected' : '82 / 150 selected';
 
                 item.innerHTML = `
           <div class="p-5">
             <div class="flex justify-between items-start mb-3">
-              <span class="bg-blue-100 text-blue-800 text-[8px] font-bold px-1.5 py-0.5 rounded uppercase">${lead.status === 'Completed' ? 'Gallery Delivered' : 'Proofing Stage'}</span>
+              <span class="bg-blue-100 text-blue-800 text-[8px] font-bold px-1.5 py-0.5 rounded uppercase">${lead.status === 'Completed' ? 'Live on Portals' : 'Syncing to Portals'}</span>
               <span class="text-[10px] font-mono text-neutral-400">PIN: ${Math.floor(1000 + Math.random() * 9000)}</span>
             </div>
-            <h4 class="font-bold text-sm text-slate-900 uppercase">${lead.coupleNames}</h4>
-            <p class="text-xs text-neutral-500 mt-1">${lead.city} Highlight proofing portal</p>
+            <h4 class="font-bold text-sm text-slate-900 uppercase">${lead.clientName}</h4>
+            <p class="text-xs text-neutral-500 mt-1">${lead.location} MagicBricks Sync Portal</p>
             <div class="mt-4 space-y-2 border-t border-neutral-100 pt-3">
               <div class="flex justify-between text-[11px]">
-                <span class="text-neutral-500">Uploaded Photos</span>
-                <span class="font-semibold text-slate-800">${photosCount} images</span>
+                <span class="text-neutral-500">Property Photos</span>
+                <span class="font-semibold text-slate-800">${photosCount} photos</span>
               </div>
               <div class="flex justify-between text-[11px]">
-                <span class="text-neutral-500">Client Choices</span>
+                <span class="text-neutral-500">Lead Inquiries</span>
                 <span class="font-semibold text-slate-800 text-blue-600">${choices}</span>
               </div>
             </div>
@@ -1810,7 +1814,7 @@
             const galCreateBox = document.createElement('div');
             galCreateBox.className = 'bg-white border border-kbBorder rounded-2xl shadow-xs p-8 text-center flex flex-col items-center justify-center min-h-[200px]';
             galCreateBox.innerHTML = `
-        <i class="fa-regular fa-images text-neutral-300 text-2xl mb-2"></i>
+        <i class="fa-regular fa-photos text-neutral-300 text-2xl mb-2"></i>
         <h5 class="text-xs font-bold text-slate-850">New Client Gallery</h5>
         <p class="text-[10.5px] text-neutral-400 mt-1">Generate a proofing link for new commissions</p>
         <button onclick="showToast('Creating gallery portal')" class="mt-4 bg-slate-900 hover:bg-slate-800 text-white font-mono text-[9px] font-bold px-3 py-1.5 rounded-lg uppercase tracking-wider">
@@ -1827,7 +1831,7 @@
                 block.className = 'bg-white border border-kbBorder p-5 rounded-2xl shadow-xs flex justify-between items-start gap-4';
 
                 const reviewText = idx === 0
-                    ? `"Karan's photojournalistic style is raw, emotional and real! Our family can't stop looking at the images."`
+                    ? `"Karan's photojournalistic style is raw, emotional and real! Our family can't stop looking at the photos."`
                     : `"Outstanding frames. The highlight film brought us to tears. You really document wedding stories in their rawest essence."`;
 
                 const isApproved = idx === 0;
@@ -1835,7 +1839,7 @@
                 block.innerHTML = `
           <div>
             <div class="flex items-center gap-2 mb-1">
-              <h4 class="font-bold text-xs uppercase tracking-wide text-slate-900">${lead.coupleNames} (Client)</h4>
+              <h4 class="font-bold text-xs uppercase tracking-wide text-slate-900">${lead.clientName} (Client)</h4>
               <div class="flex text-amber-400 text-[10px]"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
             </div>
             <p class="text-xs text-slate-650 leading-relaxed italic">${reviewText}</p>
@@ -1855,7 +1859,7 @@
 
             // 6. Automation Center Diagnostic Statistics
             const captured = leads.length;
-            const proposals = leads.filter(l => l.status === 'Quotation Sent' || l.status === 'In Review' || l.status === 'Booked' || l.status === 'Completed').length;
+            const proposals = leads.filter(l => l.status === 'Site Visit Done' || l.status === 'Negotiation / Token' || l.status === 'Booked' || l.status === 'Completed').length;
             const booked = leads.filter(l => l.status === 'Booked' || l.status === 'Completed').length;
 
             document.getElementById('diag-captured').textContent = captured;
@@ -1877,7 +1881,7 @@
                 { icon: 'fa-solid fa-bell', text: 'F3 follow-up sequence: Automated email reminder sent to Divya & Varun (Proposal sent 1 day ago).', time: '10h ago', bg: 'bg-amber-50 text-amber-600' },
                 { icon: 'fa-solid fa-calendar-check', text: 'Calendar synced: Blocks reserved for Rhea & Rohan Wedding (Udaipur Dec 15-17).', time: '1d ago', bg: 'bg-emerald-50 text-emerald-600' },
                 { icon: 'fa-solid fa-camera-retro', text: 'Gear reserve: Sony A7R V Reserved for Aanya & Kabir Wedding schedule (30 Nov).', time: '1d ago', bg: 'bg-neutral-100 text-neutral-700' },
-                { icon: 'fa-solid fa-file-invoice-dollar', text: 'Retainer paid trigger: 50% deposit received from Rhea & Rohan (₹6L). Status updated to Booked.', time: '2d ago', bg: 'bg-emerald-50 text-emerald-600' }
+                { icon: 'fa-solid fa-file-invoice-dollar', text: 'Token paid trigger: 50% deposit received from Rhea & Rohan (₹6L). Status updated to Booked.', time: '2d ago', bg: 'bg-emerald-50 text-emerald-600' }
             ];
 
             activityData.forEach(act => {
@@ -1912,8 +1916,8 @@
             leads.forEach(lead => {
                 const query = document.getElementById('boardSearch').value.toLowerCase();
                 if (query) {
-                    const match = lead.coupleNames.toLowerCase().includes(query) ||
-                        lead.city.toLowerCase().includes(query) ||
+                    const match = lead.clientName.toLowerCase().includes(query) ||
+                        lead.location.toLowerCase().includes(query) ||
                         lead.email.toLowerCase().includes(query);
                     if (!match) return;
                 }
@@ -1931,7 +1935,7 @@
             <button class="w-5 h-5 rounded-full border border-kbBorder bg-white text-neutral-400 hover:text-slate-900 flex items-center justify-center text-[10px]"><i class="fa-regular fa-star"></i></button>
           </div>
 
-          <h4 class="text-xs font-bold text-slate-800 tracking-wide uppercase mb-1">${lead.coupleNames}</h4>
+          <h4 class="text-xs font-bold text-slate-800 tracking-wide uppercase mb-1">${lead.clientName}</h4>
           <span class="text-[10px] text-slate-400 font-mono tracking-widest uppercase">Lucknow Studio CRM</span>
           
           <div class="flex gap-2 my-3.5">
@@ -1951,7 +1955,7 @@
                 if (lead.status === 'New') {
                     lane1.appendChild(card);
                     c1++;
-                } else if (lead.status === 'In Review' || lead.status === 'Quotation Sent') {
+                } else if (lead.status === 'Negotiation / Token' || lead.status === 'Site Visit Done') {
                     lane2.appendChild(card);
                     c2++;
                 } else if (lead.status === 'Booked') {
@@ -1974,10 +1978,10 @@
             const lead = leads.find(l => l.id === id);
             if (!lead) return;
 
-            document.getElementById('drawer-names').textContent = lead.coupleNames;
+            document.getElementById('drawer-names').textContent = lead.clientName;
             document.getElementById('drawer-id').textContent = `(#${lead.id.split('_').pop()})`;
             document.getElementById('drawer-email').textContent = lead.email;
-            document.getElementById('drawer-location').textContent = lead.city;
+            document.getElementById('drawer-location').textContent = lead.location;
             document.getElementById('drawer-notes').textContent = lead.notes || 'No description provided.';
             document.getElementById('drawer-status-select').value = lead.status;
 
@@ -2142,8 +2146,8 @@
         function getStatusBadgeClass(status) {
             switch (status) {
                 case 'New': return 'bg-neutral-200 text-neutral-800';
-                case 'In Review': return 'bg-zinc-800 text-white';
-                case 'Quotation Sent': return 'bg-yellow-100 text-yellow-850';
+                case 'Negotiation / Token': return 'bg-zinc-800 text-white';
+                case 'Site Visit Done': return 'bg-yellow-100 text-yellow-850';
                 case 'Booked': return 'bg-emerald-100 text-emerald-850';
                 case 'Completed': return 'bg-slate-900 text-neutral-200';
                 case 'Lost': return 'bg-neutral-100 text-neutral-400 line-through';
@@ -2200,7 +2204,7 @@
             {
                 title: "1. The Inbound Booking Funnel",
                 desc: "Indian wedding couples compare dozens of studios. A boring contact form has a 2% fill rate. Cora's multi-step visual wizard increases bookings by 3x by letting couples add events, guest sizes, and locations in a beautiful Typeform-like checkcard interface.",
-                cta: "Preview Leads Pipeline",
+                cta: "Preview Open Leads",
                 action: () => { switchTab('kanban'); }
             },
             {
@@ -2287,12 +2291,12 @@
         }
 
         function updatePersonalizedBranding() {
-            const studioName = 'Karan Makker Studio';
+            const studioName = 'Shiv Shakti Properties';
             const studioCity = 'Lucknow';
             const initials = 'KM';
 
             const sidebarName = document.getElementById('sidebar-studio-name');
-            if (sidebarName) sidebarName.textContent = 'Karan Makker';
+            if (sidebarName) sidebarName.textContent = 'Shiv Shakti Properties';
 
             const sidebarLogo = document.getElementById('sidebar-logo-initials');
             if (sidebarLogo) sidebarLogo.textContent = initials;
@@ -2317,7 +2321,7 @@
         }
 
         function updateWhatsAppCTALink() {
-            const studioName = 'Karan Makker Studio';
+            const studioName = 'Shiv Shakti Properties';
             const studioCity = 'Lucknow';
 
             const message = `Hi Cora Team, I just went through the demo for ${studioName} based in ${studioCity}. I'm interested in deploying this sales funnel and CRM system for my photography studio!`;
@@ -2371,9 +2375,9 @@
 
             const gst = subtotal * 0.18;
             const total = subtotal + gst;
-            const retainer = total * 0.5;
+            const token = total * 0.5;
 
-            const studioName = localStorage.getItem('cora_pitch_studio') || 'Karan Makker Studio';
+            const studioName = localStorage.getItem('cora_pitch_studio') || 'Shiv Shakti Properties';
             const studioCity = localStorage.getItem('cora_pitch_city') || 'Lucknow';
             const initials = studioName.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase();
             const invoiceId = `${initials}-${new Date().getFullYear()}-${lead.id.split('_').pop().toUpperCase()}`;
@@ -2401,9 +2405,9 @@
           <div class="grid grid-cols-2 gap-6 text-xs leading-relaxed">
             <div>
               <span class="block text-[8px] font-mono uppercase text-neutral-400 tracking-widest mb-1.5 font-bold">Billed To</span>
-              <p class="font-bold text-slate-900 uppercase">${lead.coupleNames}</p>
+              <p class="font-bold text-slate-900 uppercase">${lead.clientName}</p>
               <p class="text-neutral-500 mt-0.5 font-sans">${lead.email}</p>
-              <p class="text-neutral-500 mt-0.5 font-sans font-medium">Location: ${lead.city}</p>
+              <p class="text-neutral-500 mt-0.5 font-sans font-medium">Location: ${lead.location}</p>
             </div>
             <div>
               <span class="block text-[8px] font-mono uppercase text-neutral-400 tracking-widest mb-1.5 font-bold">Studio Bank details</span>
@@ -2440,15 +2444,15 @@
                 <span class="font-mono">₹${total.toLocaleString('en-IN')}</span>
               </div>
               <div class="flex justify-between text-emerald-600 font-bold">
-                <span>Retainer Paid (50%)</span>
-                <span class="font-mono">₹${retainer.toLocaleString('en-IN')}</span>
+                <span>Token Received (50%)</span>
+                <span class="font-mono">₹${token.toLocaleString('en-IN')}</span>
               </div>
             </div>
           </div>
 
           <div class="border-t border-kbBorder pt-6 text-[10px] text-neutral-400 leading-relaxed font-light font-sans">
-            <p class="font-semibold text-slate-800 mb-1 uppercase tracking-wider text-[8px] font-mono">Terms &amp; Retainer Conditions</p>
-            <p>1. 50% non-refundable retainer fee is required to block studio calendar dates. Production crew slots will not be reserved without retainer validation.</p>
+            <p class="font-semibold text-slate-800 mb-1 uppercase tracking-wider text-[8px] font-mono">Terms &amp; Token Conditions</p>
+            <p>1. 50% non-refundable token fee is required to block studio calendar dates. Production crew slots will not be reserved without token validation.</p>
             <p class="mt-1">2. Balance payments are due strictly 30 days prior to the first sangeet/shoot date.</p>
           </div>
         </div>
@@ -2479,15 +2483,15 @@
                 { name: 'Google Business', desc: 'Google Search & Maps lead sync', icon: 'fa-brands fa-google', category: 'Growth' },
                 { name: 'Instagram Sync', desc: 'Auto-post and DM automation', icon: 'fa-brands fa-instagram', category: 'Growth' },
                 { name: 'Blogs & Articles', desc: 'SEO Blog & Article Publisher', icon: 'fa-solid fa-blog', category: 'Growth' },
-                { name: 'Client Galleries', desc: 'Online proofing & selections', icon: 'fa-regular fa-images', category: 'Client Portals' },
-                { name: 'Client Portals', desc: 'Password-protected access portals', icon: 'fa-solid fa-user-shield', category: 'Client Portals' },
-                { name: 'Client Assets', desc: 'High-res deliverable vault', icon: 'fa-solid fa-folder-open', category: 'Client Portals' },
+                { name: 'Portal Syndication', desc: 'Online proofing & selections', icon: 'fa-regular fa-photos', category: 'Portal Sync & Marketing' },
+                { name: 'Portal Sync & Marketing', desc: 'Password-protected access portals', icon: 'fa-solid fa-user-shield', category: 'Portal Sync & Marketing' },
+                { name: 'Client Assets', desc: 'High-res deliverable vault', icon: 'fa-solid fa-folder-open', category: 'Portal Sync & Marketing' },
                 { name: 'Financial Insights', desc: 'Tax Planner & income tracking', icon: 'fa-solid fa-chart-line-up', category: 'Finance' },
-                { name: 'Deliverable Edits', desc: 'Post-production tracking tool', icon: 'fa-solid fa-photo-film', category: 'Production' },
-                { name: 'Equipment Locker', desc: 'Sony & Red gear booking manager', icon: 'fa-solid fa-camera-retro', category: 'Production' },
-                { name: 'Crew Assignment', desc: 'Roster & crew calendar planner', icon: 'fa-solid fa-users', category: 'Production' },
+                { name: 'Property Inventory', desc: 'Post-production tracking tool', icon: 'fa-solid fa-photo-film', category: 'Production' },
+                { name: 'Fleet & Logistics', desc: 'Sony & Red gear booking manager', icon: 'fa-solid fa-camera-retro', category: 'Production' },
+                { name: 'Agent Routing', desc: 'Roster & crew calendar planner', icon: 'fa-solid fa-users', category: 'Production' },
                 { name: 'Reviews & Social', desc: 'Testimonial generator & publisher', icon: 'fa-regular fa-star-half-stroke', category: 'Growth' },
-                { name: 'Media Hosting', desc: 'Global CDN media library', icon: 'fa-solid fa-photo-film', category: 'Client Portals' }
+                { name: 'Media Hosting', desc: 'Global CDN media library', icon: 'fa-solid fa-photo-film', category: 'Portal Sync & Marketing' }
             ];
 
             let gridHtml = '';
@@ -2548,7 +2552,7 @@
             const openCount = leads.filter(l => l.status !== 'Completed' && l.status !== 'Lost').length;
             const revenueSum = leads.filter(l => l.status === 'Booked' || l.status === 'Completed').reduce((acc, curr) => acc + (curr.totalBudget || 0), 0);
             const balanceSum = leads.filter(l => l.status === 'Booked').reduce((acc, curr) => acc + (curr.totalBudget * 0.5 || 0), 0);
-            const proposalsCount = leads.filter(l => l.status === 'Quotation Sent' || l.status === 'In Review' || l.status === 'Booked' || l.status === 'Completed').length;
+            const proposalsCount = leads.filter(l => l.status === 'Site Visit Done' || l.status === 'Negotiation / Token' || l.status === 'Booked' || l.status === 'Completed').length;
             const bookedCount = leads.filter(l => l.status === 'Booked' || l.status === 'Completed').length;
 
             const lakhs = (revenueSum / 100000).toFixed(1);
@@ -2568,7 +2572,7 @@
             document.getElementById('overview-funnel-booked-bar').style.width = (leads.length > 0 ? Math.round((bookedCount / leads.length) * 100) : 0) + '%';
 
             // Active shoots list in Overview
-            const shootsContainer = document.getElementById('overview-active-shoots');
+            const shootsContainer = document.getElementById('overview-upcoming-visits');
             shootsContainer.innerHTML = '';
             const activeLeads = leads.filter(l => l.status === 'Booked').slice(0, 3);
             if (activeLeads.length === 0) {
@@ -2580,10 +2584,10 @@
                     div.className = 'border border-kbBorder p-3 rounded-xl bg-slate-50 flex justify-between items-center';
                     div.innerHTML = `
             <div>
-              <h4 class="text-xs font-bold text-slate-800">${lead.coupleNames}</h4>
-              <p class="text-[9.5px] text-neutral-400 font-mono mt-0.5">${mainEvent ? mainEvent.date : 'TBD'} • ${lead.city}</p>
+              <h4 class="text-xs font-bold text-slate-800">${lead.clientName}</h4>
+              <p class="text-[9.5px] text-neutral-400 font-mono mt-0.5">${mainEvent ? mainEvent.date : 'TBD'} • ${lead.location}</p>
             </div>
-            <a href="https://wa.me/918708528150?text=Hi%20Cora%20Team%2C%20I%27d%20love%20to%20message%20client%20${encodeURIComponent(lead.coupleNames)}." target="_blank" class="w-7 h-7 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center text-emerald-600 hover:bg-emerald-100 transition-colors">
+            <a href="https://wa.me/918708528150?text=Hi%20Cora%20Team%2C%20I%27d%20love%20to%20message%20client%20${encodeURIComponent(lead.clientName)}." target="_blank" class="w-7 h-7 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center text-emerald-600 hover:bg-emerald-100 transition-colors">
               <i class="fa-brands fa-whatsapp text-xs"></i>
             </a>
           `;

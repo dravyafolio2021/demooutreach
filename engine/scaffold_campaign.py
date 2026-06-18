@@ -170,7 +170,8 @@ def main():
     print(f"Generated index page: {index_out}")
 
     # Admin template processing
-    admin_template_path = os.path.join(engine_dir, "admin_template.html")
+    admin_template_name = "real_estate_admin_template.html" if args.industry == "real-estate" else "admin_template.html"
+    admin_template_path = os.path.join(engine_dir, admin_template_name)
     if os.path.exists(admin_template_path):
         with open(admin_template_path, "r", encoding="utf-8") as f:
             admin_content = f.read()
