@@ -5,3 +5,20 @@ Prospet Vault/
 **/__pycache__/
 *.pyc
 *.log
+
+# Large raw source media (not served, just source files)
+*.heic
+*.HEIC
+**/assets/*.mp4
+# Keep hero/emotion/shoot/still/film_poster assets (referenced by pages)
+!**/assets/hero.png
+!**/assets/hero_thumb.jpg
+!**/assets/emotion.png
+!**/assets/shoot.png
+!**/assets/still.png
+!**/assets/film_poster_*.png
+!**/assets/ai_influencer.png
+!**/assets/agent_*.png
+
+node_modules/
+**/node_modules/

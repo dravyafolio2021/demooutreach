@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karan Makker Studio — Lead Kanban CRM</title>
+    <title>The Divine Frames — Lead Kanban CRM</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -190,7 +190,7 @@
                                 class="text-[9px] font-mono text-neutral-400 uppercase tracking-widest leading-none block font-semibold">CRM
                                 BOARD V2.6</span>
                             <h1 class="text-sm font-bold tracking-tight text-slate-900 mt-1 uppercase"
-                                id="sidebar-studio-name">Karan Makker Studio</h1>
+                                id="sidebar-studio-name">The Divine Frames</h1>
                         </div>
                     </div>
                 </div>
@@ -228,89 +228,65 @@
                         class="w-full text-left px-3 py-2 rounded-xl text-xs font-semibold tracking-wide flex items-center gap-3 transition-all text-slate-650 hover:bg-slate-100">
                         <i class="fa-solid fa-robot text-sm text-blue-500"></i> Smart Automations
                     </button>
-                    <button onclick="showFeatureLock('Financial Insights & Tax Planner')"
-                        class="w-full text-left px-3 py-2 rounded-xl text-xs font-semibold tracking-wide flex items-center justify-between text-slate-500 hover:bg-slate-50 opacity-45 hover:opacity-80 transition-all">
-                        <span class="flex items-center gap-3"><i class="fa-solid fa-chart-line-up text-sm"></i>
-                            Financial Insights</span>
-                        <i class="fa-solid fa-lock text-[10px]"></i>
+                    <button onclick="switchTab('financials')" id="nav-btn-financials"
+                        class="w-full text-left px-3 py-2 rounded-xl text-xs font-semibold tracking-wide flex items-center gap-3 transition-all text-slate-650 hover:bg-slate-100">
+                        <i class="fa-solid fa-chart-line text-sm"></i> Financial Insights
                     </button>
 
                     <span
                         class="block text-[8px] font-mono uppercase text-neutral-400 tracking-widest px-3 pt-4 mb-2 font-bold">Studio
                         Execution</span>
-                    <button onclick="showFeatureLock('Deliverable Catalog Editor')"
-                        class="w-full text-left px-3 py-2 rounded-xl text-xs font-semibold tracking-wide flex items-center justify-between text-slate-500 hover:bg-slate-50 opacity-45 hover:opacity-80 transition-all">
-                        <span class="flex items-center gap-3"><i class="fa-solid fa-photo-film text-sm"></i> Deliverable
-                            Edits</span>
-                        <i class="fa-solid fa-lock text-[10px]"></i>
+                    <button onclick="switchTab('deliverables')" id="nav-btn-deliverables"
+                        class="w-full text-left px-3 py-2 rounded-xl text-xs font-semibold tracking-wide flex items-center gap-3 transition-all text-slate-650 hover:bg-slate-100">
+                        <i class="fa-solid fa-photo-film text-sm"></i> Deliverable Edits
                     </button>
-                    <button onclick="showFeatureLock('Sony & Red Equipment Locker')"
-                        class="w-full text-left px-3 py-2 rounded-xl text-xs font-semibold tracking-wide flex items-center justify-between text-slate-500 hover:bg-slate-50 opacity-45 hover:opacity-80 transition-all">
-                        <span class="flex items-center gap-3"><i class="fa-solid fa-camera-retro text-sm"></i> Equipment
-                            Locker</span>
-                        <i class="fa-solid fa-lock text-[10px]"></i>
+                    <button onclick="switchTab('equipment')" id="nav-btn-equipment"
+                        class="w-full text-left px-3 py-2 rounded-xl text-xs font-semibold tracking-wide flex items-center gap-3 transition-all text-slate-650 hover:bg-slate-100">
+                        <i class="fa-solid fa-camera-retro text-sm"></i> Equipment Locker
                     </button>
-                    <button onclick="showFeatureLock('Roster & Crew Assignment Hub')"
-                        class="w-full text-left px-3 py-2 rounded-xl text-xs font-semibold tracking-wide flex items-center justify-between text-slate-500 hover:bg-slate-50 opacity-45 hover:opacity-80 transition-all">
-                        <span class="flex items-center gap-3"><i class="fa-solid fa-users text-sm"></i> Crew
-                            Assignment</span>
-                        <i class="fa-solid fa-lock text-[10px]"></i>
+                    <button onclick="switchTab('crew')" id="nav-btn-crew"
+                        class="w-full text-left px-3 py-2 rounded-xl text-xs font-semibold tracking-wide flex items-center gap-3 transition-all text-slate-650 hover:bg-slate-100">
+                        <i class="fa-solid fa-users text-sm"></i> Crew Assignment
                     </button>
 
                     <span
                         class="block text-[8px] font-mono uppercase text-neutral-400 tracking-widest px-3 pt-4 mb-2 font-bold">Client
                         Portals</span>
-                    <button onclick="showFeatureLock('Client Proofing Galleries')"
-                        class="w-full text-left px-3 py-2 rounded-xl text-xs font-semibold tracking-wide flex items-center justify-between text-slate-500 hover:bg-slate-50 opacity-45 hover:opacity-80 transition-all">
-                        <span class="flex items-center gap-3"><i class="fa-regular fa-images text-sm"></i> Client
-                            Galleries</span>
-                        <i class="fa-solid fa-lock text-[10px]"></i>
+                    <button onclick="switchTab('galleries')" id="nav-btn-galleries"
+                        class="w-full text-left px-3 py-2 rounded-xl text-xs font-semibold tracking-wide flex items-center gap-3 transition-all text-slate-650 hover:bg-slate-100">
+                        <i class="fa-regular fa-images text-sm"></i> Client Galleries
                     </button>
-                    <button onclick="showFeatureLock('Client Portal Access Portal')"
-                        class="w-full text-left px-3 py-2 rounded-xl text-xs font-semibold tracking-wide flex items-center justify-between text-slate-500 hover:bg-slate-50 opacity-45 hover:opacity-80 transition-all">
-                        <span class="flex items-center gap-3"><i class="fa-solid fa-user-shield text-sm"></i> Client
-                            Portals</span>
-                        <i class="fa-solid fa-lock text-[10px]"></i>
+                    <button onclick="switchTab('portals')" id="nav-btn-portals"
+                        class="w-full text-left px-3 py-2 rounded-xl text-xs font-semibold tracking-wide flex items-center gap-3 transition-all text-slate-650 hover:bg-slate-100">
+                        <i class="fa-solid fa-user-shield text-sm"></i> Client Portals
                     </button>
-                    <button onclick="showFeatureLock('Automated Reviews & Testimonials')"
-                        class="w-full text-left px-3 py-2 rounded-xl text-xs font-semibold tracking-wide flex items-center justify-between text-slate-500 hover:bg-slate-50 opacity-45 hover:opacity-80 transition-all">
-                        <span class="flex items-center gap-3"><i class="fa-regular fa-star-half-stroke text-sm"></i>
-                            Reviews &amp; Social</span>
-                        <i class="fa-solid fa-lock text-[10px]"></i>
+                    <button onclick="switchTab('reviews')" id="nav-btn-reviews"
+                        class="w-full text-left px-3 py-2 rounded-xl text-xs font-semibold tracking-wide flex items-center gap-3 transition-all text-slate-650 hover:bg-slate-100">
+                        <i class="fa-regular fa-star-half-stroke text-sm"></i> Reviews &amp; Social
                     </button>
 
                     <span
                         class="block text-[8px] font-mono uppercase text-neutral-400 tracking-widest px-3 pt-4 mb-2 font-bold">Marketing
-                        & Assets</span>
-                    <button onclick="showFeatureLock('SEO Blog & Article Publisher')"
-                        class="w-full text-left px-3 py-2 rounded-xl text-xs font-semibold tracking-wide flex items-center justify-between text-slate-500 hover:bg-slate-50 opacity-45 hover:opacity-80 transition-all">
-                        <span class="flex items-center gap-3"><i class="fa-solid fa-blog text-sm"></i> Blogs &amp;
-                            Articles</span>
-                        <i class="fa-solid fa-lock text-[10px]"></i>
+                        &amp; Assets</span>
+                    <button onclick="switchTab('blogs')" id="nav-btn-blogs"
+                        class="w-full text-left px-3 py-2 rounded-xl text-xs font-semibold tracking-wide flex items-center gap-3 transition-all text-slate-650 hover:bg-slate-100">
+                        <i class="fa-solid fa-blog text-sm"></i> Blogs &amp; Articles
                     </button>
-                    <button onclick="showFeatureLock('Media Hosting & Global CDN Locker')"
-                        class="w-full text-left px-3 py-2 rounded-xl text-xs font-semibold tracking-wide flex items-center justify-between text-slate-500 hover:bg-slate-50 opacity-45 hover:opacity-80 transition-all">
-                        <span class="flex items-center gap-3"><i class="fa-solid fa-photo-film text-sm"></i> Media
-                            Hosting</span>
-                        <i class="fa-solid fa-lock text-[10px]"></i>
+                    <button onclick="switchTab('media')" id="nav-btn-media"
+                        class="w-full text-left px-3 py-2 rounded-xl text-xs font-semibold tracking-wide flex items-center gap-3 transition-all text-slate-650 hover:bg-slate-100">
+                        <i class="fa-solid fa-photo-film text-sm"></i> Media Hosting
                     </button>
-                    <button onclick="showFeatureLock('Client Deliverables Asset Vault')"
-                        class="w-full text-left px-3 py-2 rounded-xl text-xs font-semibold tracking-wide flex items-center justify-between text-slate-500 hover:bg-slate-50 opacity-45 hover:opacity-80 transition-all">
-                        <span class="flex items-center gap-3"><i class="fa-solid fa-folder-open text-sm"></i> Client
-                            Assets</span>
-                        <i class="fa-solid fa-lock text-[10px]"></i>
+                    <button onclick="switchTab('assets')" id="nav-btn-assets"
+                        class="w-full text-left px-3 py-2 rounded-xl text-xs font-semibold tracking-wide flex items-center gap-3 transition-all text-slate-650 hover:bg-slate-100">
+                        <i class="fa-solid fa-folder-open text-sm"></i> Client Assets
                     </button>
-                    <button onclick="showFeatureLock('Instagram Feed Sync & Auto-Poster')"
-                        class="w-full text-left px-3 py-2 rounded-xl text-xs font-semibold tracking-wide flex items-center justify-between text-slate-500 hover:bg-slate-50 opacity-45 hover:opacity-80 transition-all">
-                        <span class="flex items-center gap-3"><i class="fa-brands fa-instagram text-sm"></i> Instagram
-                            Sync</span>
-                        <i class="fa-solid fa-lock text-[10px]"></i>
+                    <button onclick="switchTab('instagram')" id="nav-btn-instagram"
+                        class="w-full text-left px-3 py-2 rounded-xl text-xs font-semibold tracking-wide flex items-center gap-3 transition-all text-slate-650 hover:bg-slate-100">
+                        <i class="fa-brands fa-instagram text-sm"></i> Instagram Sync
                     </button>
-                    <button onclick="showFeatureLock('Google Business Profile Optimization & Reviews API')"
-                        class="w-full text-left px-3 py-2 rounded-xl text-xs font-semibold tracking-wide flex items-center justify-between text-slate-500 hover:bg-slate-50 opacity-45 hover:opacity-80 transition-all">
-                        <span class="flex items-center gap-3"><i class="fa-brands fa-google text-sm"></i> Google
-                            Business</span>
-                        <i class="fa-solid fa-lock text-[10px]"></i>
+                    <button onclick="switchTab('google')" id="nav-btn-google"
+                        class="w-full text-left px-3 py-2 rounded-xl text-xs font-semibold tracking-wide flex items-center gap-3 transition-all text-slate-650 hover:bg-slate-100">
+                        <i class="fa-brands fa-google text-sm"></i> Google Business
                     </button>
 
                 </nav>
@@ -323,8 +299,8 @@
                     KM
                 </div>
                 <div>
-                    <span class="text-xs font-bold block text-slate-800" id="footer-studio-name">Karan Makker</span>
-                    <span class="text-[9px] font-mono text-slate-400 studio-personalized-city">Lucknow, IN</span>
+                    <span class="text-xs font-bold block text-slate-800" id="footer-studio-name">The Divine Frames</span>
+                    <span class="text-[9px] font-mono text-slate-400 studio-personalized-city">Panchavati, IN</span>
                 </div>
             </div>
         </aside>
@@ -513,7 +489,7 @@
             </div>
 
             <!-- TAB 0: STUDIO HUB / OVERVIEW -->
-            <div id="tab-overview" class="tab-content flex-1 p-6 overflow-y-auto space-y-6">
+            <div id="tab-overview" class="tab-content flex-1 p-6 overflow-y-auto space-y-6 hidden">
                 <!-- Dashboard Welcome Banner -->
                 <div
                     class="bg-neutral-900 text-neutral-100 p-6 rounded-3xl relative overflow-hidden shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
@@ -521,7 +497,7 @@
                         <span
                             class="text-[9px] font-mono text-neutral-400 uppercase tracking-widest block font-bold mb-1">Studio
                             Analytics Center</span>
-                        <h2 class="text-xl font-bold text-white tracking-tight uppercase">Welcome back, Karan Makker
+                        <h2 class="text-xl font-bold text-white tracking-tight uppercase">Welcome back, The Divine Frames
                         </h2>
                         <p class="text-[11px] text-neutral-400 font-light mt-1">Here is a real-time overview of your
                             studio's pipeline, organic growth, and shoot rosters.</p>
@@ -709,7 +685,7 @@
             </div>
 
             <!-- TAB 1: KANBAN BOARD / TABLE PIPELINE CONTENT -->
-            <div id="tab-kanban" class="tab-content flex-1 p-6 overflow-hidden flex flex-col gap-5">
+            <div id="tab-kanban" class="tab-content flex-1 p-6 overflow-hidden flex flex-col gap-5 hidden">
 
                 <!-- Filter bar stats row -->
                 <div class="flex flex-wrap items-center justify-between gap-3 shrink-0">
@@ -1331,6 +1307,297 @@
                 </div>
             </div>
 
+            <!-- TAB 11: CLIENT PORTALS CONTENT -->
+            <div id="tab-portals" class="tab-content flex-1 p-6 overflow-y-auto hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+                    <div class="bg-white border border-kbBorder p-5 rounded-2xl shadow-xs">
+                        <span class="text-[9px] font-mono text-neutral-450 uppercase tracking-wider">Active Portals</span>
+                        <h4 class="text-2xl font-black text-slate-900 mt-1">14</h4>
+                        <p class="text-[10px] text-neutral-400 mt-1">With custom client subdomains</p>
+                    </div>
+                    <div class="bg-white border border-kbBorder p-5 rounded-2xl shadow-xs">
+                        <span class="text-[9px] font-mono text-neutral-455 uppercase tracking-wider">Average Portal Views</span>
+                        <h4 class="text-2xl font-black text-slate-900 mt-1">340 / mo</h4>
+                        <p class="text-[10px] text-neutral-400 mt-1">High engagement rate</p>
+                    </div>
+                    <div class="bg-white border border-kbBorder p-5 rounded-2xl shadow-xs">
+                        <span class="text-[9px] font-mono text-neutral-455 uppercase tracking-wider">Storage Used</span>
+                        <h4 class="text-2xl font-black text-slate-900 mt-1">82.4 GB</h4>
+                        <p class="text-[10px] text-neutral-400 mt-1">Of 500 GB total allowance</p>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-kbBorder rounded-2xl shadow-xs overflow-hidden">
+                    <div class="border-b border-kbBorder px-5 py-4 flex justify-between items-center bg-[#FAF9F5]">
+                        <h3 class="font-bold text-xs uppercase tracking-wider text-slate-900">Client Portal Subdomains</h3>
+                        <button onclick="showToast('Creating new portal')" class="bg-slate-900 hover:bg-slate-800 text-white font-mono text-[9px] font-bold px-3 py-1.5 rounded-lg uppercase tracking-wider">
+                            New Portal +
+                        </button>
+                    </div>
+                    <div class="divide-y divide-neutral-100 text-xs text-slate-700">
+                        <div class="p-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 hover:bg-neutral-50 transition-colors">
+                            <div>
+                                <h4 class="font-bold text-slate-900 uppercase">aanya-kabir.corafunnels.com</h4>
+                                <p class="text-[10px] text-neutral-400 mt-0.5 font-mono">PIN: 4892 • Status: Active</p>
+                            </div>
+                            <div class="flex gap-2">
+                                <button onclick="showToast('Link copied!')" class="px-2.5 py-1 border border-kbBorder rounded-lg font-mono text-[10px] hover:bg-white bg-slate-50">Copy</button>
+                                <button onclick="showToast('Configuring portal branding')" class="px-2.5 py-1 border border-slate-900 bg-slate-900 text-white rounded-lg font-mono text-[10px] hover:bg-slate-800">Configure</button>
+                            </div>
+                        </div>
+                        <div class="p-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 hover:bg-neutral-50 transition-colors">
+                            <div>
+                                <h4 class="font-bold text-slate-900 uppercase">rhea-rohan.corafunnels.com</h4>
+                                <p class="text-[10px] text-neutral-400 mt-0.5 font-mono">PIN: 1048 • Status: Active</p>
+                            </div>
+                            <div class="flex gap-2">
+                                <button onclick="showToast('Link copied!')" class="px-2.5 py-1 border border-kbBorder rounded-lg font-mono text-[10px] hover:bg-white bg-slate-50">Copy</button>
+                                <button onclick="showToast('Configuring portal branding')" class="px-2.5 py-1 border border-slate-900 bg-slate-900 text-white rounded-lg font-mono text-[10px] hover:bg-slate-800">Configure</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 12: BLOGS & ARTICLES CONTENT -->
+            <div id="tab-blogs" class="tab-content flex-1 p-6 overflow-y-auto hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+                    <div class="bg-white border border-kbBorder p-5 rounded-2xl shadow-xs">
+                        <span class="text-[9px] font-mono text-neutral-455 uppercase tracking-wider">SEO Articles</span>
+                        <h4 class="text-2xl font-black text-slate-900 mt-1">8 Published</h4>
+                        <p class="text-[10px] text-neutral-400 mt-1">Driving organic search traffic</p>
+                    </div>
+                    <div class="bg-white border border-kbBorder p-5 rounded-2xl shadow-xs">
+                        <span class="text-[9px] font-mono text-neutral-455 tracking-wider">Total Blog Views</span>
+                        <h4 class="text-2xl font-black text-slate-900 mt-1">4.2K</h4>
+                        <p class="text-[10px] text-neutral-400 mt-1">Past 30 days analytics</p>
+                    </div>
+                    <div class="bg-white border border-kbBorder p-5 rounded-2xl shadow-xs">
+                        <span class="text-[9px] font-mono text-neutral-455 tracking-wider">Inquiries Generated</span>
+                        <h4 class="text-2xl font-black text-slate-900 mt-1">18</h4>
+                        <p class="text-[10px] text-neutral-400 mt-1">Directly attributed to articles</p>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-kbBorder rounded-2xl shadow-xs overflow-hidden">
+                    <div class="border-b border-kbBorder px-5 py-4 flex justify-between items-center bg-[#FAF9F5]">
+                        <h3 class="font-bold text-xs uppercase tracking-wider text-slate-900">Articles &amp; SEO Performance</h3>
+                        <button onclick="showToast('Launching Cora AI blog writer')" class="bg-slate-900 hover:bg-slate-800 text-white font-mono text-[9px] font-bold px-3 py-1.5 rounded-lg uppercase tracking-wider">
+                            Write New Post
+                        </button>
+                    </div>
+                    <div class="divide-y divide-neutral-100 text-xs text-slate-700">
+                        <div class="p-4 flex justify-between items-center hover:bg-neutral-50 transition-colors">
+                            <div>
+                                <h4 class="font-bold text-slate-900">5 Essential Tips for Choosing Your Wedding Photographer in Lucknow</h4>
+                                <p class="text-[10px] text-neutral-400 mt-0.5">Views: 1,240 • SEO Score: <span class="text-emerald-600 font-bold">98/100</span> • Published: 12 May 2026</p>
+                            </div>
+                            <span class="text-neutral-400 cursor-pointer hover:text-slate-900"><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                        </div>
+                        <div class="p-4 flex justify-between items-center hover:bg-neutral-50 transition-colors">
+                            <div>
+                                <h4 class="font-bold text-slate-900">Why Destination Weddings in Goa Need a Professional Drone Team</h4>
+                                <p class="text-[10px] text-neutral-400 mt-0.5">Views: 980 • SEO Score: <span class="text-emerald-600 font-bold">92/100</span> • Published: 02 May 2026</p>
+                            </div>
+                            <span class="text-neutral-400 cursor-pointer hover:text-slate-900"><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 13: MEDIA HOSTING CONTENT -->
+            <div id="tab-media" class="tab-content flex-1 p-6 overflow-y-auto hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+                    <div class="bg-white border border-kbBorder p-5 rounded-2xl shadow-xs">
+                        <span class="text-[9px] font-mono text-neutral-450 uppercase tracking-wider">Hosted Videos</span>
+                        <h4 class="text-2xl font-black text-slate-900 mt-1">42 Clips</h4>
+                        <p class="text-[10px] text-neutral-400 mt-1">Cinematic reels & highlights</p>
+                    </div>
+                    <div class="bg-white border border-kbBorder p-5 rounded-2xl shadow-xs">
+                        <span class="text-[9px] font-mono text-neutral-455 uppercase tracking-wider">Global CDN Speed</span>
+                        <h4 class="text-2xl font-black text-slate-900 mt-1">12ms</h4>
+                        <p class="text-[10px] text-neutral-400 mt-1">Instant load times globally</p>
+                    </div>
+                    <div class="bg-white border border-kbBorder p-5 rounded-2xl shadow-xs">
+                        <span class="text-[9px] font-mono text-neutral-455 uppercase tracking-wider">Bandwidth Used</span>
+                        <h4 class="text-2xl font-black text-slate-900 mt-1">140.2 GB</h4>
+                        <p class="text-[10px] text-neutral-400 mt-1">This billing cycle</p>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-kbBorder rounded-2xl shadow-xs overflow-hidden">
+                    <div class="border-b border-kbBorder px-5 py-4 flex justify-between items-center bg-[#FAF9F5]">
+                        <h3 class="font-bold text-xs uppercase tracking-wider text-slate-900">Hosted Media Locker</h3>
+                        <button onclick="showToast('Uploading file to CDN')" class="bg-slate-900 hover:bg-slate-800 text-white font-mono text-[9px] font-bold px-3 py-1.5 rounded-lg uppercase tracking-wider">
+                            Upload Media
+                        </button>
+                    </div>
+                    <div class="divide-y divide-neutral-100 text-xs text-slate-700">
+                        <div class="p-4 flex justify-between items-center hover:bg-neutral-50 transition-colors">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg bg-red-50 text-red-600 flex items-center justify-center"><i class="fa-solid fa-file-video text-lg"></i></div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900">rhea_rohan_goa_wedding_reel_4k.mp4</h4>
+                                    <p class="text-[10px] text-neutral-400 mt-0.5">Size: 42.5 MB • CDN Status: <span class="text-emerald-600 font-bold">Optimized & Live</span></p>
+                                </div>
+                            </div>
+                            <button onclick="showToast('Reel URL copied!')" class="px-2.5 py-1 border border-kbBorder rounded-lg font-mono text-[10px] bg-slate-50 hover:bg-white">Copy Link</button>
+                        </div>
+                        <div class="p-4 flex justify-between items-center hover:bg-neutral-50 transition-colors">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg bg-red-50 text-red-600 flex items-center justify-center"><i class="fa-solid fa-file-video text-lg"></i></div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900">aanya_kabir_sangeet_dance_teaser.mp4</h4>
+                                    <p class="text-[10px] text-neutral-400 mt-0.5">Size: 18.2 MB • CDN Status: <span class="text-emerald-600 font-bold">Optimized & Live</span></p>
+                                </div>
+                            </div>
+                            <button onclick="showToast('Reel URL copied!')" class="px-2.5 py-1 border border-kbBorder rounded-lg font-mono text-[10px] bg-slate-50 hover:bg-white">Copy Link</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 14: CLIENT ASSETS CONTENT -->
+            <div id="tab-assets" class="tab-content flex-1 p-6 overflow-y-auto hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+                    <div class="bg-white border border-kbBorder p-5 rounded-2xl shadow-xs">
+                        <span class="text-[9px] font-mono text-neutral-450 uppercase tracking-wider">Total Client Archives</span>
+                        <h4 class="text-2xl font-black text-slate-900 mt-1">28 Folders</h4>
+                        <p class="text-[10px] text-neutral-400 mt-1">Secure backups for every wedding</p>
+                    </div>
+                    <div class="bg-white border border-kbBorder p-5 rounded-2xl shadow-xs">
+                        <span class="text-[9px] font-mono text-neutral-455 uppercase tracking-wider">Zipped Packages</span>
+                        <h4 class="text-2xl font-black text-slate-900 mt-1">12 Raw Packs</h4>
+                        <p class="text-[10px] text-neutral-400 mt-1">Ready for client download</p>
+                    </div>
+                    <div class="bg-white border border-kbBorder p-5 rounded-2xl shadow-xs">
+                        <span class="text-[9px] font-mono text-neutral-455 uppercase tracking-wider">Download Speed</span>
+                        <h4 class="text-2xl font-black text-slate-900 mt-1">Unlimited</h4>
+                        <p class="text-[10px] text-neutral-400 mt-1">No rate limiting on folders</p>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-kbBorder rounded-2xl shadow-xs overflow-hidden">
+                    <div class="border-b border-kbBorder px-5 py-4 flex justify-between items-center bg-[#FAF9F5]">
+                        <h3 class="font-bold text-xs uppercase tracking-wider text-slate-900">Secure Deliverables Vault</h3>
+                        <button onclick="showToast('Creating new package link')" class="bg-slate-900 hover:bg-slate-800 text-white font-mono text-[9px] font-bold px-3 py-1.5 rounded-lg uppercase tracking-wider">
+                            New Package Link
+                        </button>
+                    </div>
+                    <div class="divide-y divide-neutral-100 text-xs text-slate-700">
+                        <div class="p-4 flex justify-between items-center hover:bg-neutral-50 transition-colors">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center"><i class="fa-solid fa-file-zipper text-lg"></i></div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900">Rhea_Rohan_Udaipur_Wedding_All_Photos.zip</h4>
+                                    <p class="text-[10px] text-neutral-400 mt-0.5">Size: 4.8 GB • Expiration: Never • Downloads: 14</p>
+                                </div>
+                            </div>
+                            <button onclick="showToast('Download link copied!')" class="px-2.5 py-1 border border-kbBorder rounded-lg font-mono text-[10px] bg-slate-50 hover:bg-white">Get URL</button>
+                        </div>
+                        <div class="p-4 flex justify-between items-center hover:bg-neutral-50 transition-colors">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center"><i class="fa-solid fa-file-zipper text-lg"></i></div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900">Aanya_Kabir_Wedding_Sangeet_Deliverables.zip</h4>
+                                    <p class="text-[10px] text-neutral-400 mt-0.5">Size: 2.1 GB • Expiration: Never • Downloads: 8</p>
+                                </div>
+                            </div>
+                            <button onclick="showToast('Download link copied!')" class="px-2.5 py-1 border border-kbBorder rounded-lg font-mono text-[10px] bg-slate-50 hover:bg-white">Get URL</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 15: INSTAGRAM FEED SYNC CONTENT -->
+            <div id="tab-instagram" class="tab-content flex-1 p-6 overflow-y-auto hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+                    <div class="bg-white border border-kbBorder p-5 rounded-2xl shadow-xs">
+                        <span class="text-[9px] font-mono text-neutral-450 uppercase tracking-wider">Connected Account</span>
+                        <h4 class="text-base font-bold text-slate-900 mt-2 font-mono" id="instagram-handle-sync">@karan_makker_studio</h4>
+                        <p class="text-[10px] text-emerald-600 font-semibold mt-1 flex items-center gap-1"><i class="fa-solid fa-circle text-[6px]"></i> API Synced &amp; Active</p>
+                    </div>
+                    <div class="bg-white border border-kbBorder p-5 rounded-2xl shadow-xs">
+                        <span class="text-[9px] font-mono text-neutral-455 uppercase tracking-wider">Auto-Responses Sent</span>
+                        <h4 class="text-2xl font-black text-slate-900 mt-1">112</h4>
+                        <p class="text-[10px] text-neutral-400 mt-1">Pricing auto-pings to DMs</p>
+                    </div>
+                    <div class="bg-white border border-kbBorder p-5 rounded-2xl shadow-xs">
+                        <span class="text-[9px] font-mono text-neutral-455 uppercase tracking-wider">Lead Conversion Rate</span>
+                        <h4 class="text-2xl font-black text-slate-900 mt-1">24.2%</h4>
+                        <p class="text-[10px] text-neutral-400 mt-1">From DM to proposal form click</p>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-kbBorder rounded-2xl shadow-xs overflow-hidden">
+                    <div class="border-b border-kbBorder px-5 py-4 flex justify-between items-center bg-[#FAF9F5]">
+                        <h3 class="font-bold text-xs uppercase tracking-wider text-slate-900">DM Auto-Reply Trigger Settings</h3>
+                        <button onclick="showToast('Instagram integration settings updated')" class="bg-slate-900 hover:bg-slate-800 text-white font-mono text-[9px] font-bold px-3 py-1.5 rounded-lg uppercase tracking-wider">
+                            Save Configuration
+                        </button>
+                    </div>
+                    <div class="p-6 space-y-6 text-xs text-slate-700">
+                        <div class="flex items-start gap-4">
+                            <input type="checkbox" checked id="insta-trigger-1" class="mt-1 w-4 h-4 rounded border-kbBorder text-slate-900 focus:ring-slate-900">
+                            <div>
+                                <label for="insta-trigger-1" class="font-bold text-slate-900">Auto-reply to comments requesting "pricing", "packages", or "rates"</label>
+                                <p class="text-neutral-500 mt-0.5 leading-relaxed">Sends a structured DM to the user containing your custom website proposal questionnaire link within 5 seconds.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <input type="checkbox" checked id="insta-trigger-2" class="mt-1 w-4 h-4 rounded border-kbBorder text-slate-900 focus:ring-slate-900">
+                            <div>
+                                <label for="insta-trigger-2" class="font-bold text-slate-900">Auto-reply to all new DM inquiries with custom greeting &amp; city details</label>
+                                <p class="text-neutral-500 mt-0.5 leading-relaxed">Pings back immediately: "Hi! Thanks for reaching out to The Divine Frames. Let us know your dates and we'll send a custom quote."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 16: GOOGLE BUSINESS PROFILE SYNC CONTENT -->
+            <div id="tab-google" class="tab-content flex-1 p-6 overflow-y-auto hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+                    <div class="bg-white border border-kbBorder p-5 rounded-2xl shadow-xs">
+                        <span class="text-[9px] font-mono text-neutral-455 uppercase tracking-wider">GBP Rating</span>
+                        <h4 class="text-2xl font-black text-slate-900 mt-1 flex items-center gap-1.5 font-mono">4.9 <span class="text-amber-400 text-base"><i class="fa-solid fa-star"></i></span></h4>
+                        <p class="text-[10px] text-neutral-400 mt-1">Based on 148 verified reviews</p>
+                    </div>
+                    <div class="bg-white border border-kbBorder p-5 rounded-2xl shadow-xs">
+                        <span class="text-[9px] font-mono text-neutral-455 uppercase tracking-wider">Maps Search Views</span>
+                        <h4 class="text-2xl font-black text-slate-900 mt-1">12.4K / mo</h4>
+                        <p class="text-[10px] text-neutral-400 mt-1">+18% increase this month</p>
+                    </div>
+                    <div class="bg-white border border-kbBorder p-5 rounded-2xl shadow-xs">
+                        <span class="text-[9px] font-mono text-neutral-455 uppercase tracking-wider">Cora Auto-Review Requests</span>
+                        <h4 class="text-2xl font-black text-slate-900 mt-1">42 Sent</h4>
+                        <p class="text-[10px] text-neutral-400 mt-1">Sent automatically after photo delivery</p>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-kbBorder rounded-2xl shadow-xs overflow-hidden bg-white">
+                    <div class="border-b border-kbBorder px-5 py-4 bg-[#FAF9F5]">
+                        <h3 class="font-bold text-xs uppercase tracking-wider text-slate-900">Google Review Response Assistant</h3>
+                    </div>
+                    <div class="p-5 divide-y divide-neutral-100 text-xs text-slate-700">
+                        <div class="py-4 space-y-2">
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-slate-900 uppercase">Siddharth &amp; Neha (5 Stars)</span>
+                                <span class="text-[10px] text-neutral-400 font-mono">2 days ago</span>
+                            </div>
+                            <p class="text-neutral-500 italic">"Highly professional crew. The photos turned out incredibly cinematic. The advance payment and online photo selection process was so smooth."</p>
+                            <div class="bg-neutral-50 border border-kbBorder p-3.5 rounded-xl mt-3">
+                                <span class="text-[9px] font-mono text-neutral-450 uppercase font-bold tracking-wider">Cora AI Drafted Response</span>
+                                <p class="text-[11px] text-slate-800 mt-1">"Thank you so much Siddharth &amp; Neha for the 5-star review! We loved documenting your wedding story and are thrilled you found our online photo selection and payment process convenient."</p>
+                                <button onclick="showToast('Response posted to Google Maps')" class="mt-2.5 bg-slate-900 hover:bg-slate-800 text-white font-mono text-[9px] font-bold px-3 py-1.5 rounded-md uppercase tracking-wider">
+                                    Approve &amp; Post Response
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -1755,6 +2022,24 @@
             } else if (tabId === 'reviews') {
                 title.textContent = "Reviews & Social";
                 desc.textContent = "Approve feedback and client testimonials to display on site";
+            } else if (tabId === 'portals') {
+                title.textContent = "Client Portals";
+                desc.textContent = "Branded client dashboard, download centers, and secure access gates";
+            } else if (tabId === 'blogs') {
+                title.textContent = "Blogs & Articles";
+                desc.textContent = "Publish SEO articles, wedding photography guides, and track readability stats";
+            } else if (tabId === 'media') {
+                title.textContent = "Media Hosting";
+                desc.textContent = "Global CDN video locker, portfolio hosting and load performance optimizer";
+            } else if (tabId === 'assets') {
+                title.textContent = "Client Assets";
+                desc.textContent = "Deliverables storage vault, raw footage zip files, and photo archives";
+            } else if (tabId === 'instagram') {
+                title.textContent = "Instagram Sync";
+                desc.textContent = "Direct message triggers, automatic comment replies, and pricing auto-pings";
+            } else if (tabId === 'google') {
+                title.textContent = "Google Business";
+                desc.textContent = "GBP rating booster, AI reviews response draft assistant, and map search visibility";
             }
         }
 
@@ -2106,7 +2391,7 @@
           </div>
 
           <h4 class="text-xs font-bold text-slate-800 tracking-wide uppercase mb-1">${lead.coupleNames}</h4>
-          <span class="text-[10px] text-slate-400 font-mono tracking-widest uppercase">Lucknow Studio CRM</span>
+          <span class="text-[10px] text-slate-400 font-mono tracking-widest uppercase">Panchavati Studio CRM</span>
           
           <div class="flex gap-2 my-3.5">
             <span class="w-6 h-6 rounded-full bg-slate-50 border border-kbBorder text-neutral-500 hover:text-slate-900 flex items-center justify-center text-[10px]"><i class="fa-solid fa-globe"></i></span>
@@ -2461,12 +2746,12 @@
         }
 
         function updatePersonalizedBranding() {
-            const studioName = 'Karan Makker Studio';
-            const studioCity = 'Lucknow';
-            const initials = 'KM';
+            const studioName = 'The Divine Frames';
+            const studioCity = 'Panchavati';
+            const initials = studioName.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase();
 
             const sidebarName = document.getElementById('sidebar-studio-name');
-            if (sidebarName) sidebarName.textContent = 'Karan Makker';
+            if (sidebarName) sidebarName.textContent = studioName;
 
             const sidebarLogo = document.getElementById('sidebar-logo-initials');
             if (sidebarLogo) sidebarLogo.textContent = initials;
@@ -2491,8 +2776,8 @@
         }
 
         function updateWhatsAppCTALink() {
-            const studioName = 'Karan Makker Studio';
-            const studioCity = 'Lucknow';
+            const studioName = 'The Divine Frames';
+            const studioCity = 'Panchavati';
 
             const message = `Hi Cora Team, I just went through the demo for ${studioName} based in ${studioCity}. I'm interested in deploying this sales funnel and CRM system for my photography studio!`;
             const encodedMsg = encodeURIComponent(message);
@@ -2524,8 +2809,6 @@
                 month: 'long',
                 year: 'numeric'
             });
-
-            const invoiceId = `KMS-${new Date().getFullYear()}-${lead.id.split('_').pop().toUpperCase()}`;
 
             let itemsHtml = '';
             let subtotal = 0;
@@ -2650,24 +2933,24 @@
             }
 
             const premiumFeatures = [
-                { name: 'Google Business', desc: 'Google Search & Maps lead sync', icon: 'fa-brands fa-google', category: 'Growth' },
-                { name: 'Instagram Sync', desc: 'Auto-post and DM automation', icon: 'fa-brands fa-instagram', category: 'Growth' },
-                { name: 'Blogs & Articles', desc: 'SEO Blog & Article Publisher', icon: 'fa-solid fa-blog', category: 'Growth' },
-                { name: 'Client Galleries', desc: 'Online proofing & selections', icon: 'fa-regular fa-images', category: 'Client Portals' },
-                { name: 'Client Portals', desc: 'Password-protected access portals', icon: 'fa-solid fa-user-shield', category: 'Client Portals' },
-                { name: 'Client Assets', desc: 'High-res deliverable vault', icon: 'fa-solid fa-folder-open', category: 'Client Portals' },
-                { name: 'Financial Insights', desc: 'Tax Planner & income tracking', icon: 'fa-solid fa-chart-line-up', category: 'Finance' },
-                { name: 'Deliverable Edits', desc: 'Post-production tracking tool', icon: 'fa-solid fa-photo-film', category: 'Production' },
-                { name: 'Equipment Locker', desc: 'Sony & Red gear booking manager', icon: 'fa-solid fa-camera-retro', category: 'Production' },
-                { name: 'Crew Assignment', desc: 'Roster & crew calendar planner', icon: 'fa-solid fa-users', category: 'Production' },
-                { name: 'Reviews & Social', desc: 'Testimonial generator & publisher', icon: 'fa-regular fa-star-half-stroke', category: 'Growth' },
-                { name: 'Media Hosting', desc: 'Global CDN media library', icon: 'fa-solid fa-photo-film', category: 'Client Portals' }
+                { name: 'Google Business', tabId: 'google', desc: 'Google Search & Maps lead sync', icon: 'fa-brands fa-google', category: 'Growth' },
+                { name: 'Instagram Sync', tabId: 'instagram', desc: 'Auto-post and DM automation', icon: 'fa-brands fa-instagram', category: 'Growth' },
+                { name: 'Blogs & Articles', tabId: 'blogs', desc: 'SEO Blog & Article Publisher', icon: 'fa-solid fa-blog', category: 'Growth' },
+                { name: 'Client Galleries', tabId: 'galleries', desc: 'Online proofing & selections', icon: 'fa-regular fa-images', category: 'Client Portals' },
+                { name: 'Client Portals', tabId: 'portals', desc: 'Password-protected access portals', icon: 'fa-solid fa-user-shield', category: 'Client Portals' },
+                { name: 'Client Assets', tabId: 'assets', desc: 'High-res deliverable vault', icon: 'fa-solid fa-folder-open', category: 'Client Portals' },
+                { name: 'Financial Insights', tabId: 'financials', desc: 'Tax Planner & income tracking', icon: 'fa-solid fa-chart-line-up', category: 'Finance' },
+                { name: 'Deliverable Edits', tabId: 'deliverables', desc: 'Post-production tracking tool', icon: 'fa-solid fa-photo-film', category: 'Production' },
+                { name: 'Equipment Locker', tabId: 'equipment', desc: 'Sony & Red gear booking manager', icon: 'fa-solid fa-camera-retro', category: 'Production' },
+                { name: 'Crew Assignment', tabId: 'crew', desc: 'Roster & crew calendar planner', icon: 'fa-solid fa-users', category: 'Production' },
+                { name: 'Reviews & Social', tabId: 'reviews', desc: 'Testimonial generator & publisher', icon: 'fa-regular fa-star-half-stroke', category: 'Growth' },
+                { name: 'Media Hosting', tabId: 'media', desc: 'Global CDN media library', icon: 'fa-solid fa-photo-film', category: 'Client Portals' }
             ];
 
             let gridHtml = '';
             premiumFeatures.forEach(feat => {
                 gridHtml += `
-          <div onclick="showFeatureLock('${feat.name}')" class="p-3 bg-neutral-50 hover:bg-neutral-100 border border-kbBorder rounded-2xl cursor-pointer text-left transition-all flex flex-col justify-between group">
+          <div onclick="switchTab('${feat.tabId}'); closeMoreFeaturesDrawer();" class="p-3 bg-neutral-50 hover:bg-neutral-100 border border-kbBorder rounded-2xl cursor-pointer text-left transition-all flex flex-col justify-between group">
             <div>
               <div class="w-8 h-8 rounded-lg bg-slate-900 text-white flex items-center justify-center mb-2 text-xs">
                 <i class="${feat.icon}"></i>
@@ -2677,7 +2960,7 @@
             </div>
             <div class="mt-2.5 flex items-center justify-between text-[8px] font-mono font-bold uppercase tracking-wider text-slate-400">
               <span>${feat.category}</span>
-              <span class="text-neutral-550"><i class="fa-solid fa-lock text-[8px] mr-1"></i> PRO</span>
+              <span class="text-neutral-550"><i class="fa-solid fa-circle-check text-emerald-500 text-[8px] mr-1"></i> ACTIVE</span>
             </div>
           </div>
         `;
