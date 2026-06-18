@@ -9,7 +9,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
         rel="stylesheet">
 
     <!-- Tailwind CDN -->
@@ -20,6 +20,7 @@
                 extend: {
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
+                        serif: ['Newsreader', 'serif'],
                     },
                     colors: {
                         kbBg: '#F7F6F0',
@@ -199,9 +200,13 @@
                     <span
                         class="block text-[8px] font-mono uppercase text-neutral-400 tracking-widest px-3 mb-2 font-bold">Sales
                         &amp; Pipeline</span>
-                    <button onclick="switchTab('overview')" id="nav-btn-overview"
+                    <button onclick="switchTab('platform-overview')" id="nav-btn-platform-overview"
                         class="w-full text-left px-3 py-2 rounded-xl text-xs font-semibold tracking-wide flex items-center gap-3 transition-all bg-slate-900 text-white">
-                        <i class="fa-solid fa-chart-pie text-sm"></i> Studio Overview
+                        <i class="fa-solid fa-sparkles text-sm text-amber-200"></i> Platform Overview
+                    </button>
+                    <button onclick="switchTab('overview')" id="nav-btn-overview"
+                        class="w-full text-left px-3 py-2 rounded-xl text-xs font-semibold tracking-wide flex items-center gap-3 transition-all text-slate-650 hover:bg-slate-100">
+                        <i class="fa-solid fa-chart-pie text-sm"></i> Dashboard
                     </button>
                     <button onclick="switchTab('kanban')" id="nav-btn-kanban"
                         class="w-full text-left px-3 py-2 rounded-xl text-xs font-semibold tracking-wide flex items-center gap-3 transition-all text-slate-650 hover:bg-slate-100">
@@ -328,7 +333,7 @@
         <div class="flex-1 flex flex-col overflow-hidden">
 
             <!-- Top Filter/Search Bar (Shared) -->
-            <header
+            <header id="main-header"
                 class="bg-[#FAF9F5] border-b border-kbBorder px-6 py-4 flex flex-col md:flex-row md:items-center justify-between gap-4 shrink-0">
                 <div>
                     <h2 class="text-base font-bold text-slate-900" id="section-title">Leads Pipeline</h2>
@@ -364,6 +369,77 @@
                     </button>
                 </div>
             </header>
+
+            <!-- TAB -1: PLATFORM OVERVIEW (ANTHROPIC STYLE) -->
+            <div id="tab-platform-overview" class="tab-content flex-1 overflow-y-auto bg-[#FDFCFB] text-[#1C1917]">
+                <div class="max-w-4xl mx-auto px-8 py-16 md:py-24">
+                    <!-- Hero Section -->
+                    <div class="mb-20">
+                        <span class="font-mono text-[10px] tracking-widest text-[#8A8580] uppercase mb-4 block">Cora Platform Overview</span>
+                        <h2 class="font-serif text-4xl md:text-5xl font-normal tracking-tight leading-tight mb-6">
+                            Elevate your studio.<br>Command your market.
+                        </h2>
+                        <p class="text-lg md:text-xl font-light text-[#57534E] leading-relaxed max-w-2xl">
+                            A completely automated lead engine designed exclusively for Indian wedding photography businesses. Scale revenue and visibility without scaling effort.
+                        </p>
+                    </div>
+
+                    <!-- Feature Pillars -->
+                    <div class="grid md:grid-cols-2 gap-12 md:gap-16 mb-20">
+                        <div class="border-t border-[#E5E5E5] pt-6">
+                            <h3 class="font-serif text-2xl font-normal mb-3">Omnichannel Visibility</h3>
+                            <p class="text-sm font-light text-[#57534E] leading-relaxed mb-4">
+                                Auto-sync your Google Business Profile to capture local 'photographers near me' search traffic. We optimize your maps ranking, publish automated SEO blogs, and index your portfolio globally.
+                            </p>
+                            <ul class="text-[11px] font-mono text-[#8A8580] space-y-1.5 tracking-wide">
+                                <li>— Google Maps & Search Sync</li>
+                                <li>— Automated SEO Blog Publishing</li>
+                            </ul>
+                        </div>
+                        <div class="border-t border-[#E5E5E5] pt-6">
+                            <h3 class="font-serif text-2xl font-normal mb-3">Zero Lost Leads</h3>
+                            <p class="text-sm font-light text-[#57534E] leading-relaxed mb-4">
+                                Connect your Instagram DMs and WhatsApp directly to the Kanban board. Automated follow-ups ensure every casual inquiry is nurtured into a high-ticket proposal without manual intervention.
+                            </p>
+                            <ul class="text-[11px] font-mono text-[#8A8580] space-y-1.5 tracking-wide">
+                                <li>— Instagram DM Automation</li>
+                                <li>— WhatsApp Conversational AI</li>
+                            </ul>
+                        </div>
+                        <div class="border-t border-[#E5E5E5] pt-6">
+                            <h3 class="font-serif text-2xl font-normal mb-3">Premium Client Experience</h3>
+                            <p class="text-sm font-light text-[#57534E] leading-relaxed mb-4">
+                                Impress luxury clients with password-protected galleries, intelligent selection pinning, and high-resolution deliverable vaults hosted on our global CDN.
+                            </p>
+                            <ul class="text-[11px] font-mono text-[#8A8580] space-y-1.5 tracking-wide">
+                                <li>— Client Selection Portals</li>
+                                <li>— High-Res Asset Vaults</li>
+                            </ul>
+                        </div>
+                        <div class="border-t border-[#E5E5E5] pt-6">
+                            <h3 class="font-serif text-2xl font-normal mb-3">Financial Operations</h3>
+                            <p class="text-sm font-light text-[#57534E] leading-relaxed mb-4">
+                                Auto-generate GST invoices, enforce 50% retainer terms, and manage your studio's calendar, crew assignments, and equipment locker from a single command center.
+                            </p>
+                            <ul class="text-[11px] font-mono text-[#8A8580] space-y-1.5 tracking-wide">
+                                <li>— Automated Retainer Invoicing</li>
+                                <li>— Crew & Equipment Rosters</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- CTA -->
+                    <div class="bg-[#F5F4F0] p-10 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-8 border border-[#EBEBEB]">
+                        <div>
+                            <h4 class="font-serif text-2xl font-normal mb-2">Ready to scale your bookings?</h4>
+                            <p class="text-sm text-[#57534E] font-light">Join the top 1% of photography studios in India.</p>
+                        </div>
+                        <a href="https://wa.me/918708528150?text=Hi%20Cora%20Team%2C%20I%20want%20to%20learn%20more%20about%20unlocking%20the%20full%20Cora%20Pro%20Suite." target="_blank" class="px-6 py-3 bg-[#1C1917] hover:bg-[#292524] text-white text-[11px] font-mono tracking-widest uppercase rounded-lg transition-colors shadow-sm whitespace-nowrap">
+                            Unlock Cora Pro Suite
+                        </a>
+                    </div>
+                </div>
+            </div>
 
             <!-- TAB 0: STUDIO HUB / OVERVIEW -->
             <div id="tab-overview" class="tab-content flex-1 p-6 overflow-y-auto space-y-6">
@@ -1540,11 +1616,34 @@
             // Modify titles
             const title = document.getElementById('section-title');
             const desc = document.getElementById('section-desc');
-            const searchBox = document.getElementById('search-container');
+            const searchBox = document.getElementById('top-bar-search');
             const toggleContainer = document.getElementById('view-toggle-container');
+            const mainHeader = document.getElementById('main-header');
+
+            if (mainHeader) {
+                if (tabId === 'platform-overview') {
+                    mainHeader.classList.add('hidden');
+                    mainHeader.classList.remove('flex');
+                } else {
+                    mainHeader.classList.remove('hidden');
+                    mainHeader.classList.add('flex');
+                }
+            }
+
+            // Sidebar Active State
+            const allNavBtns = document.querySelectorAll('nav button[id^="nav-btn-"]');
+            allNavBtns.forEach(btn => {
+                btn.classList.remove('bg-slate-900', 'text-white');
+                btn.classList.add('text-slate-650', 'hover:bg-slate-100');
+            });
+            const activeBtnNav = document.getElementById(`nav-btn-${tabId}`);
+            if (activeBtnNav) {
+                activeBtnNav.classList.remove('text-slate-650', 'hover:bg-slate-100');
+                activeBtnNav.classList.add('bg-slate-900', 'text-white');
+            }
 
             if (tabId === 'overview') {
-                title.textContent = "Studio Overview";
+                title.textContent = "Dashboard";
                 desc.textContent = "Complete overview of studio operations, growth, and conversion analytics";
                 toggleContainer.classList.add('hidden');
                 searchBox.classList.add('hidden');
@@ -2598,7 +2697,7 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             loadLeads();
-            switchTab('overview');
+            switchTab('platform-overview');
             updatePersonalizedBranding();
 
             window.addEventListener('storage', (e) => {
