@@ -533,6 +533,190 @@
 
 
 
+  <!-- PORTAL SYNC SECTION -->
+  <section class="py-24 md:py-32 px-6 bg-white relative z-20 border-t border-brand-border overflow-hidden">
+
+    <!-- Subtle grid background -->
+    <div class="absolute inset-0 opacity-[0.025]" style="background-image: linear-gradient(#1C1B19 1px, transparent 1px), linear-gradient(90deg, #1C1B19 1px, transparent 1px); background-size: 40px 40px;"></div>
+
+    <div class="max-w-6xl mx-auto relative z-10">
+
+      <!-- Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
+        <div class="max-w-xl">
+          <span class="text-[9px] tracking-[0.4em] uppercase text-[#7C3AED] font-bold block mb-3 font-mono">Portal Sync</span>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-light text-[#1C1B19] tracking-tight leading-[1.15]">
+            Listed everywhere.<br><span class="font-serif italic font-light">Managed once.</span>
+          </h2>
+        </div>
+        <p class="text-neutral-500 text-xs sm:text-sm font-light leading-relaxed max-w-sm md:text-right">
+          Your Singh Associates listings automatically stay in sync across every major Indian portal — no manual re-entry, no missed updates, no duplicate effort.
+        </p>
+      </div>
+
+      <!-- Platform Logos Bar -->
+      <div class="flex flex-wrap items-center justify-center md:justify-between gap-4 sm:gap-6 mb-16 py-6 px-6 md:px-10 bg-[#FAF9F6] rounded-2xl border border-brand-border">
+
+        <!-- 99acres -->
+        <div class="flex items-center gap-2 opacity-80 hover:opacity-100 transition-opacity">
+          <img src="https://logo.clearbit.com/99acres.com" alt="99acres" class="w-7 h-7 rounded-md object-contain bg-white shadow-sm border border-neutral-100 p-0.5" onerror="this.src='/defaults/real-estate/emotion.png';this.style.display='none';"/>
+          <span class="font-bold text-sm text-[#1C1B19] tracking-tight">99acres</span>
+        </div>
+
+        <!-- MagicBricks -->
+        <div class="flex items-center gap-2 opacity-80 hover:opacity-100 transition-opacity">
+          <img src="https://logo.clearbit.com/magicbricks.com" alt="MagicBricks" class="w-7 h-7 rounded-md object-contain bg-white shadow-sm border border-neutral-100 p-0.5" onerror="this.src='/defaults/real-estate/emotion.png';this.style.display='none';"/>
+          <span class="font-bold text-sm text-[#1C1B19] tracking-tight">MagicBricks</span>
+        </div>
+
+        <!-- Square Yards -->
+        <div class="flex items-center gap-2 opacity-80 hover:opacity-100 transition-opacity">
+          <img src="https://logo.clearbit.com/squareyards.com" alt="Square Yards" class="w-7 h-7 rounded-md object-contain bg-white shadow-sm border border-neutral-100 p-0.5" onerror="this.src='/defaults/real-estate/emotion.png';this.style.display='none';"/>
+          <span class="font-bold text-sm text-[#1C1B19] tracking-tight">Square Yards</span>
+        </div>
+
+        <!-- Housing.com -->
+        <div class="flex items-center gap-2 opacity-80 hover:opacity-100 transition-opacity">
+          <img src="https://logo.clearbit.com/housing.com" alt="Housing.com" class="w-7 h-7 rounded-md object-contain bg-white shadow-sm border border-neutral-100 p-0.5" onerror="this.src='/defaults/real-estate/emotion.png';this.style.display='none';"/>
+          <span class="font-bold text-sm text-[#1C1B19] tracking-tight">Housing.com</span>
+        </div>
+
+        <!-- NoBroker -->
+        <div class="flex items-center gap-2 opacity-80 hover:opacity-100 transition-opacity">
+          <img src="https://logo.clearbit.com/nobroker.in" alt="NoBroker" class="w-7 h-7 rounded-md object-contain bg-white shadow-sm border border-neutral-100 p-0.5" onerror="this.src='/defaults/real-estate/emotion.png';this.style.display='none';"/>
+          <span class="font-bold text-sm text-[#1C1B19] tracking-tight">NoBroker</span>
+        </div>
+
+        <!-- PropTiger -->
+        <div class="flex items-center gap-2 opacity-80 hover:opacity-100 transition-opacity">
+          <img src="https://logo.clearbit.com/proptiger.com" alt="PropTiger" class="w-7 h-7 rounded-md object-contain bg-white shadow-sm border border-neutral-100 p-0.5" onerror="this.src='/defaults/real-estate/emotion.png';this.style.display='none';"/>
+          <span class="font-bold text-sm text-[#1C1B19] tracking-tight">PropTiger</span>
+        </div>
+
+        <!-- + more badge -->
+        <div class="flex items-center gap-1.5 bg-neutral-100 border border-neutral-200 rounded-full px-3 py-1.5">
+          <span class="text-[10px] font-semibold text-neutral-500 tracking-wide">+12 more portals</span>
+        </div>
+
+      </div>
+
+      <!-- Listing Cards Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
+
+        <!-- Card 1: 99acres -->
+        <div class="bg-white border border-neutral-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group">
+          <div class="relative h-44 overflow-hidden bg-neutral-100">
+            <img src="/defaults/real-estate/emotion.png" alt="Property Listing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <!-- Live badge -->
+            <div class="absolute top-3 left-3 flex items-center gap-1.5 bg-white/95 backdrop-blur rounded-full px-2.5 py-1 shadow-sm border border-neutral-100">
+              <div class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></div>
+              <span class="text-[9px] font-bold text-neutral-700 uppercase tracking-wider">Live</span>
+            </div>
+            <!-- Portal badge -->
+            <div class="absolute top-3 right-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full shadow-sm text-white text-[9px] font-bold uppercase tracking-wider" style="background:#E8441E">
+              99acres
+            </div>
+          </div>
+          <div class="p-4">
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <div>
+                <h4 class="text-sm font-semibold text-[#1C1B19]">3 BHK Apartment</h4>
+                <p class="text-neutral-400 text-[10px] font-light mt-0.5">Sector 56, Gurugram</p>
+              </div>
+              <span class="text-sm font-bold text-[#1C1B19] font-mono whitespace-nowrap">₹4.1 Cr - ₹6.8 Cr</span>
+            </div>
+            <div class="flex items-center gap-3 text-[10px] text-neutral-500 pt-3 border-t border-neutral-100">
+              <span>1,450 sq.ft</span><span class="text-neutral-300">|</span>
+              <span>3 Bed</span><span class="text-neutral-300">|</span>
+              <span>2 Bath</span>
+              <span class="ml-auto flex items-center gap-1 text-green-600 font-semibold">
+                <i class="fa-solid fa-rotate text-[8px]"></i> Auto-synced
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: MagicBricks -->
+        <div class="bg-white border border-neutral-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group">
+          <div class="relative h-44 overflow-hidden bg-neutral-100">
+            <img src="/defaults/real-estate/shoot.png" alt="Property Listing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <div class="absolute top-3 left-3 flex items-center gap-1.5 bg-white/95 backdrop-blur rounded-full px-2.5 py-1 shadow-sm border border-neutral-100">
+              <div class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></div>
+              <span class="text-[9px] font-bold text-neutral-700 uppercase tracking-wider">Live</span>
+            </div>
+            <div class="absolute top-3 right-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full shadow-sm text-white text-[9px] font-bold uppercase tracking-wider" style="background:#D7232C">
+              MagicBricks
+            </div>
+          </div>
+          <div class="p-4">
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <div>
+                <h4 class="text-sm font-semibold text-[#1C1B19]">2 BHK Builder Floor</h4>
+                <p class="text-neutral-400 text-[10px] font-light mt-0.5">DLF Phase 3, Gurugram</p>
+              </div>
+              <span class="text-sm font-bold text-[#1C1B19] font-mono whitespace-nowrap">₹2 Cr - ₹3.4 Cr</span>
+            </div>
+            <div class="flex items-center gap-3 text-[10px] text-neutral-500 pt-3 border-t border-neutral-100">
+              <span>950 sq.ft</span><span class="text-neutral-300">|</span>
+              <span>2 Bed</span><span class="text-neutral-300">|</span>
+              <span>2 Bath</span>
+              <span class="ml-auto flex items-center gap-1 text-green-600 font-semibold">
+                <i class="fa-solid fa-rotate text-[8px]"></i> Auto-synced
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Square Yards -->
+        <div class="bg-white border border-neutral-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group sm:col-span-2 lg:col-span-1">
+          <div class="relative h-44 overflow-hidden bg-neutral-100">
+            <img src="/defaults/real-estate/still.png" alt="Property Listing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <div class="absolute top-3 left-3 flex items-center gap-1.5 bg-white/95 backdrop-blur rounded-full px-2.5 py-1 shadow-sm border border-neutral-100">
+              <div class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></div>
+              <span class="text-[9px] font-bold text-neutral-700 uppercase tracking-wider">Live</span>
+            </div>
+            <div class="absolute top-3 right-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full shadow-sm text-white text-[9px] font-bold uppercase tracking-wider" style="background:#0E2D6B">
+              Square Yards
+            </div>
+          </div>
+          <div class="p-4">
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <div>
+                <h4 class="text-sm font-semibold text-[#1C1B19]">Penthouse — Sky Villa</h4>
+                <p class="text-neutral-400 text-[10px] font-light mt-0.5">Golf Course Rd, Gurugram</p>
+              </div>
+              <span class="text-sm font-bold text-[#1C1B19] font-mono whitespace-nowrap">₹9.5 Cr - ₹16.4 Cr</span>
+            </div>
+            <div class="flex items-center gap-3 text-[10px] text-neutral-500 pt-3 border-t border-neutral-100">
+              <span>3,200 sq.ft</span><span class="text-neutral-300">|</span>
+              <span>4 Bed</span><span class="text-neutral-300">|</span>
+              <span>4 Bath</span>
+              <span class="ml-auto flex items-center gap-1 text-green-600 font-semibold">
+                <i class="fa-solid fa-rotate text-[8px]"></i> Auto-synced
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom CTA Bar -->
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-6 bg-[#FAF9F6] border border-brand-border rounded-2xl px-6 md:px-10 py-6">
+        <div class="text-center sm:text-left">
+          <p class="text-sm font-semibold text-[#1C1B19]">Stop copy-pasting listings across portals.</p>
+          <p class="text-neutral-500 text-xs font-light mt-1">Update once on your dashboard — we push to 99acres, MagicBricks, Square Yards & more instantly.</p>
+        </div>
+        <a href="https://wa.me/918708528150?text=Hi%20Cora%20Team%2C%20I%20want%20to%20sync%20Singh Associates%20listings%20across%20all%20portals%20automatically." target="_blank" class="flex-shrink-0 inline-flex items-center gap-2.5 bg-[#1C1B19] hover:bg-neutral-800 text-white text-[10px] font-bold uppercase tracking-widest px-7 py-3.5 rounded-full transition-all duration-300 hover:scale-105 active:scale-95 shadow-md whitespace-nowrap">
+          <i class="fa-solid fa-rotate text-xs"></i>
+          Enable Portal Sync
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+
   <!-- PROCESS TIMELINE SECTION -->
   <section class="py-32 px-6 bg-[#FAF9F6] relative z-20 border-t border-brand-border">
     <div class="max-w-6xl mx-auto">
