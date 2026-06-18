@@ -199,9 +199,13 @@
                     <span
                         class="block text-[8px] font-mono uppercase text-neutral-400 tracking-widest px-3 mb-2 font-bold">Sales
                         &amp; Pipeline</span>
-                    <button onclick="switchTab('overview')" id="nav-btn-overview"
+                    <button onclick="switchTab('platform-overview')" id="nav-btn-platform-overview"
                         class="w-full text-left px-3 py-2 rounded-xl text-xs font-semibold tracking-wide flex items-center gap-3 transition-all bg-slate-900 text-white">
-                        <i class="fa-solid fa-chart-pie text-sm"></i> Agency Overview
+                        <i class="fa-solid fa-house text-sm"></i> Platform Overview
+                    </button>
+                    <button onclick="switchTab('overview')" id="nav-btn-overview"
+                        class="w-full text-left px-3 py-2 rounded-xl text-xs font-semibold tracking-wide flex items-center gap-3 transition-all text-slate-650 hover:bg-slate-100">
+                        <i class="fa-solid fa-chart-pie text-sm"></i> Agency Dashboard
                     </button>
                     <button onclick="switchTab('kanban')" id="nav-btn-kanban"
                         class="w-full text-left px-3 py-2 rounded-xl text-xs font-semibold tracking-wide flex items-center gap-3 transition-all text-slate-650 hover:bg-slate-100">
@@ -303,7 +307,7 @@
         <div class="flex-1 flex flex-col overflow-hidden">
 
             <!-- Top Filter/Search Bar (Shared) -->
-            <header
+            <header id="main-header"
                 class="bg-[#FAF9F5] border-b border-kbBorder px-6 py-4 flex flex-col md:flex-row md:items-center justify-between gap-4 shrink-0">
                 <div>
                     <h2 class="text-base font-bold text-slate-900" id="section-title">Open Leads</h2>
@@ -340,8 +344,151 @@
                 </div>
             </header>
 
+            <!-- TAB -1: PLATFORM OVERVIEW (LAYMAN GRID) -->
+            <div id="tab-platform-overview" class="tab-content flex-1 overflow-y-auto bg-[#F8F9FA] text-[#1C1917]">
+                <div class="max-w-6xl mx-auto px-6 py-10 md:py-16">
+                    <!-- Hero Section -->
+                    <div class="text-center mb-12">
+                        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-bold tracking-widest uppercase mb-4 shadow-sm border border-emerald-200">
+                            <i class="fa-solid fa-rocket"></i> Cora Real Estate System
+                        </span>
+                        <h2 class="font-bold text-3xl md:text-4xl tracking-tight text-slate-900 mb-4">
+                            Close More Deals. Do Less Work.
+                        </h2>
+                        <p class="text-base text-slate-600 max-w-2xl mx-auto font-medium">
+                            Everything you need to sync leads from portals like MagicBricks, Housing, and Google, automate instant WhatsApp replies, showcase listings, and close deals faster.
+                        </p>
+                    </div>
+
+                    <!-- 12-Item Layman Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-5 mb-16">
+                        
+                        <!-- Item 1 -->
+                        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                            <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center mb-4 text-blue-600">
+                                <i class="fa-solid fa-map-location-dot text-lg"></i>
+                            </div>
+                            <h3 class="font-bold text-slate-900 mb-2 text-sm">Rank #1 on Google Maps</h3>
+                            <p class="text-[12px] text-slate-500 leading-snug">Get discovered by property buyers and sellers looking for "best real estate agent in Sector 82A / Vatika".</p>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                            <div class="w-10 h-10 rounded-full bg-orange-50 flex items-center justify-center mb-4 text-orange-600">
+                                <i class="fa-solid fa-bolt text-lg"></i>
+                            </div>
+                            <h3 class="font-bold text-slate-900 mb-2 text-sm">Sync Property Portals</h3>
+                            <p class="text-[12px] text-slate-500 leading-snug">Instantly capture incoming inquiries from MagicBricks, 99acres, and Housing.com in one inbox.</p>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                            <div class="w-10 h-10 rounded-full bg-pink-50 flex items-center justify-center mb-4 text-pink-600">
+                                <i class="fa-brands fa-instagram text-lg"></i>
+                            </div>
+                            <h3 class="font-bold text-slate-900 mb-2 text-sm">Instagram Lead Sync</h3>
+                            <p class="text-[12px] text-slate-500 leading-snug">Automatically reply to property questions and listing DMs on Instagram 24/7.</p>
+                        </div>
+
+                        <!-- Item 4 -->
+                        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                            <div class="w-10 h-10 rounded-full bg-emerald-50 flex items-center justify-center mb-4 text-emerald-600">
+                                <i class="fa-brands fa-whatsapp text-lg"></i>
+                            </div>
+                            <h3 class="font-bold text-slate-900 mb-2 text-sm">WhatsApp Auto-Reply</h3>
+                            <p class="text-[12px] text-slate-500 leading-snug">Auto-reply to listing inquiries with PDF brochures and location links instantly via WhatsApp.</p>
+                        </div>
+
+                        <!-- Item 5 -->
+                        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                            <div class="w-10 h-10 rounded-full bg-yellow-50 flex items-center justify-center mb-4 text-yellow-600">
+                                <i class="fa-solid fa-star text-lg"></i>
+                            </div>
+                            <h3 class="font-bold text-slate-900 mb-2 text-sm">Get Google Reviews</h3>
+                            <p class="text-[12px] text-slate-500 leading-snug">Automatically send WhatsApp review requests to buyers and landlords after deal closures.</p>
+                        </div>
+
+                        <!-- Item 6 -->
+                        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                            <div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center mb-4 text-green-600">
+                                <i class="fa-solid fa-indian-rupee-sign text-lg"></i>
+                            </div>
+                            <h3 class="font-bold text-slate-900 mb-2 text-sm">Track Brokerage & Dues</h3>
+                            <p class="text-[12px] text-slate-500 leading-snug">See closed commissions, pending token advances, and track monthly pipeline revenue.</p>
+                        </div>
+
+                        <!-- Item 7 -->
+                        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                            <div class="w-10 h-10 rounded-full bg-purple-50 flex items-center justify-center mb-4 text-purple-600">
+                                <i class="fa-solid fa-building-user text-lg"></i>
+                            </div>
+                            <h3 class="font-bold text-slate-900 mb-2 text-sm">Premium Micro-Websites</h3>
+                            <p class="text-[12px] text-slate-500 leading-snug">Generate fast, elegant single-listing pages for premium villas and penthouses to share with HNIs.</p>
+                        </div>
+
+                        <!-- Item 8 -->
+                        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                            <div class="w-10 h-10 rounded-full bg-indigo-50 flex items-center justify-center mb-4 text-indigo-600">
+                                <i class="fa-solid fa-vr-cardboard text-lg"></i>
+                            </div>
+                            <h3 class="font-bold text-slate-900 mb-2 text-sm">Interactive Virtual Tours</h3>
+                            <p class="text-[12px] text-slate-500 leading-snug">Let potential clients explore 3D walkthroughs directly inside password-protected folders.</p>
+                        </div>
+
+                        <!-- Item 9 -->
+                        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                            <div class="w-10 h-10 rounded-full bg-teal-50 flex items-center justify-center mb-4 text-teal-600">
+                                <i class="fa-solid fa-user-gear text-lg"></i>
+                            </div>
+                            <h3 class="font-bold text-slate-900 mb-2 text-sm">Assign Leads to Agents</h3>
+                            <p class="text-[12px] text-slate-500 leading-snug">Quickly route site-visit inquiries to your field agents and track their progress in real-time.</p>
+                        </div>
+
+                        <!-- Item 10 -->
+                        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                            <div class="w-10 h-10 rounded-full bg-red-50 flex items-center justify-center mb-4 text-red-600">
+                                <i class="fa-regular fa-calendar-days text-lg"></i>
+                            </div>
+                            <h3 class="font-bold text-slate-900 mb-2 text-sm">Schedule Site Visits</h3>
+                            <p class="text-[12px] text-slate-500 leading-snug">Clients can select open slots on their phone for physical property visits, synced to your calendar.</p>
+                        </div>
+
+                        <!-- Item 11 -->
+                        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                            <div class="w-10 h-10 rounded-full bg-cyan-50 flex items-center justify-center mb-4 text-cyan-600">
+                                <i class="fa-solid fa-file-contract text-lg"></i>
+                            </div>
+                            <h3 class="font-bold text-slate-900 mb-2 text-sm">Digital Lease & Agreement</h3>
+                            <p class="text-[12px] text-slate-500 leading-snug">Send pre-filled property token agreements and leases for instant digital signatures.</p>
+                        </div>
+
+                        <!-- Item 12 -->
+                        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                            <div class="w-10 h-10 rounded-full bg-violet-50 flex items-center justify-center mb-4 text-violet-600">
+                                <i class="fa-solid fa-message text-lg"></i>
+                            </div>
+                            <h3 class="font-bold text-slate-900 mb-2 text-sm">SMS & Email Broadcasts</h3>
+                            <p class="text-[12px] text-slate-500 leading-snug">Send matching properties to warm buyer lists instantly when a new listing is acquired.</p>
+                        </div>
+
+                    </div>
+
+                    <!-- Bottom CTA -->
+                    <div class="bg-white border border-slate-200 rounded-3xl p-8 text-center max-w-3xl mx-auto shadow-sm">
+                        <h3 class="font-bold text-xl text-slate-900 mb-2">Ready to Scale Your Agency?</h3>
+                        <p class="text-sm text-slate-500 mb-6 max-w-lg mx-auto">
+                            Unlock the full Cora Real Estate Suite to automate your property portals, WhatsApp lead alerts, and close more listings.
+                        </p>
+                        <a href="https://wa.me/918708528150?text=Hi%20Cora%20Team%2C%20I%20want%20to%20unlock%20the%2520full%2520Cora%2520Real%2520Estate%252520CRM!" target="_blank"
+                            class="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white font-bold px-6 py-3 rounded-xl shadow-md transition-all text-xs tracking-wider uppercase">
+                            <i class="fa-brands fa-whatsapp text-emerald-400 text-base"></i> Upgrade to Cora Pro Suite
+                        </a>
+                    </div>
+                </div>
+            </div>
+
             <!-- TAB 0: STUDIO HUB / OVERVIEW -->
-            <div id="tab-overview" class="tab-content flex-1 p-6 overflow-y-auto space-y-6">
+            <div id="tab-overview" class="tab-content flex-1 p-6 overflow-y-auto space-y-6 hidden">
                 <!-- Dashboard Welcome Banner -->
                 <div
                     class="bg-neutral-900 text-neutral-100 p-6 rounded-3xl relative overflow-hidden shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
@@ -1459,25 +1606,20 @@
     <!-- Shopify Admin App style bottom tab bar navigation -->
     <div
         class="mobile-bottom-nav fixed bottom-0 inset-x-0 h-16 bg-[#FAF9F5] border-t border-kbBorder z-[100] hidden items-center justify-around text-center select-none shadow-lg">
-        <button onclick="switchTab('overview')" id="mob-nav-btn-overview"
+        <button onclick="switchTab('platform-overview')" id="mob-nav-btn-platform-overview"
             class="flex-1 py-1.5 flex flex-col items-center gap-0.5 text-slate-900">
-            <i class="fa-solid fa-chart-pie text-base"></i>
+            <i class="fa-solid fa-house text-base"></i>
             <span class="text-[9px] font-semibold tracking-wider uppercase">Overview</span>
+        </button>
+        <button onclick="switchTab('overview')" id="mob-nav-btn-overview"
+            class="flex-1 py-1.5 flex flex-col items-center gap-0.5 text-neutral-400">
+            <i class="fa-solid fa-chart-pie text-base"></i>
+            <span class="text-[9px] font-semibold tracking-wider uppercase">Dashboard</span>
         </button>
         <button onclick="switchTab('kanban')" id="mob-nav-btn-kanban"
             class="flex-1 py-1.5 flex flex-col items-center gap-0.5 text-neutral-400">
             <i class="fa-solid fa-table-columns text-base"></i>
             <span class="text-[9px] font-semibold tracking-wider uppercase">Leads</span>
-        </button>
-        <button onclick="switchTab('calendar')" id="mob-nav-btn-calendar"
-            class="flex-1 py-1.5 flex flex-col items-center gap-0.5 text-neutral-400">
-            <i class="fa-regular fa-calendar-days text-base"></i>
-            <span class="text-[9px] font-semibold tracking-wider uppercase">Calendar</span>
-        </button>
-        <button onclick="switchTab('contracts')" id="mob-nav-btn-contracts"
-            class="flex-1 py-1.5 flex flex-col items-center gap-0.5 text-neutral-400">
-            <i class="fa-solid fa-file-signature text-base"></i>
-            <span class="text-[9px] font-semibold tracking-wider uppercase">Contracts</span>
         </button>
         <button onclick="switchTab('automations')" id="mob-nav-btn-automations"
             class="flex-1 py-1.5 flex flex-col items-center gap-0.5 text-neutral-400">
@@ -1811,6 +1953,17 @@
             const desc = document.getElementById('section-desc');
             const searchBox = document.getElementById('search-container');
             const toggleContainer = document.getElementById('view-toggle-container');
+            const mainHeader = document.getElementById('main-header');
+
+            if (mainHeader) {
+                if (tabId === 'platform-overview') {
+                    mainHeader.classList.add('hidden');
+                    mainHeader.classList.remove('flex');
+                } else {
+                    mainHeader.classList.remove('hidden');
+                    mainHeader.classList.add('flex');
+                }
+            }
 
             if (tabId === 'overview') {
                 title.textContent = "Agency Overview";
@@ -2778,7 +2931,9 @@
                 { name: 'Fleet & Logistics', tabId: 'equipment', desc: 'Sony & Red gear booking manager', icon: 'fa-solid fa-car', category: 'Production' },
                 { name: 'Agent Routing', tabId: 'crew', desc: 'Roster & crew calendar planner', icon: 'fa-solid fa-users', category: 'Production' },
                 { name: 'Reviews & Social', tabId: 'reviews', desc: 'Testimonial generator & publisher', icon: 'fa-regular fa-star-half-stroke', category: 'Growth' },
-                { name: 'Media Hosting', tabId: 'media', desc: 'Global CDN media library', icon: 'fa-solid fa-photo-film', category: 'Portal Sync & Marketing' }
+                { name: 'Media Hosting', tabId: 'media', desc: 'Global CDN media library', icon: 'fa-solid fa-photo-film', category: 'Portal Sync & Marketing' },
+                { name: 'Calendar Scheduler', tabId: 'calendar', desc: 'Shoot dates & booking calendar', icon: 'fa-regular fa-calendar-days', category: 'Production' },
+                { name: 'Contracts & Sign', tabId: 'contracts', desc: 'Retainer contracts & signatures', icon: 'fa-solid fa-file-signature', category: 'Finance' }
             ];
 
             let gridHtml = '';
@@ -2885,7 +3040,7 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             loadLeads();
-            switchTab('overview');
+            switchTab('platform-overview');
             updatePersonalizedBranding();
 
             window.addEventListener('storage', (e) => {
