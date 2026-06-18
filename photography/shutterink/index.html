@@ -139,20 +139,22 @@
       <!-- Desktop Nav Link Menu -->
       <nav id="desktop-nav" class="hidden lg:flex items-center gap-8 text-[10px] font-bold tracking-[0.25em] uppercase text-white/80 transition-colors duration-500">
         <a href="#philosophy" class="hover:text-brand-gold transition-colors">Philosophy</a>
-        <a href="#chapters" class="hover:text-brand-gold transition-colors">Chapters</a>
+        <a href="#experience" class="hover:text-brand-gold transition-colors">Experience</a>
         <a href="#storyboard" class="hover:text-brand-gold transition-colors">Storyboard</a>
         <a href="#specifications" class="hover:text-brand-gold transition-colors">The Gear</a>
-        <a href="./admin.html" class="hover:text-brand-gold transition-colors">View Admin</a>
-        <a href="#testimonials" class="hover:text-brand-gold transition-colors">Reviews</a>
+        <a href="./admin.html" class="view-admin-btn hover:text-brand-gold transition-colors">View Admin</a>
         <a href="#booking" class="bg-brand-dark hover:bg-brand-dark/90 text-white font-bold px-6 py-2.5 rounded-full transition-all tracking-[0.2em]">Request Proposal</a>
       </nav>
 
-      <!-- Hamburger Menu for Mobile -->
-      <button id="menu-btn" class="lg:hidden text-white z-50 focus:outline-none transition-colors duration-500" aria-label="Toggle Menu">
-        <svg id="menu-icon" class="w-6 h-6 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8h16M4 16h16" />
-        </svg>
-      </button>
+      <!-- Mobile Controls (Admin Link + Menu Toggle) -->
+      <div class="flex items-center gap-3 lg:hidden">
+        <a href="./admin.html" id="mobile-admin-btn" class="view-admin-btn text-[9px] sm:text-[10px] font-bold tracking-[0.2em] uppercase text-white border border-white/20 px-3 py-1.5 rounded-full transition-all duration-500 hover:bg-white hover:text-brand-dark">View Admin</a>
+        <button id="menu-btn" class="text-white focus:outline-none transition-colors duration-500" aria-label="Toggle Menu">
+          <svg id="menu-icon" class="w-6 h-6 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8h16M4 16h16" />
+          </svg>
+        </button>
+      </div>
     </div>
 
     <!-- Mobile Drawer -->
@@ -161,7 +163,7 @@
       <a href="#chapters" class="text-neutral-700 hover:text-brand-gold py-2">Chapters</a>
       <a href="#storyboard" class="text-neutral-700 hover:text-brand-gold py-2">Storyboard</a>
       <a href="#specifications" class="text-neutral-700 hover:text-brand-gold py-2">The Gear</a>
-      <a href="./admin.html" class="text-neutral-700 hover:text-brand-gold py-2">View Admin</a>
+      <a href="./admin.html" class="view-admin-btn text-neutral-700 hover:text-brand-gold py-2">View Admin</a>
       <a href="#testimonials" class="text-neutral-700 hover:text-brand-gold py-2">Reviews</a>
       <a href="#booking" class="text-white bg-brand-dark px-8 py-3 rounded-full hover:bg-brand-gold transition-all mt-4">Request Proposal</a>
     </div>
@@ -1200,84 +1202,94 @@
       updatePreview();
     });
 
-    // Glassmorphic Navbar transition & Contrast Shift on scroll
-    window.addEventListener('scroll', () => {
+    // Glassmorphic Navbar transition & Contrast Shift on scroll / menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileAdminBtn = document.getElementById('mobile-admin-btn');
+
+    function updateHeaderColors() {
+      const isMenuOpen = mobileMenu && !mobileMenu.classList.contains('hidden');
+      const isScrolled = window.scrollY > 50;
+
       const nav = document.getElementById('navbar');
       const desktopNav = document.getElementById('desktop-nav');
       const logoSubtitle = document.getElementById('logo-subtitle');
-      const menuBtn = document.getElementById('menu-btn');
 
-      if (window.scrollY > 50) {
-        nav.classList.add('glass-nav');
-        nav.classList.remove('bg-transparent');
+      // Scroll background logic
+      if (isScrolled) {
+        if (nav) {
+          nav.classList.add('glass-nav');
+          nav.classList.remove('bg-transparent');
+        }
+      } else {
+        if (nav) {
+          nav.classList.remove('glass-nav');
+          nav.classList.add('bg-transparent');
+        }
+      }
 
+      // Element text/border color logic
+      if (isScrolled || isMenuOpen) {
         if (desktopNav) desktopNav.classList.replace('text-white/80', 'text-neutral-600');
         if (logoSubtitle) logoSubtitle.classList.replace('text-white/60', 'text-neutral-500');
-        if (menuBtn) menuBtn.classList.replace('text-white', 'text-brand-dark');
+        if (menuBtn) {
+          menuBtn.classList.replace('text-white', 'text-brand-dark');
+          menuBtn.classList.add('text-brand-dark');
+          menuBtn.classList.remove('text-white');
+        }
+        if (mobileAdminBtn) {
+          mobileAdminBtn.classList.add('text-brand-dark', 'border-brand-dark/30');
+          mobileAdminBtn.classList.remove('text-white', 'border-white/20');
+        }
       } else {
-        nav.classList.remove('glass-nav');
-        nav.classList.add('bg-transparent');
-
         if (desktopNav) desktopNav.classList.replace('text-neutral-600', 'text-white/80');
         if (logoSubtitle) logoSubtitle.classList.replace('text-neutral-500', 'text-white/60');
-        if (menuBtn) menuBtn.classList.replace('text-brand-dark', 'text-white');
-      }
-    });
-
-    // Interactive Camera HUD Status logs toggle function
-    function toggleHeroOption(type, checked) {
-      if (type === 'raw') {
-        const el = document.getElementById('tech-format');
-        if (el) {
-          el.textContent = checked ? '4K PRORES RAW' : '1080P MP4';
-          el.className = checked ? 'text-brand-gold font-bold transition-all duration-300' : 'text-white/30 font-bold transition-all duration-300';
+        if (menuBtn) {
+          menuBtn.classList.replace('text-brand-dark', 'text-white');
+          menuBtn.classList.add('text-white');
+          menuBtn.classList.remove('text-brand-dark');
         }
-      } else if (type === 'audio') {
-        const el = document.getElementById('tech-audio');
-        if (el) {
-          el.textContent = checked ? 'AMBIENT SOUND' : 'MUTED AUDIO';
-          el.className = checked ? 'text-brand-gold font-bold transition-all duration-300' : 'text-white/30 font-bold transition-all duration-300';
-        }
-      } else if (type === 'lens') {
-        const el = document.getElementById('tech-lens');
-        if (el) {
-          el.textContent = checked ? 'PRIME LENSES' : 'ZOOM LENSES';
-          el.className = checked ? 'text-brand-gold font-bold transition-all duration-300' : 'text-white/30 font-bold transition-all duration-300';
-        }
-      } else if (type === 'director') {
-        const el = document.getElementById('tech-dir');
-        if (el) {
-          el.textContent = checked ? 'CO-FOUNDER LED' : 'CREW ONLY';
-          el.className = checked ? 'text-brand-gold font-bold transition-all duration-300' : 'text-white/30 font-bold transition-all duration-300';
-        }
-      } else if (type === 'calendar') {
-        const el = document.getElementById('tech-limit');
-        if (el) {
-          el.textContent = checked ? '25 LIMIT' : 'UNLIMITED';
-          el.className = checked ? 'text-brand-gold font-bold transition-all duration-300' : 'text-white/30 font-bold transition-all duration-300';
-        }
-      } else if (type === 'capture') {
-        const el = document.getElementById('tech-capture');
-        if (el) {
-          el.textContent = checked ? 'CANDID' : 'POSED & STAGED';
-          el.className = checked ? 'text-brand-gold font-bold transition-all duration-300' : 'text-white/30 font-bold transition-all duration-300';
+        if (mobileAdminBtn) {
+          mobileAdminBtn.classList.add('text-white', 'border-white/20');
+          mobileAdminBtn.classList.remove('text-brand-dark', 'border-brand-dark/30');
         }
       }
     }
 
+    window.addEventListener('scroll', updateHeaderColors);
+
     // Mobile Hamburger Toggle
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-      mobileMenu.classList.toggle('flex');
-    });
-    mobileMenu.addEventListener('click', (e) => {
-      if(e.target.tagName === 'A') {
-        mobileMenu.classList.add('hidden');
-        mobileMenu.classList.remove('flex');
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        mobileMenu.classList.toggle('flex');
+        updateHeaderColors();
+      });
+      mobileMenu.addEventListener('click', (e) => {
+        if (e.target.tagName === 'A') {
+          mobileMenu.classList.add('hidden');
+          mobileMenu.classList.remove('flex');
+          updateHeaderColors();
+        }
+      });
+    }
+
+    // Dynamic URL builder for View Admin link
+    function setupAdminLinks() {
+      const currentPath = window.location.pathname;
+      let adminUrl = './admin.html';
+      if (window.location.protocol !== 'file:') {
+        let basePath = currentPath;
+        if (basePath.endsWith('index.html')) {
+          basePath = basePath.substring(0, basePath.length - 10);
+        }
+        adminUrl = basePath + (basePath.endsWith('/') ? '' : '/') + 'admin.html';
       }
-    });
+      document.querySelectorAll('.view-admin-btn').forEach(btn => {
+        btn.href = adminUrl;
+      });
+    }
+    window.addEventListener('DOMContentLoaded', setupAdminLinks);
 
     // Interactive Accordion Tabs for Chapters (Updates Image and Lens specifications)
     function selectChapter(idx) {

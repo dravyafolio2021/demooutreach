@@ -180,7 +180,7 @@
         Dhingra Associates<span class="text-brand-gold font-light">*</span>
       </div>
       <div class="flex items-center gap-6">
-        <a href="./admin.html" class="text-white hover:text-brand-goldLight text-xs font-semibold tracking-widest uppercase transition-colors">
+        <a href="./admin.html" class="view-admin-btn text-white hover:text-brand-goldLight text-xs font-semibold tracking-widest uppercase transition-colors">
           View Admin
         </a>
         <a href="https://wa.me/918708528150" target="_blank" class="text-white hover:text-brand-goldLight text-2xl font-light transition-colors flex-shrink-0">
@@ -1859,6 +1859,20 @@
     // Initialize carousel on load
     window.addEventListener('DOMContentLoaded', () => {
       updateCarousel();
+
+      // Dynamic URL builder for View Admin link
+      const currentPath = window.location.pathname;
+      let adminUrl = './admin.html';
+      if (window.location.protocol !== 'file:') {
+        let basePath = currentPath;
+        if (basePath.endsWith('index.html')) {
+          basePath = basePath.substring(0, basePath.length - 10);
+        }
+        adminUrl = basePath + (basePath.endsWith('/') ? '' : '/') + 'admin.html';
+      }
+      document.querySelectorAll('.view-admin-btn').forEach(btn => {
+        btn.href = adminUrl;
+      });
     });
 
     // Reveal animation on scroll

@@ -46,6 +46,7 @@
             'fade-up': 'fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
             'fade-in': 'fadeIn 1s ease forwards',
             'pulse-glow': 'pulseGlow 2s infinite alternate',
+            'marquee': 'marquee 25s linear infinite',
           },
           keyframes: {
             fadeUp: {
@@ -59,6 +60,10 @@
             pulseGlow: {
               '0%': { transform: 'scale(1)', opacity: '0.8', filter: 'drop-shadow(0 0 4px rgba(184, 154, 116, 0.4))' },
               '100%': { transform: 'scale(1.05)', opacity: '1', filter: 'drop-shadow(0 0 12px rgba(184, 154, 116, 0.8))' },
+            },
+            marquee: {
+              '0%': { transform: 'translateX(0)' },
+              '100%': { transform: 'translateX(-100%)' }
             }
           }
         }
@@ -96,6 +101,11 @@
     .reveal.visible {
       opacity: 1;
       transform: translateY(0);
+    }
+
+    /* Hover pause for marquee animation */
+    .hover-pause:hover .animate-marquee {
+      animation-play-state: paused;
     }
 
     /* Light glassmorphism nav */
@@ -139,30 +149,31 @@
       <!-- Desktop Nav Link Menu -->
       <nav id="desktop-nav" class="hidden lg:flex items-center gap-8 text-[10px] font-bold tracking-[0.25em] uppercase text-white/80 transition-colors duration-500">
         <a href="#philosophy" class="hover:text-brand-gold transition-colors">Philosophy</a>
-        <a href="#chapters" class="hover:text-brand-gold transition-colors">Chapters</a>
+        <a href="#experience" class="hover:text-brand-gold transition-colors">Experience</a>
         <a href="#storyboard" class="hover:text-brand-gold transition-colors">Storyboard</a>
         <a href="#specifications" class="hover:text-brand-gold transition-colors">The Gear</a>
-        <a href="./admin.html" class="hover:text-brand-gold transition-colors">View Admin</a>
-        <a href="#testimonials" class="hover:text-brand-gold transition-colors">Reviews</a>
+        <a href="./admin.html" class="view-admin-btn hover:text-brand-gold transition-colors">View Admin</a>
         <a href="#booking" class="bg-brand-dark hover:bg-brand-dark/90 text-white font-bold px-6 py-2.5 rounded-full transition-all tracking-[0.2em]">Request Proposal</a>
       </nav>
 
-      <!-- Hamburger Menu for Mobile -->
-      <button id="menu-btn" class="lg:hidden text-white z-50 focus:outline-none transition-colors duration-500" aria-label="Toggle Menu">
-        <svg id="menu-icon" class="w-6 h-6 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8h16M4 16h16" />
-        </svg>
-      </button>
+      <!-- Mobile Controls (Admin Link + Menu Toggle) -->
+      <div class="flex items-center gap-3 lg:hidden">
+        <a href="./admin.html" id="mobile-admin-btn" class="view-admin-btn text-[9px] sm:text-[10px] font-bold tracking-[0.2em] uppercase text-white border border-white/20 px-3 py-1.5 rounded-full transition-all duration-500 hover:bg-white hover:text-brand-dark">View Admin</a>
+        <button id="menu-btn" class="text-white focus:outline-none transition-colors duration-500" aria-label="Toggle Menu">
+          <svg id="menu-icon" class="w-6 h-6 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8h16M4 16h16" />
+          </svg>
+        </button>
+      </div>
     </div>
 
     <!-- Mobile Drawer -->
     <div id="mobile-menu" class="fixed inset-0 bg-brand-cream/98 z-40 hidden flex-col justify-center items-center gap-6 text-sm font-semibold tracking-widest uppercase transition-all duration-300">
       <a href="#philosophy" class="text-neutral-700 hover:text-brand-gold py-2">Philosophy</a>
-      <a href="#chapters" class="text-neutral-700 hover:text-brand-gold py-2">Chapters</a>
+      <a href="#experience" class="text-neutral-700 hover:text-brand-gold py-2">Experience</a>
       <a href="#storyboard" class="text-neutral-700 hover:text-brand-gold py-2">Storyboard</a>
       <a href="#specifications" class="text-neutral-700 hover:text-brand-gold py-2">The Gear</a>
-      <a href="./admin.html" class="text-neutral-700 hover:text-brand-gold py-2">View Admin</a>
-      <a href="#testimonials" class="text-neutral-700 hover:text-brand-gold py-2">Reviews</a>
+      <a href="./admin.html" class="view-admin-btn text-neutral-700 hover:text-brand-gold py-2">View Admin</a>
       <a href="#booking" class="text-white bg-brand-dark px-8 py-3 rounded-full hover:bg-brand-gold transition-all mt-4">Request Proposal</a>
     </div>
   </header>
@@ -175,7 +186,7 @@
     
     <!-- Background Full-Bleed Image with Slow Zoom Animation -->
     <div class="absolute inset-0 z-0">
-      <img src="/defaults/photography/hero.png" alt="Shutterink photojournalistic wedding couple still" class="w-full h-full object-cover object-center scale-105 transition-transform duration-[3000ms] ease-out pointer-events-none" id="hero-bg-img" />
+      <img src="/defaults/photography/hero.png" alt="Aura Wedding photojournalistic wedding couple still" class="w-full h-full object-cover object-center scale-105 transition-transform duration-[3000ms] ease-out pointer-events-none" id="hero-bg-img" />
       
       <!-- Linear Vignettes and Shadow Gradients for Text Readability -->
       <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/45 to-transparent pointer-events-none"></div>
@@ -216,7 +227,7 @@
 
         <!-- Subtext -->
         <p class="text-neutral-300 text-xs sm:text-sm font-light leading-relaxed mb-8 max-w-lg">
-          Shutterink is a co-founder led wedding photography collective. We document and capture strictly 15 commissions a year to craft your celebration into an award-winning photojournalistic story.
+          Shivani Mehta Photography is a co-founder led wedding photography collective. We document and capture strictly 15 commissions a year to craft your celebration into an award-winning photojournalistic story.
         </p>
 
         <!-- Interactive Checkbox options styled as glassmorphic badges (Riverside Style) -->
@@ -279,12 +290,14 @@
         </div>
 
         <!-- CTA Action Buttons -->
-        <div class="flex flex-row items-center gap-2 sm:gap-3 md:gap-4">
-          <a href="#booking" class="bg-brand-gold hover:bg-brand-gold/90 text-neutral-950 font-sans text-[8px] sm:text-[9px] md:text-[9.5px] font-bold tracking-[0.15em] sm:tracking-[0.2em] uppercase px-4 py-2.5 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-full shadow-lg shadow-brand-gold/15 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300">
+        <div class="flex flex-row items-center gap-2 md:gap-4 flex-nowrap w-full">
+          <a href="#booking" class="bg-brand-gold hover:bg-brand-gold/90 text-neutral-950 font-sans text-[8px] sm:text-[9px] md:text-[9.5px] font-bold tracking-[0.15em] sm:tracking-[0.2em] uppercase px-4 py-2.5 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-full shadow-lg shadow-brand-gold/15 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 text-center whitespace-nowrap flex-1 sm:flex-initial">
             Request Proposal
           </a>
-          <button onclick="openReelModal()" class="bg-white/10 hover:bg-white/15 border border-white/20 hover:border-white/40 text-white font-sans text-[8px] sm:text-[9px] md:text-[9.5px] font-bold tracking-[0.15em] sm:tracking-[0.2em] uppercase px-3.5 py-2.5 sm:px-5 sm:py-3 md:px-7 md:py-4 rounded-full flex items-center gap-1.5 sm:gap-2.5 transition-all duration-300 backdrop-blur-sm">
-            <i class="fa-solid fa-play text-brand-gold text-xs"></i> Play Showcase Reel
+          <button onclick="openReelModal()" class="bg-white/10 hover:bg-white/15 border border-white/20 hover:border-white/40 text-white font-sans text-[8px] sm:text-[9px] md:text-[9.5px] font-bold tracking-[0.15em] sm:tracking-[0.2em] uppercase px-4 py-2.5 sm:px-6 sm:py-3 md:px-7 md:py-4 rounded-full flex items-center justify-center gap-1.5 sm:gap-2.5 transition-all duration-300 backdrop-blur-sm whitespace-nowrap flex-1 sm:flex-initial">
+            <i class="fa-solid fa-play text-brand-gold text-[10px] sm:text-xs"></i>
+            <span class="hidden md:inline">Play Showcase Reel</span>
+            <span class="md:hidden">Play Reel</span>
           </button>
         </div>
 
@@ -388,7 +401,7 @@
             Non-Intrusive Capture.
           </h2>
           <p class="text-neutral-600 text-xs sm:text-sm font-light leading-relaxed mb-6">
-            A wedding story cannot be choreographed by third-party contractors. Shutterink is co-founder led: Shivani Mehta personally document the frames, prime optics, and color grading of your stories.
+            A wedding story cannot be choreographed by third-party contractors. Shivani Mehta Photography is co-founder led: Shivani Mehta personally document the frames, prime optics, and color grading of your stories.
           </p>
           <p class="text-neutral-600 text-xs sm:text-sm font-light leading-relaxed mb-8">
             We focus on keeping families comfortable, capturing ambient moments naturally, and preserving raw emotion completely free from forced posing or awkward choreography.
@@ -406,7 +419,6 @@
           
           <div class="relative aspect-[16/10] overflow-hidden rounded-2xl border border-neutral-200 shadow-xl bg-neutral-100">
             <img src="/defaults/photography/shoot.png" alt="Nitin and Sandeep filming a ceremony" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-102" />
-            
             <!-- Viewfinder corners -->
             <div class="absolute inset-4 pointer-events-none border border-black/5 rounded-lg">
               <div class="absolute top-2 left-2 w-3.5 h-3.5 border-t border-l border-brand-bronze/60"></div>
@@ -414,92 +426,276 @@
               <div class="absolute bottom-2 left-2 w-3.5 h-3.5 border-b border-l border-brand-bronze/60"></div>
               <div class="absolute bottom-2 right-2 w-3.5 h-3.5 border-b border-r border-brand-bronze/60"></div>
             </div>
-            
             <!-- Lens configuration tag -->
             <div class="absolute bottom-6 right-6 font-mono text-[7px] text-neutral-800 tracking-widest uppercase bg-white/80 px-2.5 py-1 rounded border border-neutral-200">
               50mm f/1.2 prime optics
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-
-  <!-- ════════════════════════════════════════════════ -->
-  <!--  SECTION 4 — INTERACTIVE JOURNAL CHAPTERS       -->
-  <!-- ════════════════════════════════════════════════ -->
-  <section id="chapters" class="py-24 md:py-32 px-6 bg-brand-bgsecondary relative z-10">
+  <section id="experience" class="py-24 md:py-32 px-6 bg-brand-bgsecondary relative z-10">
     <div class="max-w-6xl mx-auto">
       
       <div class="text-center mb-16 reveal">
-        <span class="text-[9px] tracking-[0.4em] uppercase text-brand-bronze font-bold block mb-4">Structure of your Journal</span>
+        <span class="text-[9px] tracking-[0.4em] uppercase text-brand-bronze font-bold block mb-4">Craft & Quality</span>
         <h2 class="text-3xl sm:text-4xl font-extrabold text-neutral-900 uppercase tracking-tight">
-          Narrative Chapters
+          The Experience
         </h2>
         <div class="w-16 h-0.5 bg-brand-gold mx-auto mt-4"></div>
       </div>
 
-      <!-- Interactive Accordion Tabs -->
-      <div class="grid lg:grid-cols-12 gap-12 items-center">
+      <!-- Bento Grid Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 reveal">
         
-        <!-- Accordion Selector Side -->
-        <div class="lg:col-span-5 flex flex-col gap-4 reveal">
-          
-          <!-- Tab 1 -->
-          <div onclick="selectChapter(1)" id="ch-tab-1" class="cursor-pointer border rounded-xl p-5 hover:border-brand-gold/60 transition-all bg-white border-brand-gold/60 shadow-sm">
-            <div class="flex items-center gap-3 mb-2">
-              <span class="font-mono text-[8px] text-brand-bronze tracking-widest uppercase border border-brand-bronze/30 px-2 py-0.5 rounded">CH I</span>
-              <h3 class="text-sm font-bold text-neutral-950 uppercase tracking-wider">The Candid Frames</h3>
+        <!-- Column 1 (Left) -->
+        <div class="space-y-6 flex flex-col justify-between">
+          <!-- Card 1: 10+ Years Experience -->
+          <div class="bg-white border border-neutral-200/60 rounded-3xl flex flex-col justify-between h-[480px] relative overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group">
+            <!-- Polaroid Pile Container (Bleeds to edges) -->
+            <div class="relative w-full h-[320px] overflow-hidden bg-[#F8F7F3]/70 flex items-center justify-center border-b border-neutral-100/60">
+              <!-- Polaroid 1 (Left) -->
+              <div class="absolute w-36 bg-white p-2.5 pb-8 shadow-md border border-neutral-200/30 -rotate-[14deg] -translate-x-14 -translate-y-4 transition-transform duration-500 group-hover:-rotate-[8deg] group-hover:-translate-x-18">
+                <div class="w-full aspect-square overflow-hidden bg-neutral-100">
+                  <img src="/defaults/photography/still.png" alt="Polaroid Still" class="w-full h-full object-cover" />
+                </div>
+              </div>
+              <!-- Polaroid 2 (Right) -->
+              <div class="absolute w-36 bg-white p-2.5 pb-8 shadow-md border border-neutral-200/30 rotate-[14deg] translate-x-14 -translate-y-2 transition-transform duration-500 group-hover:rotate-[8deg] group-hover:translate-x-18">
+                <div class="w-full aspect-square overflow-hidden bg-neutral-100">
+                  <img src="/defaults/photography/shoot.png" alt="Polaroid Shoot" class="w-full h-full object-cover" />
+                </div>
+              </div>
+              <!-- Polaroid 3 (Front Center) -->
+              <div class="absolute w-40 bg-white p-3 pb-10 shadow-xl border border-neutral-200/50 -rotate-[3deg] z-10 transition-transform duration-500 group-hover:scale-105">
+                <div class="w-full aspect-square overflow-hidden bg-neutral-100">
+                  <img src="/defaults/photography/emotion.png" alt="Polaroid Emotion" class="w-full h-full object-cover" />
+                </div>
+              </div>
             </div>
-            <p class="text-neutral-600 text-xs font-light leading-relaxed">
-              Candid fine-art photography and documentary captures preserving the private prep, portraits, and quiet details before guests arrive.
-            </p>
+            <!-- Text (Padded) -->
+            <div class="p-8">
+              <h3 class="text-2xl font-display font-extrabold text-neutral-900 tracking-tight leading-none uppercase">Over 10+ Years</h3>
+              <p class="text-xs text-brand-bronze tracking-[0.2em] font-bold uppercase mt-2">Crafting Visual Legacies</p>
+            </div>
           </div>
 
-          <!-- Tab 2 -->
-          <div onclick="selectChapter(2)" id="ch-tab-2" class="cursor-pointer border border-neutral-200 rounded-xl p-5 hover:border-brand-gold/60 transition-all bg-white/40">
-            <div class="flex items-center gap-3 mb-2">
-              <span class="font-mono text-[8px] text-brand-bronze tracking-widest uppercase border border-brand-bronze/30 px-2 py-0.5 rounded">CH II</span>
-              <h3 class="text-sm font-bold text-neutral-950 uppercase tracking-wider">The Sacred Vows</h3>
+          <!-- Card 4: Seamless Client Experience -->
+          <div class="bg-white border border-neutral-200/60 rounded-3xl flex flex-col justify-between h-[326px] relative overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group">
+            <!-- Text (Padded) -->
+            <div class="p-8 pb-2">
+              <h3 class="text-xl sm:text-2xl font-display font-extrabold text-neutral-900 tracking-tight leading-none uppercase">Seamless Experience</h3>
+              <p class="text-xs text-brand-bronze tracking-[0.2em] font-bold uppercase mt-2">Effortless Client Journeys</p>
             </div>
-            <p class="text-neutral-600 text-xs font-light leading-relaxed">
-              Documenting ceremonies, emotional unions, and family rituals with high-contrast, candid detail and ambient light preservation.
-            </p>
-          </div>
-
-          <!-- Tab 3 -->
-          <div onclick="selectChapter(3)" id="ch-tab-3" class="cursor-pointer border border-neutral-200 rounded-xl p-5 hover:border-brand-gold/60 transition-all bg-white/40">
-            <div class="flex items-center gap-3 mb-2">
-              <span class="font-mono text-[8px] text-brand-bronze tracking-widest uppercase border border-brand-bronze/30 px-2 py-0.5 rounded">CH III</span>
-              <h3 class="text-sm font-bold text-neutral-950 uppercase tracking-wider">The Festive Chaos</h3>
+            <!-- Mockup Client Portal (Tilted & Floating inside) -->
+            <div class="relative w-full h-[190px] overflow-hidden bg-[#F8F7F3]/40">
+              <div class="absolute top-4 left-6 right-6 bg-white rounded-2xl p-4 sm:p-5 border border-neutral-200/50 font-sans text-left space-y-3 shadow-md rotate-[-2deg] transition-all duration-500 group-hover:rotate-0 group-hover:translate-y-[-2px]">
+                <div class="flex items-center justify-between border-b border-neutral-200/60 pb-2">
+                  <span class="text-[9px] font-bold text-neutral-800 uppercase tracking-wider">Client Portal</span>
+                  <span class="px-2 py-0.5 rounded-full bg-[#E6F4EA] text-[#137333] text-[8px] font-bold uppercase">Active</span>
+                </div>
+                <div class="space-y-2.5">
+                  <!-- Item 1 -->
+                  <div class="flex items-center gap-2 text-[10px]">
+                    <div class="w-4 h-4 rounded-full bg-brand-gold/20 flex items-center justify-center text-brand-bronze text-[8px] font-bold">✓</div>
+                    <div class="flex-1 text-neutral-700 font-light">Interactive Timeline Synced</div>
+                  </div>
+                  <!-- Item 2 -->
+                  <div class="flex items-center gap-2 text-[10px]">
+                    <div class="w-4 h-4 rounded-full bg-brand-gold/20 flex items-center justify-center text-brand-bronze text-[8px] font-bold">✓</div>
+                    <div class="flex-1 text-neutral-700 font-light">Direct WhatsApp Deliveries</div>
+                  </div>
+                  <!-- Item 3 -->
+                  <div class="flex items-center gap-2 text-[10px]">
+                    <div class="w-4 h-4 rounded-full bg-brand-gold/20 flex items-center justify-center text-brand-bronze text-[8px] font-bold">✓</div>
+                    <div class="flex-1 text-neutral-700 font-light">One-Click High-Res Download</div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <p class="text-neutral-600 text-xs font-light leading-relaxed">
-              High-speed capture of dance floors, night revelry, and grand entries synced with natural storytelling and photojournalism editing.
-            </p>
           </div>
-
         </div>
 
-        <!-- Image Preview Card Side -->
-        <div class="lg:col-span-7 relative reveal">
-          <div class="aspect-[16/10] w-full rounded-2xl overflow-hidden border border-neutral-200 shadow-xl relative bg-neutral-100">
-            <!-- Chapter Images (crossfading via script) -->
-            <img id="chapter-img" src="/defaults/photography/still.png" alt="Chapter Image preview" class="w-full h-full object-cover transition-all duration-500 scale-100" />
-            
-            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/40 via-transparent to-transparent"></div>
-            
-            <!-- Technical details panel overlay -->
-            <div class="absolute bottom-6 left-6 right-6 flex items-center justify-between text-white font-mono text-[8px] tracking-widest uppercase">
-              <span id="chapter-lens">Prime f/1.2 Lens</span>
-              <span id="chapter-codec">ProRes RAW 12-Bit</span>
+        <!-- Column 2 & 3 (Right) -->
+        <div class="md:col-span-2 flex flex-col gap-6">
+          <!-- Row 1: Gear and Editing side-by-side -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <!-- Card 2: Camera Gear -->
+            <div class="bg-white border border-neutral-200/60 rounded-3xl flex flex-col justify-between h-[480px] relative overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group">
+              <!-- Text (Padded) -->
+              <div class="p-8">
+                <h3 class="text-xl sm:text-2xl font-display font-extrabold text-neutral-900 tracking-tight leading-none uppercase">Shot with the best</h3>
+                <p class="text-xs text-brand-bronze tracking-[0.2em] font-bold uppercase mt-2">Pro Prime Gear</p>
+              </div>
+              <!-- SVG Camera Lens Container (Bleeds to bottom) -->
+              <div class="relative w-full h-[320px] bg-[#F8F7F3]/70 flex items-center justify-center border-t border-neutral-100/60 overflow-hidden">
+                <div class="w-56 h-[300px] transition-transform duration-500 group-hover:scale-105 flex items-center justify-center">
+                  <svg class="w-full h-full object-contain" viewBox="0 0 200 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <linearGradient id="body-shade" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#141312"/>
+                        <stop offset="20%" stop-color="#2D2C2A"/>
+                        <stop offset="50%" stop-color="#3D3C3A"/>
+                        <stop offset="80%" stop-color="#2D2C2A"/>
+                        <stop offset="100%" stop-color="#141312"/>
+                      </linearGradient>
+                      <linearGradient id="metal-gold" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#8E7047"/>
+                        <stop offset="30%" stop-color="#CBB390"/>
+                        <stop offset="50%" stop-color="#E8D8C1"/>
+                        <stop offset="70%" stop-color="#CBB390"/>
+                        <stop offset="100%" stop-color="#8E7047"/>
+                      </linearGradient>
+                      <linearGradient id="glass-reflection" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#ffffff" stop-opacity="0.1"/>
+                        <stop offset="40%" stop-color="#ffffff" stop-opacity="0.05"/>
+                        <stop offset="40.1%" stop-color="#ffffff" stop-opacity="0"/>
+                        <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+                      </linearGradient>
+                    </defs>
+
+                    <!-- Lens Base Mount -->
+                    <rect x="65" y="240" width="70" height="15" rx="2" fill="url(#metal-gold)" stroke="#1A1918"/>
+                    <rect x="72" y="255" width="56" height="5" fill="#888" stroke="#1A1918"/>
+
+                    <!-- Lens Body -->
+                    <rect x="45" y="50" width="110" height="190" rx="4" fill="url(#body-shade)" stroke="#1A1918" stroke-width="1.5"/>
+
+                    <!-- Grips / Ribs -->
+                    <g fill="#161514">
+                      <rect x="47" y="75" width="106" height="4" />
+                      <rect x="47" y="81" width="106" height="4" />
+                      <rect x="47" y="87" width="106" height="4" />
+                      <rect x="47" y="93" width="106" height="4" />
+                      <rect x="47" y="99" width="106" height="4" />
+                      <rect x="47" y="105" width="106" height="4" />
+                      <rect x="47" y="111" width="106" height="4" />
+                      <rect x="47" y="117" width="106" height="4" />
+                    </g>
+
+                    <!-- Gold Accent Ring -->
+                    <rect x="44" y="132" width="112" height="6" fill="url(#metal-gold)" stroke="#1A1918"/>
+
+                    <!-- Distance Scale Window -->
+                    <rect x="70" y="150" width="60" height="20" rx="3" fill="#111" stroke="#333" stroke-width="1.5"/>
+                    <text x="100" y="163" fill="#FAF9F5" font-family="monospace" font-size="9" text-anchor="middle" font-weight="bold" tracking="1">50mm F1.2</text>
+
+                    <!-- Switches -->
+                    <rect x="52" y="185" width="28" height="40" rx="2" fill="#222" stroke="#333"/>
+                    <rect x="57" y="190" width="18" height="10" rx="1" fill="#111"/>
+                    <rect x="61" y="191" width="10" height="8" rx="0.5" fill="#555"/>
+                    <text x="66" y="215" fill="#999" font-family="sans-serif" font-size="6" text-anchor="middle" font-weight="bold">AF/MF</text>
+
+                    <!-- Aperture Scale Ring -->
+                    <rect x="45" y="228" width="110" height="12" fill="#1C1B1A" stroke="#2D2C2B"/>
+                    <text x="100" y="237" fill="#CBB390" font-family="monospace" font-size="7" text-anchor="middle">1.2  1.4  2  2.8</text>
+
+                    <!-- Lens Hood / Top Flare -->
+                    <path d="M35 50 L165 50 L155 15 L45 15 Z" fill="url(#body-shade)" stroke="#1A1918" stroke-width="1.5"/>
+                    <!-- Glass Reflection Highlight -->
+                    <ellipse cx="100" cy="20" rx="50" ry="4" fill="url(#glass-reflection)"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3: Professional Editing -->
+            <div class="bg-white border border-neutral-200/60 rounded-3xl flex flex-col justify-between h-[480px] relative overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group">
+              <!-- Before/After Split Container (Bleeds to top, left, right) -->
+              <div class="before-after-container relative w-full h-[320px] bg-neutral-900 cursor-ew-resize border-b border-neutral-100/60 overflow-hidden">
+                <!-- Before Image (Dull / Black & White) -->
+                <img src="/defaults/photography/still.png" class="absolute inset-0 w-full h-full object-cover filter grayscale brightness-75 contrast-125" />
+                <!-- After Image (Graded / Vibrant) -->
+                <div class="after-image-wrapper absolute inset-0 w-full h-full overflow-hidden" style="width: 50%;">
+                  <img src="/defaults/photography/still.png" class="absolute inset-0 w-full h-full object-cover" style="width: 100%; max-width: none;" />
+                </div>
+                <!-- Labels (Fixed in bottom corners) -->
+                <span class="absolute bottom-4 left-4 z-20 bg-black/60 backdrop-blur-sm px-2.5 py-1 rounded font-mono text-[7px] text-white tracking-widest uppercase pointer-events-none">RAW PHOTO</span>
+                <span class="absolute bottom-4 right-4 z-20 bg-brand-gold/85 backdrop-blur-sm px-2.5 py-1 rounded font-mono text-[7px] text-neutral-950 tracking-widest uppercase pointer-events-none">COLOR GRADED</span>
+                <!-- Split Divider Line -->
+                <div class="split-divider absolute top-0 bottom-0 h-full w-[2px] bg-white shadow-lg z-10" style="left: 50%;">
+                  <!-- Handle -->
+                  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white shadow-md border border-neutral-200 flex items-center justify-center text-[10px] text-neutral-800">
+                    <i class="fa-solid fa-arrows-left-right"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- Text (Padded) -->
+              <div class="p-8">
+                <h3 class="text-xl sm:text-2xl font-display font-extrabold text-neutral-900 tracking-tight leading-none uppercase">Editorial Grade</h3>
+                <p class="text-xs text-brand-bronze tracking-[0.2em] font-bold uppercase mt-2">Professional Grading Included</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Row 2: Wide Banner (Tailored to your vision - Bleeds to right) -->
+          <div class="bg-white border border-neutral-200/60 rounded-3xl flex flex-col md:flex-row justify-between items-center h-auto md:h-[180px] relative overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group gap-6">
+            <!-- Left text -->
+            <div class="p-8 flex-1 text-left z-10">
+              <h3 class="text-2xl font-display font-extrabold text-neutral-900 tracking-tight leading-none uppercase">Tailored to your Vision</h3>
+              <p class="text-xs text-neutral-600 font-light mt-3 leading-relaxed max-w-sm">Every shot is styled and graded to match your aesthetic mood board and lighting preferences.</p>
+            </div>
+            <!-- Right image block (Bleeds completely) -->
+            <div class="w-full md:w-1/2 h-[140px] md:h-full relative overflow-hidden flex-shrink-0">
+              <img src="/defaults/photography/emotion.png" alt="Moodboard Detail" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+              <!-- Left side fade gradient for smooth text overlay blending -->
+              <div class="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent hidden md:block"></div>
+            </div>
+          </div>
+
+          <!-- Row 3: Satisfied Clients & Turnaround side-by-side -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <!-- Card 6: Satisfied Clients -->
+            <div class="bg-white border border-neutral-200/60 rounded-3xl p-6 flex flex-col justify-between h-[122px] shadow-sm hover:shadow-md transition-all duration-300">
+              <div class="flex items-center gap-1 text-brand-gold text-xs">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="flex items-baseline gap-2 mt-2">
+                <span class="text-3xl font-display font-extrabold text-neutral-900">150+</span>
+                <span class="text-[10px] text-neutral-500 font-bold uppercase tracking-wider">Satisfied Couples</span>
+              </div>
+              <!-- Overlapping avatars -->
+              <div class="flex -space-x-2.5 mt-2">
+                <div class="w-6 h-6 rounded-full bg-neutral-900 border border-white flex items-center justify-center text-[8px] font-bold text-white uppercase font-mono">K</div>
+                <div class="w-6 h-6 rounded-full bg-brand-gold border border-white flex items-center justify-center text-[8px] font-bold text-black uppercase font-mono">S</div>
+                <div class="w-6 h-6 rounded-full bg-brand-bronze border border-white flex items-center justify-center text-[8px] font-bold text-white uppercase font-mono">A</div>
+                <div class="w-6 h-6 rounded-full bg-neutral-200 border border-white flex items-center justify-center text-[8px] font-bold text-neutral-800 uppercase font-mono">+</div>
+              </div>
+            </div>
+
+            <!-- Card 7: 30-Day Turnaround -->
+            <div class="bg-white border border-neutral-200/60 rounded-3xl p-6 flex items-center justify-between h-[122px] shadow-sm hover:shadow-md transition-all duration-300">
+              <div class="flex flex-col justify-between h-full">
+                <div class="text-[10px] text-brand-bronze font-bold uppercase tracking-widest flex items-center gap-1.5">
+                  <i class="fa-solid fa-bolt text-brand-gold"></i> Fast Delivery
+                </div>
+                <div class="mt-2">
+                  <span class="text-2xl sm:text-3xl font-display font-extrabold text-neutral-900 leading-none">30 Days</span>
+                  <p class="text-[8px] text-neutral-500 font-bold uppercase tracking-wider mt-1">Full Gallery Handover</p>
+                </div>
+              </div>
+              <!-- Simple Gauge SVG -->
+              <div class="w-16 h-16 relative flex-shrink-0">
+                <svg class="w-full h-full transform -rotate-90" viewBox="0 0 36 36">
+                  <path class="stroke-neutral-100" stroke-width="3" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                  <path class="stroke-brand-gold" stroke-dasharray="85, 100" stroke-width="3" stroke-linecap="round" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                </svg>
+                <div class="absolute inset-0 flex flex-col items-center justify-center text-[10px] font-bold text-neutral-900 leading-none">
+                  <span>85%</span>
+                  <span class="text-[5px] text-neutral-500 uppercase font-normal mt-0.5">Faster</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
       </div>
-
     </div>
   </section>
 
@@ -589,7 +785,7 @@
               <div class="w-full aspect-square overflow-hidden bg-neutral-100">
                 <img src="/defaults/photography/still.png" alt="Walking" class="w-full h-full object-cover" />
               </div>
-              <div class="mt-2 text-center text-neutral-600 font-sans italic text-[6.5px] truncate">Kolkata Archway</div>
+              <div class="mt-2 text-center text-neutral-600 font-sans italic text-[6.5px] truncate">Mumbai Archway</div>
             </div>
 
             <!-- Polaroid 3 -->
@@ -643,99 +839,372 @@
 
       <!-- MOBILE COLLAGE CONTAINER (block md:hidden) -->
       <div class="block md:hidden py-4 -mx-2">
-        <div class="relative w-full h-[1450px] bg-[#EAE8E0] rounded-[1.5rem] border border-neutral-300/70 overflow-hidden shadow-inner p-4">
+        <div class="relative w-full bg-[#EAE8E0] rounded-[1.5rem] border border-neutral-300/70 overflow-hidden shadow-inner p-6">
           <div class="absolute inset-0 bg-[radial-gradient(#CFCBBA_1px,transparent_1px)] [background-size:20px_20px] opacity-20 pointer-events-none"></div>
           
-          <!-- Vertical Lights Path -->
-          <svg viewBox="0 0 375 1450" fill="none" class="absolute inset-0 w-full h-full pointer-events-none z-0" preserveAspectRatio="none">
-            <path d="M 187,20 Q 150,110 187,200 T 187,380 T 187,560 T 187,740 T 187,920 T 187,1100 T 187,1280 T 187,1400" stroke="#B0AB9A" stroke-width="1.5" opacity="0.65" />
-            <circle cx="187" cy="20" r="4" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" />
-            <circle cx="165" cy="110" r="4" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 1.8s;" />
-            <circle cx="187" cy="200" r="4" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 2.5s;" />
-            <circle cx="209" cy="290" r="4" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 2.3s;" />
-            <circle cx="187" cy="380" r="4" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 1.9s;" />
-            <circle cx="165" cy="470" r="4" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 2.7s;" />
-            <circle cx="187" cy="560" r="4" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 2.2s;" />
-            <circle cx="209" cy="650" r="4" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 1.6s;" />
-            <circle cx="187" cy="740" r="4" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 2.4s;" />
-            <circle cx="165" cy="830" r="4" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 1.5s;" />
-            <circle cx="187" cy="920" r="4" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 2.8s;" />
-            <circle cx="209" cy="1010" r="4" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 2.0s;" />
-            <circle cx="187" cy="1100" r="4" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 2.3s;" />
-            <circle cx="165" cy="1190" r="4" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 1.7s;" />
-            <circle cx="187" cy="1280" r="4" class="fairy-bulb fill-yellow-200 text-yellow-300 animate-pulse" style="animation-duration: 2.6s;" />
-          </svg>
-
-          <!-- Staggered Polaroids -->
-          <div class="absolute inset-0 z-10 w-full h-full pointer-events-none">
-            
-            <!-- Polaroid 1 -->
-            <div class="absolute pointer-events-auto w-[42%] aspect-[1/1.22] p-2 bg-[#FAF9F5] border border-neutral-300/40 shadow-md group hover:scale-105 transition-all duration-300" style="top: 2%; left: 6%; transform: rotate(-3deg);">
-              <div class="absolute -top-2.5 w-6 h-2.5 bg-cyan-400/30 left-1/2 -translate-x-1/2 rotate-[-5deg] mix-blend-multiply"></div>
-              <div class="w-full aspect-square overflow-hidden bg-neutral-100">
-                <img src="/defaults/photography/hero.png" alt="Hero" class="w-full h-full object-cover" />
+          <div class="relative z-10 grid grid-cols-2 gap-4">
+            <!-- Left Column -->
+            <div class="space-y-8 flex flex-col items-center">
+              <!-- Polaroid 1 -->
+              <div class="w-full aspect-[1/1.22] p-2 bg-[#FAF9F5] border border-neutral-300/40 shadow-md group hover:scale-105 transition-all duration-300 relative" style="transform: rotate(-3deg);">
+                <div class="absolute -top-2.5 w-6 h-2.5 bg-cyan-400/30 left-1/2 -translate-x-1/2 rotate-[-5deg] mix-blend-multiply"></div>
+                <div class="w-full aspect-square overflow-hidden bg-neutral-100">
+                  <img src="/defaults/photography/hero.png" alt="Hero" class="w-full h-full object-cover" />
+                </div>
+                <div class="mt-2 text-center text-neutral-600 font-sans italic text-[9px] truncate">Joyful Laughter</div>
               </div>
-              <div class="mt-1 text-center text-neutral-600 font-sans italic text-[8px] truncate">Joyful Laughter</div>
+
+              <!-- Polaroid 3 -->
+              <div class="w-full aspect-[1/1.22] p-2 bg-[#FAF9F5] border border-neutral-300/40 shadow-md group hover:scale-105 transition-all duration-300 relative" style="transform: rotate(-2deg);">
+                <div class="absolute -top-2.5 w-6 h-2.5 bg-red-400/30 left-1/2 -translate-x-1/2 rotate-[-3deg] mix-blend-multiply"></div>
+                <div class="w-full aspect-square overflow-hidden bg-neutral-100">
+                  <img src="/defaults/photography/emotion.png" alt="Emotional" class="w-full h-full object-cover" />
+                </div>
+                <div class="mt-2 text-center text-neutral-600 font-sans italic text-[9px] truncate">Bidai Tear</div>
+              </div>
+
+              <!-- Polaroid 5 -->
+              <div class="w-full aspect-[1/1.22] p-2 bg-[#FAF9F5] border border-neutral-300/40 shadow-md group hover:scale-105 transition-all duration-300 relative" style="transform: rotate(2deg);">
+                <div class="absolute -top-2.5 w-6 h-2.5 bg-red-400/30 left-1/2 -translate-x-1/2 rotate-[3deg] mix-blend-multiply"></div>
+                <div class="w-full aspect-square overflow-hidden bg-neutral-100">
+                  <img src="/defaults/photography/hero.png" alt="Bride" class="w-full h-full object-cover" />
+                </div>
+                <div class="mt-2 text-center text-neutral-600 font-sans italic text-[9px] truncate">The Adornment</div>
+              </div>
+
+              <!-- Polaroid 7 -->
+              <div class="w-full aspect-[1/1.22] p-2 bg-[#FAF9F5] border border-neutral-300/40 shadow-md group hover:scale-105 transition-all duration-300 relative" style="transform: rotate(1.5deg);">
+                <div class="absolute -top-2.5 w-6 h-2.5 bg-yellow-400/30 left-1/2 -translate-x-1/2 rotate-[3deg] mix-blend-multiply"></div>
+                <div class="w-full aspect-square overflow-hidden bg-neutral-100">
+                  <img src="/defaults/photography/shoot.png" alt="Sangeet" class="w-full h-full object-cover" />
+                </div>
+                <div class="mt-2 text-center text-neutral-600 font-sans italic text-[9px] truncate">Dance Revelry</div>
+              </div>
             </div>
 
-            <!-- Polaroid 2 -->
-            <div class="absolute pointer-events-auto w-[42%] aspect-[1/1.22] p-2 bg-[#FAF9F5] border border-neutral-300/40 shadow-md group hover:scale-105 transition-all duration-300" style="top: 15%; right: 6%; transform: rotate(2.5deg);">
-              <div class="absolute -top-2.5 w-6 h-2.5 bg-yellow-400/30 left-1/2 -translate-x-1/2 rotate-[4deg] mix-blend-multiply"></div>
-              <div class="w-full aspect-square overflow-hidden bg-neutral-100">
-                <img src="/defaults/photography/still.png" alt="Walking" class="w-full h-full object-cover" />
+            <!-- Right Column -->
+            <div class="space-y-8 flex flex-col items-center pt-10">
+              <!-- Polaroid 2 -->
+              <div class="w-full aspect-[1/1.22] p-2 bg-[#FAF9F5] border border-neutral-300/40 shadow-md group hover:scale-105 transition-all duration-300 relative" style="transform: rotate(2.5deg);">
+                <div class="absolute -top-2.5 w-6 h-2.5 bg-yellow-400/30 left-1/2 -translate-x-1/2 rotate-[4deg] mix-blend-multiply"></div>
+                <div class="w-full aspect-square overflow-hidden bg-neutral-100">
+                  <img src="/defaults/photography/still.png" alt="Walking" class="w-full h-full object-cover" />
+                </div>
+                <div class="mt-2 text-center text-neutral-600 font-sans italic text-[9px] truncate">Mumbai Archway</div>
               </div>
-              <div class="mt-1 text-center text-neutral-600 font-sans italic text-[8px] truncate">Kolkata Archway</div>
-            </div>
 
-            <!-- Polaroid 3 -->
-            <div class="absolute pointer-events-auto w-[42%] aspect-[1/1.22] p-2 bg-[#FAF9F5] border border-neutral-300/40 shadow-md group hover:scale-105 transition-all duration-300" style="top: 29%; left: 6%; transform: rotate(-2deg);">
-              <div class="absolute -top-2.5 w-6 h-2.5 bg-red-400/30 left-1/2 -translate-x-1/2 rotate-[-3deg] mix-blend-multiply"></div>
-              <div class="w-full aspect-square overflow-hidden bg-neutral-100">
-                <img src="/defaults/photography/emotion.png" alt="Emotional" class="w-full h-full object-cover" />
+              <!-- Polaroid 4 -->
+              <div class="w-full aspect-[1/1.22] p-2 bg-[#FAF9F5] border border-neutral-300/40 shadow-md group hover:scale-105 transition-all duration-300 relative" style="transform: rotate(3deg);">
+                <div class="absolute -top-2.5 w-6 h-2.5 bg-green-400/30 left-1/2 -translate-x-1/2 rotate-[2deg] mix-blend-multiply"></div>
+                <div class="w-full aspect-square overflow-hidden bg-neutral-100">
+                  <img src="/defaults/photography/shoot.png" alt="Director" class="w-full h-full object-cover" />
+                </div>
+                <div class="mt-2 text-center text-neutral-600 font-sans italic text-[9px] truncate">The Crew</div>
               </div>
-              <div class="mt-1 text-center text-neutral-600 font-sans italic text-[8px] truncate">Bidai Tear</div>
-            </div>
 
-            <!-- Polaroid 4 -->
-            <div class="absolute pointer-events-auto w-[42%] aspect-[1/1.22] p-2 bg-[#FAF9F5] border border-neutral-300/40 shadow-md group hover:scale-105 transition-all duration-300" style="top: 43%; right: 6%; transform: rotate(3deg);">
-              <div class="absolute -top-2.5 w-6 h-2.5 bg-green-400/30 left-1/2 -translate-x-1/2 rotate-[2deg] mix-blend-multiply"></div>
-              <div class="w-full aspect-square overflow-hidden bg-neutral-100">
-                <img src="/defaults/photography/shoot.png" alt="Director" class="w-full h-full object-cover" />
+              <!-- Polaroid 6 -->
+              <div class="w-full aspect-[1/1.22] p-2 bg-[#FAF9F5] border border-neutral-300/40 shadow-md group hover:scale-105 transition-all duration-300 relative" style="transform: rotate(-2.5deg);">
+                <div class="absolute -top-2.5 w-6 h-2.5 bg-cyan-400/30 left-1/2 -translate-x-1/2 rotate-[-5deg] mix-blend-multiply"></div>
+                <div class="w-full aspect-square overflow-hidden bg-neutral-100">
+                  <img src="/defaults/photography/still.png" alt="Laugh" class="w-full h-full object-cover" />
+                </div>
+                <div class="mt-2 text-center text-neutral-600 font-sans italic text-[9px] truncate">Haldi Laughter</div>
               </div>
-              <div class="mt-1 text-center text-neutral-600 font-sans italic text-[8px] truncate">The Crew</div>
             </div>
-
-            <!-- Polaroid 5 -->
-            <div class="absolute pointer-events-auto w-[42%] aspect-[1/1.22] p-2 bg-[#FAF9F5] border border-neutral-300/40 shadow-md group hover:scale-105 transition-all duration-300" style="top: 57%; left: 6%; transform: rotate(2deg);">
-              <div class="absolute -top-2.5 w-6 h-2.5 bg-red-400/30 left-1/2 -translate-x-1/2 rotate-[3deg] mix-blend-multiply"></div>
-              <div class="w-full aspect-square overflow-hidden bg-neutral-100">
-                <img src="/defaults/photography/hero.png" alt="Bride" class="w-full h-full object-cover" />
-              </div>
-              <div class="mt-1 text-center text-neutral-600 font-sans italic text-[8px] truncate">The Adornment</div>
-            </div>
-
-            <!-- Polaroid 6 -->
-            <div class="absolute pointer-events-auto w-[42%] aspect-[1/1.22] p-2 bg-[#FAF9F5] border border-neutral-300/40 shadow-md group hover:scale-105 transition-all duration-300" style="top: 71%; right: 6%; transform: rotate(-2.5deg);">
-              <div class="absolute -top-2.5 w-6 h-2.5 bg-cyan-400/30 left-1/2 -translate-x-1/2 rotate-[-5deg] mix-blend-multiply"></div>
-              <div class="w-full aspect-square overflow-hidden bg-neutral-100">
-                <img src="/defaults/photography/still.png" alt="Laugh" class="w-full h-full object-cover" />
-              </div>
-              <div class="mt-1 text-center text-neutral-600 font-sans italic text-[8px] truncate">Haldi laughter</div>
-            </div>
-
-            <!-- Polaroid 7 -->
-            <div class="absolute pointer-events-auto w-[42%] aspect-[1/1.22] p-2 bg-[#FAF9F5] border border-neutral-300/40 shadow-md group hover:scale-105 transition-all duration-300" style="top: 85%; left: 6%; transform: rotate(1.5deg);">
-              <div class="absolute -top-2.5 w-6 h-2.5 bg-yellow-400/30 left-1/2 -translate-x-1/2 rotate-[3deg] mix-blend-multiply"></div>
-              <div class="w-full aspect-square overflow-hidden bg-neutral-100">
-                <img src="/defaults/photography/shoot.png" alt="Sangeet" class="w-full h-full object-cover" />
-              </div>
-              <div class="mt-1 text-center text-neutral-600 font-sans italic text-[8px] truncate">Dance Revelry</div>
-            </div>
-
           </div>
         </div>
       </div>
 
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════ -->
+  <!--  SECTION 6.5 — CINEMATIC FILM SHOWCASE           -->
+  <!-- ════════════════════════════════════════════════ -->
+  <section id="films" class="py-24 md:py-32 bg-brand-cream relative z-10 border-t border-neutral-200/80 overflow-hidden">
+    <!-- Centered Header -->
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <span class="text-[9px] tracking-[0.4em] uppercase text-brand-bronze font-bold block mb-4">Cinematic Masterpieces</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-neutral-900 uppercase tracking-tight">
+          Featured Wedding Films
+        </h2>
+        <p class="text-neutral-600 text-xs sm:text-sm font-light max-w-sm mx-auto leading-relaxed mt-4">
+          Handcrafted documentary stories preserving localized soundscapes and visual emotion.
+        </p>
+      </div>
+    </div>
+
+    <!-- Full-Width Carousel Wrapper -->
+    <div class="relative w-full overflow-visible reveal" style="transition-delay: 100ms;">
+      <!-- Left & Right Arrow controls -->
+      <button id="film-prev-btn" class="absolute left-4 md:left-8 top-[40%] -translate-y-1/2 w-11 h-11 rounded-full bg-white/90 hover:bg-white text-neutral-800 flex items-center justify-center border border-neutral-200/60 shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 z-20" aria-label="Previous Slide">
+        <i class="fa-solid fa-arrow-left text-sm"></i>
+      </button>
+      <button id="film-next-btn" class="absolute right-4 md:right-8 top-[40%] -translate-y-1/2 w-11 h-11 rounded-full bg-white/90 hover:bg-white text-neutral-800 flex items-center justify-center border border-neutral-200/60 shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 z-20" aria-label="Next Slide">
+        <i class="fa-solid fa-arrow-right text-sm"></i>
+      </button>
+
+      <!-- Carousel Track -->
+      <div id="film-carousel-track" class="flex gap-4 overflow-x-auto overflow-y-visible scrollbar-none py-12 px-4 md:px-8" style="-ms-overflow-style: none; scrollbar-width: none;">
+        
+        <!-- ================== SET A ================== -->
+        <!-- Slide 1 -->
+        <div class="carousel-slide flex-shrink-0 w-[240px] sm:w-[280px] cursor-pointer group" onclick="openReelModal()">
+          <div class="relative w-full aspect-[2/3] rounded-xl overflow-hidden shadow-2xl border border-neutral-200/20 bg-neutral-900">
+            <img src="/defaults/photography/film_poster_1.png" alt="Dhruv & Pippa" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-black/50 flex flex-col justify-between p-6">
+              <div class="text-center">
+                <span class="text-[9px] tracking-[0.3em] text-white/80 uppercase font-medium">A Shivani Mehta Photography Film</span>
+              </div>
+              <!-- Premium Play Indicator -->
+              <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                <div class="w-14 h-14 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center text-white text-lg shadow-xl transition-all duration-300 transform scale-90 group-hover:scale-100 group-hover:bg-white/30">
+                  <i class="fa-solid fa-play ml-1"></i>
+                </div>
+              </div>
+              <div class="text-center z-10">
+                <h3 class="text-xl sm:text-2xl font-display font-semibold text-white tracking-wide italic leading-tight">Dhruv & Pippa</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-slide flex-shrink-0 w-[240px] sm:w-[280px] cursor-pointer group" onclick="openReelModal()">
+          <div class="relative w-full aspect-[2/3] rounded-xl overflow-hidden shadow-2xl border border-neutral-200/20 bg-neutral-900">
+            <img src="/defaults/photography/film_poster_2.png" alt="Palak & Priya" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-black/50 flex flex-col justify-between p-6">
+              <div class="text-center">
+                <span class="text-[9px] tracking-[0.3em] text-white/80 uppercase font-medium">A Shivani Mehta Photography Film</span>
+              </div>
+              <!-- Premium Play Indicator -->
+              <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                <div class="w-14 h-14 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center text-white text-lg shadow-xl transition-all duration-300 transform scale-90 group-hover:scale-100 group-hover:bg-white/30">
+                  <i class="fa-solid fa-play ml-1"></i>
+                </div>
+              </div>
+              <div class="text-center z-10">
+                <h3 class="text-xl sm:text-2xl font-display font-semibold text-white tracking-wide italic leading-tight">Palak & Priya</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-slide flex-shrink-0 w-[240px] sm:w-[280px] cursor-pointer group" onclick="openReelModal()">
+          <div class="relative w-full aspect-[2/3] rounded-xl overflow-hidden shadow-2xl border border-neutral-200/20 bg-neutral-900">
+            <img src="/defaults/photography/film_poster_3.png" alt="Indu & Sahil" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-black/50 flex flex-col justify-between p-6">
+              <div class="text-center">
+                <span class="text-[9px] tracking-[0.3em] text-white/80 uppercase font-medium">A Shivani Mehta Photography Film</span>
+              </div>
+              <!-- Premium Play Indicator -->
+              <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                <div class="w-14 h-14 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center text-white text-lg shadow-xl transition-all duration-300 transform scale-90 group-hover:scale-100 group-hover:bg-white/30">
+                  <i class="fa-solid fa-play ml-1"></i>
+                </div>
+              </div>
+              <div class="text-center z-10">
+                <h3 class="text-xl sm:text-2xl font-display font-semibold text-white tracking-wide italic leading-tight">Indu & Sahil</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="carousel-slide flex-shrink-0 w-[240px] sm:w-[280px] cursor-pointer group" onclick="openReelModal()">
+          <div class="relative w-full aspect-[2/3] rounded-xl overflow-hidden shadow-2xl border border-neutral-200/20 bg-neutral-900">
+            <img src="/defaults/photography/film_poster_4.png" alt="Avi & Vai" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-black/50 flex flex-col justify-between p-6">
+              <div class="text-center">
+                <span class="text-[9px] tracking-[0.3em] text-white/80 uppercase font-medium">A Shivani Mehta Photography Film</span>
+              </div>
+              <!-- Premium Play Indicator -->
+              <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                <div class="w-14 h-14 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center text-white text-lg shadow-xl transition-all duration-300 transform scale-90 group-hover:scale-100 group-hover:bg-white/30">
+                  <i class="fa-solid fa-play ml-1"></i>
+                </div>
+              </div>
+              <div class="text-center z-10">
+                <h3 class="text-xl sm:text-2xl font-display font-semibold text-white tracking-wide italic leading-tight">Avi & Vai</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================== SET B ================== -->
+        <!-- Slide 5 -->
+        <div class="carousel-slide flex-shrink-0 w-[240px] sm:w-[280px] cursor-pointer group" onclick="openReelModal()">
+          <div class="relative w-full aspect-[2/3] rounded-xl overflow-hidden shadow-2xl border border-neutral-200/20 bg-neutral-900">
+            <img src="/defaults/photography/film_poster_1.png" alt="Dhruv & Pippa" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-black/50 flex flex-col justify-between p-6">
+              <div class="text-center">
+                <span class="text-[9px] tracking-[0.3em] text-white/80 uppercase font-medium">A Shivani Mehta Photography Film</span>
+              </div>
+              <!-- Premium Play Indicator -->
+              <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                <div class="w-14 h-14 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center text-white text-lg shadow-xl transition-all duration-300 transform scale-90 group-hover:scale-100 group-hover:bg-white/30">
+                  <i class="fa-solid fa-play ml-1"></i>
+                </div>
+              </div>
+              <div class="text-center z-10">
+                <h3 class="text-xl sm:text-2xl font-display font-semibold text-white tracking-wide italic leading-tight">Dhruv & Pippa</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="carousel-slide flex-shrink-0 w-[240px] sm:w-[280px] cursor-pointer group" onclick="openReelModal()">
+          <div class="relative w-full aspect-[2/3] rounded-xl overflow-hidden shadow-2xl border border-neutral-200/20 bg-neutral-900">
+            <img src="/defaults/photography/film_poster_2.png" alt="Palak & Priya" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-black/50 flex flex-col justify-between p-6">
+              <div class="text-center">
+                <span class="text-[9px] tracking-[0.3em] text-white/80 uppercase font-medium">A Shivani Mehta Photography Film</span>
+              </div>
+              <!-- Premium Play Indicator -->
+              <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                <div class="w-14 h-14 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center text-white text-lg shadow-xl transition-all duration-300 transform scale-90 group-hover:scale-100 group-hover:bg-white/30">
+                  <i class="fa-solid fa-play ml-1"></i>
+                </div>
+              </div>
+              <div class="text-center z-10">
+                <h3 class="text-xl sm:text-2xl font-display font-semibold text-white tracking-wide italic leading-tight">Palak & Priya</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 7 -->
+        <div class="carousel-slide flex-shrink-0 w-[240px] sm:w-[280px] cursor-pointer group" onclick="openReelModal()">
+          <div class="relative w-full aspect-[2/3] rounded-xl overflow-hidden shadow-2xl border border-neutral-200/20 bg-neutral-900">
+            <img src="/defaults/photography/film_poster_3.png" alt="Indu & Sahil" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-black/50 flex flex-col justify-between p-6">
+              <div class="text-center">
+                <span class="text-[9px] tracking-[0.3em] text-white/80 uppercase font-medium">A Shivani Mehta Photography Film</span>
+              </div>
+              <!-- Premium Play Indicator -->
+              <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                <div class="w-14 h-14 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center text-white text-lg shadow-xl transition-all duration-300 transform scale-90 group-hover:scale-100 group-hover:bg-white/30">
+                  <i class="fa-solid fa-play ml-1"></i>
+                </div>
+              </div>
+              <div class="text-center z-10">
+                <h3 class="text-xl sm:text-2xl font-display font-semibold text-white tracking-wide italic leading-tight">Indu & Sahil</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 8 -->
+        <div class="carousel-slide flex-shrink-0 w-[240px] sm:w-[280px] cursor-pointer group" onclick="openReelModal()">
+          <div class="relative w-full aspect-[2/3] rounded-xl overflow-hidden shadow-2xl border border-neutral-200/20 bg-neutral-900">
+            <img src="/defaults/photography/film_poster_4.png" alt="Avi & Vai" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-black/50 flex flex-col justify-between p-6">
+              <div class="text-center">
+                <span class="text-[9px] tracking-[0.3em] text-white/80 uppercase font-medium">A Shivani Mehta Photography Film</span>
+              </div>
+              <!-- Premium Play Indicator -->
+              <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                <div class="w-14 h-14 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center text-white text-lg shadow-xl transition-all duration-300 transform scale-90 group-hover:scale-100 group-hover:bg-white/30">
+                  <i class="fa-solid fa-play ml-1"></i>
+                </div>
+              </div>
+              <div class="text-center z-10">
+                <h3 class="text-xl sm:text-2xl font-display font-semibold text-white tracking-wide italic leading-tight">Avi & Vai</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================== SET C ================== -->
+        <!-- Slide 9 -->
+        <div class="carousel-slide flex-shrink-0 w-[240px] sm:w-[280px] cursor-pointer group" onclick="openReelModal()">
+          <div class="relative w-full aspect-[2/3] rounded-xl overflow-hidden shadow-2xl border border-neutral-200/20 bg-neutral-900">
+            <img src="/defaults/photography/film_poster_1.png" alt="Dhruv & Pippa" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-black/50 flex flex-col justify-between p-6">
+              <div class="text-center">
+                <span class="text-[9px] tracking-[0.3em] text-white/80 uppercase font-medium">A Shivani Mehta Photography Film</span>
+              </div>
+              <!-- Premium Play Indicator -->
+              <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                <div class="w-14 h-14 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center text-white text-lg shadow-xl transition-all duration-300 transform scale-90 group-hover:scale-100 group-hover:bg-white/30">
+                  <i class="fa-solid fa-play ml-1"></i>
+                </div>
+              </div>
+              <div class="text-center z-10">
+                <h3 class="text-xl sm:text-2xl font-display font-semibold text-white tracking-wide italic leading-tight">Dhruv & Pippa</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 10 -->
+        <div class="carousel-slide flex-shrink-0 w-[240px] sm:w-[280px] cursor-pointer group" onclick="openReelModal()">
+          <div class="relative w-full aspect-[2/3] rounded-xl overflow-hidden shadow-2xl border border-neutral-200/20 bg-neutral-900">
+            <img src="/defaults/photography/film_poster_2.png" alt="Palak & Priya" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-black/50 flex flex-col justify-between p-6">
+              <div class="text-center">
+                <span class="text-[9px] tracking-[0.3em] text-white/80 uppercase font-medium">A Shivani Mehta Photography Film</span>
+              </div>
+              <!-- Premium Play Indicator -->
+              <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                <div class="w-14 h-14 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center text-white text-lg shadow-xl transition-all duration-300 transform scale-90 group-hover:scale-100 group-hover:bg-white/30">
+                  <i class="fa-solid fa-play ml-1"></i>
+                </div>
+              </div>
+              <div class="text-center z-10">
+                <h3 class="text-xl sm:text-2xl font-display font-semibold text-white tracking-wide italic leading-tight">Palak & Priya</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 11 -->
+        <div class="carousel-slide flex-shrink-0 w-[240px] sm:w-[280px] cursor-pointer group" onclick="openReelModal()">
+          <div class="relative w-full aspect-[2/3] rounded-xl overflow-hidden shadow-2xl border border-neutral-200/20 bg-neutral-900">
+            <img src="/defaults/photography/film_poster_3.png" alt="Indu & Sahil" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-black/50 flex flex-col justify-between p-6">
+              <div class="text-center">
+                <span class="text-[9px] tracking-[0.3em] text-white/80 uppercase font-medium">A Shivani Mehta Photography Film</span>
+              </div>
+              <!-- Premium Play Indicator -->
+              <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                <div class="w-14 h-14 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center text-white text-lg shadow-xl transition-all duration-300 transform scale-90 group-hover:scale-100 group-hover:bg-white/30">
+                  <i class="fa-solid fa-play ml-1"></i>
+                </div>
+              </div>
+              <div class="text-center z-10">
+                <h3 class="text-xl sm:text-2xl font-display font-semibold text-white tracking-wide italic leading-tight">Indu & Sahil</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 12 -->
+        <div class="carousel-slide flex-shrink-0 w-[240px] sm:w-[280px] cursor-pointer group" onclick="openReelModal()">
+          <div class="relative w-full aspect-[2/3] rounded-xl overflow-hidden shadow-2xl border border-neutral-200/20 bg-neutral-900">
+            <img src="/defaults/photography/film_poster_4.png" alt="Avi & Vai" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-black/50 flex flex-col justify-between p-6">
+              <div class="text-center">
+                <span class="text-[9px] tracking-[0.3em] text-white/80 uppercase font-medium">A Shivani Mehta Photography Film</span>
+              </div>
+              <!-- Premium Play Indicator -->
+              <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                <div class="w-14 h-14 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center text-white text-lg shadow-xl transition-all duration-300 transform scale-90 group-hover:scale-100 group-hover:bg-white/30">
+                  <i class="fa-solid fa-play ml-1"></i>
+                </div>
+              </div>
+              <div class="text-center z-10">
+                <h3 class="text-xl sm:text-2xl font-display font-semibold text-white tracking-wide italic leading-tight">Avi & Vai</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
@@ -838,52 +1307,6 @@
   </section>
 
 
-  <!-- ════════════════════════════════════════════════ -->
-  <!--  SECTION 9 — CLIENT REVIEWS / TESTIMONIALS       -->
-  <!-- ════════════════════════════════════════════════ -->
-  <section id="testimonials" class="py-24 md:py-32 px-6 bg-brand-cream border-t border-neutral-200/80 relative z-10">
-    <div class="max-w-6xl mx-auto">
-      
-      <div class="text-center mb-16 reveal">
-        <span class="text-[9px] tracking-[0.4em] uppercase text-brand-bronze font-bold block mb-4">Client Chapters</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-neutral-900 uppercase tracking-tight">
-          Endorsements
-        </h2>
-        <div class="w-16 h-0.5 bg-brand-gold mx-auto mt-4"></div>
-      </div>
-
-      <!-- Testimonial Grid -->
-      <div class="grid md:grid-cols-2 gap-8">
-        
-        <!-- Review 1 -->
-        <div class="glass-card p-8 rounded-2xl relative reveal">
-          <span class="absolute top-6 right-6 text-brand-gold/20 text-4xl font-black">“</span>
-          <p class="text-neutral-700 text-xs sm:text-sm font-light leading-relaxed mb-6 italic">
-            "Shivani Mehta felt like childhood friends rather than a wedding crew. They merged with our family in Kolkata seamlessly. We didn't even notice them shooting, yet they captured every single tear and raw smile beautifully."
-          </p>
-          <div>
-            <h4 class="text-xs font-bold text-neutral-900 uppercase tracking-widest">Aashna &amp; Kabir</h4>
-            <span class="text-[9.5px] text-brand-bronze font-mono uppercase tracking-widest mt-1 block">KOLKATA PALACE WEDDING</span>
-          </div>
-        </div>
-
-        <!-- Review 2 -->
-        <div class="glass-card p-8 rounded-2xl relative reveal" style="transition-delay: 150ms;">
-          <span class="absolute top-6 right-6 text-brand-gold/20 text-4xl font-black">“</span>
-          <p class="text-neutral-700 text-xs sm:text-sm font-light leading-relaxed mb-6 italic">
-            "The photojournalism approach was exactly what we were looking for. No staged poses, no forced directions. Shivani Mehta documented the chaotic beauty of our multi-day sangeet and sacred union with absolute honesty."
-          </p>
-          <div>
-            <h4 class="text-xs font-bold text-neutral-900 uppercase tracking-widest">Riya &amp; Dev</h4>
-            <span class="text-[9.5px] text-brand-bronze font-mono uppercase tracking-widest mt-1 block">UDAIPUR DESTINATION</span>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
 
   <!-- ════════════════════════════════════════════════ -->
   <!--  SECTION 10 — BESPOKE INQUIRY & ESTIMATOR ENGINE -->
@@ -905,7 +1328,7 @@
           </p>
           
           <div class="space-y-4 text-neutral-600 text-xs font-mono tracking-widest uppercase">
-            <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Base Studio: Kolkata</div>
+            <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Base Studio: Mumbai</div>
             <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Travel: Worldwide</div>
             <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Deliverables: High-Contrast Catalog &amp; Documentary Films</div>
           </div>
@@ -944,7 +1367,7 @@
               <div>
                 <label class="block text-[8.5px] font-mono tracking-widest uppercase text-brand-bronze mb-2">Celebration Location *</label>
                 <select id="city" class="w-full bg-brand-cream border border-neutral-200 focus:border-brand-gold rounded-xl px-4 py-3.5 text-xs tracking-wider text-neutral-900 outline-none transition-colors cursor-pointer" onchange="updatePreview()">
-                  <option value="Kolkata" selected>Kolkata</option>
+                  <option value="Mumbai" selected>Mumbai</option>
                   <option value="Udaipur">Udaipur / Rajasthan</option>
                   <option value="Goa">Goa</option>
                   <option value="London">London, UK</option>
@@ -962,7 +1385,7 @@
             <div class="p-4 bg-brand-cream border border-neutral-200 rounded-xl">
               <span class="block text-[8px] font-mono tracking-widest uppercase text-brand-bronze mb-1">Interactive Proposal Estimate</span>
               <div class="flex justify-between items-baseline">
-                <span class="text-[10px] text-neutral-500 font-light">Project Scope: <span id="preview-scope" class="text-neutral-700 font-semibold">Multi-Day in Kolkata</span></span>
+                <span class="text-[10px] text-neutral-500 font-light">Project Scope: <span id="preview-scope" class="text-neutral-700 font-semibold">Multi-Day in Mumbai</span></span>
                 <span class="text-xs font-mono font-bold text-brand-bronze" id="preview-cost">Custom Bespoke Quote</span>
               </div>
               <p class="text-[8.5px] text-neutral-400 font-light mt-1.5 leading-relaxed">
@@ -984,55 +1407,83 @@
   </section>
 
 
+
+
   <!-- ════════════════════════════════════════════════ -->
-  <!--  SECTION 11 — PRODUCTION FAQS                     -->
+  <!--  SECTION 11.5 — CALL TO ACTION PILE             -->
   <!-- ════════════════════════════════════════════════ -->
-  <section class="py-24 md:py-32 px-6 bg-brand-bgsecondary relative z-10 border-t border-neutral-200/80">
-    <div class="max-w-4xl mx-auto">
+  <section class="py-24 md:py-32 px-6 bg-brand-cream relative z-10 border-t border-neutral-200/80 text-center overflow-hidden">
+    <div class="max-w-5xl mx-auto">
       
-      <div class="text-center mb-16 reveal">
-        <span class="text-[9px] tracking-[0.4em] uppercase text-brand-bronze font-bold block mb-4">FAQ</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-neutral-900 uppercase tracking-tight">
-          Common Questions
+      <!-- Header & Subtitle -->
+      <div class="max-w-3xl mx-auto reveal">
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-neutral-900 tracking-tight leading-tight">
+          The perfect shot is just a <br>
+          conversation away
         </h2>
-        <div class="w-16 h-0.5 bg-brand-gold mx-auto mt-4"></div>
+        <p class="text-neutral-600 text-xs sm:text-sm font-light max-w-lg mx-auto mt-6 leading-relaxed">
+          Reach out now and let's discuss bringing your vision to life with photography that truly captures what matters.
+        </p>
+        
+        <div class="mt-8 flex justify-center">
+          <a href="#booking" class="bg-neutral-950 hover:bg-neutral-800 text-white font-sans text-[10px] font-bold tracking-widest uppercase px-8 py-4 rounded-full shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300">
+            Get in touch
+          </a>
+        </div>
       </div>
 
-      <div class="space-y-6">
+      <!-- 3D Overlapping Card Stack -->
+      <div class="relative w-full h-[320px] sm:h-[420px] flex items-center justify-center mt-16 select-none reveal">
         
-        <!-- Accordion Item 1 -->
-        <div class="glass-card rounded-2xl border border-neutral-200 overflow-hidden reveal">
-          <button onclick="toggleFaq(1)" class="w-full text-left px-6 py-5 flex items-center justify-between focus:outline-none select-none bg-white">
-            <span class="text-xs sm:text-sm font-bold text-neutral-900 uppercase tracking-wider">Do you travel for weddings?</span>
-            <span class="text-brand-bronze text-xs font-bold transition-transform duration-300" id="faq-icon-1">+</span>
-          </button>
-          <div class="px-6 pb-5 hidden text-neutral-600 text-xs sm:text-sm font-light leading-relaxed bg-white" id="faq-content-1">
-            Nitin &amp; Sandeep travel globally. Travel fees, local lodging, and airport transfers are calculated and added to the proposal based on your itinerary.
+        <!-- Left Card (Rotate Left) -->
+        <div class="absolute w-44 sm:w-56 aspect-[3/4] rounded-2xl overflow-hidden shadow-xl border border-white/20 -rotate-[10deg] -translate-x-24 sm:-translate-x-36 translate-y-4 transition-transform duration-500 hover:rotate-[-6deg] hover:-translate-x-40">
+          <img src="/defaults/photography/still.png" alt="Landscape crop preview" class="w-full h-full object-cover" />
+          <!-- Viewfinder corners overlay -->
+          <div class="absolute inset-4 pointer-events-none border border-white/10 rounded-lg">
+            <div class="absolute top-2 left-2 w-3 h-3 border-t border-l border-white/60"></div>
+            <div class="absolute top-2 right-2 w-3 h-3 border-t border-r border-white/60"></div>
+            <div class="absolute bottom-2 left-2 w-3 h-3 border-b border-l border-white/60"></div>
+            <div class="absolute bottom-2 right-2 w-3 h-3 border-b border-r border-white/60"></div>
           </div>
         </div>
 
-        <!-- Accordion Item 2 -->
-        <div class="glass-card rounded-2xl border border-neutral-200 overflow-hidden reveal" style="transition-delay: 100ms;">
-          <button onclick="toggleFaq(2)" class="w-full text-left px-6 py-5 flex items-center justify-between focus:outline-none select-none bg-white">
-            <span class="text-xs sm:text-sm font-bold text-neutral-900 uppercase tracking-wider">What is your crew size?</span>
-            <span class="text-brand-bronze text-xs font-bold transition-transform duration-300" id="faq-icon-2">+</span>
-          </button>
-          <div class="px-6 pb-5 hidden text-neutral-600 text-xs sm:text-sm font-light leading-relaxed bg-white" id="faq-content-2">
-            To maintain our non-intrusive photojournalistic standards, our team is compact. Typically, it consists of 3 to 6 specialists (lead prime operators and sound coordinators) led by Shivani Mehta.
+        <!-- Right Card (Rotate Right) -->
+        <div class="absolute w-44 sm:w-56 aspect-[3/4] rounded-2xl overflow-hidden shadow-xl border border-white/20 rotate-[10deg] translate-x-24 sm:translate-x-36 translate-y-4 transition-transform duration-500 hover:rotate-[6deg] hover:translate-x-40">
+          <img src="/defaults/photography/emotion.png" alt="Emotional detail crop preview" class="w-full h-full object-cover" />
+          <!-- Viewfinder corners overlay -->
+          <div class="absolute inset-4 pointer-events-none border border-white/10 rounded-lg">
+            <div class="absolute top-2 left-2 w-3 h-3 border-t border-l border-white/60"></div>
+            <div class="absolute top-2 right-2 w-3 h-3 border-t border-r border-white/60"></div>
+            <div class="absolute bottom-2 left-2 w-3 h-3 border-b border-l border-white/60"></div>
+            <div class="absolute bottom-2 right-2 w-3 h-3 border-b border-r border-white/60"></div>
           </div>
         </div>
 
-        <!-- Accordion Item 3 -->
-        <div class="glass-card rounded-2xl border border-neutral-200 overflow-hidden reveal" style="transition-delay: 200ms;">
-          <button onclick="toggleFaq(3)" class="w-full text-left px-6 py-5 flex items-center justify-between focus:outline-none select-none bg-white">
-            <span class="text-xs sm:text-sm font-bold text-neutral-900 uppercase tracking-wider">What is the image turnaround time?</span>
-            <span class="text-brand-bronze text-xs font-bold transition-transform duration-300" id="faq-icon-3">+</span>
-          </button>
-          <div class="px-6 pb-5 hidden text-neutral-600 text-xs sm:text-sm font-light leading-relaxed bg-white" id="faq-content-3">
-            Since every frame is individually color-graded and curated to tell an authentic story, the final high-resolution photojournalistic catalog takes between 10 and 14 weeks. A highlight set is delivered within 3 weeks.
+        <!-- Center Card (Hero, Stacked on top) -->
+        <div class="absolute w-48 sm:w-60 aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border border-white/30 z-10 scale-102 hover:scale-[1.05] transition-all duration-500">
+          <img src="/defaults/photography/hero.png" alt="Hero portrait crop preview" class="w-full h-full object-cover" />
+          <!-- Viewfinder corners overlay -->
+          <div class="absolute inset-4 pointer-events-none border border-white/10 rounded-lg">
+            <div class="absolute top-2 left-2 w-3.5 h-3.5 border-t border-l border-white/60"></div>
+            <div class="absolute top-2 right-2 w-3.5 h-3.5 border-t border-r border-white/60"></div>
+            <div class="absolute bottom-2 left-2 w-3.5 h-3.5 border-b border-l border-white/60"></div>
+            <div class="absolute bottom-2 right-2 w-3.5 h-3.5 border-b border-r border-white/60"></div>
           </div>
         </div>
 
+      </div>
+
+      <!-- Social Links Row -->
+      <div class="flex items-center justify-center gap-6 sm:gap-8 text-[9px] font-mono tracking-widest uppercase mt-6 sm:mt-10 reveal">
+        <a href="https://instagram.com" target="_blank" class="hover:text-brand-gold text-neutral-500 hover:text-neutral-900 transition-colors flex items-center gap-1.5">
+          Instagram <i class="fa-solid fa-arrow-up-right text-[8px] opacity-60"></i>
+        </a>
+        <a href="#" class="hover:text-brand-gold text-neutral-500 hover:text-neutral-900 transition-colors flex items-center gap-1.5">
+          LinkedIn <i class="fa-solid fa-arrow-up-right text-[8px] opacity-60"></i>
+        </a>
+        <a href="https://youtube.com" target="_blank" class="hover:text-brand-gold text-neutral-500 hover:text-neutral-900 transition-colors flex items-center gap-1.5">
+          YouTube <i class="fa-solid fa-arrow-up-right text-[8px] opacity-60"></i>
+        </a>
       </div>
 
     </div>
@@ -1054,7 +1505,7 @@
             <div class="bg-[#9B8260] px-4 py-1.5 text-white font-black text-[10px] md:text-xs tracking-[0.15em] uppercase select-none leading-none">
               CORA
             </div>
-            <span class="text-[7px] md:text-[8px] tracking-[0.3em] text-neutral-400 uppercase font-semibold">by Shutterink</span>
+            <span class="text-[7px] md:text-[8px] tracking-[0.3em] text-neutral-400 uppercase font-semibold">by Claraverse</span>
           </div>
           <p class="text-neutral-600 text-xs md:text-sm leading-relaxed max-w-lg font-light">
             Cora is a premium digital platform built exclusively for wedding photographers, filmmakers, and creative studios. We help creators showcase their artistry, manage client inquiries, and streamline bookings — all through beautifully crafted, conversion-optimized landing pages.
@@ -1066,9 +1517,6 @@
             <a href="https://wa.me/918708528150?text=Hi%20Cora%20Team%2C%20I%27d%20love%20to%20learn%20more%20about%20your%20platform." target="_blank" class="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white text-[9px] font-bold tracking-widest uppercase px-5 py-2.5 rounded-full transition-all duration-300 shadow-sm">
               <i class="fa-brands fa-whatsapp text-sm"></i> Chat with Us
             </a>
-            <a href="mailto:hello@shutterink.in" class="inline-flex items-center gap-2 text-neutral-500 hover:text-brand-gold text-[9px] font-mono tracking-widest uppercase transition-colors">
-              <i class="fa-solid fa-envelope text-[10px]"></i> hello@shutterink.in
-            </a>
           </div>
         </div>
 
@@ -1077,10 +1525,9 @@
           <h4 class="text-[9px] font-mono tracking-[0.3em] uppercase text-neutral-400 font-bold">Quick Links</h4>
           <div class="flex flex-col gap-2.5">
             <a href="#philosophy" class="text-neutral-600 hover:text-brand-gold text-xs font-light transition-colors">Philosophy</a>
-            <a href="#chapters" class="text-neutral-600 hover:text-brand-gold text-xs font-light transition-colors">Chapters</a>
+            <a href="#experience" class="text-neutral-600 hover:text-brand-gold text-xs font-light transition-colors">Experience</a>
             <a href="#storyboard" class="text-neutral-600 hover:text-brand-gold text-xs font-light transition-colors">Storyboard</a>
             <a href="#specifications" class="text-neutral-600 hover:text-brand-gold text-xs font-light transition-colors">The Gear</a>
-            <a href="#testimonials" class="text-neutral-600 hover:text-brand-gold text-xs font-light transition-colors">Testimonials</a>
             <a href="#booking" class="text-neutral-600 hover:text-brand-gold text-xs font-light transition-colors">Book an Inquiry</a>
           </div>
         </div>
@@ -1103,7 +1550,7 @@
         <!-- Copyright + Back to Top -->
         <div class="flex flex-col items-center md:items-end gap-3">
           <p class="text-neutral-400 font-light text-[9px] tracking-wider">
-            &copy; 2026 Shutterink. All Rights Reserved. Crafted with care by the Cora team.
+            &copy; 2026 Shivani Mehta Photography. All Rights Reserved. Crafted with care by the Cora team.
           </p>
           <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="text-neutral-500 hover:text-brand-gold text-xs font-mono uppercase tracking-widest flex items-center gap-2 transition-colors focus:outline-none">
             <i class="fa-solid fa-arrow-up text-[10px]"></i> Back To Top
@@ -1200,29 +1647,61 @@
       updatePreview();
     });
 
-    // Glassmorphic Navbar transition & Contrast Shift on scroll
-    window.addEventListener('scroll', () => {
+    // Glassmorphic Navbar transition & Contrast Shift on scroll / menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileAdminBtn = document.getElementById('mobile-admin-btn');
+
+    function updateHeaderColors() {
+      const isMenuOpen = mobileMenu && !mobileMenu.classList.contains('hidden');
+      const isScrolled = window.scrollY > 50;
+
       const nav = document.getElementById('navbar');
       const desktopNav = document.getElementById('desktop-nav');
       const logoSubtitle = document.getElementById('logo-subtitle');
-      const menuBtn = document.getElementById('menu-btn');
 
-      if (window.scrollY > 50) {
-        nav.classList.add('glass-nav');
-        nav.classList.remove('bg-transparent');
+      // Scroll background logic
+      if (isScrolled) {
+        if (nav) {
+          nav.classList.add('glass-nav');
+          nav.classList.remove('bg-transparent');
+        }
+      } else {
+        if (nav) {
+          nav.classList.remove('glass-nav');
+          nav.classList.add('bg-transparent');
+        }
+      }
 
+      // Element text/border color logic
+      if (isScrolled || isMenuOpen) {
         if (desktopNav) desktopNav.classList.replace('text-white/80', 'text-neutral-600');
         if (logoSubtitle) logoSubtitle.classList.replace('text-white/60', 'text-neutral-500');
-        if (menuBtn) menuBtn.classList.replace('text-white', 'text-brand-dark');
+        if (menuBtn) {
+          menuBtn.classList.replace('text-white', 'text-brand-dark');
+          menuBtn.classList.add('text-brand-dark');
+          menuBtn.classList.remove('text-white');
+        }
+        if (mobileAdminBtn) {
+          mobileAdminBtn.classList.add('text-brand-dark', 'border-brand-dark/30');
+          mobileAdminBtn.classList.remove('text-white', 'border-white/20');
+        }
       } else {
-        nav.classList.remove('glass-nav');
-        nav.classList.add('bg-transparent');
-
         if (desktopNav) desktopNav.classList.replace('text-neutral-600', 'text-white/80');
         if (logoSubtitle) logoSubtitle.classList.replace('text-neutral-500', 'text-white/60');
-        if (menuBtn) menuBtn.classList.replace('text-brand-dark', 'text-white');
+        if (menuBtn) {
+          menuBtn.classList.replace('text-brand-dark', 'text-white');
+          menuBtn.classList.add('text-white');
+          menuBtn.classList.remove('text-brand-dark');
+        }
+        if (mobileAdminBtn) {
+          mobileAdminBtn.classList.add('text-white', 'border-white/20');
+          mobileAdminBtn.classList.remove('text-brand-dark', 'border-brand-dark/30');
+        }
       }
-    });
+    }
+
+    window.addEventListener('scroll', updateHeaderColors);
 
     // Interactive Camera HUD Status logs toggle function
     function toggleHeroOption(type, checked) {
@@ -1266,57 +1745,60 @@
     }
 
     // Mobile Hamburger Toggle
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-      mobileMenu.classList.toggle('flex');
-    });
-    mobileMenu.addEventListener('click', (e) => {
-      if(e.target.tagName === 'A') {
-        mobileMenu.classList.add('hidden');
-        mobileMenu.classList.remove('flex');
-      }
-    });
-
-    // Interactive Accordion Tabs for Chapters (Updates Image and Lens specifications)
-    function selectChapter(idx) {
-      const ch1 = document.getElementById('ch-tab-1');
-      const ch2 = document.getElementById('ch-tab-2');
-      const ch3 = document.getElementById('ch-tab-3');
-      const img = document.getElementById('chapter-img');
-      const lens = document.getElementById('chapter-lens');
-      const codec = document.getElementById('chapter-codec');
-
-      // Reset tabs
-      ch1.classList.replace('border-brand-gold/60', 'border-neutral-200');
-      ch1.classList.add('bg-white/40');
-      ch2.classList.replace('border-brand-gold/60', 'border-neutral-200');
-      ch2.classList.add('bg-white/40');
-      ch3.classList.replace('border-brand-gold/60', 'border-neutral-200');
-      ch3.classList.add('bg-white/40');
-
-      // Set active
-      const activeTab = document.getElementById(`ch-tab-${idx}`);
-      activeTab.classList.replace('border-neutral-200', 'border-brand-gold/60');
-      activeTab.classList.remove('bg-white/40');
-      activeTab.classList.add('bg-white');
-
-      // Set contents
-      if (idx === 1) {
-        img.src = '/shivani-mehta-photography/assets/still.png';
-        lens.textContent = 'Prime f/1.2 Lens';
-        codec.textContent = 'ProRes RAW 12-Bit';
-      } else if (idx === 2) {
-        img.src = '/shivani-mehta-photography/assets/emotion.png';
-        lens.textContent = 'Prime 85mm f/1.4';
-        codec.textContent = 'Uncompressed RAW';
-      } else if (idx === 3) {
-        img.src = '/shivani-mehta-photography/assets/shoot.png';
-        lens.textContent = 'Prime 35mm f/1.2';
-        codec.textContent = 'High Speed RAW';
-      }
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        mobileMenu.classList.toggle('flex');
+        updateHeaderColors();
+      });
+      mobileMenu.addEventListener('click', (e) => {
+        if (e.target.tagName === 'A') {
+          mobileMenu.classList.add('hidden');
+          mobileMenu.classList.remove('flex');
+          updateHeaderColors();
+        }
+      });
     }
+
+    // Dynamic URL builder for View Admin link
+    function setupAdminLinks() {
+      const currentPath = window.location.pathname;
+      let adminUrl = './admin.html';
+      if (window.location.protocol !== 'file:') {
+        let basePath = currentPath;
+        if (basePath.endsWith('index.html')) {
+          basePath = basePath.substring(0, basePath.length - 10);
+        }
+        adminUrl = basePath + (basePath.endsWith('/') ? '' : '/') + 'admin.html';
+      }
+      document.querySelectorAll('.view-admin-btn').forEach(btn => {
+        btn.href = adminUrl;
+      });
+    }
+    window.addEventListener('DOMContentLoaded', setupAdminLinks);
+
+    // Before/After Image Slider for Bento Grid (Professional Editing card)
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.querySelector('.before-after-container');
+      if (!container) return;
+
+      const handle = container.querySelector('.split-divider');
+      const wrapper = container.querySelector('.after-image-wrapper');
+
+      const move = (e) => {
+        const rect = container.getBoundingClientRect();
+        const clientX = e.clientX || (e.touches && e.touches[0].clientX);
+        if (clientX === undefined) return;
+        const x = clientX - rect.left;
+        let pct = (x / rect.width) * 100;
+        pct = Math.max(0, Math.min(100, pct));
+        handle.style.left = `${pct}%`;
+        wrapper.style.width = `${pct}%`;
+      };
+
+      container.addEventListener('mousemove', move);
+      container.addEventListener('touchmove', move, { passive: true });
+    });
 
     // Dynamic proposal pricing estimator (Estimator Logic)
     function updatePreview() {
@@ -1333,16 +1815,16 @@
 
       if (scaleVal === 'intimate') {
         scope = `Intimate Wedding in ${cityVal}`;
-        price = cityVal === 'Custom' ? 'Custom Quote' : '₹1.6L - ₹2.5L';
+        price = cityVal === 'Custom' ? 'Custom Quote' : '₹3L - ₹4.5L';
       } else if (scaleVal === 'multi-day') {
         scope = `Multi-Day Wedding in ${cityVal}`;
-        price = cityVal === 'Custom' ? 'Custom Quote' : '₹3L - ₹4.4L';
+        price = cityVal === 'Custom' ? 'Custom Quote' : '₹5.5L - ₹8L';
       } else if (scaleVal === 'destination') {
         scope = `Destination Wedding in ${cityVal}`;
-        price = cityVal === 'Custom' || cityVal === 'Kolkata' ? '₹4.9L - ₹6.5L' : '₹5.5L - ₹8.2L';
+        price = cityVal === 'Custom' || cityVal === 'Mumbai' ? '₹9L - ₹12L' : '₹10L - ₹15L';
       } else if (scaleVal === 'documentary') {
         scope = `Documentary Session in ${cityVal}`;
-        price = '₹1L - ₹1.4L';
+        price = '₹1.8L - ₹2.5L';
       }
 
       scopeText.textContent = scope;
@@ -1362,19 +1844,7 @@
       successModal.classList.remove('hidden');
     }
 
-    // Expandable FAQs Accordion Toggle
-    function toggleFaq(idx) {
-      const content = document.getElementById(`faq-content-${idx}`);
-      const icon = document.getElementById(`faq-icon-${idx}`);
-      content.classList.toggle('hidden');
-      if (content.classList.contains('hidden')) {
-        icon.textContent = '+';
-        icon.style.transform = 'rotate(0deg)';
-      } else {
-        icon.textContent = '−';
-        icon.style.transform = 'rotate(180deg)';
-      }
-    }
+
 
     // Modals controllers
     function openReelModal() {
@@ -1388,6 +1858,152 @@
       document.getElementById('inquiryForm').reset();
       updatePreview();
     }
+
+    // Carousel scroller controllers with infinite silent loop wrap & 3D curvature marquee
+    document.addEventListener('DOMContentLoaded', () => {
+      const track = document.getElementById('film-carousel-track');
+      const prevBtn = document.getElementById('film-prev-btn');
+      const nextBtn = document.getElementById('film-next-btn');
+
+      if (!track) return;
+
+      const originalCount = 4;
+      let scrollPos = 0;
+      const speed = 0.8; // speed of autoscroll in pixels per frame
+      let isPaused = false;
+      let rafId = null;
+
+      // Initialize positioning to the middle set (Set B)
+      function initScroll() {
+        const slide = track.querySelector('.carousel-slide');
+        if (!slide) return;
+        const slides = track.querySelectorAll('.carousel-slide');
+        const slideWidth = slides.length > 1 ? slides[1].offsetLeft - slides[0].offsetLeft : slide.offsetWidth + 16;
+        const loopWidth = slideWidth * originalCount;
+        scrollPos = loopWidth;
+        track.scrollLeft = scrollPos;
+      }
+
+      // Delay initialization slightly to guarantee layouts are computed
+      setTimeout(initScroll, 100);
+      window.addEventListener('resize', initScroll);
+
+      // Mouse and Touch Hover Actions to pause the marquee
+      const pause = () => { isPaused = true; };
+      const resume = () => {
+        isPaused = false;
+        scrollPos = track.scrollLeft;
+      };
+
+      track.addEventListener('mouseenter', pause);
+      track.addEventListener('mouseleave', resume);
+      track.addEventListener('touchstart', pause, { passive: true });
+      track.addEventListener('touchend', resume, { passive: true });
+
+      if (prevBtn && nextBtn) {
+        prevBtn.addEventListener('mouseenter', pause);
+        prevBtn.addEventListener('mouseleave', resume);
+        nextBtn.addEventListener('mouseenter', pause);
+        nextBtn.addEventListener('mouseleave', resume);
+
+        // Click actions for arrow buttons
+        nextBtn.addEventListener('click', () => {
+          const slide = track.querySelector('.carousel-slide');
+          if (!slide) return;
+          const slides = track.querySelectorAll('.carousel-slide');
+          const slideWidth = slides.length > 1 ? slides[1].offsetLeft - slides[0].offsetLeft : slide.offsetWidth + 16;
+          scrollPos += slideWidth;
+          track.scrollTo({ left: scrollPos, behavior: 'smooth' });
+        });
+
+        prevBtn.addEventListener('click', () => {
+          const slide = track.querySelector('.carousel-slide');
+          if (!slide) return;
+          const slides = track.querySelectorAll('.carousel-slide');
+          const slideWidth = slides.length > 1 ? slides[1].offsetLeft - slides[0].offsetLeft : slide.offsetWidth + 16;
+          scrollPos -= slideWidth;
+          track.scrollTo({ left: scrollPos, behavior: 'smooth' });
+        });
+      }
+
+      // Loop ticking animation
+      function tick() {
+        const slides = track.querySelectorAll('.carousel-slide');
+        if (slides.length === 0) {
+          rafId = requestAnimationFrame(tick);
+          return;
+        }
+
+        const slideWidth = slides.length > 1 ? slides[1].offsetLeft - slides[0].offsetLeft : slides[0].offsetWidth + 16;
+        const loopWidth = slideWidth * originalCount;
+
+        if (!isPaused) {
+          scrollPos += speed;
+          
+          // Looping silent warp
+          if (scrollPos >= loopWidth * 2) {
+            scrollPos -= loopWidth;
+          }
+          track.scrollLeft = scrollPos;
+        } else {
+          // Synchronize positions during manual touch scrolls
+          scrollPos = track.scrollLeft;
+        }
+
+        // Silent warp boundaries check for manual scrolls
+        if (scrollPos < slideWidth * 2) {
+          scrollPos += loopWidth;
+          track.scrollLeft = scrollPos;
+        } else if (scrollPos >= loopWidth + slideWidth * 2) {
+          scrollPos -= loopWidth;
+          track.scrollLeft = scrollPos;
+        }
+
+        // 3D Curvature logic (Non-thrashing read phase, then write phase)
+        const trackRect = track.getBoundingClientRect();
+        const trackCenter = trackRect.left + trackRect.width / 2;
+        const slideRects = [];
+
+        // Read phase
+        slides.forEach(slide => {
+          slideRects.push(slide.getBoundingClientRect());
+        });
+
+        // Write phase
+        slides.forEach((slide, idx) => {
+          const rect = slideRects[idx];
+          const slideCenter = rect.left + rect.width / 2;
+          const offset = slideCenter - trackCenter;
+          
+          const halfWidth = trackRect.width / 2;
+          let ratio = offset / halfWidth;
+          ratio = Math.max(-1.5, Math.min(1.5, ratio)); // clamp range
+          
+          // 3D curved rotations & coordinates (concave cylinder curvature)
+          // 1. rotateY: faces inwards towards center. E.g. left cards rotate right, right cards rotate left.
+          const angle = -ratio * 22; // 22 degrees max rotation at edges
+          
+          // 2. translateZ: push the center back in depth, sides are close to screen.
+          // Center (ratio=0) is furthest away (-160px). Edge (ratio=1 or -1) is closest (0px).
+          const translateZ = -160 * (1 - Math.min(1, Math.pow(Math.abs(ratio), 1.5)));
+          
+          // 3. translateY: 0 (keep vertical centers perfectly aligned for natural perspective curve)
+          const translateY = 0;
+
+          // 4. scale: 1 (perspective handle sizing automatically)
+          const scale = 1;
+
+          slide.style.transform = `perspective(1000px) rotateY(${angle}deg) translateZ(${translateZ}px) translateY(${translateY}px) scale(${scale})`;
+          slide.style.transformStyle = 'preserve-3d';
+          slide.style.backfaceVisibility = 'hidden';
+        });
+
+        rafId = requestAnimationFrame(tick);
+      }
+
+      // Start ticker
+      rafId = requestAnimationFrame(tick);
+    });
   </script>
 
 

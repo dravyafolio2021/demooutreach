@@ -4,6 +4,7 @@ import sys
 import json
 import argparse
 import re
+import urllib.parse
 from datetime import datetime
 
 def parse_budget_factor(budget_str):
@@ -135,6 +136,7 @@ def main():
     replacements = {
         "{{PROSPECT_NAME}}": args.name,
         "{{PROSPECT_NAME_UPPER}}": args.name.upper(),
+        "{{PROSPECT_NAME_URL_ENCODED}}": urllib.parse.quote(args.name),
         "{{PROSPECT_FOLDER}}": folder_slug,
         "{{FOUNDERS}}": args.founders,
         "{{LOCATION}}": args.location,

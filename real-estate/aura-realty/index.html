@@ -180,7 +180,7 @@
         Aura Realty<span class="text-brand-gold font-light">*</span>
       </div>
       <div class="flex items-center gap-6">
-        <a href="./admin.html" class="text-white hover:text-brand-goldLight text-xs font-semibold tracking-widest uppercase transition-colors">
+        <a href="./admin.html" class="view-admin-btn text-white hover:text-brand-goldLight text-xs font-semibold tracking-widest uppercase transition-colors">
           View Admin
         </a>
         <a href="https://wa.me/918708528150" target="_blank" class="text-white hover:text-brand-goldLight text-2xl font-light transition-colors flex-shrink-0">
@@ -308,7 +308,7 @@
                 <h4 class="text-sm font-semibold text-[#1C1B19]">3 BHK Apartment</h4>
                 <p class="text-neutral-400 text-[10px] font-light mt-0.5">Sector 56, Gurugram</p>
               </div>
-              <span class="text-sm font-bold text-[#1C1B19] font-mono whitespace-nowrap">₹4.1 Cr - ₹6.8 Cr</span>
+              <span class="text-sm font-bold text-[#1C1B19] font-mono whitespace-nowrap">₹3 Cr - ₹5 Cr</span>
             </div>
             <div class="flex items-center gap-3 text-[10px] text-neutral-500 pt-3 border-t border-neutral-100">
               <span>1,450 sq.ft</span><span class="text-neutral-300">|</span>
@@ -339,7 +339,7 @@
                 <h4 class="text-sm font-semibold text-[#1C1B19]">2 BHK Builder Floor</h4>
                 <p class="text-neutral-400 text-[10px] font-light mt-0.5">DLF Phase 3, Gurugram</p>
               </div>
-              <span class="text-sm font-bold text-[#1C1B19] font-mono whitespace-nowrap">₹2 Cr - ₹3.4 Cr</span>
+              <span class="text-sm font-bold text-[#1C1B19] font-mono whitespace-nowrap">₹1.5 Cr - ₹2.5 Cr</span>
             </div>
             <div class="flex items-center gap-3 text-[10px] text-neutral-500 pt-3 border-t border-neutral-100">
               <span>950 sq.ft</span><span class="text-neutral-300">|</span>
@@ -522,7 +522,7 @@
                 <h4 class="text-sm font-semibold text-[#1C1B19]">Penthouse — Sky Villa</h4>
                 <p class="text-neutral-400 text-[10px] font-light mt-0.5">Golf Course Rd, Gurugram</p>
               </div>
-              <span class="text-sm font-bold text-[#1C1B19] font-mono whitespace-nowrap">₹9.5 Cr - ₹16.4 Cr</span>
+              <span class="text-sm font-bold text-[#1C1B19] font-mono whitespace-nowrap">₹7 Cr - ₹12 Cr</span>
             </div>
             <div class="flex items-center gap-3 text-[10px] text-neutral-500 pt-3 border-t border-neutral-100">
               <span>3,200 sq.ft</span><span class="text-neutral-300">|</span>
@@ -778,7 +778,7 @@
                   </p>
                 </div>
                 <div class="text-right">
-                  <span class="block text-xl font-semibold text-[#1C1B19] font-mono">₹4.1 Cr - ₹6.8 Cr</span>
+                  <span class="block text-xl font-semibold text-[#1C1B19] font-mono">₹3 Cr - ₹5 Cr</span>
                   <span class="text-[9px] font-mono text-neutral-400 uppercase tracking-widest block mt-0.5">Pricing Band</span>
                 </div>
               </div>
@@ -812,7 +812,7 @@
                   </p>
                 </div>
                 <div class="text-right">
-                  <span class="block text-xl font-semibold text-[#1C1B19] font-mono">₹9.5 Cr - ₹16.4 Cr</span>
+                  <span class="block text-xl font-semibold text-[#1C1B19] font-mono">₹7 Cr - ₹12 Cr</span>
                   <span class="text-[9px] font-mono text-neutral-400 uppercase tracking-widest block mt-0.5">Pricing Band</span>
                 </div>
               </div>
@@ -846,7 +846,7 @@
                   </p>
                 </div>
                 <div class="text-right">
-                  <span class="block text-xl font-semibold text-[#1C1B19] font-mono">₹2 Cr - ₹3.4 Cr</span>
+                  <span class="block text-xl font-semibold text-[#1C1B19] font-mono">₹1.5 Cr - ₹2.5 Cr</span>
                   <span class="text-[9px] font-mono text-neutral-400 uppercase tracking-widest block mt-0.5">Pricing Band</span>
                 </div>
               </div>
@@ -1859,6 +1859,20 @@
     // Initialize carousel on load
     window.addEventListener('DOMContentLoaded', () => {
       updateCarousel();
+
+      // Dynamic URL builder for View Admin link
+      const currentPath = window.location.pathname;
+      let adminUrl = './admin.html';
+      if (window.location.protocol !== 'file:') {
+        let basePath = currentPath;
+        if (basePath.endsWith('index.html')) {
+          basePath = basePath.substring(0, basePath.length - 10);
+        }
+        adminUrl = basePath + (basePath.endsWith('/') ? '' : '/') + 'admin.html';
+      }
+      document.querySelectorAll('.view-admin-btn').forEach(btn => {
+        btn.href = adminUrl;
+      });
     });
 
     // Reveal animation on scroll

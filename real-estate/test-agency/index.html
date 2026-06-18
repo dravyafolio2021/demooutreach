@@ -945,6 +945,20 @@
     // Initialize carousel on load
     window.addEventListener('DOMContentLoaded', () => {
       updateCarousel();
+
+      // Dynamic URL builder for View Admin link
+      const currentPath = window.location.pathname;
+      let adminUrl = './admin.html';
+      if (window.location.protocol !== 'file:') {
+        let basePath = currentPath;
+        if (basePath.endsWith('index.html')) {
+          basePath = basePath.substring(0, basePath.length - 10);
+        }
+        adminUrl = basePath + (basePath.endsWith('/') ? '' : '/') + 'admin.html';
+      }
+      document.querySelectorAll('.view-admin-btn').forEach(btn => {
+        btn.href = adminUrl;
+      });
     });
 
     // Reveal animation on scroll
