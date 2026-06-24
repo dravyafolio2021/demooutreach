@@ -2857,6 +2857,750 @@
     {
       "source": "/yogmaya-realtors/:path*",
       "destination": "/real-estate/yogmaya-realtors/:path*"
+    },
+    {
+      "source": "/pune-dusk-photography",
+      "destination": "/photography/pune-dusk-photography"
+    },
+    {
+      "source": "/pune-dusk-photography/:path*",
+      "destination": "/photography/pune-dusk-photography/:path*"
+    },
+    {
+      "source": "/ajinkya-jadhav-photography",
+      "destination": "/photography/ajinkya-jadhav-photography"
+    },
+    {
+      "source": "/ajinkya-jadhav-photography/:path*",
+      "destination": "/photography/ajinkya-jadhav-photography/:path*"
+    },
+    {
+      "source": "/knotsbyamp",
+      "destination": "/photography/knotsbyamp"
+    },
+    {
+      "source": "/knotsbyamp/:path*",
+      "destination": "/photography/knotsbyamp/:path*"
+    },
+    {
+      "source": "/amour-affairs-photography",
+      "destination": "/photography/amour-affairs-photography"
+    },
+    {
+      "source": "/amour-affairs-photography/:path*",
+      "destination": "/photography/amour-affairs-photography/:path*"
+    },
+    {
+      "source": "/the-picture-talk-photography",
+      "destination": "/photography/the-picture-talk-photography"
+    },
+    {
+      "source": "/the-picture-talk-photography/:path*",
+      "destination": "/photography/the-picture-talk-photography/:path*"
+    },
+    {
+      "source": "/frozen-memories",
+      "destination": "/photography/frozen-memories"
+    },
+    {
+      "source": "/frozen-memories/:path*",
+      "destination": "/photography/frozen-memories/:path*"
+    },
+    {
+      "source": "/bliss-memoir-photography-films",
+      "destination": "/photography/bliss-memoir-photography-films"
+    },
+    {
+      "source": "/bliss-memoir-photography-films/:path*",
+      "destination": "/photography/bliss-memoir-photography-films/:path*"
+    },
+    {
+      "source": "/capture-the-image-films",
+      "destination": "/photography/capture-the-image-films"
+    },
+    {
+      "source": "/capture-the-image-films/:path*",
+      "destination": "/photography/capture-the-image-films/:path*"
+    },
+    {
+      "source": "/aniket-kanade-photography",
+      "destination": "/photography/aniket-kanade-photography"
+    },
+    {
+      "source": "/aniket-kanade-photography/:path*",
+      "destination": "/photography/aniket-kanade-photography/:path*"
+    },
+    {
+      "source": "/eyes-pixel-photography",
+      "destination": "/photography/eyes-pixel-photography"
+    },
+    {
+      "source": "/eyes-pixel-photography/:path*",
+      "destination": "/photography/eyes-pixel-photography/:path*"
+    },
+    {
+      "source": "/wedmegood-pune-photographers",
+      "destination": "/photography/wedmegood-pune-photographers"
+    },
+    {
+      "source": "/wedmegood-pune-photographers/:path*",
+      "destination": "/photography/wedmegood-pune-photographers/:path*"
+    },
+    {
+      "source": "/edita-photography",
+      "destination": "/photography/edita-photography"
+    },
+    {
+      "source": "/edita-photography/:path*",
+      "destination": "/photography/edita-photography/:path*"
+    },
+    {
+      "source": "/vaishali-harip-photography",
+      "destination": "/photography/vaishali-harip-photography"
+    },
+    {
+      "source": "/vaishali-harip-photography/:path*",
+      "destination": "/photography/vaishali-harip-photography/:path*"
+    },
+    {
+      "source": "/deep-achtani-photography",
+      "destination": "/photography/deep-achtani-photography"
+    },
+    {
+      "source": "/deep-achtani-photography/:path*",
+      "destination": "/photography/deep-achtani-photography/:path*"
+    },
+    {
+      "source": "/lil-starz-photography",
+      "destination": "/photography/lil-starz-photography"
+    },
+    {
+      "source": "/lil-starz-photography/:path*",
+      "destination": "/photography/lil-starz-photography/:path*"
+    },
+    {
+      "source": "/the-kids-photos",
+      "destination": "/photography/the-kids-photos"
+    },
+    {
+      "source": "/the-kids-photos/:path*",
+      "destination": "/photography/the-kids-photos/:path*"
+    },
+    {
+      "source": "/justdial-newborn-baby-photographers-pune",
+      "destination": "/photography/justdial-newborn-baby-photographers-pune"
+    },
+    {
+      "source": "/justdial-newborn-baby-photographers-pune/:path*",
+      "destination": "/photography/justdial-newborn-baby-photographers-pune/:path*"
+    },
+    {
+      "source": "/sandeep-khade-studios",
+      "destination": "/photography/sandeep-khade-studios"
+    },
+    {
+      "source": "/sandeep-khade-studios/:path*",
+      "destination": "/photography/sandeep-khade-studios/:path*"
+    },
+    {
+      "source": "/the-portrait-studio-pune",
+      "destination": "/photography/the-portrait-studio-pune"
+    },
+    {
+      "source": "/the-portrait-studio-pune/:path*",
+      "destination": "/photography/the-portrait-studio-pune/:path*"
+    },
+    {
+      "source": "/studio-panorama-abhiram-tilak",
+      "destination": "/photography/studio-panorama-abhiram-tilak"
+    },
+    {
+      "source": "/studio-panorama-abhiram-tilak/:path*",
+      "destination": "/photography/studio-panorama-abhiram-tilak/:path*"
+    },
+    {
+      "source": "/sulekha-family-portrait-photographers-pune",
+      "destination": "/photography/sulekha-family-portrait-photographers-pune"
+    },
+    {
+      "source": "/sulekha-family-portrait-photographers-pune/:path*",
+      "destination": "/photography/sulekha-family-portrait-photographers-pune/:path*"
+    },
+    {
+      "source": "/justdial-photographers-pune",
+      "destination": "/photography/justdial-photographers-pune"
+    },
+    {
+      "source": "/justdial-photographers-pune/:path*",
+      "destination": "/photography/justdial-photographers-pune/:path*"
+    },
+    {
+      "source": "/celebu-studio",
+      "destination": "/photography/celebu-studio"
+    },
+    {
+      "source": "/celebu-studio/:path*",
+      "destination": "/photography/celebu-studio/:path*"
+    },
+    {
+      "source": "/bring-it-online",
+      "destination": "/photography/bring-it-online"
+    },
+    {
+      "source": "/bring-it-online/:path*",
+      "destination": "/photography/bring-it-online/:path*"
+    },
+    {
+      "source": "/the-lens-india",
+      "destination": "/photography/the-lens-india"
+    },
+    {
+      "source": "/the-lens-india/:path*",
+      "destination": "/photography/the-lens-india/:path*"
+    },
+    {
+      "source": "/indiamart-product-photography-pune",
+      "destination": "/photography/indiamart-product-photography-pune"
+    },
+    {
+      "source": "/indiamart-product-photography-pune/:path*",
+      "destination": "/photography/indiamart-product-photography-pune/:path*"
+    },
+    {
+      "source": "/rakesh-tatia-photography",
+      "destination": "/photography/rakesh-tatia-photography"
+    },
+    {
+      "source": "/rakesh-tatia-photography/:path*",
+      "destination": "/photography/rakesh-tatia-photography/:path*"
+    },
+    {
+      "source": "/indiamart-corporate-photography-pune",
+      "destination": "/photography/indiamart-corporate-photography-pune"
+    },
+    {
+      "source": "/indiamart-corporate-photography-pune/:path*",
+      "destination": "/photography/indiamart-corporate-photography-pune/:path*"
+    },
+    {
+      "source": "/sulekha-corporate-photographers-pune",
+      "destination": "/photography/sulekha-corporate-photographers-pune"
+    },
+    {
+      "source": "/sulekha-corporate-photographers-pune/:path*",
+      "destination": "/photography/sulekha-corporate-photographers-pune/:path*"
+    },
+    {
+      "source": "/zoopgo-corporate-event-photographers-pune",
+      "destination": "/photography/zoopgo-corporate-event-photographers-pune"
+    },
+    {
+      "source": "/zoopgo-corporate-event-photographers-pune/:path*",
+      "destination": "/photography/zoopgo-corporate-event-photographers-pune/:path*"
+    },
+    {
+      "source": "/justdial-event-photographers-pune",
+      "destination": "/photography/justdial-event-photographers-pune"
+    },
+    {
+      "source": "/justdial-event-photographers-pune/:path*",
+      "destination": "/photography/justdial-event-photographers-pune/:path*"
+    },
+    {
+      "source": "/dazz-photography",
+      "destination": "/photography/dazz-photography"
+    },
+    {
+      "source": "/dazz-photography/:path*",
+      "destination": "/photography/dazz-photography/:path*"
+    },
+    {
+      "source": "/ckstudio-pune",
+      "destination": "/photography/ckstudio-pune"
+    },
+    {
+      "source": "/ckstudio-pune/:path*",
+      "destination": "/photography/ckstudio-pune/:path*"
+    },
+    {
+      "source": "/muse-photography-studios",
+      "destination": "/photography/muse-photography-studios"
+    },
+    {
+      "source": "/muse-photography-studios/:path*",
+      "destination": "/photography/muse-photography-studios/:path*"
+    },
+    {
+      "source": "/indiamart-fashion-photography-pune",
+      "destination": "/photography/indiamart-fashion-photography-pune"
+    },
+    {
+      "source": "/indiamart-fashion-photography-pune/:path*",
+      "destination": "/photography/indiamart-fashion-photography-pune/:path*"
+    },
+    {
+      "source": "/justdial-fashion-photographers-pune",
+      "destination": "/photography/justdial-fashion-photographers-pune"
+    },
+    {
+      "source": "/justdial-fashion-photographers-pune/:path*",
+      "destination": "/photography/justdial-fashion-photographers-pune/:path*"
+    },
+    {
+      "source": "/vikas-dutt-photography",
+      "destination": "/photography/vikas-dutt-photography"
+    },
+    {
+      "source": "/vikas-dutt-photography/:path*",
+      "destination": "/photography/vikas-dutt-photography/:path*"
+    },
+    {
+      "source": "/studiooncloud-pune",
+      "destination": "/photography/studiooncloud-pune"
+    },
+    {
+      "source": "/studiooncloud-pune/:path*",
+      "destination": "/photography/studiooncloud-pune/:path*"
+    },
+    {
+      "source": "/houzz-real-estate-photography-pune",
+      "destination": "/photography/houzz-real-estate-photography-pune"
+    },
+    {
+      "source": "/houzz-real-estate-photography-pune/:path*",
+      "destination": "/photography/houzz-real-estate-photography-pune/:path*"
+    },
+    {
+      "source": "/royans-photography",
+      "destination": "/photography/royans-photography"
+    },
+    {
+      "source": "/royans-photography/:path*",
+      "destination": "/photography/royans-photography/:path*"
+    },
+    {
+      "source": "/yogesh-mahamuni-photography",
+      "destination": "/photography/yogesh-mahamuni-photography"
+    },
+    {
+      "source": "/yogesh-mahamuni-photography/:path*",
+      "destination": "/photography/yogesh-mahamuni-photography/:path*"
+    },
+    {
+      "source": "/evolver-media-pune",
+      "destination": "/photography/evolver-media-pune"
+    },
+    {
+      "source": "/evolver-media-pune/:path*",
+      "destination": "/photography/evolver-media-pune/:path*"
+    },
+    {
+      "source": "/kartik-bakshi-photography",
+      "destination": "/photography/kartik-bakshi-photography"
+    },
+    {
+      "source": "/kartik-bakshi-photography/:path*",
+      "destination": "/photography/kartik-bakshi-photography/:path*"
+    },
+    {
+      "source": "/wedmegood-pune-wedding-photographers",
+      "destination": "/photography/wedmegood-pune-wedding-photographers"
+    },
+    {
+      "source": "/wedmegood-pune-wedding-photographers/:path*",
+      "destination": "/photography/wedmegood-pune-wedding-photographers/:path*"
+    },
+    {
+      "source": "/justdial-wedding-photographers-pune",
+      "destination": "/photography/justdial-wedding-photographers-pune"
+    },
+    {
+      "source": "/justdial-wedding-photographers-pune/:path*",
+      "destination": "/photography/justdial-wedding-photographers-pune/:path*"
+    },
+    {
+      "source": "/sulekha-wedding-photographers-pune",
+      "destination": "/photography/sulekha-wedding-photographers-pune"
+    },
+    {
+      "source": "/sulekha-wedding-photographers-pune/:path*",
+      "destination": "/photography/sulekha-wedding-photographers-pune/:path*"
+    },
+    {
+      "source": "/timeframe-studios",
+      "destination": "/photography/timeframe-studios"
+    },
+    {
+      "source": "/timeframe-studios/:path*",
+      "destination": "/photography/timeframe-studios/:path*"
+    },
+    {
+      "source": "/pune-wedding-photography",
+      "destination": "/photography/pune-wedding-photography"
+    },
+    {
+      "source": "/pune-wedding-photography/:path*",
+      "destination": "/photography/pune-wedding-photography/:path*"
+    },
+    {
+      "source": "/candid-wedding-photography-pune",
+      "destination": "/photography/candid-wedding-photography-pune"
+    },
+    {
+      "source": "/candid-wedding-photography-pune/:path*",
+      "destination": "/photography/candid-wedding-photography-pune/:path*"
+    },
+    {
+      "source": "/pre-wedding-photography-pune",
+      "destination": "/photography/pre-wedding-photography-pune"
+    },
+    {
+      "source": "/pre-wedding-photography-pune/:path*",
+      "destination": "/photography/pre-wedding-photography-pune/:path*"
+    },
+    {
+      "source": "/wedding-tales-pune",
+      "destination": "/photography/wedding-tales-pune"
+    },
+    {
+      "source": "/wedding-tales-pune/:path*",
+      "destination": "/photography/wedding-tales-pune/:path*"
+    },
+    {
+      "source": "/shaadi-stories-pune",
+      "destination": "/photography/shaadi-stories-pune"
+    },
+    {
+      "source": "/shaadi-stories-pune/:path*",
+      "destination": "/photography/shaadi-stories-pune/:path*"
+    },
+    {
+      "source": "/bridal-moments-pune",
+      "destination": "/photography/bridal-moments-pune"
+    },
+    {
+      "source": "/bridal-moments-pune/:path*",
+      "destination": "/photography/bridal-moments-pune/:path*"
+    },
+    {
+      "source": "/baby-photography-pune",
+      "destination": "/photography/baby-photography-pune"
+    },
+    {
+      "source": "/baby-photography-pune/:path*",
+      "destination": "/photography/baby-photography-pune/:path*"
+    },
+    {
+      "source": "/maternity-photography-pune",
+      "destination": "/photography/maternity-photography-pune"
+    },
+    {
+      "source": "/maternity-photography-pune/:path*",
+      "destination": "/photography/maternity-photography-pune/:path*"
+    },
+    {
+      "source": "/kids-photography-pune",
+      "destination": "/photography/kids-photography-pune"
+    },
+    {
+      "source": "/kids-photography-pune/:path*",
+      "destination": "/photography/kids-photography-pune/:path*"
+    },
+    {
+      "source": "/family-photography-pune",
+      "destination": "/photography/family-photography-pune"
+    },
+    {
+      "source": "/family-photography-pune/:path*",
+      "destination": "/photography/family-photography-pune/:path*"
+    },
+    {
+      "source": "/newborn-studio-pune",
+      "destination": "/photography/newborn-studio-pune"
+    },
+    {
+      "source": "/newborn-studio-pune/:path*",
+      "destination": "/photography/newborn-studio-pune/:path*"
+    },
+    {
+      "source": "/headshot-photography-pune",
+      "destination": "/photography/headshot-photography-pune"
+    },
+    {
+      "source": "/headshot-photography-pune/:path*",
+      "destination": "/photography/headshot-photography-pune/:path*"
+    },
+    {
+      "source": "/corporate-headshots-pune",
+      "destination": "/photography/corporate-headshots-pune"
+    },
+    {
+      "source": "/corporate-headshots-pune/:path*",
+      "destination": "/photography/corporate-headshots-pune/:path*"
+    },
+    {
+      "source": "/linkedin-photos-pune",
+      "destination": "/photography/linkedin-photos-pune"
+    },
+    {
+      "source": "/linkedin-photos-pune/:path*",
+      "destination": "/photography/linkedin-photos-pune/:path*"
+    },
+    {
+      "source": "/personal-branding-photography-pune",
+      "destination": "/photography/personal-branding-photography-pune"
+    },
+    {
+      "source": "/personal-branding-photography-pune/:path*",
+      "destination": "/photography/personal-branding-photography-pune/:path*"
+    },
+    {
+      "source": "/matrimonial-photos-pune",
+      "destination": "/photography/matrimonial-photos-pune"
+    },
+    {
+      "source": "/matrimonial-photos-pune/:path*",
+      "destination": "/photography/matrimonial-photos-pune/:path*"
+    },
+    {
+      "source": "/e-commerce-photography-pune",
+      "destination": "/photography/e-commerce-photography-pune"
+    },
+    {
+      "source": "/e-commerce-photography-pune/:path*",
+      "destination": "/photography/e-commerce-photography-pune/:path*"
+    },
+    {
+      "source": "/amazon-product-photography-pune",
+      "destination": "/photography/amazon-product-photography-pune"
+    },
+    {
+      "source": "/amazon-product-photography-pune/:path*",
+      "destination": "/photography/amazon-product-photography-pune/:path*"
+    },
+    {
+      "source": "/food-photography-pune",
+      "destination": "/photography/food-photography-pune"
+    },
+    {
+      "source": "/food-photography-pune/:path*",
+      "destination": "/photography/food-photography-pune/:path*"
+    },
+    {
+      "source": "/lifestyle-photography-pune",
+      "destination": "/photography/lifestyle-photography-pune"
+    },
+    {
+      "source": "/lifestyle-photography-pune/:path*",
+      "destination": "/photography/lifestyle-photography-pune/:path*"
+    },
+    {
+      "source": "/catalog-photography-pune",
+      "destination": "/photography/catalog-photography-pune"
+    },
+    {
+      "source": "/catalog-photography-pune/:path*",
+      "destination": "/photography/catalog-photography-pune/:path*"
+    },
+    {
+      "source": "/corporate-event-photography-pune",
+      "destination": "/photography/corporate-event-photography-pune"
+    },
+    {
+      "source": "/corporate-event-photography-pune/:path*",
+      "destination": "/photography/corporate-event-photography-pune/:path*"
+    },
+    {
+      "source": "/conference-photography-pune",
+      "destination": "/photography/conference-photography-pune"
+    },
+    {
+      "source": "/conference-photography-pune/:path*",
+      "destination": "/photography/conference-photography-pune/:path*"
+    },
+    {
+      "source": "/agm-photography-pune",
+      "destination": "/photography/agm-photography-pune"
+    },
+    {
+      "source": "/agm-photography-pune/:path*",
+      "destination": "/photography/agm-photography-pune/:path*"
+    },
+    {
+      "source": "/product-launch-photography-pune",
+      "destination": "/photography/product-launch-photography-pune"
+    },
+    {
+      "source": "/product-launch-photography-pune/:path*",
+      "destination": "/photography/product-launch-photography-pune/:path*"
+    },
+    {
+      "source": "/team-building-photography-pune",
+      "destination": "/photography/team-building-photography-pune"
+    },
+    {
+      "source": "/team-building-photography-pune/:path*",
+      "destination": "/photography/team-building-photography-pune/:path*"
+    },
+    {
+      "source": "/model-portfolio-photography-pune",
+      "destination": "/photography/model-portfolio-photography-pune"
+    },
+    {
+      "source": "/model-portfolio-photography-pune/:path*",
+      "destination": "/photography/model-portfolio-photography-pune/:path*"
+    },
+    {
+      "source": "/portfolio-photography-pune",
+      "destination": "/photography/portfolio-photography-pune"
+    },
+    {
+      "source": "/portfolio-photography-pune/:path*",
+      "destination": "/photography/portfolio-photography-pune/:path*"
+    },
+    {
+      "source": "/beauty-photography-pune",
+      "destination": "/photography/beauty-photography-pune"
+    },
+    {
+      "source": "/beauty-photography-pune/:path*",
+      "destination": "/photography/beauty-photography-pune/:path*"
+    },
+    {
+      "source": "/editorial-photography-pune",
+      "destination": "/photography/editorial-photography-pune"
+    },
+    {
+      "source": "/editorial-photography-pune/:path*",
+      "destination": "/photography/editorial-photography-pune/:path*"
+    },
+    {
+      "source": "/lookbook-photography-pune",
+      "destination": "/photography/lookbook-photography-pune"
+    },
+    {
+      "source": "/lookbook-photography-pune/:path*",
+      "destination": "/photography/lookbook-photography-pune/:path*"
+    },
+    {
+      "source": "/interior-photography-pune",
+      "destination": "/photography/interior-photography-pune"
+    },
+    {
+      "source": "/interior-photography-pune/:path*",
+      "destination": "/photography/interior-photography-pune/:path*"
+    },
+    {
+      "source": "/hotel-photography-pune",
+      "destination": "/photography/hotel-photography-pune"
+    },
+    {
+      "source": "/hotel-photography-pune/:path*",
+      "destination": "/photography/hotel-photography-pune/:path*"
+    },
+    {
+      "source": "/restaurant-photography-pune",
+      "destination": "/photography/restaurant-photography-pune"
+    },
+    {
+      "source": "/restaurant-photography-pune/:path*",
+      "destination": "/photography/restaurant-photography-pune/:path*"
+    },
+    {
+      "source": "/3d-photography-pune",
+      "destination": "/photography/3d-photography-pune"
+    },
+    {
+      "source": "/3d-photography-pune/:path*",
+      "destination": "/photography/3d-photography-pune/:path*"
+    },
+    {
+      "source": "/aerial-photography-pune",
+      "destination": "/photography/aerial-photography-pune"
+    },
+    {
+      "source": "/aerial-photography-pune/:path*",
+      "destination": "/photography/aerial-photography-pune/:path*"
+    },
+    {
+      "source": "/wedding-films-pune",
+      "destination": "/photography/wedding-films-pune"
+    },
+    {
+      "source": "/wedding-films-pune/:path*",
+      "destination": "/photography/wedding-films-pune/:path*"
+    },
+    {
+      "source": "/cinematic-wedding-pune",
+      "destination": "/photography/cinematic-wedding-pune"
+    },
+    {
+      "source": "/cinematic-wedding-pune/:path*",
+      "destination": "/photography/cinematic-wedding-pune/:path*"
+    },
+    {
+      "source": "/destination-wedding-pune",
+      "destination": "/photography/destination-wedding-pune"
+    },
+    {
+      "source": "/destination-wedding-pune/:path*",
+      "destination": "/photography/destination-wedding-pune/:path*"
+    },
+    {
+      "source": "/maharashtrian-wedding-pune",
+      "destination": "/photography/maharashtrian-wedding-pune"
+    },
+    {
+      "source": "/maharashtrian-wedding-pune/:path*",
+      "destination": "/photography/maharashtrian-wedding-pune/:path*"
+    },
+    {
+      "source": "/marathi-wedding-pune",
+      "destination": "/photography/marathi-wedding-pune"
+    },
+    {
+      "source": "/marathi-wedding-pune/:path*",
+      "destination": "/photography/marathi-wedding-pune/:path*"
+    },
+    {
+      "source": "/pet-photography-pune",
+      "destination": "/photography/pet-photography-pune"
+    },
+    {
+      "source": "/pet-photography-pune/:path*",
+      "destination": "/photography/pet-photography-pune/:path*"
+    },
+    {
+      "source": "/automotive-photography-pune",
+      "destination": "/photography/automotive-photography-pune"
+    },
+    {
+      "source": "/automotive-photography-pune/:path*",
+      "destination": "/photography/automotive-photography-pune/:path*"
+    },
+    {
+      "source": "/jewelry-photography-pune",
+      "destination": "/photography/jewelry-photography-pune"
+    },
+    {
+      "source": "/jewelry-photography-pune/:path*",
+      "destination": "/photography/jewelry-photography-pune/:path*"
+    },
+    {
+      "source": "/industrial-photography-pune",
+      "destination": "/photography/industrial-photography-pune"
+    },
+    {
+      "source": "/industrial-photography-pune/:path*",
+      "destination": "/photography/industrial-photography-pune/:path*"
+    },
+    {
+      "source": "/medical-photography-pune",
+      "destination": "/photography/medical-photography-pune"
+    },
+    {
+      "source": "/medical-photography-pune/:path*",
+      "destination": "/photography/medical-photography-pune/:path*"
     }
   ]
 }

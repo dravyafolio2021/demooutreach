@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pune Outreach Intelligence</title>
+  
+  <!-- Fonts: Inter for UI, Newsreader for elegant headings -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Newsreader', 'serif'],
+          },
+          colors: {
+            claude: {
+              bg: '#fdfcf8',
+              surface: '#ffffff',
+              border: '#e6e4dd',
+              text: '#2d2b2a',
+              muted: '#73716c',
+              accent: '#d97757',
+              hover: '#f5f4ef'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      background-color: #fdfcf8;
+      color: #2d2b2a;
+    }
+    
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #dcdad2;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #c0beb6;
+    }
+
+    .pill-filter.active {
+      background-color: #2d2b2a;
+      color: #ffffff;
+      border-color: #2d2b2a;
+    }
+    
+    .table-container {
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02), 0 1px 2px rgba(0,0,0,0.04);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col font-sans selection:bg-claude-accent/20">
+
+  <!-- HEADER -->
+  <header class="border-b border-claude-border bg-claude-bg/80 backdrop-blur-sm sticky top-0 z-30">
+    <div class="max-w-[1400px] mx-auto px-6 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <h1 class="font-serif text-xl font-medium tracking-tight text-claude-text">Pune Outreach Intelligence</h1>
+      </div>
+      <div class="flex items-center gap-6 text-sm">
+        <div class="flex flex-col text-right">
+          <span class="text-xs text-claude-muted">Total Leads</span>
+          <span class="font-medium text-claude-text" id="stat-total">0</span>
+        </div>
+        <div class="w-px h-8 bg-claude-border"></div>
+        <div class="flex flex-col text-right">
+          <span class="text-xs text-claude-muted">Deployed URLs</span>
+          <span class="font-medium text-claude-text" id="stat-deployed">0</span>
+        </div>
+        <div class="w-px h-8 bg-claude-border"></div>
+        <div class="flex flex-col text-right">
+          <span class="text-xs text-claude-muted">WhatsApp Ready</span>
+          <span class="font-medium text-claude-text" id="stat-whatsapp">0</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="flex-1 max-w-[1400px] w-full mx-auto px-6 py-8 flex flex-col gap-8">
+    
+    <!-- SIDE DRAWER OVERLAY -->
+    <div id="drawer-overlay" class="fixed inset-0 bg-black/20 backdrop-blur-sm z-40 hidden transition-opacity opacity-0" onclick="toggleDrawer()"></div>
+    
+    <!-- SIDE DRAWER -->
+    <div id="side-drawer" class="fixed top-0 right-0 h-full w-full max-w-sm bg-claude-surface shadow-2xl z-50 transform translate-x-full transition-transform duration-300 flex flex-col">
+      <div class="px-6 py-5 border-b border-claude-border flex items-center justify-between bg-claude-bg/50">
+        <h2 class="font-serif text-lg font-medium text-claude-text">Advanced Filters</h2>
+        <button onclick="toggleDrawer()" class="text-claude-muted hover:text-claude-text transition-colors"><i class="fa-solid fa-times text-lg"></i></button>
+      </div>
+      <div class="flex-1 overflow-y-auto p-6 space-y-8">
+        <div>
+          <h3 class="text-xs font-medium text-claude-muted mb-3 uppercase tracking-wider">City Location</h3>
+          <div class="flex flex-wrap gap-2" id="city-filters"></div>
+        </div>
+        <div class="space-y-4 pt-6 border-t border-claude-border border-dashed">
+          <h3 class="text-xs font-medium text-claude-muted mb-3 uppercase tracking-wider">Status Requirements</h3>
+          <label class="flex items-center gap-3 cursor-pointer group">
+            <input type="checkbox" id="filter-deployed" class="rounded border-claude-border text-claude-text focus:ring-0 accent-claude-text w-4 h-4 cursor-pointer">
+            <span class="text-sm text-claude-text group-hover:text-claude-text transition-colors">Has Live URL Only</span>
+          </label>
+          <label class="flex items-center gap-3 cursor-pointer group">
+            <input type="checkbox" id="filter-whatsapp" class="rounded border-claude-border text-claude-text focus:ring-0 accent-claude-text w-4 h-4 cursor-pointer">
+            <span class="text-sm text-claude-text group-hover:text-claude-text transition-colors">WhatsApp Ready Only</span>
+          </label>
+        </div>
+      </div>
+      <div class="p-6 border-t border-claude-border bg-claude-bg">
+        <button id="reset-btn" class="w-full py-2.5 rounded-lg border border-claude-border bg-white text-sm font-medium text-claude-text hover:bg-claude-hover transition-colors shadow-sm">Reset All Filters</button>
+      </div>
+    </div>
+
+    <!-- CONTROLS SECTION -->
+    <div class="bg-claude-surface border border-claude-border rounded-xl p-5 shadow-sm space-y-5">
+      
+      <!-- Top Row: Search and Drawer Button -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-between items-start sm:items-center">
+        <div class="relative w-full sm:max-w-md">
+          <input type="text" id="search-input" placeholder="Search leads, notes, studios..." class="w-full bg-claude-bg border border-claude-border rounded-lg px-4 py-2.5 pl-10 text-sm text-claude-text placeholder-claude-muted focus:outline-none focus:border-claude-muted transition-colors shadow-sm">
+          <i class="fa-solid fa-search absolute left-3.5 top-1/2 -translate-y-1/2 text-claude-muted text-sm"></i>
+        </div>
+        <button onclick="toggleDrawer()" class="flex items-center gap-2 px-4 py-2.5 rounded-lg border border-claude-border bg-claude-bg text-sm font-medium text-claude-text hover:bg-claude-hover transition-colors shadow-sm shrink-0">
+          <i class="fa-solid fa-sliders text-xs"></i> Advanced Filters
+        </button>
+      </div>
+
+      <!-- Sheet & Industry (Top Filters) -->
+      <div class="flex flex-col xl:flex-row gap-6 pt-5 border-t border-claude-border border-dashed">
+        <div class="flex-1">
+          <h3 class="text-xs font-medium text-claude-muted mb-3 uppercase tracking-wider">Date</h3>
+          <div class="flex flex-wrap gap-2" id="sheet-filters"></div>
+        </div>
+        <div class="flex-1">
+          <h3 class="text-xs font-medium text-claude-muted mb-3 uppercase tracking-wider">Industry Filter</h3>
+          <div class="flex flex-wrap gap-2" id="category-filters"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TABLE HEADER INFO -->
+    <div class="flex justify-between items-end">
+      <h2 class="font-serif text-lg text-claude-text">Unified Prospects</h2>
+      <span class="text-sm text-claude-muted" id="results-count">Showing 0 prospects</span>
+    </div>
+
+    <!-- DATA TABLE -->
+    <div class="bg-claude-surface border border-claude-border rounded-xl overflow-hidden table-container flex-1">
+      <div class="overflow-x-auto max-h-[600px]">
+        <table class="w-full text-left text-sm whitespace-nowrap">
+          <thead class="bg-claude-hover/50 border-b border-claude-border sticky top-0 z-10 backdrop-blur-md">
+            <tr class="text-claude-muted font-medium">
+              <th class="px-5 py-3 w-10">#</th>
+              <th class="px-5 py-3">Studio &amp; Founder</th>
+              <th class="px-5 py-3">Industry</th>
+              <th class="px-5 py-3">Location</th>
+              <th class="px-5 py-3">Contact</th>
+              <th class="px-5 py-3">Date Added</th>
+              <th class="px-5 py-3 text-center">Status</th>
+              <th class="px-5 py-3 text-right sticky right-0 bg-claude-hover/90 border-l border-claude-border backdrop-blur-md">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="leads-tbody" class="divide-y divide-claude-border/60">
+            <!-- Rendered by JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- TOAST -->
+  <div id="toast" class="fixed bottom-6 right-6 bg-claude-text text-white text-sm px-4 py-3 rounded-lg shadow-xl translate-y-20 opacity-0 transition-all duration-300 flex items-center gap-2 pointer-events-none z-50">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toast-text">Action completed</span>
+  </div>
+
+  <!-- LOAD DATA -->
+  <script src="pune_data.js"></script>
+
+  <!-- APP LOGIC -->
+  <script>
+    let allLeads = [];
+    let filteredLeads = [];
+    
+    // State
+    let state = {
+      search: "",
+      sheet: "All",
+      category: "All",
+      city: "All",
+      deployedOnly: false,
+      whatsappOnly: false
+    };
+
+    // Initialization
+    window.addEventListener('DOMContentLoaded', () => {
+      // Data compilation
+      if (typeof sheetsData !== 'undefined') {
+        Object.keys(sheetsData).forEach(sheetName => {
+          sheetsData[sheetName].forEach(lead => {
+            allLeads.push({
+              ...lead,
+              sheetName: sheetName,
+              uniqueId: `${sheetName}-${lead.id}`
+            });
+          });
+        });
+      }
+
+      // Initial Sort: WhatsApp ready on top
+      allLeads.sort((a, b) => {
+        const aValid = hasValidPhone(a.phone);
+        const bValid = hasValidPhone(b.phone);
+        if (aValid && !bValid) return -1;
+        if (!aValid && bValid) return 1;
+        return 0;
+      });
+
+      // Populate Filters
+      populateFilters();
+
+      // Event Listeners
+      document.getElementById('search-input').addEventListener('input', (e) => {
+        state.search = e.target.value.toLowerCase();
+        applyFilters();
+      });
+      document.getElementById('filter-deployed').addEventListener('change', (e) => {
+        state.deployedOnly = e.target.checked;
+        applyFilters();
+      });
+      document.getElementById('filter-whatsapp').addEventListener('change', (e) => {
+        state.whatsappOnly = e.target.checked;
+        applyFilters();
+      });
+      document.getElementById('reset-btn').addEventListener('click', () => {
+        state = { search: "", sheet: "All", category: "All", city: "All", deployedOnly: false, whatsappOnly: false };
+        document.getElementById('search-input').value = "";
+        document.getElementById('filter-deployed').checked = false;
+        document.getElementById('filter-whatsapp').checked = false;
+        populateFilters();
+        applyFilters();
+      });
+
+      applyFilters();
+    });
+
+    // Helper: Valid Phone
+    function getValidPhonesArray(phoneStr) {
+      if (!phoneStr || phoneStr === '—' || phoneStr.toLowerCase().includes('locked') || phoneStr.toLowerCase().includes('via')) return [];
+      const parts = phoneStr.split(/[/,&]/);
+      const valid = [];
+      parts.forEach(p => {
+        const clean = p.replace(/\D/g, '');
+        if (clean.length >= 10) valid.push(clean);
+      });
+      return valid;
+    }
+
+    function hasValidPhone(phoneVal) {
+      return getValidPhonesArray(phoneVal).length > 0;
+    }
+
+    // Helper: Clean Category
+    function getCleanCategory(catStr) {
+      if (!catStr) return "Other";
+      const lower = catStr.toLowerCase();
+      if (lower.includes("salon") || lower.includes("spa") || lower.includes("beauty")) return "Salon";
+      if (lower.includes("real estate") || lower.includes("property")) return "Real Estate";
+      if (lower.includes("photo") || lower.includes("wedding") || lower.includes("maternity") || lower.includes("newborn") || lower.includes("product") || lower.includes("fashion") || lower.includes("commercial")) return "Photography";
+      return "Other";
+    }
+
+    // Helper: Clean Date (from Sheet Name)
+    function getCleanDate(sheetName) {
+      if (!sheetName) return "Unknown Date";
+      const match = sheetName.match(/\d{1,2}(?:st|nd|rd|th)\s+[a-zA-Z]+/i);
+      return match ? match[0] : sheetName;
+    }
+
+    // Helper: Clean City
+    function getCleanCity(cityStr) {
+      if (!cityStr) return "Unknown";
+      let lower = cityStr.toLowerCase();
+      if (lower.includes("mumbai") || lower.includes("juhu") || lower.includes("borivali") || lower.includes("malad") || lower.includes("ghatkopar") || lower.includes("andheri") || lower.includes("vikhroli") || lower.includes("charkop")) return "Mumbai";
+      if (lower.includes("pune") || lower.includes("pimpri") || lower.includes("solapur") || lower.includes("budhwar") || lower.includes("kothrud")) return "Pune";
+      if (lower.includes("delhi")) return "Delhi";
+      if (lower.includes("noida")) return "Noida";
+      if (lower.includes("gurgaon") || lower.includes("gurugram")) return "Gurgaon";
+      if (lower.includes("nashik") || lower.includes("panchavati")) return "Nashik";
+      if (lower.includes("nagpur")) return "Nagpur";
+      if (lower.includes("hyderabad")) return "Hyderabad";
+      if (lower.includes("kolkata")) return "Kolkata";
+      return cityStr.split(',')[0].split('(')[0].trim();
+    }
+
+    function populateFilters() {
+      const dates = new Set(["All"]);
+      const categories = new Set(["All"]);
+      const cities = new Set(["All"]);
+
+      allLeads.forEach(lead => {
+        dates.add(getCleanDate(lead.sheetName));
+        categories.add(getCleanCategory(lead.category));
+        if (lead.city) {
+          cities.add(getCleanCity(lead.city));
+        }
+      });
+
+      renderPills('sheet-filters', dates, state.sheet, (val) => { state.sheet = val; populateFilters(); applyFilters(); });
+      renderPills('category-filters', categories, state.category, (val) => { state.category = val; populateFilters(); applyFilters(); });
+      renderPills('city-filters', cities, state.city, (val) => { state.city = val; populateFilters(); applyFilters(); });
+    }
+
+    function renderPills(containerId, itemsSet, activeValue, callback) {
+      const container = document.getElementById(containerId);
+      container.innerHTML = '';
+      Array.from(itemsSet).forEach(item => {
+        const btn = document.createElement('button');
+        btn.className = `pill-filter px-3 py-1 text-xs rounded-md border transition-colors ${
+          activeValue === item 
+            ? 'active' 
+            : 'bg-transparent border-claude-border text-claude-muted hover:border-claude-muted hover:text-claude-text'
+        }`;
+        
+        let label = item;
+
+        
+        btn.textContent = label;
+        btn.title = item;
+        btn.onclick = () => callback(item);
+        container.appendChild(btn);
+      });
+    }
+
+    function applyFilters() {
+      filteredLeads = allLeads.filter(lead => {
+        // Search
+        const matchesQuery = 
+          (lead.name || "").toLowerCase().includes(state.search) ||
+          (lead.founder || "").toLowerCase().includes(state.search) ||
+          (lead.city || "").toLowerCase().includes(state.search) ||
+          (lead.notes || "").toLowerCase().includes(state.search);
+        
+        // Sheet (now Date)
+        const leadDate = getCleanDate(lead.sheetName);
+        const matchesSheet = state.sheet === "All" || leadDate === state.sheet;
+
+        // Category
+        let leadCat = getCleanCategory(lead.category);
+        const matchesCategory = state.category === "All" || leadCat === state.category;
+        
+        // City
+        let leadCity = getCleanCity(lead.city);
+        const matchesCity = state.city === "All" || leadCity === state.city;
+        
+        // Deployed
+        const hasUrl = lead.url && lead.url.trim() !== '' && lead.url.trim() !== '—';
+        const matchesDeployment = !state.deployedOnly || hasUrl;
+
+        // WhatsApp
+        const matchesWhatsapp = !state.whatsappOnly || hasValidPhone(lead.phone);
+
+        return matchesQuery && matchesSheet && matchesCategory && matchesCity && matchesDeployment && matchesWhatsapp;
+      });
+
+      renderTable();
+      updateStats();
+    }
+
+    function renderTable() {
+      const tbody = document.getElementById('leads-tbody');
+      
+      if (filteredLeads.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="8" class="py-16 text-center text-claude-muted italic">No leads match your criteria.</td></tr>`;
+        return;
+      }
+
+      const rows = filteredLeads.map((lead, i) => {
+        const phoneVal = lead.phone || '—';
+        const emailVal = lead.email || '—';
+        const hasUrl = lead.url && lead.url.trim() !== '' && lead.url.trim() !== '—';
+        const isWhatsappReady = hasValidPhone(phoneVal);
+        const igHandle = lead.instagram && lead.instagram !== '—' ? lead.instagram.replace('@', '').trim() : '';
+
+        return `
+        <tr class="hover:bg-claude-hover transition-colors group">
+          <td class="px-5 py-4 text-claude-muted text-xs">${i + 1}</td>
+          <td class="px-5 py-4">
+            <div class="font-medium text-claude-text">${lead.name}</div>
+            <div class="text-xs text-claude-muted mt-0.5">${lead.founder !== '—' ? lead.founder : 'No founder listed'}</div>
+          </td>
+          <td class="px-5 py-4">
+            <span class="inline-flex items-center px-2 py-1 rounded bg-claude-border/40 text-claude-text text-xs border border-claude-border/80">
+              ${getCleanCategory(lead.category)}
+            </span>
+          </td>
+          <td class="px-5 py-4 text-claude-text">${getCleanCity(lead.city)}</td>
+          <td class="px-5 py-4">
+            <div class="flex items-center gap-2">
+              <i class="fa-brands fa-whatsapp text-emerald-600 ${isWhatsappReady ? 'opacity-100' : 'opacity-20'}" title="${isWhatsappReady ? 'WhatsApp Ready' : 'No Valid Phone'}"></i>
+              <span class="text-xs text-claude-muted">${phoneVal}</span>
+            </div>
+            ${igHandle ? `<div class="text-xs text-claude-muted mt-1 truncate max-w-[150px]">@${igHandle}</div>` : ''}
+          </td>
+          <td class="px-5 py-4 text-xs text-claude-muted max-w-[150px] truncate" title="${lead.sheetName}">${getCleanDate(lead.sheetName)}</td>
+          <td class="px-5 py-4 text-center">
+            ${hasUrl
+              ? '<span class="inline-flex items-center gap-1.5 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-xs font-medium"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Live</span>'
+              : '<span class="inline-flex items-center gap-1.5 px-2 py-1 rounded-full bg-stone-100 text-stone-600 border border-stone-200 text-xs font-medium"><span class="w-1.5 h-1.5 rounded-full bg-stone-400"></span> Pending</span>'
+            }
+          </td>
+          <td class="px-5 py-4 text-right sticky right-0 bg-claude-surface group-hover:bg-claude-hover border-l border-claude-border transition-colors">
+            <div class="flex items-center justify-end gap-2">
+              ${hasUrl 
+                ? `<a href="${lead.url}" target="_blank" class="w-8 h-8 rounded border border-claude-border flex items-center justify-center text-claude-text hover:bg-claude-text hover:text-white transition-colors" title="Open Demo"><i class="fa-solid fa-arrow-up-right-from-square text-xs"></i></a>`
+                : ''
+              }
+              ${getValidPhonesArray(phoneVal).map((p, idx) => 
+                 `<button onclick="outreach('${lead.uniqueId}', 'whatsapp', '${p}')" class="w-8 h-8 rounded border border-emerald-200 bg-emerald-50 flex items-center justify-center text-emerald-600 hover:bg-emerald-600 hover:text-white transition-colors" title="WhatsApp Message ${getValidPhonesArray(phoneVal).length > 1 ? (idx + 1) : ''}"><i class="fa-brands fa-whatsapp text-sm"></i></button>`
+              ).join('')}
+              ${igHandle 
+                ? `<button onclick="outreach('${lead.uniqueId}', 'instagram')" class="w-8 h-8 rounded border border-pink-200 bg-pink-50 flex items-center justify-center text-pink-600 hover:bg-pink-600 hover:text-white transition-colors" title="Instagram Message"><i class="fa-brands fa-instagram text-sm"></i></button>`
+                : ''
+              }
+              <button onclick="outreach('${lead.uniqueId}', 'copy')" class="w-8 h-8 rounded border border-claude-border flex items-center justify-center text-claude-muted hover:text-claude-text hover:bg-claude-border/50 transition-colors" title="Copy Pitch"><i class="fa-regular fa-copy text-xs"></i></button>
+            </div>
+          </td>
+        </tr>
+        `;
+      }).join('');
+
+      tbody.innerHTML = rows;
+    }
+
+    function updateStats() {
+      document.getElementById('stat-total').textContent = filteredLeads.length;
+      document.getElementById('stat-deployed').textContent = filteredLeads.filter(l => l.url && l.url.trim() !== '' && l.url.trim() !== '—').length;
+      document.getElementById('stat-whatsapp').textContent = filteredLeads.filter(l => hasValidPhone(l.phone)).length;
+      document.getElementById('results-count').textContent = `Showing ${filteredLeads.length} prospect${filteredLeads.length !== 1 ? 's' : ''}`;
+    }
+
+    // --- OUTREACH LOGIC ---
+    function getLead(uniqueId) {
+      return allLeads.find(l => l.uniqueId === uniqueId);
+    }
+
+    function buildPitch(lead) {
+      let founderName = 'Team';
+      if (lead.founder && lead.founder !== '—' && lead.founder.trim() !== '') {
+        const fLower = lead.founder.toLowerCase();
+        const isGeneric = ['co-founder', 'founder', 'team', 'owner', 'there', 'n/a', 'null'].some(k => fLower.includes(k));
+        if (!isGeneric) founderName = lead.founder.trim();
+      }
+      
+      const appreciation = (lead.category || '').toLowerCase().includes('wedding') 
+        ? 'your wedding photographs and stories are incredible.'
+        : 'your work and portfolio look incredible.';
+        
+      let problem = 'I feel a strong booking system would help you scale your business and automate lead qualification.';
+      if (lead.notes && lead.notes.toLowerCase().includes('no online booking')) {
+        problem = 'I noticed your website lacks an online booking funnel, meaning inquiries have to be handled manually. A strong booking system would help solve this.';
+      }
+
+      const url = (lead.url && lead.url !== '—') ? lead.url : '';
+      return `Hey ${founderName},\n\nI found you on IG. I spent some time scrolling through your feed—${appreciation}\n\n${problem}\n\nWe built a personalized showcase demo for ${lead.name} to show how this works: ${url}\n\nWould love to get your feedback on this.`;
+    }
+
+    function outreach(uniqueId, method, specificPhone = null) {
+      const lead = getLead(uniqueId);
+      if (!lead) return;
+      
+      const pitch = buildPitch(lead);
+
+      if (method === 'whatsapp') {
+        const cleanPhone = specificPhone ? specificPhone : lead.phone.replace(/\D/g, '');
+        const formattedPhone = cleanPhone.length === 10 ? "91" + cleanPhone : cleanPhone;
+        window.open(`https://wa.me/${formattedPhone}?text=${encodeURIComponent(pitch)}`, '_blank');
+      } else if (method === 'instagram') {
+        navigator.clipboard.writeText(pitch).then(() => {
+          showToast("Pitch copied! Opening Instagram...");
+          setTimeout(() => {
+            const igHandle = lead.instagram.replace('@', '').trim();
+            window.open(`https://instagram.com/${igHandle}/`, '_blank');
+          }, 600);
+        });
+      } else if (method === 'copy') {
+        navigator.clipboard.writeText(pitch).then(() => {
+          showToast("Outreach pitch copied to clipboard!");
+        });
+      }
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      document.getElementById('toast-text').textContent = msg;
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0');
+      }, 3000);
+    }
+
+    function toggleDrawer() {
+      const drawer = document.getElementById('side-drawer');
+      const overlay = document.getElementById('drawer-overlay');
+      const isClosed = drawer.classList.contains('translate-x-full');
+      
+      if (isClosed) {
+        drawer.classList.remove('translate-x-full');
+        overlay.classList.remove('hidden');
+        // small delay to allow display:block to apply before animating opacity
+        setTimeout(() => overlay.classList.remove('opacity-0'), 10);
+      } else {
+        drawer.classList.add('translate-x-full');
+        overlay.classList.add('opacity-0');
+        setTimeout(() => overlay.classList.add('hidden'), 300); // Wait for transition
+      }
+    }
+  </script>
+</body>
+</html>

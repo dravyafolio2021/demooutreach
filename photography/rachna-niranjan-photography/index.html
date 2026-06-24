@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rachna & Niranjan Photography — Award-Winning Luxury Wedding Photojournalism | Rachna & Niranjan Photography</title>
-  <meta name="description" content="Co-founder led luxury wedding photojournalism by Rachna & Niranjan Photography. Based in Pune, Maharashtra, filming worldwide. Capturing authentic, raw wedding stories." />
-  <meta name="keywords" content="wedding photography Pune, Maharashtra, Rachna & Niranjan Photography, candid wedding photographer India, Rachna & Niranjan Photography, photojournalistic wedding photography" />
+  <title>Rachna & Niranjan Photography — Award-Winning Luxury Wedding Photojournalism | Rachna & Niranjan</title>
+  <meta name="description" content="Co-founder led luxury wedding photojournalism by Rachna & Niranjan. Based in Pune, filming worldwide. Capturing authentic, raw wedding stories." />
+  <meta name="keywords" content="wedding photography Pune, Rachna & Niranjan Photography, candid wedding photographer India, Rachna & Niranjan, photojournalistic wedding photography" />
   
   <!-- Open Graph -->
   <meta property="og:title" content="Rachna & Niranjan Photography — Luxury Wedding Photojournalism & Documentary Stories" />
-  <meta property="og:description" content="Co-founder led luxury wedding photojournalism. Rachna & Niranjan Photography document your celebration into an award-winning visual journal." />
+  <meta property="og:description" content="Co-founder led luxury wedding photojournalism. Rachna & Niranjan document your celebration into an award-winning visual journal." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://demo.claraverse.in/defaults/photography/hero_thumb.jpg" />
+  <meta property="og:image" content="https://demo.claraverse.in/rachna-niranjan-photography/assets/hero_thumb.jpg" />
   <meta property="og:url" content="https://demo.claraverse.in/rachna-niranjan-photography" />
 
   <!-- Font Setup: Inter -->
@@ -227,7 +227,7 @@
 
         <!-- Subtext -->
         <p class="text-neutral-300 text-xs sm:text-sm font-light leading-relaxed mb-8 max-w-lg">
-          Rachna & Niranjan Photography is a co-founder led wedding photography collective. We document and capture strictly 15 commissions a year to craft your celebration into an award-winning photojournalistic story.
+          Rachna & Niranjan Photography is a co-founder led wedding photography collective. We document and capture strictly 25 commissions a year to craft your celebration into an award-winning photojournalistic story.
         </p>
 
         <!-- Interactive Checkbox options styled as glassmorphic badges (Riverside Style) -->
@@ -401,7 +401,7 @@
             Non-Intrusive Capture.
           </h2>
           <p class="text-neutral-600 text-xs sm:text-sm font-light leading-relaxed mb-6">
-            A wedding story cannot be choreographed by third-party contractors. Rachna & Niranjan Photography is co-founder led: Rachna & Niranjan Photography personally document the frames, prime optics, and color grading of your stories.
+            A wedding story cannot be choreographed by third-party contractors. Rachna & Niranjan Photography is co-founder led: Rachna & Niranjan personally document the frames, prime optics, and color grading of your stories.
           </p>
           <p class="text-neutral-600 text-xs sm:text-sm font-light leading-relaxed mb-8">
             We focus on keeping families comfortable, capturing ambient moments naturally, and preserving raw emotion completely free from forced posing or awkward choreography.
@@ -1290,10 +1290,10 @@
             The Bidai Farewell.
           </h2>
           <p class="text-neutral-600 text-xs sm:text-sm font-light leading-relaxed mb-6">
-            At Rachna & Niranjan Photography, our photojournalistic method shines in transition points. The Bidai farewell represents an intense emotional crossroad that choreographed crews often in Pune, Maharashtra often obstruct or miss.
+            At Rachna & Niranjan Photography, our photojournalistic method shines in transition points. The Bidai farewell represents an intense emotional crossroad that choreographed crews often in Pune often obstruct or miss.
           </p>
           <p class="text-neutral-600 text-xs sm:text-sm font-light leading-relaxed mb-8">
-            Rachna & Niranjan Photography operate at a distance with fast prime telephoto optics to ensure the family experiences these emotional thresholds privately.
+            Rachna & Niranjan operate at a distance with fast prime telephoto optics to ensure the family experiences these emotional thresholds privately.
           </p>
           
           <div class="border-t border-neutral-200 pt-6">
@@ -1389,7 +1389,7 @@
                 <span class="text-xs font-mono font-bold text-brand-bronze" id="preview-cost">Custom Bespoke Quote</span>
               </div>
               <p class="text-[8.5px] text-neutral-400 font-light mt-1.5 leading-relaxed">
-                *Estimates include full Rachna & Niranjan Photography co-founder coverage, processed digital catalogs, and travel logs. Flight bookings calculated on itinerary finalization.
+                *Estimates include full Rachna & Niranjan co-founder coverage, processed digital catalogs, and travel logs. Flight bookings calculated on itinerary finalization.
               </p>
             </div>
 
@@ -1702,6 +1702,47 @@
     }
 
     window.addEventListener('scroll', updateHeaderColors);
+
+    // Interactive Camera HUD Status logs toggle function
+    function toggleHeroOption(type, checked) {
+      if (type === 'raw') {
+        const el = document.getElementById('tech-format');
+        if (el) {
+          el.textContent = checked ? '4K PRORES RAW' : '1080P MP4';
+          el.className = checked ? 'text-brand-gold font-bold transition-all duration-300' : 'text-white/30 font-bold transition-all duration-300';
+        }
+      } else if (type === 'audio') {
+        const el = document.getElementById('tech-audio');
+        if (el) {
+          el.textContent = checked ? 'AMBIENT SOUND' : 'MUTED AUDIO';
+          el.className = checked ? 'text-brand-gold font-bold transition-all duration-300' : 'text-white/30 font-bold transition-all duration-300';
+        }
+      } else if (type === 'lens') {
+        const el = document.getElementById('tech-lens');
+        if (el) {
+          el.textContent = checked ? 'PRIME LENSES' : 'ZOOM LENSES';
+          el.className = checked ? 'text-brand-gold font-bold transition-all duration-300' : 'text-white/30 font-bold transition-all duration-300';
+        }
+      } else if (type === 'director') {
+        const el = document.getElementById('tech-dir');
+        if (el) {
+          el.textContent = checked ? 'CO-FOUNDER LED' : 'CREW ONLY';
+          el.className = checked ? 'text-brand-gold font-bold transition-all duration-300' : 'text-white/30 font-bold transition-all duration-300';
+        }
+      } else if (type === 'calendar') {
+        const el = document.getElementById('tech-limit');
+        if (el) {
+          el.textContent = checked ? '25 LIMIT' : 'UNLIMITED';
+          el.className = checked ? 'text-brand-gold font-bold transition-all duration-300' : 'text-white/30 font-bold transition-all duration-300';
+        }
+      } else if (type === 'capture') {
+        const el = document.getElementById('tech-capture');
+        if (el) {
+          el.textContent = checked ? 'CANDID' : 'POSED & STAGED';
+          el.className = checked ? 'text-brand-gold font-bold transition-all duration-300' : 'text-white/30 font-bold transition-all duration-300';
+        }
+      }
+    }
 
     // Mobile Hamburger Toggle
     if (menuBtn && mobileMenu) {

@@ -4,14 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Bridal Photography — Award-Winning Luxury Wedding Photojournalism | Team</title>
-  <meta name="description" content="Co-founder led luxury wedding photojournalism by Team. Based in Pune + Mumbai Branch, filming worldwide. Capturing authentic, raw wedding stories." />
-  <meta name="keywords" content="wedding photography Pune + Mumbai Branch, The Bridal Photography, candid wedding photographer India, Team, photojournalistic wedding photography" />
+  <meta name="description" content="Co-founder led luxury wedding photojournalism by Team. Based in Pune, filming worldwide. Capturing authentic, raw wedding stories." />
+  <meta name="keywords" content="wedding photography Pune, The Bridal Photography, candid wedding photographer India, Team, photojournalistic wedding photography" />
   
   <!-- Open Graph -->
   <meta property="og:title" content="The Bridal Photography — Luxury Wedding Photojournalism & Documentary Stories" />
   <meta property="og:description" content="Co-founder led luxury wedding photojournalism. Team document your celebration into an award-winning visual journal." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://demo.claraverse.in/defaults/photography/hero_thumb.jpg" />
+  <meta property="og:image" content="https://demo.claraverse.in/the-bridal-photography/assets/hero_thumb.jpg" />
   <meta property="og:url" content="https://demo.claraverse.in/the-bridal-photography" />
 
   <!-- Font Setup: Inter -->
@@ -227,7 +227,7 @@
 
         <!-- Subtext -->
         <p class="text-neutral-300 text-xs sm:text-sm font-light leading-relaxed mb-8 max-w-lg">
-          The Bridal Photography is a co-founder led wedding photography collective. We document and capture strictly 15 commissions a year to craft your celebration into an award-winning photojournalistic story.
+          The Bridal Photography is a co-founder led wedding photography collective. We document and capture strictly 25 commissions a year to craft your celebration into an award-winning photojournalistic story.
         </p>
 
         <!-- Interactive Checkbox options styled as glassmorphic badges (Riverside Style) -->
@@ -1290,7 +1290,7 @@
             The Bidai Farewell.
           </h2>
           <p class="text-neutral-600 text-xs sm:text-sm font-light leading-relaxed mb-6">
-            At The Bridal Photography, our photojournalistic method shines in transition points. The Bidai farewell represents an intense emotional crossroad that choreographed crews often in Pune + Mumbai Branch often obstruct or miss.
+            At The Bridal Photography, our photojournalistic method shines in transition points. The Bidai farewell represents an intense emotional crossroad that choreographed crews often in Pune often obstruct or miss.
           </p>
           <p class="text-neutral-600 text-xs sm:text-sm font-light leading-relaxed mb-8">
             Team operate at a distance with fast prime telephoto optics to ensure the family experiences these emotional thresholds privately.
@@ -1702,6 +1702,47 @@
     }
 
     window.addEventListener('scroll', updateHeaderColors);
+
+    // Interactive Camera HUD Status logs toggle function
+    function toggleHeroOption(type, checked) {
+      if (type === 'raw') {
+        const el = document.getElementById('tech-format');
+        if (el) {
+          el.textContent = checked ? '4K PRORES RAW' : '1080P MP4';
+          el.className = checked ? 'text-brand-gold font-bold transition-all duration-300' : 'text-white/30 font-bold transition-all duration-300';
+        }
+      } else if (type === 'audio') {
+        const el = document.getElementById('tech-audio');
+        if (el) {
+          el.textContent = checked ? 'AMBIENT SOUND' : 'MUTED AUDIO';
+          el.className = checked ? 'text-brand-gold font-bold transition-all duration-300' : 'text-white/30 font-bold transition-all duration-300';
+        }
+      } else if (type === 'lens') {
+        const el = document.getElementById('tech-lens');
+        if (el) {
+          el.textContent = checked ? 'PRIME LENSES' : 'ZOOM LENSES';
+          el.className = checked ? 'text-brand-gold font-bold transition-all duration-300' : 'text-white/30 font-bold transition-all duration-300';
+        }
+      } else if (type === 'director') {
+        const el = document.getElementById('tech-dir');
+        if (el) {
+          el.textContent = checked ? 'CO-FOUNDER LED' : 'CREW ONLY';
+          el.className = checked ? 'text-brand-gold font-bold transition-all duration-300' : 'text-white/30 font-bold transition-all duration-300';
+        }
+      } else if (type === 'calendar') {
+        const el = document.getElementById('tech-limit');
+        if (el) {
+          el.textContent = checked ? '25 LIMIT' : 'UNLIMITED';
+          el.className = checked ? 'text-brand-gold font-bold transition-all duration-300' : 'text-white/30 font-bold transition-all duration-300';
+        }
+      } else if (type === 'capture') {
+        const el = document.getElementById('tech-capture');
+        if (el) {
+          el.textContent = checked ? 'CANDID' : 'POSED & STAGED';
+          el.className = checked ? 'text-brand-gold font-bold transition-all duration-300' : 'text-white/30 font-bold transition-all duration-300';
+        }
+      }
+    }
 
     // Mobile Hamburger Toggle
     if (menuBtn && mobileMenu) {
