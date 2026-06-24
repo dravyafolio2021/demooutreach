@@ -467,6 +467,10 @@
     }
 
     function buildPitch(lead) {
+      if (lead.pitch && lead.pitch.trim() !== '' && lead.pitch.trim() !== '—') {
+        return lead.pitch;
+      }
+
       let founderName = 'Team';
       if (lead.founder && lead.founder !== '—' && lead.founder.trim() !== '') {
         const fLower = lead.founder.toLowerCase();
