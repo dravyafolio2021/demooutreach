@@ -466,9 +466,29 @@
       return allLeads.find(l => l.uniqueId === uniqueId);
     }
 
+    function formatOutreachPitch(pitch) {
+      if (!pitch) return '';
+      pitch = pitch.trim();
+      
+      const greetingMatch = pitch.match(/^(Hey\s+[^,!?]+[,!?])\s*(.*)/is);
+      if (!greetingMatch) return pitch;
+      
+      const greeting = greetingMatch[1].trim();
+      const rest = greetingMatch[2].trim();
+      
+      const sentences = rest.split(/(?<=[.!?])\s+/);
+      if (sentences.length < 2) return pitch;
+      
+      const appreciation = sentences[0].trim();
+      const feedback = sentences[sentences.length - 1].trim();
+      const problemAndDemo = sentences.slice(1, sentences.length - 1).map(s => s.trim()).join(' ');
+      
+      return `${greeting}\n\n${appreciation}\n\n${problemAndDemo}\n\n${feedback}`;
+    }
+
     function buildPitch(lead) {
       if (lead.pitch && lead.pitch.trim() !== '' && lead.pitch.trim() !== '—') {
-        return lead.pitch;
+        return formatOutreachPitch(lead.pitch);
       }
 
       let founderName = 'Team';
