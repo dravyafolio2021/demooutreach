@@ -7,12 +7,13 @@ const punePhotographers100 = [
     "category": "Wedding",
     "instagram": "@punedusk",
     "websiteStatus": "Has website (punedusk.com) — NO booking form",
-    "phone": "—",
+    "phone": "+91-97679-98811",
     "email": "info@punedusk.com",
     "notes": "Founded by Abhay Lohokare (Vancouver Film School). Candid wedding & cinematic films. No online booking.",
     "url": "https://demo.claraverse.in/pune-dusk-photography",
-    "pitch": "Hey Abhay, I'm truly impressed by the candid and cinematic storytelling in Pune Dusk Photography's wedding portfolio. I noticed your website currently doesn't feature an online booking system, which often means managing inquiries manually. To show you how seamless this could be, we've crafted a personalized showcase demo just for Pune Dusk Photography: https://demo.claraverse.in/pune-dusk-photography. Would love to get your feedback on this.",
-    "slug": "pune-dusk-photography"
+    "pitch": "Hey Abhay,\n\nI came across Pune Dusk Photography on Instagram and absolutely love your candid wedding & cinematic film storytelling!\n\nI noticed your website, punedusk.com, doesn't have an online booking system, which often means handling inquiries manually. I've put together a quick demo for you here: https://demo.claraverse.in/pune-dusk-photography\n\nWould love to hear your thoughts on this!",
+    "slug": "pune-dusk-photography",
+    "facebook": "https://www.facebook.com/puneduskphotogrphy"
   },
   {
     "id": 501,
@@ -22,12 +23,13 @@ const punePhotographers100 = [
     "category": "Wedding",
     "instagram": "@ajinkya_jadhav_photography",
     "websiteStatus": "Has website (ajinkyajadhav.co.in) — NO booking form",
-    "phone": "—",
+    "phone": "+91-99750-70006",
     "email": "info@ajinkyajadhav.co.in",
     "notes": "Artistic portraits & storytelling wedding coverage. No booking system.",
     "url": "https://demo.claraverse.in/ajinkya-jadhav-photography",
-    "pitch": "Hey Ajinkya, I'm truly impressed by your artistic portraits and storytelling approach to wedding photography; your work beautifully captures those special moments. I noticed your website, ajinkyajadhav.co.in, doesn't feature an online booking system, which likely means you're handling all inquiries and bookings manually. We've actually put together a personalized demo for you at https://demo.claraverse.in/ajinkya-jadhav-photography to show how seamless this could be. Would love to get your feedback on this.",
-    "slug": "ajinkya-jadhav-photography"
+    "pitch": "Hey Ajinkya,\n\nFound your incredible work on Instagram and absolutely love your artistic portraits and storytelling wedding coverage!\n\nNoticed your website ajinkyajadhav.co.in doesn't have an online booking system, so I put together a quick demo at https://demo.claraverse.in/ajinkyajadhav-photography to show how you could automate this.\n\nWould love to hear your thoughts on this!",
+    "slug": "ajinkya-jadhav-photography",
+    "facebook": "https://www.facebook.com/ajinkyajadhavphotography"
   },
   {
     "id": 502,
@@ -41,8 +43,9 @@ const punePhotographers100 = [
     "email": "info@rachnaniranjan.com",
     "notes": "Husband-wife duo. Documentary style. Destination weddings. Phone + email verified.",
     "url": "https://demo.claraverse.in/rachna-niranjan-photography",
-    "pitch": "Hey Rachna & Niranjan, Your documentary style photography beautifully captures the authentic emotions of each moment, especially in your destination weddings. I noticed your website, rachnaniranjan.com, doesn't currently offer an online booking system, which often means managing inquiries and bookings manually. We've actually built a personalized showcase demo specifically for Rachna & Niranjan Photography to illustrate how seamless this could be: https://demo.claraverse.in/rachna-niranjan-photography. Would love to get your feedback on this.",
-    "slug": "rachna-niranjan-photography"
+    "pitch": "Hey Rachna & Niranjan,\n\nWe stumbled upon your incredible documentary-style wedding and pre-wedding photography on Instagram and were absolutely captivated by your work, especially your stunning destination wedding captures!\n\nWe noticed your beautiful website, rachnaniranjan.com, doesn't currently offer an online booking system, which often means manual scheduling. We've put together a quick demo for you at https://demo.claraverse.in/rachna-niranjan-photography to show how you could automate and streamline your booking process.\n\nWould love to hear your thoughts on this!",
+    "slug": "rachna-niranjan-photography",
+    "facebook": "https://www.facebook.com/rachnaniranjan"
   },
   {
     "id": 503,
@@ -52,12 +55,13 @@ const punePhotographers100 = [
     "category": "Wedding",
     "instagram": "@knotsbyamp",
     "websiteStatus": "Has website (knotsbyamp.com) — NO booking form",
-    "phone": "—",
+    "phone": "+91-99870-71831",
     "email": "info@knotsbyamp.com",
     "notes": "BITS Pilani & ILS Law alumni. Storytelling approach. Ritz Carlton Pune featured.",
     "url": "https://demo.claraverse.in/knotsbyamp",
-    "pitch": "Hey Anupam and Soumi, Your storytelling approach to wedding photography, beautifully capturing genuine emotions, truly stands out. I noticed your website, knotsbyamp.com, doesn't currently feature an online booking system, which often means manual handling of inquiries. We've actually built a personalized showcase demo for KnotsbyAMP at https://demo.claraverse.in/knotsbyamp to illustrate how seamless this could be. Would love to get your feedback on this.",
-    "slug": "knotsbyamp"
+    "pitch": "Hey Anupam and Soumi,\n\nLove your cinematic wedding storytelling on Instagram, especially how you capture those candid moments at places like the Ritz Carlton Pune!\n\nNoticed your website, knotsbyamp.com, doesn't have an online booking system, meaning you're likely handling inquiries manually. We've built a custom demo for KnotsbyAMP at https://demo.claraverse.in/knotsbyamp to automate and streamline your client bookings.\n\nWould love to hear your thoughts on this!",
+    "slug": "knotsbyamp",
+    "facebook": "www.facebook.com/KnotsbyAMP"
   },
   {
     "id": 504,
@@ -67,12 +71,13 @@ const punePhotographers100 = [
     "category": "Wedding/Pre-Wedding",
     "instagram": "@mh12weddings",
     "websiteStatus": "Has website (mh12weddings.com) — NO booking form",
-    "phone": "—",
+    "phone": "+91-88309-89454",
     "email": "contact@mh12weddings.com",
     "notes": "Vibrant & creative wedding photography. Candid + cinematic films. No booking.",
     "url": "https://demo.claraverse.in/mh12-weddings",
-    "pitch": "Hey Team, Your vibrant and creative wedding photography, especially the candid and cinematic style, truly stands out. I noticed your beautiful website, mh12weddings.com, doesn't currently offer an online booking system, which often means handling inquiries manually. We've actually put together a personalized showcase demo for MH12 Weddings to illustrate how seamless online booking could be: https://demo.claraverse.in/mh12-weddings. Would love to get your feedback on this.",
-    "slug": "mh12-weddings"
+    "pitch": "Hey MH12 Weddings Team,\n\nJust stumbled upon your incredible work on Instagram and absolutely love your vibrant & creative wedding photography, especially your candid + cinematic films!\n\nNoticed you're handling bookings manually despite having a great website – imagine automating that process! I've put together a quick demo for you here: https://demo.claraverse.in/mh12-weddings\n\nWould love to hear your thoughts on this!",
+    "slug": "mh12-weddings",
+    "facebook": "—"
   },
   {
     "id": 505,
@@ -82,12 +87,13 @@ const punePhotographers100 = [
     "category": "Wedding",
     "instagram": "@amouraffairs",
     "websiteStatus": "Has website (amouraffairs.in) — NO booking form",
-    "phone": "—",
+    "phone": "+91-99210-00052",
     "email": "hello@amouraffairs.in",
     "notes": "Romantic storytelling & elegant wedding visuals. No online booking.",
     "url": "https://demo.claraverse.in/amour-affairs-photography",
-    "pitch": "Hey Team, Your romantic storytelling and elegant wedding visuals truly capture the essence of each couple's special day. I noticed your beautiful website, amouraffairs.in, currently handles bookings manually without an online system. We've actually built a personalized showcase demo for Amour Affairs Photography to illustrate how seamless online booking could be: https://demo.claraverse.in/amour-affairs-photography Would love to get your feedback on this.",
-    "slug": "amour-affairs-photography"
+    "pitch": "Hey Amour Affairs Team,\n\nYour ability to capture romantic storytelling and elegant wedding visuals on Instagram is truly captivating!\n\nI noticed your beautiful website (amouraffairs.in) doesn't have an online booking system, which often means manual booking processes. We've put together a tailored demo for Amour Affairs Photography here: https://demo.claraverse.in/amour-affairs-photography to show how you could automate this.\n\nWould love to hear your thoughts on this!",
+    "slug": "amour-affairs-photography",
+    "facebook": "—"
   },
   {
     "id": 506,
@@ -97,12 +103,13 @@ const punePhotographers100 = [
     "category": "Wedding",
     "instagram": "@thepicturetalk",
     "websiteStatus": "Has website (thepicturetalk.myportfolio.com) — NO booking form",
-    "phone": "—",
+    "phone": "+91-80478-44001",
     "email": "info@thepicturetalk.com",
     "notes": "Documentary style. Natural candid moments. myportfolio subdomain.",
     "url": "https://demo.claraverse.in/the-picture-talk-photography",
-    "pitch": "Hey Team, I was really impressed by the natural, candid moments you capture in your documentary-style wedding photography. I noticed your website lacks an online booking system, meaning bookings are handled manually. We've built a personalized showcase demo specifically for The Picture Talk Photography to show how this could streamline your process: https://demo.claraverse.in/the-picture-talk-photography. Would love to get your feedback on this.",
-    "slug": "the-picture-talk-photography"
+    "pitch": "Hey The Picture Talk Team,\n\nYour documentary style, natural candid wedding moments on Instagram are truly captivating!\n\nI noticed your beautiful portfolio on myportfolio.com, but it looks like you're handling bookings manually. We've put together a custom demo for you at https://demo.claraverse.in/the-picture-talk-photography to show how you can automate and streamline this.\n\nWould love to hear your thoughts on this!",
+    "slug": "the-picture-talk-photography",
+    "facebook": "—"
   },
   {
     "id": 507,
@@ -116,8 +123,9 @@ const punePhotographers100 = [
     "email": "contact@frozenmemories.in",
     "notes": "Cinematic wedding storytelling. Emotional & creative visuals. No booking.",
     "url": "https://demo.claraverse.in/frozen-memories",
-    "pitch": "Hey Team, Your cinematic wedding storytelling and emotional visuals at Frozen Memories truly stand out. I noticed your website, frozenmemories.in, doesn't have an online booking system, which likely means you're handling all inquiries manually. We've actually put together a personalized demo for Frozen Memories to show how seamless this could be: https://demo.claraverse.in/frozen-memories Would love to get your feedback on this.",
-    "slug": "frozen-memories"
+    "pitch": "Hey Frozen Memories Team,\n\nAbsolutely love the cinematic wedding storytelling and emotional visuals you capture on Instagram!\n\nNoticed you don't have a booking form on frozenmemories.in, which often means manual booking. We've built a custom demo for you at https://demo.claraverse.in/frozen-memories to automate this.\n\nWould love to hear your thoughts on how this could help!",
+    "slug": "frozen-memories",
+    "facebook": "—"
   },
   {
     "id": 508,
@@ -127,12 +135,13 @@ const punePhotographers100 = [
     "category": "Wedding",
     "instagram": "@blissmemoir",
     "websiteStatus": "Has website (blissmemoir.com) — NO booking form",
-    "phone": "—",
+    "phone": "+91 086051 13018",
     "email": "info@blissmemoir.com",
     "notes": "Warm & emotional wedding photography. Candid + artistic portraits. No booking.",
     "url": "https://demo.claraverse.in/bliss-memoir-photography-films",
-    "pitch": "Hey Team, Your portfolio at Bliss Memoir Photography & Films truly captures the warm, emotional essence of weddings with a beautiful blend of candid and artistic portraits. I noticed your website lacks an online booking system, meaning bookings are handled manually. We've actually built a personalized showcase demo specifically for you to illustrate how seamlessly this could integrate: https://demo.claraverse.in/bliss-memoir-photography-films. Would love to get your feedback on this.",
-    "slug": "bliss-memoir-photography-films"
+    "pitch": "Hey Bliss Memoir Team,\n\nYour warm, emotional wedding photography and candid, artistic portraits on Instagram are truly captivating!\n\nI noticed your beautiful work on blissmemoir.com, but it looks like you're handling bookings manually. We've tailored a solution to automate and streamline this for you: https://demo.claraverse.in/bliss-memoir-photography-films\n\nWould love to hear your thoughts on this!",
+    "slug": "bliss-memoir-photography-films",
+    "facebook": "—"
   },
   {
     "id": 509,
@@ -142,12 +151,13 @@ const punePhotographers100 = [
     "category": "Wedding/Cinematography",
     "instagram": "@capture_the_image_films",
     "websiteStatus": "No website",
-    "phone": "—",
+    "phone": "+91-96650-57955",
     "email": "info@capturetheimagefilms.com",
     "notes": "Cinematic wedding storytelling. Instagram-only presence. No booking.",
     "url": "https://demo.claraverse.in/capture-the-image-films",
-    "pitch": "Hey Team, Your cinematic wedding storytelling on Instagram is truly captivating. I noticed you don't have a website, which means managing bookings and showcasing your incredible work might be more challenging than it needs to be. We've actually built a personalized showcase demo specifically for Capture The Image Films to illustrate how seamless this could be: https://demo.claraverse.in/capture-the-image-films Would love to get your feedback on this.",
-    "slug": "capture-the-image-films"
+    "pitch": "Hey Team,\n\nYour cinematic wedding storytelling on Instagram is truly captivating.\n\nNo website? We built a demo to show seamless bookings & showcases: https://demo.claraverse.in/capture-the-image-films\n\nWould love your feedback!",
+    "slug": "capture-the-image-films",
+    "facebook": "—"
   },
   {
     "id": 510,
@@ -161,8 +171,9 @@ const punePhotographers100 = [
     "email": "—",
     "notes": "Award-winning wedding & maternity. 4.9★ 1179 reviews. Packages from ₹6000. Phone verified.",
     "url": "https://demo.claraverse.in/the-bridal-photography",
-    "pitch": "Hey Team, your award-winning candid and heartfelt approach to wedding and maternity photography truly stands out. I noticed your website lacks an online booking system, meaning bookings are handled manually. We even built a personalized showcase demo specifically for you to show how this works: https://demo.claraverse.in/the-bridal-photography. Would love to get your feedback on this.",
-    "slug": "the-bridal-photography"
+    "pitch": "Hey The Bridal Photography Team,\n\nYour award-winning wedding and pre-wedding storytelling on Instagram is truly captivating!\n\nNoticed your beautiful website (thebridal.photography) doesn't have an online booking form, meaning you're likely handling inquiries manually. We've created a custom demo to automate this for you: https://demo.claraverse.in/the-bridal-photography\n\nWould love to hear your thoughts on this!",
+    "slug": "the-bridal-photography",
+    "facebook": "https://www.facebook.com/thebridal.photography/"
   },
   {
     "id": 511,
@@ -176,8 +187,9 @@ const punePhotographers100 = [
     "email": "—",
     "notes": "8+ years. 100+ weddings. Balewadi studio. Phone verified. WhatsApp available.",
     "url": "https://demo.claraverse.in/pixelworks-photography",
-    "pitch": "Hey Team, Your extensive experience in wedding and pre-wedding photography truly shines through, capturing such beautiful and candid moments for couples. I noticed your website, pixelworks.in, doesn't currently offer an online booking system, which often means managing inquiries and bookings manually. We've actually built a personalized showcase demo specifically for Pixelworks Photography to illustrate how seamless online booking could be: https://demo.claraverse.in/pixelworks-photography. Would love to get your feedback on this.",
-    "slug": "pixelworks-photography"
+    "pitch": "Hey Pixelworks Team,\n\nYour stunning wedding and pre-wedding photography on Instagram truly captures the magic of each couple's special day!\n\nI noticed your website, pixelworks.in, doesn't have an online booking system, meaning you're likely handling inquiries manually. We've created a tailored demo to automate this for you: https://demo.claraverse.in/pixelworks-photography\n\nWould love to hear your thoughts on this!",
+    "slug": "pixelworks-photography",
+    "facebook": "—"
   },
   {
     "id": 512,
@@ -187,12 +199,13 @@ const punePhotographers100 = [
     "category": "Wedding",
     "instagram": "@aniketkanade",
     "websiteStatus": "Has website (aniketkanadephotography.com) — NO booking form",
-    "phone": "—",
+    "phone": "+91-99215-25355",
     "email": "—",
     "notes": "Best Wedding Photographer in Pune. Candid & pre-wedding specialist. No booking.",
     "url": "https://demo.claraverse.in/aniket-kanade-photography",
-    "pitch": "Hey Aniket, I'm truly impressed by your candid and pre-wedding photography, capturing such genuine moments. I noticed your website lacks an online booking system, meaning bookings are handled manually. We've built a personalized showcase demo specifically for you to illustrate this: https://demo.claraverse.in/aniket-kanade-photography. Would love to get your feedback on this.",
-    "slug": "aniket-kanade-photography"
+    "pitch": "Hey Aniket,\n\nYour stunning candid and pre-wedding shots on Instagram are truly captivating!\n\nI noticed your website, aniketkanadephotography.com, doesn't have an online booking system, meaning you're likely handling inquiries manually. I put together a quick demo for you here: https://demo.claraverse.in/aniket-kanade-photography\n\nWould love to hear your thoughts on this!",
+    "slug": "aniket-kanade-photography",
+    "facebook": "https://www.facebook.com/aniketkanadephotography"
   },
   {
     "id": 513,
@@ -202,12 +215,13 @@ const punePhotographers100 = [
     "category": "Wedding/Event/Product",
     "instagram": "@eyespixel",
     "websiteStatus": "Has website (eyespixel.com) — NO booking form",
-    "phone": "—",
+    "phone": "+91-79032-43332",
     "email": "—",
     "notes": "Lead photographer Setu Raj. Pre-wedding, wedding, event, product, food, newborn. No booking.",
     "url": "https://demo.claraverse.in/eyes-pixel-photography",
-    "pitch": "Hey Setu Raj, Your portfolio at Eyes Pixel Photography, especially the heartwarming newborn shots and vibrant wedding captures, truly stands out with its beautiful storytelling. I noticed your website lacks an online booking system, meaning bookings are handled manually. We've built a personalized showcase demo specifically for you to illustrate how seamless this could be: https://demo.claraverse.in/eyes-pixel-photography Would love to get your feedback on this.",
-    "slug": "eyes-pixel-photography"
+    "pitch": "Hey Setu Raj,\n\nI came across Eyes Pixel Photography on Instagram and was genuinely impressed by your candid wedding storytelling and the incredibly creative newborn baby photoshoot setups!\n\nI noticed your website, eyespixel.com, doesn't have an online booking system, meaning you're likely handling inquiries manually. I've put together a custom demo for you at https://demo.claraverse.in/eyes-pixel-photography to show how you can automate and streamline this process.\n\nWould love to hear your thoughts on this!",
+    "slug": "eyes-pixel-photography",
+    "facebook": "—"
   },
   {
     "id": 514,
@@ -221,8 +235,9 @@ const punePhotographers100 = [
     "email": "vendors@wedmegood.com",
     "notes": "183 wedding photographers listed. Directory approach. No direct booking.",
     "url": "https://demo.claraverse.in/wedmegood-pune-photographers",
-    "pitch": "Hey Team, we're really impressed with the extensive and diverse collection of wedding photographers you've curated for Pune. I noticed your directory approach means individual photographers might lack a streamlined online booking system, potentially leading to manual booking processes. We've built a personalized showcase demo specifically for WedMeGood Pune Photographers to illustrate how this could work: https://demo.claraverse.in/wedmegood-pune-photographers. Would love to get your feedback on this.",
-    "slug": "wedmegood-pune-photographers"
+    "pitch": "Hey WedMeGood Pune Photographers Team,\n\nJust came across your incredible wedding photography on Instagram – your ability to capture those raw, emotional moments is truly captivating!\n\nIt looks like managing bookings might be a manual process for you, especially with the directory setup, so I put together a quick demo to show how you could automate and streamline everything: https://demo.claraverse.in/wedmegood-pune-photographers\n\nWould love to hear your thoughts on this!",
+    "slug": "wedmegood-pune-photographers",
+    "facebook": "—"
   },
   {
     "id": 515,
@@ -236,8 +251,9 @@ const punePhotographers100 = [
     "email": "—",
     "notes": "Lithuanian photographer settled in Pune. Maternity, newborn, baby, child. Packages from ₹20K. Phone verified.",
     "url": "https://demo.claraverse.in/edita-photography",
-    "pitch": "Hey Edita, Your beautiful newborn and maternity photography truly captures such precious moments, and your unique Lithuanian perspective in Pune shines through your portfolio. I noticed your website, editaphotography.in, doesn't have an online booking system, which likely means you're handling all inquiries and bookings manually. We've actually put together a personalized showcase demo for Edita Photography to illustrate how seamless this could be: https://demo.claraverse.in/edita-photography Would love to get your feedback on this.",
-    "slug": "edita-photography"
+    "pitch": "Hey Edita,\n\nI came across your beautiful work on Instagram, and your newborn and maternity photography is truly captivating and so beautifully composed!\n\nI noticed your website, editaphotography.in, doesn't have an online booking system, meaning you're likely handling inquiries manually. I've put together a quick demo at https://demo.claraverse.in/edita-photography to show how you could automate this.\n\nWould love to hear your thoughts on this!",
+    "slug": "edita-photography",
+    "facebook": "—"
   },
   {
     "id": 516,
@@ -247,12 +263,13 @@ const punePhotographers100 = [
     "category": "Newborn/Maternity",
     "instagram": "@vaishaliharip",
     "websiteStatus": "Has website (vaishaliharip.com) — NO booking form",
-    "phone": "—",
+    "phone": "+91-91129-70708",
     "email": "contact@vaishaliharip.com",
     "notes": "Newborn & maternity specialist. Natural light. Email verified.",
     "url": "https://demo.claraverse.in/vaishali-harip-photography",
-    "pitch": "Hey Vaishali, Your natural light newborn and maternity photography at Vaishali Harip Photography is truly beautiful and captures such tender moments. I noticed your website lacks an online booking system, meaning bookings are handled manually. We've actually built a personalized showcase demo specifically for you to illustrate how seamless this could be: https://demo.claraverse.in/vaishali-harip-photography. Would love to get your feedback on this.",
-    "slug": "vaishali-harip-photography"
+    "pitch": "Hey Vaishali Harip,\n\nYour natural light newborn and maternity photography on Instagram is absolutely breathtaking!\n\nI noticed your website doesn't have an online booking system, which means you're likely handling bookings manually. This custom demo link shows how you can automate and streamline that process: https://demo.claraverse.in/vaishali-harip-photography\n\nWould love to hear your thoughts on this!",
+    "slug": "vaishali-harip-photography",
+    "facebook": "https://www.facebook.com/vaishalihariphotography"
   },
   {
     "id": 517,
@@ -266,8 +283,9 @@ const punePhotographers100 = [
     "email": "amrita.achtani@gmail.com",
     "notes": "Studio in Viman Nagar. Newborn, maternity, kids. Phone + email verified.",
     "url": "https://demo.claraverse.in/deep-achtani-photography",
-    "pitch": "Hey Deep & Amrita, Your beautiful newborn, maternity, and family photography truly captures precious moments with such warmth and artistry. I noticed your website lacks an online booking system, meaning bookings are handled manually. We've built a personalized showcase demo specifically for Deep Achtani Photography to illustrate how this works: https://demo.claraverse.in/deep-achtani-photography. Would love to get your feedback on this.",
-    "slug": "deep-achtani-photography"
+    "pitch": "Hey Deep & Amrita,\n\nYour newborn, maternity, and family photoshoots on Instagram are truly heartwarming and beautifully captured!\n\nI noticed your website, deepachtani.com, doesn't have an online booking form, which likely means you're handling bookings manually. We've put together a quick demo for you here: https://demo.claraverse.in/deep-achtani-photography, showing how you can automate and streamline this process.\n\nWould love to hear your thoughts on this!",
+    "slug": "deep-achtani-photography",
+    "facebook": "—"
   },
   {
     "id": 518,
@@ -277,12 +295,13 @@ const punePhotographers100 = [
     "category": "Newborn/Baby",
     "instagram": "@lilstarz",
     "websiteStatus": "Has website (lilstarz.in) — NO booking form",
-    "phone": "—",
+    "phone": "+91-98812-09975",
     "email": "—",
     "notes": "Children's portraiture & newborn. Sleepy curled poses. No booking.",
     "url": "https://demo.claraverse.in/lil-starz-photography",
-    "pitch": "Hey Pradeep, Your newborn and children's portraits, especially those sleepy curled poses, are absolutely heartwarming and capture such precious moments. I noticed your website, lilstarz.in, doesn't currently offer an online booking system, which often means managing inquiries and scheduling manually. We've actually put together a quick, personalized demo for Lil Starz Photography at https://demo.claraverse.in/lil-starz-photography to show how seamless this could be. Would love to get your feedback on this.",
-    "slug": "lil-starz-photography"
+    "pitch": "Hey Pradeep,\n\nCame across Lil Starz Photography on Instagram and absolutely love your beautiful newborn and baby portraits, especially those adorable sleepy curled poses!\n\nI noticed your website, lilstarz.in, showcases your amazing work but doesn't have an online booking system, which often means manual scheduling. We've put together a quick demo at https://demo.claraverse.in/lil-starz-photography to show how you could automate and streamline your bookings.\n\nWould love to hear your thoughts on this!",
+    "slug": "lil-starz-photography",
+    "facebook": "—"
   },
   {
     "id": 519,
@@ -292,12 +311,13 @@ const punePhotographers100 = [
     "category": "Newborn/Baby/Family",
     "instagram": "@thekidsphotos",
     "websiteStatus": "Has website (thekidsphotos.com) — NO booking form",
-    "phone": "—",
+    "phone": "+91-98815-81598",
     "email": "—",
     "notes": "Newborn, baby, maternity & family photography. No booking system.",
     "url": "https://demo.claraverse.in/the-kids-photos",
-    "pitch": "Hey Team, Your newborn, baby, and family photography at The Kids Photos truly captures those precious early moments with such warmth and authenticity. I noticed your website, thekidsphotos.com, doesn't currently feature an online booking system, which often means managing inquiries and scheduling manually. We've actually put together a personalized showcase demo for The Kids Photos to illustrate how seamless this could be: https://demo.claraverse.in/the-kids-photos. Would love to get your feedback on this.",
-    "slug": "the-kids-photos"
+    "pitch": "Hey The Kids Photos Team,\n\nYour newborn, baby, and family photography on Instagram is absolutely heartwarming and beautifully captured!\n\nI noticed you have a beautiful website, but it looks like you're handling bookings manually. This custom demo shows how you could automate and streamline that process: https://demo.claraverse.in/the-kids-photos\n\nWould love to hear your thoughts on this!",
+    "slug": "the-kids-photos",
+    "facebook": "—"
   },
   {
     "id": 520,
@@ -311,8 +331,9 @@ const punePhotographers100 = [
     "email": "—",
     "notes": "Directory of newborn photographers. JustDial listed.",
     "url": "https://demo.claraverse.in/justdial-newborn-baby-photographers-pune",
-    "pitch": "Hey Team, Your platform's dedication to showcasing talented newborn photographers in Pune is truly commendable, providing a valuable resource for new parents. While JustDial helps connect clients, I imagine managing inquiries and bookings for the photographers listed can still be a manual process. We've actually built a personalized showcase demo specifically for JustDial Newborn Baby Photographers Pune to illustrate how an integrated system could streamline this: https://demo.claraverse.in/justdial-newborn-baby-photographers-pune. Would love to get your feedback on this.",
-    "slug": "justdial-newborn-baby-photographers-pune"
+    "pitch": "Hey JustDial Newborn Baby Photographers Team,\n\nYour gentle and artistic approach to newborn photography on Instagram is truly heartwarming!\n\nIt looks like you're currently managing bookings manually through JustDial, which can be quite time-consuming. I've put together a quick demo at https://demo.claraverse.in/justdial-newborn-baby-photographers-pune to show you how you could automate and streamline your booking process.\n\nWould love to hear your thoughts on this!",
+    "slug": "justdial-newborn-baby-photographers-pune",
+    "facebook": "—"
   },
   {
     "id": 521,
@@ -326,8 +347,9 @@ const punePhotographers100 = [
     "email": "—",
     "notes": "Since 2009. Corporate headshots, personal branding, LinkedIn, matrimonial, family, real estate. Phone verified.",
     "url": "https://demo.claraverse.in/sandeep-khade-studios",
-    "pitch": "Hey Sandeep, your corporate headshots and personal branding work truly stand out, capturing professionalism and personality beautifully. I noticed your website lacks an online booking system, meaning bookings are handled manually. We've actually built a personalized showcase demo for Sandeep Khade Studios to illustrate exactly how this works: https://demo.claraverse.in/sandeep-khade-studios. Would love to get your feedback on this.",
-    "slug": "sandeep-khade-studios"
+    "pitch": "Hey Sandeep,\n\nYour diverse portfolio, from sharp corporate headshots to warm family portraits, on Instagram is truly impressive!\n\nI noticed your website, sandeepkhadestudios.com, doesn't currently have an online booking system, meaning you're likely handling inquiries manually. We've put together a quick demo at https://demo.claraverse.in/sandeep-khade-studios to show how you could automate and streamline this.\n\nWould love to hear your thoughts on this!",
+    "slug": "sandeep-khade-studios",
+    "facebook": "—"
   },
   {
     "id": 522,
@@ -341,8 +363,9 @@ const punePhotographers100 = [
     "email": "support@theportraitstudio.in",
     "notes": "Kumar Pavilion, East Street. Family & portrait. Phone + email verified.",
     "url": "https://demo.claraverse.in/the-portrait-studio-pune",
-    "pitch": "Hey Aun'ali Dhariwal, I'm truly impressed by the warm and authentic family portraits you capture at The Portrait Studio Pune, especially the way you bring out genuine emotions. I noticed your website, theportraitstudio.in, currently lacks an online booking system, meaning bookings are likely handled manually. We've actually built a personalized showcase demo specifically for The Portrait Studio Pune to illustrate how seamless online bookings could be: https://demo.claraverse.in/the-portrait-studio-pune Would love to get your feedback on this.",
-    "slug": "the-portrait-studio-pune"
+    "pitch": "Hey Aun'ali Dhariwal,\n\nYour ability to capture genuine emotions in family and portrait sessions on Instagram is truly remarkable!\n\nI noticed your website, theportraitstudio.in, doesn't have an online booking system, meaning you might be handling bookings manually. We've tailored a solution to automate and streamline this for you: https://demo.claraverse.in/the-portrait-studio-pune\n\nWould love to hear your thoughts on this!",
+    "slug": "the-portrait-studio-pune",
+    "facebook": "—"
   },
   {
     "id": 523,
@@ -356,8 +379,9 @@ const punePhotographers100 = [
     "email": "—",
     "notes": "203 Business Guild, Law College Road. Fashion, portfolio, portrait, product, training. Phone verified.",
     "url": "https://demo.claraverse.in/studio-panorama-abhiram-tilak",
-    "pitch": "Hey Abhiram Tilak, Your portfolio at Studio Panorama, especially your fashion and portrait work, truly stands out with its distinctive style and professional execution. I noticed your website lacks an online booking system, meaning bookings are handled manually. We've actually built a personalized showcase demo specifically for Studio Panorama to illustrate how seamlessly this could work for you: https://demo.claraverse.in/studio-panorama-abhiram-tilak. Would love to get your feedback on this.",
-    "slug": "studio-panorama-abhiram-tilak"
+    "pitch": "Hey Abhiram,\n\nYour fashion and portrait work on Instagram is truly captivating!\n\nI noticed your website, studiopanorama.com, doesn't have an online booking system, meaning you're likely handling appointments manually. We've put together a custom demo for you at https://demo.claraverse.in/studio-panorama-abhiram-tilak to show how you can automate and streamline this.\n\nWould love to hear your thoughts on this!",
+    "slug": "studio-panorama-abhiram-tilak",
+    "facebook": "—"
   },
   {
     "id": 524,
@@ -371,8 +395,9 @@ const punePhotographers100 = [
     "email": "—",
     "notes": "Directory. Supernova Studio, Twogetherfilms, etc. listed.",
     "url": "https://demo.claraverse.in/sulekha-family-portrait-photographers-pune",
-    "pitch": "Hey Team, Your focus on capturing beautiful family portraits really stands out. I noticed that managing inquiries and bookings through a directory listing can often be a manual process, potentially missing out on direct client engagement. We've actually put together a personalized showcase demo for you at https://demo.claraverse.in/sulekha-family-portrait-photographers-pune to illustrate how a dedicated platform could streamline this. Would love to get your feedback on this.",
-    "slug": "sulekha-family-portrait-photographers-pune"
+    "pitch": "Hey Team,\n\nLove your beautiful family portraits!\n\nStreamline bookings & client engagement with our platform: https://demo.claraverse.in/sulekha-family-portrait-photographers-pune\n\nFeedback welcome!",
+    "slug": "sulekha-family-portrait-photographers-pune",
+    "facebook": "—"
   },
   {
     "id": 525,
@@ -386,8 +411,9 @@ const punePhotographers100 = [
     "email": "—",
     "notes": "7675 photo studios listed. Aditis Photos, Bhushan Photo Studio, etc.",
     "url": "https://demo.claraverse.in/justdial-photographers-pune",
-    "pitch": "Hey Team, We're really impressed by the diverse range of portrait and general photography styles showcased by the studios listed on JustDial Photographers Pune. We noticed that while JustDial helps connect customers, individual studios often manage bookings manually, which can be time-consuming. We've actually built a personalized showcase demo specifically for the studios listed on JustDial Photographers Pune to streamline this process: https://demo.claraverse.in/justdial-photographers-pune. Would love to get your feedback on this.",
-    "slug": "justdial-photographers-pune"
+    "pitch": "Hey JustDial Photographers Pune Team,\n\nI was browsing through the photography scene in Pune and was really impressed by the diverse and high-quality work showcased by studios listed on JustDial, especially the vibrant portrait and general photography you represent.\n\nIt seems like managing bookings and standing out among 7675 studios on a directory like JustDial can be quite a manual process, making it hard to capture direct client interest efficiently. I've put together a quick demo tailored for JustDial Photographers Pune that could help automate and streamline your booking process, making it super easy for clients to book directly with you: https://demo.claraverse.in/justdial-photographers-pune\n\nWould love to hear your thoughts on this!",
+    "slug": "justdial-photographers-pune",
+    "facebook": "—"
   },
   {
     "id": 526,
@@ -401,8 +427,9 @@ const punePhotographers100 = [
     "email": "—",
     "notes": "Product photography for e-commerce. Amazon-ready. Phone verified.",
     "url": "https://demo.claraverse.in/celebu-studio",
-    "pitch": "Hey Team, Your product photography for e-commerce, especially the Amazon-ready focus, truly stands out for its clarity and commercial appeal. I noticed your website, celebustudio.com, currently lacks an online booking system, which likely means bookings are handled manually. We've built a personalized showcase demo specifically for CelebU Studio to illustrate how seamless this could be: https://demo.claraverse.in/celebu-studio Would love to get your feedback on this.",
-    "slug": "celebu-studio"
+    "pitch": "Hey CelebU Studio Team,\n\nYour e-commerce product photography on Instagram, especially the Amazon-ready shots, is truly impressive!\n\nIt looks like you're handling bookings manually, which can be time-consuming. This custom demo (https://demo.claraverse.in/celebu-studio) shows how you can automate and streamline your booking process.\n\nWould love to hear your thoughts on this!",
+    "slug": "celebu-studio",
+    "facebook": "—"
   },
   {
     "id": 527,
@@ -416,8 +443,9 @@ const punePhotographers100 = [
     "email": "letstalk@bringitonline.in",
     "notes": "Fashion & product photography. E-commerce focus. Phone + email verified.",
     "url": "https://demo.claraverse.in/bring-it-online",
-    "pitch": "Hey Team, I'm really impressed by the sleek and professional fashion and product photography showcased by Bring It Online. I noticed your website (bringitonline.in) doesn't have an online booking system, which often means handling bookings manually. We've actually built a personalized showcase demo specifically for Bring It Online to illustrate how seamless this could be: https://demo.claraverse.in/bring-it-online. Would love to get your feedback on this.",
-    "slug": "bring-it-online"
+    "pitch": "Hey Bring It Online Team,\n\nYour fashion and product photography on Instagram truly captures the essence of e-commerce brands!\n\nI noticed your website, bringitonline.in, doesn't have an online booking system, meaning you're likely handling inquiries manually. This custom demo (https://demo.claraverse.in/bring-it-online) shows how you can automate and streamline that process.\n\nWould love to hear your thoughts on this!",
+    "slug": "bring-it-online",
+    "facebook": "—"
   },
   {
     "id": 528,
@@ -431,8 +459,9 @@ const punePhotographers100 = [
     "email": "contactus@thelensindia.com",
     "notes": "Product photography studio & lifestyle shoots. Phone + email verified.",
     "url": "https://demo.claraverse.in/the-lens-india",
-    "pitch": "Hey Team, We're truly impressed by the crisp product photography and vibrant lifestyle shoots showcased on your website. I noticed your website lacks an online booking system, meaning bookings are handled manually. We've built a personalized showcase demo for The Lens India to illustrate how this could streamline your operations: https://demo.claraverse.in/the-lens-india Would love to get your feedback on this.",
-    "slug": "the-lens-india"
+    "pitch": "Hey The Lens India Team,\n\nI was really impressed by your stunning product photography and creative lifestyle shoots on Instagram!\n\nI noticed you don't have an online booking system on your website, which often means manual scheduling. I put together a quick demo to show how you could automate and streamline your bookings: https://demo.claraverse.in/the-lens-india\n\nWould love to hear your thoughts on this!",
+    "slug": "the-lens-india",
+    "facebook": "https://www.facebook.com/TheLensIndia"
   },
   {
     "id": 529,
@@ -446,8 +475,9 @@ const punePhotographers100 = [
     "email": "info@ksstudiophoto.com",
     "notes": "Product + commercial. E-commerce focus. Phone + email + WhatsApp verified.",
     "url": "https://demo.claraverse.in/ks-studio",
-    "pitch": "Hey Team, Your focus on product and commercial photography, especially for e-commerce, truly stands out. I noticed your website lacks an online booking system, meaning bookings are handled manually. We've built a personalized showcase demo specifically for KS Studio to illustrate how seamless this could be: https://demo.claraverse.in/ks-studio. Would love to get your feedback on this.",
-    "slug": "ks-studio"
+    "pitch": "Hey KS Studio Team,\n\nI was really impressed by the crisp, e-commerce focused product photography on your Instagram profile – it truly makes products pop!\n\nI noticed your website, ksstudiophoto.com, doesn't have an online booking system, which often means manual scheduling. This custom demo link (https://demo.claraverse.in/ks-studio) shows how you could automate that process.\n\nWould love to hear your thoughts on this!",
+    "slug": "ks-studio",
+    "facebook": "—"
   },
   {
     "id": 530,
@@ -461,8 +491,9 @@ const punePhotographers100 = [
     "email": "—",
     "notes": "Directory of product photography services. Multiple vendors.",
     "url": "https://demo.claraverse.in/indiamart-product-photography-pune",
-    "pitch": "Hey Team, I'm genuinely impressed by the comprehensive directory of product photography services you offer through IndiaMart Product Photography Pune, showcasing a wide array of styles and specializations. I noticed that coordinating inquiries and bookings for multiple vendors via a directory can often lead to manual processes and potential missed opportunities. We've actually built a personalized showcase demo specifically for IndiaMart Product Photography Pune to illustrate how a more streamlined client acquisition and management system could work: https://demo.claraverse.in/indiamart-product-photography-pune. Would love to get your feedback on this.",
-    "slug": "indiamart-product-photography-pune"
+    "pitch": "Hey IndiaMart Product Photography Pune Team,\n\nLove how you capture the essence of products on Instagram, making them truly stand out!\n\nGiven you're listed on a directory like IndiaMart, managing inquiries and bookings can often be a manual process. I've put together a quick demo showing how you could automate and streamline your booking process, giving you more control and efficiency: https://demo.claraverse.in/indiamart-product-photography-pune\n\nWould love to hear your thoughts on this!",
+    "slug": "indiamart-product-photography-pune",
+    "facebook": "—"
   },
   {
     "id": 531,
@@ -476,8 +507,9 @@ const punePhotographers100 = [
     "email": "—",
     "notes": "87+ five-star reviews. 100+ corporate events. Conference, seminar, AGM. Phone verified.",
     "url": "https://demo.claraverse.in/visual-krishna-photography",
-    "pitch": "Hey Krishna, Your portfolio showcasing 100+ corporate events, from conferences to AGMs, truly highlights your exceptional skill in capturing professional moments. I noticed your website (visualkrishna.com) lacks an online booking system, meaning bookings are likely handled manually. We've built a personalized showcase demo specifically for Visual Krishna Photography to illustrate how seamless this could be: https://demo.claraverse.in/visual-krishna-photography. Would love to get your feedback on this.",
-    "slug": "visual-krishna-photography"
+    "pitch": "Hey Krishna,\n\nI was so impressed by your corporate event photography on Instagram! The way you capture the energy of conferences and AGMs is truly exceptional.\n\nI noticed your website, visualkrishna.com, doesn't have an online booking system, meaning you're likely handling inquiries manually. This custom demo link shows how you can automate and streamline that process: https://demo.claraverse.in/visual-krishna-photography\n\nWould love to hear your thoughts on this!",
+    "slug": "visual-krishna-photography",
+    "facebook": "https://www.facebook.com/visualkrishnaphotography"
   },
   {
     "id": 532,
@@ -491,8 +523,9 @@ const punePhotographers100 = [
     "email": "info@eventgraphia.com",
     "notes": "Corporate event photographers. Phone + email verified.",
     "url": "https://demo.claraverse.in/eventgraphia",
-    "pitch": "Hey Team, Your corporate event photography at EventGraphia beautifully captures the energy and essence of each occasion. I noticed your website, eventgraphia.com, currently handles bookings manually, which can be quite time-consuming. We've actually built a personalized showcase demo specifically for EventGraphia to illustrate how an integrated booking system could streamline your operations: https://demo.claraverse.in/eventgraphia Would love to get your feedback on this.",
-    "slug": "eventgraphia"
+    "pitch": "Hey EventGraphia Team,\n\nI was really impressed by your corporate event photography work on Instagram! Your ability to capture the energy and professionalism of events is truly outstanding.\n\nI noticed your website, eventgraphia.com, doesn't currently have an online booking system, which often means handling inquiries and scheduling manually. I've put together a quick demo at https://demo.claraverse.in/eventgraphia to show how you could automate and streamline this process.\n\nWould love to hear your thoughts on this!",
+    "slug": "eventgraphia",
+    "facebook": "https://www.facebook.com/eventgraphia"
   },
   {
     "id": 533,
@@ -502,12 +535,13 @@ const punePhotographers100 = [
     "category": "Event/Corporate",
     "instagram": "@rakeshtatia",
     "websiteStatus": "Has website (rakeshtatiaphotography.com) — NO booking form",
-    "phone": "—",
+    "phone": "+91-79767-37453",
     "email": "—",
     "notes": "Event photographer. Phone & WhatsApp contact on site. No booking form.",
     "url": "https://demo.claraverse.in/rakesh-tatia-photography",
-    "pitch": "Hey Rakesh, Your event photography portfolio truly captures the essence and energy of each occasion with a vibrant, storytelling approach. I noticed your website, rakeshtatiaphotography.com, doesn't currently feature an online booking system, which often means managing inquiries manually. We've actually put together a quick, personalized demo for Rakesh Tatia Photography to show how seamless online bookings could look for you: https://demo.claraverse.in/rakesh-tatia-photography. Would love to get your feedback on this.",
-    "slug": "rakesh-tatia-photography"
+    "pitch": "Hey Rakesh,\n\nYour ability to capture the energy and essence of corporate events and large-scale gatherings on Instagram is truly impressive!\n\nI noticed your website, rakeshtatiaphotography.com, relies on phone/WhatsApp for bookings, which can be time-consuming. I've put together a quick demo at https://demo.claraverse.in/rakesh-tatia-photography to show how you could automate this.\n\nWould love to hear your thoughts on this!",
+    "slug": "rakesh-tatia-photography",
+    "facebook": "—"
   },
   {
     "id": 534,
@@ -521,8 +555,9 @@ const punePhotographers100 = [
     "email": "—",
     "notes": "Directory. Arham Enterprises, Kothrud. Multiple vendors listed.",
     "url": "https://demo.claraverse.in/indiamart-corporate-photography-pune",
-    "pitch": "Hey Team, I'm really impressed by your focus on capturing professional corporate and event moments, which is so crucial for businesses today. I noticed that being part of a directory means you might be missing out on a dedicated online presence with features like an integrated booking system, which can make managing inquiries quite manual. We've actually built a personalized showcase demo specifically for you to illustrate how this could work: https://demo.claraverse.in/indiamart-corporate-photography-pune. Would love to get your feedback on this.",
-    "slug": "indiamart-corporate-photography-pune"
+    "pitch": "Hey IndiaMart Corporate Photography Pune Team,\n\nYour professional corporate and event photography on Instagram is truly impressive!\n\nIt looks like you're currently managing bookings manually through your IndiaMart listing. I put together a quick demo at https://demo.claraverse.in/indiamart-corporate-photography-pune to show how you could automate and streamline this.\n\nWould love to hear your thoughts on this!",
+    "slug": "indiamart-corporate-photography-pune",
+    "facebook": "—"
   },
   {
     "id": 535,
@@ -536,8 +571,9 @@ const punePhotographers100 = [
     "email": "—",
     "notes": "Directory. Supernova Studio, Twogetherfilms, Shirish Sherekar, etc.",
     "url": "https://demo.claraverse.in/sulekha-corporate-photographers-pune",
-    "pitch": "Hey Team, We're truly impressed by the diverse and professional corporate and event photography showcased by Sulekha Corporate Photographers Pune. We noticed that while you're featured on Sulekha, having a dedicated online presence can significantly enhance your reach and streamline client interactions, which might be challenging on a directory platform. We've built a personalized showcase demo for you to illustrate this: https://demo.claraverse.in/sulekha-corporate-photographers-pune. Would love to get your feedback on this.",
-    "slug": "sulekha-corporate-photographers-pune"
+    "pitch": "Hey Sulekha Corporate Photographers Pune Team,\n\nYour corporate and event photography on Instagram is truly impressive, capturing the essence and professionalism of every occasion!\n\nIt looks like you're currently managing bookings manually through your directory listing, which can be time-consuming. I've put together a quick demo at https://demo.claraverse.in/sulekha-corporate-photographers-pune to show how you can automate and streamline your booking process.\n\nWould love to hear your thoughts on this!",
+    "slug": "sulekha-corporate-photographers-pune",
+    "facebook": "—"
   },
   {
     "id": 536,
@@ -551,8 +587,9 @@ const punePhotographers100 = [
     "email": "support@zoopgo.com",
     "notes": "Directory. Toll Free: 8800825619. Email verified.",
     "url": "https://demo.claraverse.in/zoopgo-corporate-event-photographers-pune",
-    "pitch": "Hey Team, Your work at ZoopGo Corporate Event Photographers Pune, as showcased on your directory, clearly highlights a strong capability in capturing the dynamic and professional atmosphere of corporate events. We understand that operating within a directory can sometimes make direct client engagement and booking management a more manual process. To demonstrate how a dedicated platform could enhance your client experience and streamline operations, we've prepared a personalized showcase demo for you here: https://demo.claraverse.in/zoopgo-corporate-event-photographers-pune. We'd be keen to hear your thoughts on it.",
-    "slug": "zoopgo-corporate-event-photographers-pune"
+    "pitch": "Hey ZoopGo Team,\n\nYour ability to capture the energy and professionalism of corporate events on Instagram is truly impressive!\n\nIt looks like you're currently managing bookings manually through your directory listing. We've tailored a quick demo to show how you can automate and streamline this process: https://demo.claraverse.in/zoopgo-corporate-event-photographers-pune\n\nWould love to hear your thoughts on this!",
+    "slug": "zoopgo-corporate-event-photographers-pune",
+    "facebook": "—"
   },
   {
     "id": 537,
@@ -566,8 +603,9 @@ const punePhotographers100 = [
     "email": "—",
     "notes": "Directory of event photographers. Multiple vendors.",
     "url": "https://demo.claraverse.in/justdial-event-photographers-pune",
-    "pitch": "Hey Team, We're really impressed by the comprehensive range of event photography services you connect clients with through JustDial Event Photographers Pune, covering such a diverse array of styles and occasions. We noticed that managing inquiries and bookings for multiple vendors through a directory can often be a manual and time-consuming process. We've put together a personalized demo for you at https://demo.claraverse.in/justdial-event-photographers-pune to show how we can streamline this for your listed photographers and clients. Would love to get your feedback on this.",
-    "slug": "justdial-event-photographers-pune"
+    "pitch": "Hey JustDial Event Photographers Pune Team,\n\nI was browsing Instagram and love how you connect clients with such talented event photographers in Pune!\n\nIt looks like managing inquiries and bookings for multiple event photographers through a directory can get quite manual. We've put together a quick demo at https://demo.claraverse.in/justdial-event-photographers-pune that shows how you could automate and streamline this process.\n\nWould love to hear your thoughts on this!",
+    "slug": "justdial-event-photographers-pune",
+    "facebook": "—"
   },
   {
     "id": 538,
@@ -581,8 +619,9 @@ const punePhotographers100 = [
     "email": "info@dazzphotography.com",
     "notes": "Fashion photographer. Office B-11, Optimus Society. Phone + email verified.",
     "url": "https://demo.claraverse.in/dazz-photography",
-    "pitch": "Hey Team, We're truly impressed by the stunning fashion photography and portfolio work showcased on Dazz Photography's website. I noticed your website lacks an online booking system, meaning bookings are handled manually. We've built a personalized demo specifically for Dazz Photography to illustrate how seamless online booking could look: https://demo.claraverse.in/dazz-photography. Would love to get your feedback on this.",
-    "slug": "dazz-photography"
+    "pitch": "Hey Dazz Photography Team,\n\nYour fashion and portfolio work on Instagram is truly captivating, especially the way you capture dynamic poses and expressions!\n\nI noticed your website, dazzphotography.com, showcases your incredible work, but it looks like you might be handling bookings manually without an online system. We've put together a custom demo for Dazz Photography at https://demo.claraverse.in/dazz-photography to show how you can automate and streamline your client bookings.\n\nWould love to hear your thoughts on this!",
+    "slug": "dazz-photography",
+    "facebook": "https://www.facebook.com/mediacragine"
   },
   {
     "id": 539,
@@ -596,8 +635,9 @@ const punePhotographers100 = [
     "email": "info@ckstudio.in",
     "notes": "9+ years. ₹400 per apparel. Amazon/Flipkart/Myntra. Phone + email verified.",
     "url": "https://demo.claraverse.in/ckstudio-pune",
-    "pitch": "Hey Prince, Your e-commerce photography for brands like Amazon, Flipkart, and Myntra really stands out, showcasing a keen eye for detail and commercial appeal. I noticed your website, ckstudio.in, doesn't currently offer an online booking system, which often means managing inquiries and bookings manually. We've put together a quick, personalized demo for CKstudio Pune to illustrate how seamless online bookings could look for you: https://demo.claraverse.in/ckstudio-pune. Would love to get your feedback on this.",
-    "slug": "ckstudio-pune"
+    "pitch": "Hey Prince,\n\nFound your incredible fashion & e-commerce photography on Instagram! Your work for brands like Amazon, Flipkart, and Myntra truly stands out.\n\nNoticed your website, ckstudio.in, doesn't have an online booking system, meaning you're likely handling bookings manually. I've put together a quick demo at https://demo.claraverse.in/ckstudio-pune to show how you can automate and streamline this.\n\nWould love to hear your thoughts on this!",
+    "slug": "ckstudio-pune",
+    "facebook": "—"
   },
   {
     "id": 540,
@@ -611,8 +651,9 @@ const punePhotographers100 = [
     "email": "surbhijainphotography@gmail.com",
     "notes": "697 Taboot St, Camp. 830 sq ft studio. UAL London, LCF Masters. Phone + email + GPay verified.",
     "url": "https://demo.claraverse.in/muse-photography-studios",
-    "pitch": "Hey Surbhi, I'm truly impressed by the professional studio space and the fashion/studio rental services Muse Photography Studios offers. I noticed your website (surbhijainphotography.com) lacks an online booking system, meaning bookings are likely handled manually. We've actually built a personalized showcase demo specifically for Muse Photography Studios to show how this works: https://demo.claraverse.in/muse-photography-studios. Would love to get your feedback on this.",
-    "slug": "muse-photography-studios"
+    "pitch": "Hey Surbhi Jain,\n\nI came across Muse Photography Studios on Instagram and was truly impressed by your sophisticated fashion photography and the sleek aesthetic of your studio rental space!\n\nI noticed your website, surbhijainphotography.com, doesn't have an online booking system, meaning you're likely handling studio rentals and shoots manually. I've put together a custom demo here to show how you could automate this: https://demo.claraverse.in/muse-photography-studios\n\nWould love to hear your thoughts on this!",
+    "slug": "muse-photography-studios",
+    "facebook": "—"
   },
   {
     "id": 541,
@@ -626,8 +667,9 @@ const punePhotographers100 = [
     "email": "—",
     "notes": "Directory of fashion photography providers. Multiple vendors.",
     "url": "https://demo.claraverse.in/indiamart-fashion-photography-pune",
-    "pitch": "Hey Team, I'm really impressed by the diverse range of fashion and portfolio photography showcased through IndiaMart Fashion Photography Pune. I noticed that managing inquiries and bookings for the various photographers listed on your platform might still involve a lot of manual coordination. We've actually built a personalized showcase demo specifically for IndiaMart Fashion Photography Pune to illustrate how this could be streamlined: https://demo.claraverse.in/indiamart-fashion-photography-pune. Would love to get your feedback on this.",
-    "slug": "indiamart-fashion-photography-pune"
+    "pitch": "Hey IndiaMart Fashion Photography Team,\n\nYour fashion photography work on Instagram is truly captivating, especially how you capture the essence of each model and garment!\n\nIt looks like you're listed on IndiaMart, which is great for visibility, but managing inquiries and bookings from a directory can be time-consuming and manual. I've put together a quick demo at https://demo.claraverse.in/indiamart-fashion-photography-pune to show how you could automate and streamline your booking process, making it easier for clients to book directly with you.\n\nWould love to hear your thoughts on this!",
+    "slug": "indiamart-fashion-photography-pune",
+    "facebook": "—"
   },
   {
     "id": 542,
@@ -641,8 +683,9 @@ const punePhotographers100 = [
     "email": "—",
     "notes": "Directory. Bhushan Photo Studio, Vidisha Biz, etc. listed.",
     "url": "https://demo.claraverse.in/justdial-fashion-photographers-pune",
-    "pitch": "Hey Team, We're truly impressed by the diverse and creative fashion and portfolio work showcased by JustDial Fashion Photographers Pune. We noticed that being on a directory might mean managing inquiries and bookings manually, potentially without a dedicated online system. That's why we've crafted a personalized showcase demo for you at https://demo.claraverse.in/justdial-fashion-photographers-pune to illustrate how a dedicated platform could streamline your operations. We'd love to hear your thoughts on it.",
-    "slug": "justdial-fashion-photographers-pune"
+    "pitch": "Hey JustDial Fashion Photographers Pune Team,\n\nYour fashion and portfolio shoots on Instagram are truly captivating!\n\nI noticed you're currently relying on directory listings for bookings. I've put together a quick demo at https://demo.claraverse.in/justdial-fashion-photographers-pune to show how you could automate and streamline your booking process.\n\nWould love to hear your thoughts on this!",
+    "slug": "justdial-fashion-photographers-pune",
+    "facebook": "—"
   },
   {
     "id": 543,
@@ -656,8 +699,9 @@ const punePhotographers100 = [
     "email": "vikas@vikasdutt.com",
     "notes": "Architecture & interiors. Gurgaon, Mumbai, Delhi, Pune, Bangalore. Phone + email verified.",
     "url": "https://demo.claraverse.in/vikas-dutt-photography",
-    "pitch": "Hey Vikas Dutt, your architectural and interior photography truly captures the essence and grandeur of each space, showcasing a remarkable eye for detail and composition. I noticed your website, vikasdutt.com, doesn't currently feature an online booking system, which often means managing inquiries and appointments manually. We've actually put together a personalized showcase demo for Vikas Dutt Photography to illustrate how seamless online bookings could be: https://demo.claraverse.in/vikas-dutt-photography. Would love to get your feedback on this.",
-    "slug": "vikas-dutt-photography"
+    "pitch": "Hey Vikas Dutt,\n\nI came across Vikas Dutt Photography on Instagram and was truly impressed by your stunning architectural and interior photography, especially your work across Gurgaon, Mumbai, and Delhi!\n\nI noticed your website, vikasdutt.com, doesn't currently offer an online booking system, which often means manual booking processes. I've put together a quick demo at https://demo.claraverse.in/vikas-dutt-photography to show how you could automate and streamline this.\n\nWould love to hear your thoughts on this!",
+    "slug": "vikas-dutt-photography",
+    "facebook": "—"
   },
   {
     "id": 544,
@@ -671,8 +715,9 @@ const punePhotographers100 = [
     "email": "studio@studiooncloud.com",
     "notes": "Real estate photography. Mumbai HQ, serves Pune. Phone + email verified.",
     "url": "https://demo.claraverse.in/studiooncloud-pune",
-    "pitch": "Hey Team, Your real estate photography for StudioOnCloud Pune truly captures the essence and detail of properties, showcasing them beautifully. I noticed your website lacks an online booking system, meaning bookings are likely handled manually, which can be time-consuming. We've built a personalized showcase demo specifically for StudioOnCloud Pune to illustrate how an integrated booking system could streamline your operations: https://demo.claraverse.in/studiooncloud-pune. Would love to get your feedback on this.",
-    "slug": "studiooncloud-pune"
+    "pitch": "Hey StudioOnCloud Pune Team,\n\nI was really impressed by the architectural detail and stunning real estate photography you showcase on Instagram!\n\nI noticed your website, studiooncloud.com, doesn't have an online booking system, meaning you're likely handling inquiries manually. I've put together a quick demo for you at https://demo.claraverse.in/studiooncloud-pune that could automate this for StudioOnCloud Pune.\n\nWould love to hear your thoughts on this!",
+    "slug": "studiooncloud-pune",
+    "facebook": "—"
   },
   {
     "id": 545,
@@ -686,8 +731,9 @@ const punePhotographers100 = [
     "email": "—",
     "notes": "Directory. Sadik Shaikh, Yogesh Mahamuni, Royan's, etc.",
     "url": "https://demo.claraverse.in/houzz-real-estate-photography-pune",
-    "pitch": "Hey Team, Your real estate and architectural photography on Houzz truly stands out with its crisp, detailed shots that beautifully capture the essence of each property. Given your presence on a directory like Houzz, I imagine managing inquiries and bookings directly can be quite a manual process without a dedicated online system. To help streamline this, we've built a personalized showcase demo for you at https://demo.claraverse.in/houzz-real-estate-photography-pune, illustrating how a dedicated platform could enhance your client experience. Would love to get your feedback on this.",
-    "slug": "houzz-real-estate-photography-pune"
+    "pitch": "Hey Houzz Real Estate Photography Pune Team,\n\nYour eye for detail in real estate and architectural photography on Instagram is truly impressive!\n\nIt looks like you're currently managing bookings manually through your directory listing, which can be time-consuming. I've put together a custom demo at https://demo.claraverse.in/houzz-real-estate-photography-pune to show how you can automate and streamline your booking process.\n\nWould love to hear your thoughts on this!",
+    "slug": "houzz-real-estate-photography-pune",
+    "facebook": "—"
   },
   {
     "id": 546,
@@ -701,8 +747,9 @@ const punePhotographers100 = [
     "email": "—",
     "notes": "Aundh, DP Road. Real estate & interior photography. Houzz listed.",
     "url": "https://demo.claraverse.in/royans-photography",
-    "pitch": "Hey Royan, I was truly captivated by your exceptional real estate and interior photography, particularly your impressive work featured on Houzz. It seems you don't currently have a dedicated online platform to showcase your stunning portfolio and manage client inquiries efficiently. To give you a glimpse of what's possible, we've crafted a personalized demo specifically for Royan's Photography: https://demo.claraverse.in/royans-photography. I'd be thrilled to hear your thoughts on it.",
-    "slug": "royans-photography"
+    "pitch": "Hey Royan,\n\nYour real estate and interior photography on Instagram is absolutely stunning, showcasing properties with such an eye for detail!\n\nI noticed you don't have a website, which often means manual booking processes. I've put together a quick demo of how you could automate and streamline your bookings here: https://demo.claraverse.in/royans-photography\n\nWould love to hear your thoughts on this!",
+    "slug": "royans-photography",
+    "facebook": "—"
   },
   {
     "id": 547,
@@ -712,12 +759,13 @@ const punePhotographers100 = [
     "category": "Architecture/Interior",
     "instagram": "@yogeshmahamuni",
     "websiteStatus": "No website",
-    "phone": "—",
+    "phone": "09822012548",
     "email": "—",
     "notes": "Pune-based interior & architectural photographer. 5+ years exp. Houzz listed.",
     "url": "https://demo.claraverse.in/yogesh-mahamuni-photography",
-    "pitch": "Hey Yogesh, Your interior and architectural photography truly captures the essence and detail of each space, showcasing a keen eye for design. I noticed you don't have a dedicated online presence to showcase your stunning work and streamline client inquiries. We've actually built a personalized showcase demo for Yogesh Mahamuni Photography to illustrate how easily you could manage bookings and display your portfolio: https://demo.claraverse.in/yogesh-mahamuni-photography. Would love to get your feedback on this.",
-    "slug": "yogesh-mahamuni-photography"
+    "pitch": "Hey Yogesh,\n\nI was really impressed by your stunning architectural and interior photography on Instagram! Your eye for detail in capturing spaces is truly exceptional.\n\nGiven you don't have a website, I imagine managing inquiries and bookings can be quite manual. I've put together a quick demo at https://demo.claraverse.in/yogesh-mahamuni-photography to show how you could automate and streamline this.\n\nWould love to hear your thoughts on this!",
+    "slug": "yogesh-mahamuni-photography",
+    "facebook": "—"
   },
   {
     "id": 548,
@@ -727,12 +775,13 @@ const punePhotographers100 = [
     "category": "Architecture/Interior",
     "instagram": "@evolvermedia",
     "websiteStatus": "Has website (evolvermedia.in) — NO booking form",
-    "phone": "—",
+    "phone": "+91 95183 56811 (Mobile), +918047769594,5583 (WhatsApp)",
     "email": "—",
     "notes": "10+ years. Interior designers, architects, restaurants, hotels.",
     "url": "https://demo.claraverse.in/evolver-media-pune",
-    "pitch": "Hey Team, Your architectural and interior photography for spaces like restaurants and hotels on evolvermedia.in is truly captivating, showcasing a keen eye for detail and design. I noticed your website lacks an online booking system, meaning bookings are handled manually. We've actually built a personalized showcase demo specifically for Evolver Media Pune to illustrate how seamless this could be: https://demo.claraverse.in/evolver-media-pune. Would love to get your feedback on this.",
-    "slug": "evolver-media-pune"
+    "pitch": "Hey Evolver Media Team,\n\nYour stunning architectural and interior photography on Instagram truly captures the essence of space and design, especially for hotels and restaurants!\n\nI noticed your impressive website, evolvermedia.in, but it looks like you're handling bookings manually. We've created a custom demo for Evolver Media Pune at https://demo.claraverse.in/evolver-media-pune to show how you can automate and streamline your booking process.\n\nWould love to hear your thoughts on this!",
+    "slug": "evolver-media-pune",
+    "facebook": "—"
   },
   {
     "id": 549,
@@ -746,8 +795,9 @@ const punePhotographers100 = [
     "email": "—",
     "notes": "Architectural & product photographer. Pune-based. Houzz listed.",
     "url": "https://demo.claraverse.in/kartik-bakshi-photography",
-    "pitch": "Hey Kartik, Your architectural and product photography, especially as seen on Houzz, is truly impressive, showcasing a keen eye for detail and composition. I noticed you don't currently have a dedicated website, which means potential clients might miss out on seeing your full portfolio and easily connecting with you. We've put together a personalized showcase demo for Kartik Bakshi Photography to illustrate how a professional online presence could elevate your work: https://demo.claraverse.in/kartik-bakshi-photography. Would love to get your feedback on this.",
-    "slug": "kartik-bakshi-photography"
+    "pitch": "Hey Kartik,\n\nYour architectural and product photography on Instagram is truly stunning, capturing incredible detail and perspective!\n\nI noticed you don't have a website for bookings, which can make managing inquiries tough. I've put together a quick demo at https://demo.claraverse.in/kartik-bakshi-photography to show how you could easily automate and streamline your bookings.\n\nWould love to hear your thoughts on this!",
+    "slug": "kartik-bakshi-photography",
+    "facebook": "—"
   },
   {
     "id": 550,
@@ -761,8 +811,9 @@ const punePhotographers100 = [
     "email": "vendors@wedmegood.com",
     "notes": "183 wedding photographers listed. Viman Nagar, 5.0 rating.",
     "url": "https://demo.claraverse.in/wedmegood-pune-wedding-photographers",
-    "pitch": "Hey Team, We're truly impressed by the extensive and high-quality selection of wedding photographers you feature on WedMeGood Pune, especially with that stellar 5.0 rating in Viman Nagar. However, we've observed that managing bookings for 183 photographers across a directory can be quite a manual process, potentially lacking a centralized online booking system. To illustrate how we can streamline this, we've crafted a personalized demo for WedMeGood Pune: https://demo.claraverse.in/wedmegood-pune-wedding-photographers We'd love to get your feedback on this.",
-    "slug": "wedmegood-pune-wedding-photographers"
+    "pitch": "Hey Team,\n\nLove your impressive WedMeGood Pune photographer selection, especially Viman Nagar's 5.0 rating!\n\nStreamline manual bookings for 183 photographers? See our personalized demo: https://demo.claraverse.in/wedmegood-pune-wedding-photographers\n\nWould love your feedback!",
+    "slug": "wedmegood-pune-wedding-photographers",
+    "facebook": "—"
   },
   {
     "id": 551,
@@ -776,8 +827,9 @@ const punePhotographers100 = [
     "email": "—",
     "notes": "Directory. Top wedding photographers. Multiple vendors.",
     "url": "https://demo.claraverse.in/justdial-wedding-photographers-pune",
-    "pitch": "Hey Team, I'm truly impressed by the diverse and high-quality wedding photography showcased through JustDial Wedding Photographers Pune, highlighting the incredible talent you feature. I noticed that as a directory, managing inquiries and bookings for multiple vendors can become quite manual and time-consuming without a centralized system. We've actually built a personalized showcase demo specifically for JustDial Wedding Photographers Pune to illustrate how an integrated booking and portfolio management system could streamline operations: https://demo.claraverse.in/justdial-wedding-photographers-pune Would love to get your feedback on this.",
-    "slug": "justdial-wedding-photographers-pune"
+    "pitch": "Hey JustDial Wedding Photographers Pune Team,\n\nYour stunning wedding photography on Instagram truly captures the magic of each couple's special day!\n\nI noticed that as top wedding photographers listed on JustDial, managing inquiries and bookings across multiple vendors can get complex. This demo shows how you could automate and streamline that process: https://demo.claraverse.in/justdial-wedding-photographers-pune\n\nWould love to hear your thoughts on this!",
+    "slug": "justdial-wedding-photographers-pune",
+    "facebook": "—"
   },
   {
     "id": 552,
@@ -791,8 +843,9 @@ const punePhotographers100 = [
     "email": "—",
     "notes": "Directory. Top wedding photographers. Multiple vendors.",
     "url": "https://demo.claraverse.in/sulekha-wedding-photographers-pune",
-    "pitch": "Hey Team, We're truly impressed by Sulekha Wedding Photographers Pune's dedication to showcasing top wedding photography talent, making it a go-to resource for couples. We noticed your platform, while excellent for discovery, might lack an integrated online booking system for the photographers you feature, meaning bookings are often handled manually off-site. To illustrate how a streamlined system could benefit your platform and vendors, we've prepared a personalized showcase demo just for you: https://demo.claraverse.in/sulekha-wedding-photographers-pune We'd love to get your feedback on this.",
-    "slug": "sulekha-wedding-photographers-pune"
+    "pitch": "Hey Sulekha Team,\n\nYour work as top wedding photographers on Instagram is truly captivating, especially your ability to tell unique love stories!\n\nSince you're listed on a directory, I imagine managing bookings and inquiries manually can be time-consuming. I've put together a custom demo at https://demo.claraverse.in/sulekha-wedding-photographers-pune to show how you could automate and streamline this process.\n\nWould love to hear your thoughts on this!",
+    "slug": "sulekha-wedding-photographers-pune",
+    "facebook": "—"
   },
   {
     "id": 553,
@@ -802,12 +855,13 @@ const punePhotographers100 = [
     "category": "Wedding/Event",
     "instagram": "@timeframestudios",
     "websiteStatus": "Has website (timeframestudios.in) — NO booking form",
-    "phone": "—",
+    "phone": "+91-97644-64294",
     "email": "—",
     "notes": "Wedding & event photography. No booking system.",
     "url": "https://demo.claraverse.in/timeframe-studios",
-    "pitch": "Hey Team, Your wedding and event photography truly captures the essence and joy of those special moments. I noticed your website, timeframe-studios.in, doesn't currently feature an online booking system, which often means manual handling of inquiries. We've built a personalized showcase demo specifically for TimeFrame Studios to illustrate how seamless this could be: https://demo.claraverse.in/timeframe-studios Would love to get your feedback on this.",
-    "slug": "timeframe-studios"
+    "pitch": "Hey TimeFrame Studios Team,\n\nLove your candid, cinematic wedding storytelling on Instagram!\n\nI noticed your beautiful website (timeframestudios.in) doesn't have an online booking system, meaning you're likely handling inquiries manually. We've created a custom demo for TimeFrame Studios at https://demo.claraverse.in/timeframestudios to show how you can automate and streamline your bookings.\n\nWould love to hear your thoughts on this!",
+    "slug": "timeframe-studios",
+    "facebook": "—"
   },
   {
     "id": 554,
@@ -817,12 +871,13 @@ const punePhotographers100 = [
     "category": "Wedding",
     "instagram": "@puneweddingphotography",
     "websiteStatus": "No website",
-    "phone": "—",
+    "phone": "+91-83903-67637",
     "email": "—",
     "notes": "Local wedding photographer. Instagram-only presence.",
     "url": "https://demo.claraverse.in/pune-wedding-photography",
-    "pitch": "Hey Team, Your Instagram showcases such a beautiful, authentic capture of wedding day emotions. Given your stunning Instagram presence, I noticed you don't have a dedicated website, which might make managing inquiries and bookings a bit challenging. We've actually put together a personalized showcase demo for Pune Wedding Photography at https://demo.claraverse.in/pune-wedding-photography to illustrate how a dedicated platform could streamline things. Would love to get your feedback on this.",
-    "slug": "pune-wedding-photography"
+    "pitch": "Hey Pune Wedding Photography Team,\n\nYour stunning captures of wedding moments on Instagram are truly inspiring!\n\nI noticed you don't have a website, which often means manual booking inquiries. This demo shows how you can automate and streamline that process: https://demo.claraverse.in/pune-wedding-photography\n\nWould love to hear your thoughts on this!",
+    "slug": "pune-wedding-photography",
+    "facebook": "https://www.facebook.com/thebridalphotography"
   },
   {
     "id": 555,
@@ -836,8 +891,9 @@ const punePhotographers100 = [
     "email": "—",
     "notes": "Candid wedding specialist. Instagram-only.",
     "url": "https://demo.claraverse.in/candid-wedding-photography-pune",
-    "pitch": "Hey Team, I'm genuinely impressed by the authentic and heartfelt candid moments you capture, truly telling a unique story with each wedding. I noticed you're primarily Instagram-only, which means managing inquiries and bookings might be quite manual without a dedicated online presence. We've actually put together a personalized showcase demo for Candid Wedding Photography Pune to illustrate how a dedicated platform could streamline this for you: https://demo.claraverse.in/candid-wedding-photography-pune Would love to get your feedback on this.",
-    "slug": "candid-wedding-photography-pune"
+    "pitch": "Hey Candid Wedding Photography Pune Team,\n\nLove your candid wedding photography on Instagram! Your ability to capture genuine emotions is truly remarkable.\n\nI noticed you're Instagram-only, which often means managing bookings manually. This custom demo link (https://demo.claraverse.in/candid-wedding-photography-pune) shows how you could automate and streamline your booking process.\n\nWould love to hear your thoughts on this!",
+    "slug": "candid-wedding-photography-pune",
+    "facebook": "—"
   },
   {
     "id": 556,
@@ -847,12 +903,13 @@ const punePhotographers100 = [
     "category": "Pre-Wedding/Wedding",
     "instagram": "@preweddingpune",
     "websiteStatus": "No website",
-    "phone": "—",
+    "phone": "+91-92848-80394",
     "email": "—",
     "notes": "Pre-wedding specialist. Instagram-only.",
     "url": "https://demo.claraverse.in/pre-wedding-photography-pune",
-    "pitch": "Hey Team, Your Instagram-only approach to showcasing your beautiful pre-wedding photography truly captures the essence of candid moments. I noticed that without a dedicated website, managing inquiries and bookings might be a manual process, potentially missing out on direct online conversions. We've actually put together a personalized showcase demo for Pre Wedding Photography Pune to illustrate how a dedicated platform could streamline this for you: https://demo.claraverse.in/pre-wedding-photography-pune Would love to get your feedback on this.",
-    "slug": "pre-wedding-photography-pune"
+    "pitch": "Hey Pre Wedding Photography Pune Team,\n\nYour pre-wedding photography on Instagram is absolutely stunning – the way you capture those romantic, candid moments is truly special!\n\nSince you're Instagram-only, I noticed you might be handling bookings manually. This custom demo link shows how you could automate and streamline your booking process: https://demo.claraverse.in/pre-wedding-photography-pune\n\nWould love to hear your thoughts on this!",
+    "slug": "pre-wedding-photography-pune",
+    "facebook": "—"
   },
   {
     "id": 557,
@@ -862,12 +919,13 @@ const punePhotographers100 = [
     "category": "Wedding",
     "instagram": "@weddingtalespune",
     "websiteStatus": "No website",
-    "phone": "—",
+    "phone": "+91-99162-94861",
     "email": "—",
     "notes": "Wedding storytelling. Instagram-only.",
     "url": "https://demo.claraverse.in/wedding-tales-pune",
-    "pitch": "Hey Team, Your wedding storytelling on Instagram is truly captivating, capturing such genuine moments. It seems you're primarily on Instagram, which is fantastic for showcasing your work, but a dedicated online presence could help streamline inquiries and bookings beyond DMs. We've actually put together a personalized showcase demo for Wedding Tales Pune to illustrate this: https://demo.claraverse.in/wedding-tales-pune. Would love to get your feedback on this.",
-    "slug": "wedding-tales-pune"
+    "pitch": "Hey Wedding Tales Pune Team,\n\nYour wedding storytelling on Instagram is absolutely captivating!\n\nI noticed you're Instagram-only, which means managing inquiries and bookings can get pretty manual. This custom demo link (https://demo.claraverse.in/wedding-tales-pune) is designed to automate and streamline that for you.\n\nWould love to hear your thoughts on this!",
+    "slug": "wedding-tales-pune",
+    "facebook": "—"
   },
   {
     "id": 558,
@@ -881,8 +939,9 @@ const punePhotographers100 = [
     "email": "—",
     "notes": "Wedding photography. Instagram-only.",
     "url": "https://demo.claraverse.in/shaadi-stories-pune",
-    "pitch": "Hey Team, Your Instagram-only portfolio for Shaadi Stories Pune beautifully captures the candid joy and emotion of weddings. I noticed you're operating without a dedicated website, which means you might be missing out on potential clients searching online and streamlining your booking process. We've put together a personalized showcase demo specifically for Shaadi Stories Pune to illustrate how a professional online presence can elevate your brand: https://demo.claraverse.in/shaadi-stories-pune Would love to get your feedback on this.",
-    "slug": "shaadi-stories-pune"
+    "pitch": "Hey Shaadi Stories Team,\n\nYour Instagram is a beautiful showcase of your wedding photography – truly captivating!\n\nI noticed you're Instagram-only, which often means manual booking processes. This custom demo link shows how you can automate and streamline everything: https://demo.claraverse.in/shaadi-stories-pune\n\nWould love to hear your thoughts on this!",
+    "slug": "shaadi-stories-pune",
+    "facebook": "—"
   },
   {
     "id": 559,
@@ -892,12 +951,13 @@ const punePhotographers100 = [
     "category": "Wedding",
     "instagram": "@bridalmomentspune",
     "websiteStatus": "No website",
-    "phone": "—",
+    "phone": "+91-83903-67637",
     "email": "—",
     "notes": "Bridal & wedding photography. Instagram-only.",
     "url": "https://demo.claraverse.in/bridal-moments-pune",
-    "pitch": "Hey Team, I'm truly impressed by the beautiful wedding photography you showcase on Instagram. I noticed you're exclusively on Instagram, which means managing inquiries and bookings can be quite manual. We've actually built a personalized showcase demo for Bridal Moments Pune to illustrate how a dedicated platform could streamline this: https://demo.claraverse.in/bridal-moments-pune Would love to get your feedback on this.",
-    "slug": "bridal-moments-pune"
+    "pitch": "Hey Bridal Moments Pune Team,\n\nI was so impressed by your stunning bridal and wedding photography on Instagram!\n\nGiven you're Instagram-only, I imagine managing bookings manually can be quite time-consuming. We've put together a custom demo for you at https://demo.claraverse.in/bridal-moments-pune to show how you can automate and streamline this process.\n\nWould love to hear your thoughts on this!",
+    "slug": "bridal-moments-pune",
+    "facebook": "—"
   },
   {
     "id": 560,
@@ -907,12 +967,13 @@ const punePhotographers100 = [
     "category": "Newborn/Baby",
     "instagram": "@babyphotographypune",
     "websiteStatus": "No website",
-    "phone": "—",
+    "phone": "+91-99224-12417",
     "email": "—",
     "notes": "Newborn & baby photography. Instagram-only.",
     "url": "https://demo.claraverse.in/baby-photography-pune",
-    "pitch": "Hey Team, Your dedication to capturing those precious early moments with your newborn and baby photography is truly heartwarming. I noticed you're currently operating without a dedicated website, which might make it challenging for potential clients to discover and book your beautiful work. We've actually put together a personalized showcase demo just for you, showing how a dedicated online presence could look: https://demo.claraverse.in/baby-photography-pune. Would love to get your feedback on this.",
-    "slug": "baby-photography-pune"
+    "pitch": "Hey Baby Photography Pune Team,\n\nYour newborn baby photoshoot setups on Instagram are incredibly creative and heartwarming!\n\nI noticed you're Instagram-only, which often means manual booking inquiries – imagine automating that! I've put together a quick demo for you here: https://demo.claraverse.in/baby-photography-pune\n\nWould love to hear your thoughts on this!",
+    "slug": "baby-photography-pune",
+    "facebook": "—"
   },
   {
     "id": 561,
@@ -922,12 +983,13 @@ const punePhotographers100 = [
     "category": "Maternity/Baby",
     "instagram": "@maternityphotographypune",
     "websiteStatus": "No website",
-    "phone": "—",
+    "phone": "+91-95770-70700",
     "email": "—",
     "notes": "Maternity & baby photography. Instagram-only.",
     "url": "https://demo.claraverse.in/maternity-photography-pune",
-    "pitch": "Hey Team, Your maternity and baby photography on Instagram truly captures such precious moments with warmth and artistry. I noticed you're currently operating without a dedicated website, which means you might be missing out on potential clients searching online. We've put together a personalized showcase demo for Maternity Photography Pune to illustrate how a professional online presence could elevate your business: https://demo.claraverse.in/maternity-photography-pune Would love to get your feedback on this.",
-    "slug": "maternity-photography-pune"
+    "pitch": "Hey Maternity Photography Pune Team,\n\nYour maternity and newborn baby photoshoot setups on Instagram are absolutely heartwarming and beautifully captured!\n\nGiven you're Instagram-only, I imagine managing bookings and inquiries manually can be quite time-consuming. I put together a quick demo link for you at https://demo.claraverse.in/maternity-photography-pune that could help automate and streamline your entire booking process.\n\nWould love to hear your thoughts on this!",
+    "slug": "maternity-photography-pune",
+    "facebook": "—"
   },
   {
     "id": 562,
@@ -941,8 +1003,9 @@ const punePhotographers100 = [
     "email": "—",
     "notes": "Kids & child photography. Instagram-only.",
     "url": "https://demo.claraverse.in/kids-photography-pune",
-    "pitch": "Hey Team, Your Instagram showcases such heartwarming and authentic moments of kids and families, truly capturing the joy of childhood. It looks like you're primarily on Instagram, which is great for showcasing your work, but it might make managing inquiries and bookings a bit more manual. We've put together a personalized showcase demo for Kids Photography Pune to illustrate how a dedicated platform could streamline this for you: https://demo.claraverse.in/kids-photography-pune. Would love to get your feedback on this.",
-    "slug": "kids-photography-pune"
+    "pitch": "Hey Kids Photography Pune Team,\n\nYour kids and newborn photography on Instagram is absolutely heartwarming and beautifully captured!\n\nIt looks like you're currently managing bookings manually without a dedicated website. We've put together a quick demo to show how you could automate and streamline this process: https://demo.claraverse.in/kids-photography-pune\n\nWould love to hear your thoughts on this!",
+    "slug": "kids-photography-pune",
+    "facebook": "—"
   },
   {
     "id": 563,
@@ -956,8 +1019,9 @@ const punePhotographers100 = [
     "email": "—",
     "notes": "Family photography. Instagram-only.",
     "url": "https://demo.claraverse.in/family-photography-pune",
-    "pitch": "Hey Team, We're really impressed by the heartwarming and authentic family moments you capture, as seen on your Instagram. We noticed you're currently operating without a dedicated website, which means you might be missing out on direct bookings and showcasing your beautiful work more comprehensively. To help visualize how a professional online presence could elevate your brand, we've put together a personalized demo for Family Photography Pune: https://demo.claraverse.in/family-photography-pune. We'd love to get your feedback on this.",
-    "slug": "family-photography-pune"
+    "pitch": "Hey Team,\n\nLove your heartwarming family moments on Instagram!\n\nNo website? See your custom demo here: https://demo.claraverse.in/family-photography-pune\n\nWhat do you think?",
+    "slug": "family-photography-pune",
+    "facebook": "—"
   },
   {
     "id": 564,
@@ -971,8 +1035,9 @@ const punePhotographers100 = [
     "email": "—",
     "notes": "Newborn studio. Instagram-only.",
     "url": "https://demo.claraverse.in/newborn-studio-pune",
-    "pitch": "Hey Team, Your beautiful newborn photography on Instagram truly captures those precious early moments with such warmth and artistry. I noticed you're primarily on Instagram and don't have a dedicated website, which can sometimes make it challenging for potential clients to find all your information and book easily. We've actually put together a quick personalized demo for Newborn Studio Pune to show how a dedicated online presence could look and function for you: https://demo.claraverse.in/newborn-studio-pune Would love to get your feedback on this.",
-    "slug": "newborn-studio-pune"
+    "pitch": "Hey Newborn Studio Pune Team,\n\nI absolutely love your newborn baby photoshoot setups on Instagram – they're incredibly creative and heartwarming!\n\nGiven you're Instagram-only, managing bookings and inquiries can get really time-consuming. I've put together a quick demo here to show how you could automate and streamline everything: https://demo.claraverse.in/newborn-studio-pune\n\nWould love to hear your thoughts on this!",
+    "slug": "newborn-studio-pune",
+    "facebook": "—"
   },
   {
     "id": 565,
@@ -986,8 +1051,9 @@ const punePhotographers100 = [
     "email": "—",
     "notes": "Headshot photography. Instagram-only.",
     "url": "https://demo.claraverse.in/headshot-photography-pune",
-    "pitch": "Hey Team, I was really impressed by the professional and impactful headshots you showcase on Instagram. I noticed that without a dedicated website, managing inquiries and showcasing your full portfolio might be challenging, especially since you're Instagram-only. We've put together a personalized demo for Headshot Photography Pune to illustrate how a professional online presence could elevate your brand: https://demo.claraverse.in/headshot-photography-pune. Would love to get your feedback on this.",
-    "slug": "headshot-photography-pune"
+    "pitch": "Hey Headshot Photography Pune Team,\n\nI found your work on Instagram and your professional headshot portfolio is truly impressive, capturing such strong and confident expressions!\n\nSince you're Instagram-only and don't have a website, I noticed you might be handling bookings manually. I've put together a quick demo of how you could automate and streamline your booking process, making it super easy for clients to schedule sessions directly: https://demo.claraverse.in/headshot-photography-pune\n\nWould love to hear your thoughts on this!",
+    "slug": "headshot-photography-pune",
+    "facebook": "—"
   },
   {
     "id": 566,
@@ -997,12 +1063,13 @@ const punePhotographers100 = [
     "category": "Portrait/Headshot",
     "instagram": "@corporateheadshotspune",
     "websiteStatus": "No website",
-    "phone": "—",
+    "phone": "+91-84120-11220",
     "email": "—",
     "notes": "Corporate headshots. Instagram-only.",
     "url": "https://demo.claraverse.in/corporate-headshots-pune",
-    "pitch": "Hey Team, Your Instagram showcases a really strong portfolio of corporate headshots, capturing professional and impactful portraits. Given your Instagram-only presence, managing inquiries and bookings might be quite manual. We've actually put together a personalized demo for Corporate Headshots Pune at https://demo.claraverse.in/corporate-headshots-pune to illustrate how a dedicated platform could streamline this. Would love to get your feedback on this.",
-    "slug": "corporate-headshots-pune"
+    "pitch": "Hey Corporate Headshots Pune Team,\n\nYour corporate headshot portfolio on Instagram is incredibly professional and captures executive presence perfectly!\n\nI noticed you're currently Instagram-only, which often means manual booking inquiries. This demo shows how you could automate and streamline your corporate headshot bookings: https://demo.claraverse.in/corporate-headshots-pune\n\nWould love to hear your thoughts on this!",
+    "slug": "corporate-headshots-pune",
+    "facebook": "—"
   },
   {
     "id": 567,
@@ -1012,12 +1079,13 @@ const punePhotographers100 = [
     "category": "Portrait/Headshot",
     "instagram": "@linkedinphotospune",
     "websiteStatus": "No website",
-    "phone": "—",
+    "phone": "+91-84120-11220",
     "email": "—",
     "notes": "LinkedIn profile photos. Instagram-only.",
     "url": "https://demo.claraverse.in/linkedin-photos-pune",
-    "pitch": "Hey Team, We're really impressed by the sharp, professional headshots you create for LinkedIn profiles on your Instagram. Given your strong Instagram presence but lack of a dedicated website, managing inquiries and bookings might be a manual process. We've actually put together a personalized showcase demo for LinkedIn Photos Pune to illustrate how a dedicated platform could streamline this for you: https://demo.claraverse.in/linkedin-photos-pune Would love to get your feedback on this.",
-    "slug": "linkedin-photos-pune"
+    "pitch": "Hey LinkedIn Photos Pune Team,\n\nYour LinkedIn profile photos on Instagram are incredibly sharp and professional!\n\nIt looks like you're currently managing bookings manually through Instagram DMs, which can be time-consuming. I've put together a quick demo here: https://demo.claraverse.in/linkedin-photos-pune\n\nWould love to hear your thoughts on this!",
+    "slug": "linkedin-photos-pune",
+    "facebook": "—"
   },
   {
     "id": 568,
@@ -1031,8 +1099,9 @@ const punePhotographers100 = [
     "email": "—",
     "notes": "Personal branding photography. Instagram-only.",
     "url": "https://demo.claraverse.in/personal-branding-photography-pune",
-    "pitch": "Hey Team, We're really impressed with your stunning personal branding photography showcased on Instagram. Given your strong Instagram presence, we noticed you don't have a dedicated website, which might make it challenging to manage bookings and showcase your full portfolio beyond social media. We've actually built a personalized showcase demo specifically for Personal Branding Photography Pune to illustrate how a dedicated platform could elevate your brand: https://demo.claraverse.in/personal-branding-photography-pune. We'd love to get your feedback on this.",
-    "slug": "personal-branding-photography-pune"
+    "pitch": "Hey Personal Branding Photography Pune Team,\n\nYour personal branding photography on Instagram is truly inspiring, capturing unique professional stories!\n\nI noticed you're Instagram-only, which often means manual booking. We've put together a quick demo to show how you can automate and streamline your bookings: https://demo.claraverse.in/personal-branding-photography-pune\n\nWould love to hear your thoughts on this!",
+    "slug": "personal-branding-photography-pune",
+    "facebook": "—"
   },
   {
     "id": 569,
@@ -1046,8 +1115,9 @@ const punePhotographers100 = [
     "email": "—",
     "notes": "Matrimonial & biodata photos. Instagram-only.",
     "url": "https://demo.claraverse.in/matrimonial-photos-pune",
-    "pitch": "Hey Team, We're really impressed by your beautiful matrimonial and biodata photography showcased on Instagram. I noticed you're currently Instagram-only, which means managing inquiries and showcasing your full portfolio can be quite manual. We've built a personalized showcase demo specifically for Matrimonial Photos Pune to illustrate how a dedicated online presence could streamline this: https://demo.claraverse.in/matrimonial-photos-pune. Would love to get your feedback on this.",
-    "slug": "matrimonial-photos-pune"
+    "pitch": "Hey Matrimonial Photos Pune Team,\n\nYour matrimonial and biodata photography on Instagram is truly exceptional, capturing such important moments beautifully!\n\nI noticed you're Instagram-only, which often means handling booking inquiries manually. This custom demo link shows how you can automate and streamline that process: https://demo.claraverse.in/matrimonial-photos-pune\n\nWould love to hear your thoughts on this!",
+    "slug": "matrimonial-photos-pune",
+    "facebook": "—"
   },
   {
     "id": 570,
@@ -1057,12 +1127,13 @@ const punePhotographers100 = [
     "category": "Product/E-commerce",
     "instagram": "@ecommercephotopune",
     "websiteStatus": "No website",
-    "phone": "—",
+    "phone": "+91 9833074070, +91 8655504111 (WhatsApp)",
     "email": "—",
     "notes": "E-commerce product photography. Instagram-only.",
     "url": "https://demo.claraverse.in/e-commerce-photography-pune",
-    "pitch": "Hey Team, Your e-commerce product photography on Instagram is truly impressive, showcasing products with such clarity and appeal. I noticed you're currently operating without a dedicated website, which might make it challenging to showcase your full portfolio and streamline client inquiries. We've put together a personalized showcase demo for E-commerce Photography Pune to illustrate how a professional online presence could look for you: https://demo.claraverse.in/e-commerce-photography-pune Would love to get your feedback on this.",
-    "slug": "e-commerce-photography-pune"
+    "pitch": "Hey E-commerce Photography Pune Team,\n\nYour e-commerce product photography on Instagram is truly impressive, showcasing products with such clarity and appeal!\n\nI noticed you're Instagram-only, which often means manual booking inquiries. This custom demo link shows how you could automate and streamline your booking process: https://demo.claraverse.in/e-commerce-photography-pune\n\nWould love to hear your thoughts on this!",
+    "slug": "e-commerce-photography-pune",
+    "facebook": "—"
   },
   {
     "id": 571,
@@ -1076,8 +1147,9 @@ const punePhotographers100 = [
     "email": "—",
     "notes": "Amazon product photography. Instagram-only.",
     "url": "https://demo.claraverse.in/amazon-product-photography-pune",
-    "pitch": "Hey Team, Your Amazon product photography on Instagram truly stands out, showcasing a keen eye for detail that helps products shine. I noticed you're primarily showcasing your impressive work on Instagram, which means potential clients might miss out on a dedicated portfolio experience. We've actually built a personalized showcase demo just for you to illustrate how a dedicated platform could elevate your brand: https://demo.claraverse.in/amazon-product-photography-pune. Would love to get your feedback on this.",
-    "slug": "amazon-product-photography-pune"
+    "pitch": "Hey Amazon Product Photography Pune Team,\n\nYour Amazon product photography on Instagram is incredibly sharp and professional, making products truly pop!\n\nI noticed you're Instagram-only, which often means handling bookings manually. I've put together a quick demo here to show how you could automate and streamline that process: https://demo.claraverse.in/amazon-product-photography-pune\n\nWould love to hear your thoughts on this!",
+    "slug": "amazon-product-photography-pune",
+    "facebook": "—"
   },
   {
     "id": 572,
@@ -1091,8 +1163,9 @@ const punePhotographers100 = [
     "email": "—",
     "notes": "Food photography. Instagram-only.",
     "url": "https://demo.claraverse.in/food-photography-pune",
-    "pitch": "Hey Team, Your food photography on Instagram is truly captivating, showcasing dishes with such artistry and appeal. I noticed you're primarily on Instagram and don't have a dedicated website, which might make it challenging for potential clients to explore your full portfolio or book your services directly. We've put together a personalized showcase demo for Food Photography Pune to illustrate how a dedicated online presence could elevate your brand: https://demo.claraverse.in/food-photography-pune. Would love to get your feedback on this.",
-    "slug": "food-photography-pune"
+    "pitch": "Hey Food Photography Pune Team,\n\nYour food photography on Instagram is absolutely mouth-watering and truly captures the essence of each dish!\n\nI noticed you're currently managing all your bookings manually through Instagram DMs or calls, which can be time-consuming. This custom demo link shows how you could automate and streamline that process: https://demo.claraverse.in/food-photography-pune\n\nWould love to hear your thoughts on this!",
+    "slug": "food-photography-pune",
+    "facebook": "—"
   },
   {
     "id": 573,
@@ -1106,8 +1179,9 @@ const punePhotographers100 = [
     "email": "—",
     "notes": "Lifestyle product photography. Instagram-only.",
     "url": "https://demo.claraverse.in/lifestyle-photography-pune",
-    "pitch": "Hey Team, We're really impressed by the captivating lifestyle product photography you showcase on Instagram. Given your Instagram-only presence, we imagine managing inquiries and bookings might be quite manual. We've actually put together a personalized showcase demo for Lifestyle Photography Pune to illustrate how a dedicated online presence could streamline things: https://demo.claraverse.in/lifestyle-photography-pune. Would love to get your feedback on this.",
-    "slug": "lifestyle-photography-pune"
+    "pitch": "Hey Lifestyle Photography Pune Team,\n\nYour lifestyle product photography on Instagram is absolutely stunning – you have a real knack for making products look aspirational!\n\nI noticed you're Instagram-only and likely handling bookings manually, which can be time-consuming. I put together a quick demo here: https://demo.claraverse.in/lifestyle-photography-pune to show how you could automate and streamline your booking process.\n\nWould love to hear your thoughts on this!",
+    "slug": "lifestyle-photography-pune",
+    "facebook": "—"
   },
   {
     "id": 574,
@@ -1121,8 +1195,9 @@ const punePhotographers100 = [
     "email": "—",
     "notes": "Catalog & lookbook photography. Instagram-only.",
     "url": "https://demo.claraverse.in/catalog-photography-pune",
-    "pitch": "Hey Team, Your catalog and lookbook photography on Instagram is truly impressive, showcasing products with such clarity and style. I noticed you're primarily on Instagram and don't have a dedicated website, which might make it challenging for potential clients to explore your full portfolio or book your services directly. We've actually put together a personalized showcase demo for Catalog Photography Pune to illustrate how a dedicated platform could elevate your online presence: https://demo.claraverse.in/catalog-photography-pune. Would love to get your feedback on this.",
-    "slug": "catalog-photography-pune"
+    "pitch": "Hey Catalog Photography Pune Team,\n\nYour catalog and lookbook photography on Instagram is truly impressive, capturing products with such clarity and style!\n\nGiven you're Instagram-only with no website, managing bookings can be a manual process. I've put together a quick demo at https://demo.claraverse.in/catalog-photography-pune to show how you could automate and streamline this.\n\nWould love to hear your thoughts on this!",
+    "slug": "catalog-photography-pune",
+    "facebook": "—"
   },
   {
     "id": 575,
@@ -1132,12 +1207,13 @@ const punePhotographers100 = [
     "category": "Corporate/Event",
     "instagram": "@corporateeventpune",
     "websiteStatus": "No website",
-    "phone": "—",
+    "phone": "+91-82080-31265",
     "email": "—",
     "notes": "Corporate event photography. Instagram-only.",
     "url": "https://demo.claraverse.in/corporate-event-photography-pune",
-    "pitch": "Hey Team, Your corporate event photography on Instagram truly captures the energy and professionalism of each occasion. Given you're Instagram-only, managing inquiries and bookings can be quite a manual process without a dedicated online presence. We've crafted a personalized showcase demo specifically for Corporate Event Photography Pune to streamline this: https://demo.claraverse.in/corporate-event-photography-pune Would love to get your feedback on this.",
-    "slug": "corporate-event-photography-pune"
+    "pitch": "Hey Corporate Event Photography Pune Team,\n\nI was really impressed by your dynamic corporate event photography on Instagram!\n\nIt looks like you're currently managing bookings manually or through DMs without a dedicated website. I've put together a quick demo of how you could automate and streamline your booking process here: https://demo.claraverse.in/corporate-event-photography-pune\n\nWould love to hear your thoughts on this!",
+    "slug": "corporate-event-photography-pune",
+    "facebook": "—"
   },
   {
     "id": 576,
@@ -1151,8 +1227,9 @@ const punePhotographers100 = [
     "email": "—",
     "notes": "Conference & seminar photography. Instagram-only.",
     "url": "https://demo.claraverse.in/conference-photography-pune",
-    "pitch": "Hey Team, Your focus on capturing the dynamic energy of conferences and seminars on Instagram is truly impressive. Given your incredible work is currently Instagram-only, you're missing out on a dedicated online space to showcase your portfolio and streamline client inquiries. We've built a personalized showcase demo specifically for Conference Photography Pune to illustrate how a dedicated platform could elevate your brand: https://demo.claraverse.in/conference-photography-pune Would love to get your feedback on this.",
-    "slug": "conference-photography-pune"
+    "pitch": "Hey Team,\n\nLove your dynamic conference photography on Instagram!\n\nMissing a dedicated portfolio? Check your custom demo: https://demo.claraverse.in/conference-photography-pune\n\nWould love your feedback!",
+    "slug": "conference-photography-pune",
+    "facebook": "—"
   },
   {
     "id": 577,
@@ -1166,8 +1243,9 @@ const punePhotographers100 = [
     "email": "—",
     "notes": "AGM & corporate photography. Instagram-only.",
     "url": "https://demo.claraverse.in/agm-photography-pune",
-    "pitch": "Hey Team, Your corporate and event photography on Instagram truly captures the essence of each moment with a professional and engaging style. I noticed you're currently Instagram-only, which means managing inquiries and bookings might be a manual process without a dedicated online presence. We've actually built a personalized showcase demo specifically for AGM Photography Pune to illustrate how a dedicated platform could streamline this for you: https://demo.claraverse.in/agm-photography-pune. Would love to get your feedback on this.",
-    "slug": "agm-photography-pune"
+    "pitch": "Hey Team,\n\nLove your engaging corporate & event photography on Instagram!\n\nSee how a dedicated platform streamlines bookings: https://demo.claraverse.in/agm-photography-pune\n\nWould love your feedback!",
+    "slug": "agm-photography-pune",
+    "facebook": "—"
   },
   {
     "id": 578,
@@ -1181,8 +1259,9 @@ const punePhotographers100 = [
     "email": "—",
     "notes": "Product launch photography. Instagram-only.",
     "url": "https://demo.claraverse.in/product-launch-photography-pune",
-    "pitch": "Hey Team, Your focus on capturing the essence of product launches through your Instagram-only presence is truly impressive. I noticed you're currently operating without a dedicated website, which might make it challenging to showcase your full portfolio and streamline client inquiries. We've put together a personalized showcase demo for Product Launch Photography Pune to illustrate how a dedicated platform could elevate your brand: https://demo.claraverse.in/product-launch-photography-pune Would love to get your feedback on this.",
-    "slug": "product-launch-photography-pune"
+    "pitch": "Hey Product Launch Photography Pune Team,\n\nLove how you capture the excitement and detail of product launches on Instagram!\n\nSince you're Instagram-only, this often means managing bookings manually, which can be time-consuming. I've put together a quick demo here to show how you could automate and streamline this process: https://demo.claraverse.in/product-launch-photography-pune\n\nWould love to hear your thoughts on this!",
+    "slug": "product-launch-photography-pune",
+    "facebook": "—"
   },
   {
     "id": 579,
@@ -1192,12 +1271,13 @@ const punePhotographers100 = [
     "category": "Corporate/Event",
     "instagram": "@teambuildingpune",
     "websiteStatus": "No website",
-    "phone": "—",
+    "phone": "+91-81043-29191",
     "email": "—",
     "notes": "Team building & corporate photography. Instagram-only.",
     "url": "https://demo.claraverse.in/team-building-photography-pune",
-    "pitch": "Hey Team, Your focus on capturing the dynamic energy of team-building and corporate events really stands out. I noticed you're currently Instagram-only, which means managing inquiries and bookings can be quite manual. We've put together a quick personalized demo at https://demo.claraverse.in/team-building-photography-pune to show how a dedicated platform could streamline this for Team Building Photography Pune. Would love to get your feedback on this.",
-    "slug": "team-building-photography-pune"
+    "pitch": "Hey Team,\n\nYour corporate event and team-building photography on Instagram truly captures the energy and spirit of collaboration!\n\nI noticed you're rocking it on Instagram, but without a website, managing bookings might be a manual process. I've put together a quick demo to show how you could automate and streamline that: https://demo.claraverse.in/team-building-photography-pune\n\nWould love to hear your thoughts on this!",
+    "slug": "team-building-photography-pune",
+    "facebook": "—"
   },
   {
     "id": 580,
@@ -1207,12 +1287,13 @@ const punePhotographers100 = [
     "category": "Fashion/Portfolio",
     "instagram": "@modelportfoliopune",
     "websiteStatus": "No website",
-    "phone": "—",
+    "phone": "+91-91689-81777",
     "email": "—",
     "notes": "Model portfolio photography. Instagram-only.",
     "url": "https://demo.claraverse.in/model-portfolio-photography-pune",
-    "pitch": "Hey Team, We're really impressed by the striking model portfolio photography you showcase on Instagram. Given you're Instagram-only, we noticed you might be missing out on a dedicated online space to showcase your work and streamline client bookings. We've built a personalized showcase demo specifically for Model Portfolio Photography Pune to illustrate how this could work: https://demo.claraverse.in/model-portfolio-photography-pune Would love to get your feedback on this.",
-    "slug": "model-portfolio-photography-pune"
+    "pitch": "Hey Model Portfolio Photography Pune Team,\n\nYour model portfolio work on Instagram is absolutely stunning – the way you capture fashion and personality is truly impressive!\n\nI noticed you're Instagram-only, which often means handling bookings manually. This custom demo link shows how you could automate and streamline your entire booking process: https://demo.claraverse.in/model-portfolio-photography-pune\n\nWould love to hear your thoughts on this!",
+    "slug": "model-portfolio-photography-pune",
+    "facebook": "—"
   },
   {
     "id": 581,
@@ -1222,12 +1303,13 @@ const punePhotographers100 = [
     "category": "Fashion/Portfolio",
     "instagram": "@portfoliophotopune",
     "websiteStatus": "No website",
-    "phone": "—",
+    "phone": "+91-70453-60660",
     "email": "—",
     "notes": "Portfolio photography. Instagram-only.",
     "url": "https://demo.claraverse.in/portfolio-photography-pune",
-    "pitch": "Hey Team, Your portfolio photography on Instagram truly stands out with its striking visuals and unique aesthetic. Given your strong Instagram presence, having a dedicated online platform could significantly streamline client interactions and bookings, which currently might be handled manually. We've crafted a personalized showcase demo for Portfolio Photography Pune to illustrate this, which you can view here: https://demo.claraverse.in/portfolio-photography-pune. We'd love to get your feedback on this.",
-    "slug": "portfolio-photography-pune"
+    "pitch": "Hey Portfolio Photography Pune Team,\n\nYour fashion and portfolio photography on Instagram is truly captivating!\n\nI noticed you're currently managing bookings through Instagram, which can be quite time-consuming without a dedicated platform. I've put together a quick demo for you here: https://demo.claraverse.in/portfolio-photography-pune\n\nWould love to hear your thoughts on this!",
+    "slug": "portfolio-photography-pune",
+    "facebook": "—"
   },
   {
     "id": 582,
@@ -1241,8 +1323,9 @@ const punePhotographers100 = [
     "email": "—",
     "notes": "Beauty & cosmetics photography. Instagram-only.",
     "url": "https://demo.claraverse.in/beauty-photography-pune",
-    "pitch": "Hey Team, Your beauty & cosmetics photography on Instagram is truly captivating, showcasing a keen eye for detail and aesthetics. I noticed you're currently operating without a dedicated website, which means managing inquiries and bookings might be a manual process. We've actually put together a personalized showcase demo for Beauty Photography Pune to illustrate how a dedicated platform could streamline your operations: https://demo.claraverse.in/beauty-photography-pune Would love to get your feedback on this.",
-    "slug": "beauty-photography-pune"
+    "pitch": "Hey Beauty Photography Pune Team,\n\nYour stunning beauty and cosmetics photography on Instagram is truly captivating!\n\nGiven you're Instagram-only with no website, managing bookings manually must be a huge task. We've tailored a demo at https://demo.claraverse.in/beauty-photography-pune to show how you can automate and streamline your booking process.\n\nWould love to hear your thoughts on this!",
+    "slug": "beauty-photography-pune",
+    "facebook": "—"
   },
   {
     "id": 583,
@@ -1256,8 +1339,9 @@ const punePhotographers100 = [
     "email": "—",
     "notes": "Editorial photography. Instagram-only.",
     "url": "https://demo.claraverse.in/editorial-photography-pune",
-    "pitch": "Hey Team,\n\nI love your photography. We built a personalized booking demo for you: https://demo.claraverse.in/editorial-photography-pune\n\nWould love to get your feedback!",
-    "slug": "editorial-photography-pune"
+    "pitch": "Hey Editorial Photography Pune Team,\n\nYour high-impact editorial photography on Instagram is absolutely stunning!\n\nNoticed you're Instagram-only, which often means manual bookings. This custom demo link (https://demo.claraverse.in/editorial-photography-pune) could automate and streamline your client bookings.\n\nWould love to hear your thoughts on this!",
+    "slug": "editorial-photography-pune",
+    "facebook": "—"
   },
   {
     "id": 584,
@@ -1271,8 +1355,9 @@ const punePhotographers100 = [
     "email": "—",
     "notes": "Lookbook photography. Instagram-only.",
     "url": "https://demo.claraverse.in/lookbook-photography-pune",
-    "pitch": "Hey Team, Your distinctive lookbook photography style on Instagram is truly captivating and showcases a unique artistic vision. I noticed that while Instagram is fantastic for sharing, not having a dedicated website might mean you're missing out on a centralized platform to present your full portfolio and streamline client inquiries. We've put together a personalized demo just for Lookbook Photography Pune to illustrate how a professional online presence could elevate your brand: https://demo.claraverse.in/lookbook-photography-pune. Would love to get your feedback on this.",
-    "slug": "lookbook-photography-pune"
+    "pitch": "Hey Lookbook Photography Team,\n\nYour lookbook photography on Instagram is absolutely stunning, capturing fashion with such an artistic eye!\n\nI noticed you're currently managing bookings without a dedicated website, which can be quite time-consuming. I've put together a quick demo at https://demo.claraverse.in/lookbook-photography-pune to show how you could automate and streamline your entire booking process.\n\nWould love to hear your thoughts on this!",
+    "slug": "lookbook-photography-pune",
+    "facebook": "—"
   },
   {
     "id": 585,
@@ -1286,8 +1371,9 @@ const punePhotographers100 = [
     "email": "—",
     "notes": "Interior photography. Instagram-only.",
     "url": "https://demo.claraverse.in/interior-photography-pune",
-    "pitch": "Hey Team, Your interior photography on Instagram is truly captivating, showcasing spaces with such an artistic eye. I noticed you're currently operating without a dedicated website, which might make it challenging to showcase your full portfolio and streamline client inquiries. We've put together a personalized demo for Interior Photography Pune to illustrate how a tailored online presence could elevate your brand: https://demo.claraverse.in/interior-photography-pune. Would love to get your feedback on this.",
-    "slug": "interior-photography-pune"
+    "pitch": "Hey Interior Photography Pune Team,\n\nYour interior photography on Instagram is absolutely stunning, capturing spaces with such an eye for detail and light!\n\nI noticed you're currently Instagram-only, which often means handling bookings manually. This custom demo link shows how you can automate and streamline your booking process: https://demo.claraverse.in/interior-photography-pune\n\nWould love to hear your thoughts on this!",
+    "slug": "interior-photography-pune",
+    "facebook": "—"
   },
   {
     "id": 586,
@@ -1297,12 +1383,13 @@ const punePhotographers100 = [
     "category": "Architecture/Hotel",
     "instagram": "@hotelphotopune",
     "websiteStatus": "No website",
-    "phone": "—",
+    "phone": "+91 95183 56811, +91 70301 81401, +91 98900 35081",
     "email": "—",
     "notes": "Hotel & resort photography. Instagram-only.",
     "url": "https://demo.claraverse.in/hotel-photography-pune",
-    "pitch": "Hey Team, Your stunning hotel and resort photography on Instagram truly captures the essence and luxury of each property. I noticed you're currently operating without a dedicated website, which might make it challenging to showcase your full portfolio and streamline client inquiries. We've put together a personalized demo for Hotel Photography Pune at https://demo.claraverse.in/hotel-photography-pune to show how a professional online presence could elevate your business. Would love to get your feedback on this.",
-    "slug": "hotel-photography-pune"
+    "pitch": "Hey Hotel Photography Pune Team,\n\nYour stunning hotel & resort photography on Instagram is truly captivating!\n\nI noticed you're currently managing bookings without a dedicated website. This custom demo shows how you can automate and streamline your bookings: https://demo.claraverse.in/hotel-photography-pune\n\nWould love to hear your thoughts on this!",
+    "slug": "hotel-photography-pune",
+    "facebook": "—"
   },
   {
     "id": 587,
@@ -1312,12 +1399,13 @@ const punePhotographers100 = [
     "category": "Architecture/Food",
     "instagram": "@restaurantphotopune",
     "websiteStatus": "No website",
-    "phone": "—",
+    "phone": "+91-95183-56811",
     "email": "—",
     "notes": "Restaurant & cafe photography. Instagram-only.",
     "url": "https://demo.claraverse.in/restaurant-photography-pune",
-    "pitch": "Hey Team, Your Instagram showcases some truly mouth-watering restaurant and cafe photography, capturing the essence of each dish and ambiance beautifully. I noticed you're primarily on Instagram, which is fantastic for showcasing your work, but it means you might be missing out on a dedicated online space to convert inquiries into bookings seamlessly. We've put together a personalized showcase demo for Restaurant Photography Pune to illustrate how a dedicated platform could elevate your online presence and streamline your client interactions: https://demo.claraverse.in/restaurant-photography-pune Would love to get your feedback on this.",
-    "slug": "restaurant-photography-pune"
+    "pitch": "Hey Restaurant Photography Pune Team,\n\nYour restaurant and cafe photography on Instagram is absolutely stunning, capturing the essence of each dish and ambiance so perfectly!\n\nGiven you're Instagram-only, I imagine you're handling all inquiries and bookings manually. I've put together a quick demo at https://demo.claraverse.in/restaurant-photography-pune to show how you could automate and streamline your booking process.\n\nWould love to hear your thoughts on this!",
+    "slug": "restaurant-photography-pune",
+    "facebook": "—"
   },
   {
     "id": 588,
@@ -1331,8 +1419,9 @@ const punePhotographers100 = [
     "email": "—",
     "notes": "3D architectural photography. Instagram-only.",
     "url": "https://demo.claraverse.in/3d-photography-pune",
-    "pitch": "Hey Team, Your 3D architectural photography on Instagram is truly impressive, capturing spaces with such unique depth and perspective. I noticed you're currently Instagram-only and don't have a dedicated website, which might make it challenging to showcase your full portfolio and streamline client inquiries. We've put together a quick personalized demo at https://demo.claraverse.in/3d-photography-pune to show how a dedicated platform could elevate your online presence. Would love to get your feedback on this.",
-    "slug": "3d-photography-pune"
+    "pitch": "Hey 3D Photography Pune Team,\n\nYour 3D architectural photography on Instagram is truly captivating, showcasing spaces with incredible depth and detail!\n\nNoticed you're Instagram-only, which often means handling bookings manually. Imagine automating that process and letting clients book 24/7! We've put together a quick demo for you here: https://demo.claraverse.in/3d-photography-pune\n\nWould love to hear your thoughts on this!",
+    "slug": "3d-photography-pune",
+    "facebook": "—"
   },
   {
     "id": 589,
@@ -1342,12 +1431,13 @@ const punePhotographers100 = [
     "category": "Architecture/Aerial",
     "instagram": "@aerialphotopune",
     "websiteStatus": "No website",
-    "phone": "—",
+    "phone": "+91 93710 44204 (mobile/WhatsApp), +91 99224 68407 (WhatsApp)",
     "email": "—",
     "notes": "Aerial & drone photography. Instagram-only.",
     "url": "https://demo.claraverse.in/aerial-photography-pune",
-    "pitch": "Hey Team, Your aerial and drone photography captures such breathtaking perspectives, truly standing out on Instagram. I noticed you're primarily on Instagram, which is fantastic for showcasing your work, but it can make it tricky for potential clients to find all your services and book easily. We've put together a personalized showcase demo for Aerial Photography Pune to illustrate how a dedicated online presence could elevate your client experience: https://demo.claraverse.in/aerial-photography-pune. Would love to get your feedback on this.",
-    "slug": "aerial-photography-pune"
+    "pitch": "Hey Team,\n\nLove your stunning aerial photography on Instagram!\n\nInstagram's great, but a dedicated site boosts bookings. See your demo:\nhttps://demo.claraverse.in/aerial-photography-pune\n\nWould love your feedback!",
+    "slug": "aerial-photography-pune",
+    "facebook": "—"
   },
   {
     "id": 590,
@@ -1361,8 +1451,9 @@ const punePhotographers100 = [
     "email": "—",
     "notes": "Wedding cinematography. Instagram-only.",
     "url": "https://demo.claraverse.in/wedding-films-pune",
-    "pitch": "Hey Team, We're truly impressed by the captivating wedding cinematography you create, beautifully showcased on Instagram. I noticed you don't have a dedicated website, which means potential clients might miss out on easily exploring your beautiful work and booking your services. We've actually built a personalized showcase demo specifically for Wedding Films Pune to illustrate how this could look: https://demo.claraverse.in/wedding-films-pune. Would love to get your feedback on this.",
-    "slug": "wedding-films-pune"
+    "pitch": "Hey Team,\n\nYour captivating wedding cinematography on Instagram is truly impressive!\n\nNo dedicated website? We built a demo to showcase your amazing work: https://demo.claraverse.in/wedding-films-pune\n\nWould love your feedback!",
+    "slug": "wedding-films-pune",
+    "facebook": "—"
   },
   {
     "id": 591,
@@ -1376,8 +1467,9 @@ const punePhotographers100 = [
     "email": "—",
     "notes": "Cinematic wedding films. Instagram-only.",
     "url": "https://demo.claraverse.in/cinematic-wedding-pune",
-    "pitch": "Hey Team, Your cinematic wedding films truly capture the emotion and grandeur of special days, creating timeless memories for your clients. I noticed you're primarily on Instagram, which is fantastic for showcasing your work, but it means potential clients might miss out on a dedicated space to explore your full portfolio and services. We've crafted a personalized showcase demo for Cinematic Wedding Pune at https://demo.claraverse.in/cinematic-wedding-pune to illustrate how a dedicated online presence could elevate your brand. Would love to get your feedback on this.",
-    "slug": "cinematic-wedding-pune"
+    "pitch": "Hey Cinematic Wedding Pune Team,\n\nYour cinematic wedding films on Instagram are absolutely breathtaking – truly capturing the magic of each couple's special day!\n\nI noticed you're Instagram-only, which often means handling bookings manually. This custom demo link shows how you could automate and streamline your booking process: https://demo.claraverse.in/cinematic-wedding-pune\n\nWould love to hear your thoughts on this!",
+    "slug": "cinematic-wedding-pune",
+    "facebook": "—"
   },
   {
     "id": 592,
@@ -1391,8 +1483,9 @@ const punePhotographers100 = [
     "email": "—",
     "notes": "Destination wedding photography. Instagram-only.",
     "url": "https://demo.claraverse.in/destination-wedding-pune",
-    "pitch": "Hey Team, Your Instagram showcases such breathtaking destination wedding photography, truly capturing the magic of each moment. I noticed you're primarily on Instagram, which means managing inquiries and bookings might be a manual process without a dedicated website. We even built a personalized showcase demo specifically for you to show how this works: https://demo.claraverse.in/destination-wedding-pune. Would love to get your feedback on this.",
-    "slug": "destination-wedding-pune"
+    "pitch": "Hey Destination Wedding Pune Team,\n\nYour breathtaking destination wedding photography on Instagram truly captures the magic of each moment!\n\nIt looks like you're currently managing all your bookings manually, especially without a dedicated website. I've put together a quick demo of how you could automate and streamline this process, tailored just for you: https://demo.claraverse.in/destination-wedding-pune\n\nWould love to hear your thoughts on this!",
+    "slug": "destination-wedding-pune",
+    "facebook": "—"
   },
   {
     "id": 593,
@@ -1406,8 +1499,9 @@ const punePhotographers100 = [
     "email": "—",
     "notes": "Traditional Maharashtrian wedding photography. Instagram-only.",
     "url": "https://demo.claraverse.in/maharashtrian-wedding-pune",
-    "pitch": "Hey Team, We're truly impressed by the beautiful traditional Maharashtrian wedding photography you showcase on Instagram. Given your stunning work is Instagram-only, we noticed you might be missing out on a dedicated online presence to capture more leads and streamline bookings. We've actually put together a personalized showcase demo for Maharashtrian Wedding Pune at https://demo.claraverse.in/maharashtrian-wedding-pune to illustrate how a dedicated platform could elevate your business. We'd love to get your feedback on this.",
-    "slug": "maharashtrian-wedding-pune"
+    "pitch": "Hey Maharashtrian Wedding Pune Team,\n\nAbsolutely love how your Instagram captures the essence and joy of traditional Maharashtrian weddings!\n\nI noticed you're Instagram-only, which often means handling bookings manually. This custom demo link shows how you could automate and streamline that process: https://demo.claraverse.in/maharashtrian-wedding-pune\n\nWould love to hear your thoughts on this!",
+    "slug": "maharashtrian-wedding-pune",
+    "facebook": "—"
   },
   {
     "id": 594,
@@ -1421,8 +1515,9 @@ const punePhotographers100 = [
     "email": "—",
     "notes": "Marathi wedding photography. Instagram-only.",
     "url": "https://demo.claraverse.in/marathi-wedding-pune",
-    "pitch": "Hey Team, Your Instagram showcases such beautiful and vibrant Marathi wedding photography, truly capturing the essence of these special celebrations. Given your incredible work is currently Instagram-only, you might be missing out on potential clients who prefer to browse a dedicated portfolio and book directly. We've actually built a personalized showcase demo specifically for Marathi Wedding Pune to illustrate how you could present your work and streamline bookings: https://demo.claraverse.in/marathi-wedding-pune Would love to get your feedback on this.",
-    "slug": "marathi-wedding-pune"
+    "pitch": "Hey Marathi Wedding Pune Team,\n\nYour vibrant Marathi wedding photography on Instagram truly captures the essence and joy of each ceremony!\n\nI noticed you're Instagram-only, which often means handling bookings manually. This custom demo link (https://demo.claraverse.in/marathi-wedding-pune) is tailored to automate and streamline your booking process.\n\nWould love to hear your thoughts on this!",
+    "slug": "marathi-wedding-pune",
+    "facebook": "—"
   },
   {
     "id": 595,
@@ -1432,12 +1527,13 @@ const punePhotographers100 = [
     "category": "Pet/Portrait",
     "instagram": "@petphotographypune",
     "websiteStatus": "No website",
-    "phone": "—",
+    "phone": "+91-87899-99084",
     "email": "—",
     "notes": "Pet photography. Instagram-only.",
     "url": "https://demo.claraverse.in/pet-photography-pune",
-    "pitch": "Hey Team, Your Instagram-only approach to pet photography captures such genuine and heartwarming moments, truly showcasing the unique bond between pets and their owners. I noticed that without a dedicated website, managing inquiries and showcasing your full portfolio might be more challenging than it needs to be. We've actually put together a personalized demo for Pet Photography Pune to illustrate how a dedicated platform could streamline things for you: https://demo.claraverse.in/pet-photography-pune. Would love to get your feedback on this.",
-    "slug": "pet-photography-pune"
+    "pitch": "Hey Pet Photography Pune Team,\n\nYour pet portraits on Instagram are absolutely heartwarming and capture so much personality!\n\nNoticed you're rocking Instagram without a website, which often means manual bookings. This custom demo link shows how you can automate and streamline everything: https://demo.claraverse.in/pet-photography-pune\n\nWould love to hear your thoughts on this!",
+    "slug": "pet-photography-pune",
+    "facebook": "—"
   },
   {
     "id": 596,
@@ -1451,8 +1547,9 @@ const punePhotographers100 = [
     "email": "—",
     "notes": "Automotive photography. Instagram-only.",
     "url": "https://demo.claraverse.in/automotive-photography-pune",
-    "pitch": "Hey Team, Your automotive photography on Instagram is truly captivating, showcasing a keen eye for detail and dynamic compositions. I noticed you're primarily Instagram-only, which means you might be missing out on a dedicated platform to showcase your stunning portfolio and streamline client inquiries. We've actually put together a personalized showcase demo just for Automotive Photography Pune to illustrate how a dedicated online presence could elevate your brand: https://demo.claraverse.in/automotive-photography-pune. Would love to get your feedback on this.",
-    "slug": "automotive-photography-pune"
+    "pitch": "Hey Automotive Photography Pune Team,\n\nYour automotive photography on Instagram is absolutely stunning, capturing the essence and power of each vehicle perfectly!\n\nI noticed you're rocking it on Instagram without a website, which often means handling bookings manually. We've put together a quick demo to show how you could automate and streamline your booking process: https://demo.claraverse.in/automotive-photography-pune\n\nWould love to hear your thoughts on this!",
+    "slug": "automotive-photography-pune",
+    "facebook": "—"
   },
   {
     "id": 597,
@@ -1466,8 +1563,9 @@ const punePhotographers100 = [
     "email": "—",
     "notes": "Jewelry product photography. Instagram-only.",
     "url": "https://demo.claraverse.in/jewelry-photography-pune",
-    "pitch": "Hey Team, Your jewelry product photography on Instagram is truly captivating, showcasing each piece with such exquisite detail and artistry. I noticed you're exclusively on Instagram, which is fantastic for showcasing your work, but it means potential clients might miss out on a dedicated space to explore your full portfolio and services. We've actually built a personalized showcase demo specifically for Jewelry Photography Pune to illustrate how a dedicated online presence could elevate your brand: https://demo.claraverse.in/jewelry-photography-pune. Would love to get your feedback on this.",
-    "slug": "jewelry-photography-pune"
+    "pitch": "Hey Jewelry Photography Pune Team,\n\nYour stunning jewelry product photography on Instagram really caught my eye!\n\nIt looks like you're currently managing bookings manually without a dedicated website, which can be quite time-consuming. I put together a quick demo of how you could automate and streamline this process here: https://demo.claraverse.in/jewelry-photography-pune\n\nWould love to hear your thoughts on this!",
+    "slug": "jewelry-photography-pune",
+    "facebook": "—"
   },
   {
     "id": 598,
@@ -1477,12 +1575,13 @@ const punePhotographers100 = [
     "category": "Industrial/Commercial",
     "instagram": "@industrialphotopune",
     "websiteStatus": "No website",
-    "phone": "—",
+    "phone": "+91-95183-56811",
     "email": "—",
     "notes": "Industrial & factory photography. Instagram-only.",
     "url": "https://demo.claraverse.in/industrial-photography-pune",
-    "pitch": "Hey Team, Your industrial and factory photography captures the essence of operations with such a powerful and authentic eye. I noticed you're currently Instagram-only, which means managing inquiries and bookings can be quite a manual process. We've actually built a personalized showcase demo specifically for Industrial Photography Pune to illustrate how a dedicated online presence could streamline this: https://demo.claraverse.in/industrial-photography-pune. Would love to get your feedback on this.",
-    "slug": "industrial-photography-pune"
+    "pitch": "Hey Industrial Photography Pune Team,\n\nI found your incredible industrial & factory photography on Instagram and was genuinely impressed by how you capture the raw power and intricate details of the sector!\n\nI noticed you're Instagram-only, which often means manual booking processes. I've put together a quick demo at https://demo.claraverse.in/industrial-photography-pune to show how you could automate and streamline your bookings.\n\nWould love to hear your thoughts on this!",
+    "slug": "industrial-photography-pune",
+    "facebook": "—"
   },
   {
     "id": 599,
@@ -1492,12 +1591,13 @@ const punePhotographers100 = [
     "category": "Medical/Commercial",
     "instagram": "@medicalphotopune",
     "websiteStatus": "No website",
-    "phone": "—",
+    "phone": "9921677520, 8087475047",
     "email": "—",
     "notes": "Medical & healthcare photography. Instagram-only.",
     "url": "https://demo.claraverse.in/medical-photography-pune",
-    "pitch": "Hey Team, Your focus on medical and healthcare photography on Instagram is truly unique and impactful. I noticed you're currently operating without a dedicated website, which might make it challenging to showcase your full portfolio and streamline client inquiries. We've actually built a personalized showcase demo specifically for Medical Photography Pune to illustrate how a dedicated platform could elevate your online presence: https://demo.claraverse.in/medical-photography-pune. Would love to get your feedback on this.",
-    "slug": "medical-photography-pune"
+    "pitch": "Hey Medical Photography Pune Team,\n\nYour detailed medical and healthcare photography on Instagram truly stands out!\n\nI noticed you're Instagram-only, which often means handling bookings manually. This demo link shows how you could automate and streamline that process, freeing up your time: https://demo.claraverse.in/medical-photography-pune\n\nWould love to hear your thoughts on this!",
+    "slug": "medical-photography-pune",
+    "facebook": "—"
   }
 ];
 
