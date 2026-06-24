@@ -500,7 +500,7 @@
       if (method === 'whatsapp') {
         const cleanPhone = specificPhone ? specificPhone : lead.phone.replace(/\D/g, '');
         const formattedPhone = cleanPhone.length === 10 ? "91" + cleanPhone : cleanPhone;
-        window.open(`https://wa.me/${formattedPhone}?text=${encodeURIComponent(pitch)}`, '_blank');
+        window.open(`https://web.whatsapp.com/send?phone=${formattedPhone}&text=${encodeURIComponent(pitch)}`, '_blank');
       } else if (method === 'instagram') {
         navigator.clipboard.writeText(pitch).then(() => {
           showToast("Pitch copied! Opening Instagram...");
