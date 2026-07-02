@@ -183,17 +183,30 @@
 <body class="font-sans antialiased selection:bg-brand-gold selection:text-white min-h-screen flex flex-col justify-between overflow-x-hidden">
 
   <!-- HEADER -->
-  <header class="absolute top-0 left-0 right-0 z-50 bg-transparent">
-    <div class="max-w-7xl mx-auto px-4 sm:px-8 h-20 flex items-center justify-between gap-4">
-      <div class="text-white text-base sm:text-xl font-display font-medium tracking-tight max-w-[70vw] sm:max-w-none truncate">
-        Bawa Estate<span class="text-brand-gold font-light">*</span>
+  <header class="fixed top-4 sm:top-6 left-0 right-0 z-50 px-4 sm:px-6">
+    <div class="max-w-6xl mx-auto h-16 sm:h-20 bg-black/40 backdrop-blur-xl border border-white/10 rounded-full flex items-center justify-between px-5 sm:px-8 shadow-2xl transition-all duration-500">
+      <!-- Logo -->
+      <div class="text-white text-lg sm:text-2xl font-display font-medium tracking-tight truncate flex-shrink-0 flex items-center gap-3">
+        <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-[#D4AF37] to-[#F3E5AB] flex items-center justify-center shadow-lg">
+          <i class="fa-solid fa-building text-black text-sm"></i>
+        </div>
+        Bawa Estate
       </div>
-      <div class="flex items-center gap-6">
-        <a href="./admin.html" class="view-admin-btn text-white hover:text-brand-goldLight text-xs font-semibold tracking-widest uppercase transition-colors">
-          View Admin
+      
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-8">
+        <a href="#" class="text-white/80 hover:text-[#D4AF37] text-sm font-light tracking-widest uppercase transition-colors">Estates</a>
+        <a href="#vision" class="text-white/80 hover:text-[#D4AF37] text-sm font-light tracking-widest uppercase transition-colors">Vision</a>
+        <a href="#" class="text-white/80 hover:text-[#D4AF37] text-sm font-light tracking-widest uppercase transition-colors">Agents</a>
+      </nav>
+
+      <!-- CTA -->
+      <div class="flex items-center gap-3 sm:gap-4 flex-shrink-0">
+        <a href="./admin.html" class="hidden sm:inline-flex items-center justify-center bg-white/10 hover:bg-white/20 border border-white/20 text-white text-[10px] sm:text-xs font-semibold tracking-widest uppercase px-4 sm:px-5 py-2 sm:py-2.5 rounded-full transition-all duration-300">
+          Dashboard
         </a>
-        <a href="https://wa.me/918708528150" target="_blank" class="text-white hover:text-brand-goldLight text-2xl font-light transition-colors flex-shrink-0">
-          <i class="fa-light fa-plus font-light">+</i>
+        <a href="https://wa.me/918708528150" target="_blank" class="w-9 h-9 sm:w-11 sm:h-11 bg-[#D4AF37] hover:bg-white text-black rounded-full flex items-center justify-center transition-transform hover:scale-105 shadow-lg">
+          <i class="fa-brands fa-whatsapp text-lg sm:text-xl"></i>
         </a>
       </div>
     </div>
