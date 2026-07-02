@@ -62,6 +62,15 @@
   </script>
 
   <style>
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .hide-scrollbar {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+    }
     body {
       background-color: #FAF9F6;
       color: #1C1B19;
@@ -190,36 +199,69 @@
     </div>
   </header>
 
-  <!-- HERO SECTION (Inspired by Screen 1) -->
-  <section class="relative min-h-screen flex flex-col justify-between pt-32 pb-8 px-6 overflow-hidden">
-    <!-- Hero Architecture Background Image & Overlay (Built-in Skyline Sky) -->
+  <!-- HERO SECTION -->
+  <section class="relative min-h-screen flex flex-col justify-between pt-32 pb-12 px-6 overflow-hidden">
+    <!-- Hero Background -->
     <div class="absolute inset-0 z-0 select-none">
-      <!-- Skyscrapers Image with natural sky -->
-      <img src="/defaults/real-estate/hero.png" alt="Luxury Architecture" class="absolute inset-0 w-full h-full object-cover object-center z-10" />
-      <!-- Top shadow for header contrast and bottom blend to Vision section -->
-      <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/10 to-[#FAF9F6] z-20"></div>
+      <img src="/defaults/real-estate/hero.png" alt="Luxury Architecture" class="absolute inset-0 w-full h-full object-cover object-center z-10 transform scale-105 animate-[pulse_20s_ease-in-out_infinite_alternate]" />
+      <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-[#FAF9F6] z-20"></div>
     </div>
     
     <!-- Center Content -->
-    <div class="max-w-4xl mx-auto text-center relative z-20 mt-12">
-      <h2 class="text-5xl sm:text-6xl md:text-7xl font-display font-light text-white tracking-tight leading-[1.05] mb-6 drop-shadow-sm">
-        Extraordinary<br>living begins here.
+    <div class="w-full max-w-5xl mx-auto relative z-20 mt-16 flex flex-col items-center animate-fade-up">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-8">
+        <div class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></div>
+        <span class="text-[10px] font-mono text-white tracking-widest uppercase">Now listing premium estates</span>
+      </div>
+      
+      <h2 class="text-5xl sm:text-6xl md:text-8xl font-display font-light text-white tracking-tighter leading-[1.1] mb-6 text-center drop-shadow-lg">
+        Extraordinary<br><span class="font-serif italic font-light text-brand-goldLight">living begins here.</span>
       </h2>
-      <p class="text-white/80 text-sm sm:text-base max-w-xl mx-auto font-light leading-relaxed drop-shadow-sm mb-8">
-        Timeless architecture, exclusive locations, and luxury homes designed to inspire your next chapter.
+      <p class="text-white/80 text-sm sm:text-base max-w-xl text-center mx-auto font-light leading-relaxed drop-shadow-md mb-12">
+        Timeless architecture, exclusive locations, and luxury homes designed to inspire your next chapter. Explore our handpicked collection.
       </p>
+
+      <!-- Glassmorphic Quick Search -->
+      <div class="w-full max-w-4xl bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-2 sm:p-3 shadow-2xl flex flex-col sm:flex-row gap-2 sm:gap-0 items-center justify-between">
+        <div class="flex-1 w-full flex items-center px-4 py-3 sm:border-r border-white/20">
+          <i class="fa-regular fa-map text-white/50 mr-3"></i>
+          <input type="text" placeholder="Search by location or neighborhood" class="w-full bg-transparent text-white placeholder:text-white/60 focus:outline-none text-sm font-light">
+        </div>
+        <div class="flex-1 w-full flex items-center px-4 py-3 sm:border-r border-white/20">
+          <i class="fa-regular fa-building text-white/50 mr-3"></i>
+          <select class="w-full bg-transparent text-white/60 focus:text-white focus:outline-none text-sm font-light appearance-none cursor-pointer">
+            <option value="" disabled selected>Property Type</option>
+            <option value="penthouse" class="text-black">Penthouses</option>
+            <option value="villa" class="text-black">Luxury Villas</option>
+            <option value="apartment" class="text-black">Premium Apartments</option>
+          </select>
+        </div>
+        <div class="flex-1 w-full flex items-center px-4 py-3">
+          <i class="fa-solid fa-indian-rupee-sign text-white/50 mr-3"></i>
+          <select class="w-full bg-transparent text-white/60 focus:text-white focus:outline-none text-sm font-light appearance-none cursor-pointer">
+            <option value="" disabled selected>Budget Range</option>
+            <option value="5cr" class="text-black">₹ 5 Cr - ₹ 10 Cr</option>
+            <option value="10cr" class="text-black">₹ 10 Cr - ₹ 25 Cr</option>
+            <option value="25cr" class="text-black">₹ 25 Cr +</option>
+          </select>
+        </div>
+        <button class="w-full sm:w-auto px-8 py-4 bg-white hover:bg-neutral-100 text-[#1C1B19] rounded-2xl font-semibold tracking-wide text-sm transition-colors shrink-0">
+          Search
+        </button>
+      </div>
     </div>
 
-    <!-- Scroll Down indicator / spacing -->
-    <div class="w-full text-center relative z-20">
-      <a href="#vision" class="inline-block text-neutral-500 hover:text-neutral-800 transition-colors">
-        <i class="fa-solid fa-chevron-down text-lg animate-bounce"></i>
+    <!-- Scroll Down indicator -->
+    <div class="w-full text-center relative z-20 mt-16 pb-8">
+      <a href="#vision" class="inline-flex flex-col items-center gap-3 text-white/50 hover:text-white transition-colors">
+        <span class="text-[10px] font-mono tracking-[0.2em] uppercase">Scroll</span>
+        <div class="w-px h-12 bg-gradient-to-b from-white/50 to-transparent"></div>
       </a>
     </div>
   </section>
 
   <!-- PORTAL SYNC SECTION -->
-  <section class="py-24 md:py-32 px-6 bg-white relative z-20 border-t border-brand-border overflow-hidden">
+  <section class="py-24 md:py-32 px-6 bg-[#0A0A0A] relative z-20 border-t border-white/10 overflow-hidden">
 
     <!-- Subtle grid background -->
     <div class="absolute inset-0 opacity-[0.025]" style="background-image: linear-gradient(#1C1B19 1px, transparent 1px), linear-gradient(90deg, #1C1B19 1px, transparent 1px); background-size: 40px 40px;"></div>
@@ -229,73 +271,73 @@
       <!-- Header -->
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
         <div class="max-w-xl">
-          <span class="text-[9px] tracking-[0.4em] uppercase text-[#7C3AED] font-bold block mb-3 font-mono">Portal Sync</span>
-          <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-light text-[#1C1B19] tracking-tight leading-[1.15]">
+          <span class="text-[9px] tracking-[0.4em] uppercase text-brand-goldLight font-bold block mb-3 font-mono">Portal Sync</span>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-light text-white tracking-tight leading-[1.15]">
             Listed everywhere.<br><span class="font-serif italic font-light">Managed once.</span>
           </h2>
         </div>
-        <p class="text-neutral-500 text-xs sm:text-sm font-light leading-relaxed max-w-sm md:text-right">
+        <p class="text-white/60 text-xs sm:text-sm font-light leading-relaxed max-w-sm md:text-right">
           Your Aarsan Realtors listings automatically stay in sync across every major Indian portal — no manual re-entry, no missed updates, no duplicate effort.
         </p>
       </div>
 
       <!-- Platform Logos Bar -->
-      <div class="flex flex-wrap items-center justify-center md:justify-between gap-4 sm:gap-6 mb-16 py-6 px-6 md:px-10 bg-[#FAF9F6] rounded-2xl border border-brand-border">
+      <div class="flex flex-wrap items-center justify-center md:justify-between gap-4 sm:gap-6 mb-16 py-6 px-6 md:px-10 bg-[#1C1B19]/50 rounded-2xl border border-white/10">
 
         <!-- 99acres -->
         <div class="flex items-center gap-2 opacity-80 hover:opacity-100 transition-opacity">
-          <img src="https://www.google.com/s2/favicons?domain=99acres.com&sz=128" alt="99acres" class="w-7 h-7 rounded-md object-contain bg-white shadow-sm border border-neutral-100 p-0.5" />
-          <span class="font-bold text-sm text-[#1C1B19] tracking-tight">99acres</span>
+          <img src="https://www.google.com/s2/favicons?domain=99acres.com&sz=128" alt="99acres" class="w-7 h-7 rounded-md object-contain bg-white shadow-sm border border-transparent p-0.5" />
+          <span class="font-bold text-sm text-white tracking-tight">99acres</span>
         </div>
 
         <!-- MagicBricks -->
         <div class="flex items-center gap-2 opacity-80 hover:opacity-100 transition-opacity">
-          <img src="https://www.google.com/s2/favicons?domain=magicbricks.com&sz=128" alt="MagicBricks" class="w-7 h-7 rounded-md object-contain bg-white shadow-sm border border-neutral-100 p-0.5" />
-          <span class="font-bold text-sm text-[#1C1B19] tracking-tight">MagicBricks</span>
+          <img src="https://www.google.com/s2/favicons?domain=magicbricks.com&sz=128" alt="MagicBricks" class="w-7 h-7 rounded-md object-contain bg-white shadow-sm border border-transparent p-0.5" />
+          <span class="font-bold text-sm text-white tracking-tight">MagicBricks</span>
         </div>
 
         <!-- Square Yards -->
         <div class="flex items-center gap-2 opacity-80 hover:opacity-100 transition-opacity">
-          <img src="https://www.google.com/s2/favicons?domain=squareyards.com&sz=128" alt="Square Yards" class="w-7 h-7 rounded-md object-contain bg-white shadow-sm border border-neutral-100 p-0.5" />
-          <span class="font-bold text-sm text-[#1C1B19] tracking-tight">Square Yards</span>
+          <img src="https://www.google.com/s2/favicons?domain=squareyards.com&sz=128" alt="Square Yards" class="w-7 h-7 rounded-md object-contain bg-white shadow-sm border border-transparent p-0.5" />
+          <span class="font-bold text-sm text-white tracking-tight">Square Yards</span>
         </div>
 
         <!-- Housing.com -->
         <div class="flex items-center gap-2 opacity-80 hover:opacity-100 transition-opacity">
-          <img src="https://www.google.com/s2/favicons?domain=housing.com&sz=128" alt="Housing.com" class="w-7 h-7 rounded-md object-contain bg-white shadow-sm border border-neutral-100 p-0.5" />
-          <span class="font-bold text-sm text-[#1C1B19] tracking-tight">Housing.com</span>
+          <img src="https://www.google.com/s2/favicons?domain=housing.com&sz=128" alt="Housing.com" class="w-7 h-7 rounded-md object-contain bg-white shadow-sm border border-transparent p-0.5" />
+          <span class="font-bold text-sm text-white tracking-tight">Housing.com</span>
         </div>
 
         <!-- NoBroker -->
         <div class="flex items-center gap-2 opacity-80 hover:opacity-100 transition-opacity">
-          <img src="https://www.google.com/s2/favicons?domain=nobroker.in&sz=128" alt="NoBroker" class="w-7 h-7 rounded-md object-contain bg-white shadow-sm border border-neutral-100 p-0.5" />
-          <span class="font-bold text-sm text-[#1C1B19] tracking-tight">NoBroker</span>
+          <img src="https://www.google.com/s2/favicons?domain=nobroker.in&sz=128" alt="NoBroker" class="w-7 h-7 rounded-md object-contain bg-white shadow-sm border border-transparent p-0.5" />
+          <span class="font-bold text-sm text-white tracking-tight">NoBroker</span>
         </div>
 
         <!-- PropTiger -->
         <div class="flex items-center gap-2 opacity-80 hover:opacity-100 transition-opacity">
-          <img src="https://www.google.com/s2/favicons?domain=proptiger.com&sz=128" alt="PropTiger" class="w-7 h-7 rounded-md object-contain bg-white shadow-sm border border-neutral-100 p-0.5" />
-          <span class="font-bold text-sm text-[#1C1B19] tracking-tight">PropTiger</span>
+          <img src="https://www.google.com/s2/favicons?domain=proptiger.com&sz=128" alt="PropTiger" class="w-7 h-7 rounded-md object-contain bg-white shadow-sm border border-transparent p-0.5" />
+          <span class="font-bold text-sm text-white tracking-tight">PropTiger</span>
         </div>
 
         <!-- + more badge -->
-        <div class="flex items-center gap-1.5 bg-neutral-100 border border-neutral-200 rounded-full px-3 py-1.5">
-          <span class="text-[10px] font-semibold text-neutral-500 tracking-wide">+12 more portals</span>
+        <div class="flex items-center gap-1.5 bg-white/5 border border-white/10 rounded-full px-3 py-1.5">
+          <span class="text-[10px] font-semibold text-white/60 tracking-wide">+12 more portals</span>
         </div>
 
       </div>
 
       <!-- Listing Cards Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
+      <div class="flex overflow-x-auto gap-6 mb-14 pb-8 snap-x snap-mandatory hide-scrollbar" style="scroll-padding: 1.5rem;">
 
         <!-- Card 1: 99acres -->
-        <div class="bg-white border border-neutral-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group">
-          <div class="relative h-44 overflow-hidden bg-neutral-100">
+        <div class="bg-[#1C1B19] border border-white/10 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group" style="min-width: 320px; flex-shrink: 0; snap-align: start;">
+          <div class="relative h-44 overflow-hidden bg-white/5">
             <img src="/defaults/real-estate/emotion.png" alt="Property Listing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
             <!-- Live badge -->
-            <div class="absolute top-3 left-3 flex items-center gap-1.5 bg-white/95 backdrop-blur rounded-full px-2.5 py-1 shadow-sm border border-neutral-100">
+            <div class="absolute top-3 left-3 flex items-center gap-1.5 bg-white backdrop-blur rounded-full px-2.5 py-1 shadow-sm border border-transparent">
               <div class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></div>
-              <span class="text-[9px] font-bold text-neutral-700 uppercase tracking-wider">Live</span>
+              <span class="text-[9px] font-bold text-black uppercase tracking-wider">Live</span>
             </div>
             <!-- Portal badge -->
             <div class="absolute top-3 right-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full shadow-sm text-white text-[9px] font-bold uppercase tracking-wider" style="background:#E8441E">
@@ -305,12 +347,12 @@
           <div class="p-4">
             <div class="flex items-start justify-between gap-2 mb-2">
               <div>
-                <h4 class="text-sm font-semibold text-[#1C1B19]">3 BHK Apartment</h4>
-                <p class="text-neutral-400 text-[10px] font-light mt-0.5">Sector 56, Gurugram</p>
+                <h4 class="text-sm font-semibold text-white">3 BHK Apartment</h4>
+                <p class="text-white/40 text-[10px] font-light mt-0.5">Sector 56, Gurugram</p>
               </div>
-              <span class="text-sm font-bold text-[#1C1B19] font-mono whitespace-nowrap">₹4.1 Cr - ₹6.8 Cr</span>
+              <span class="text-sm font-bold text-white font-mono whitespace-nowrap">₹4.1 Cr - ₹6.8 Cr</span>
             </div>
-            <div class="flex items-center gap-3 text-[10px] text-neutral-500 pt-3 border-t border-neutral-100">
+            <div class="flex items-center gap-3 text-[10px] text-white/60 pt-3 border-t border-transparent">
               <span>1,450 sq.ft</span><span class="text-neutral-300">|</span>
               <span>3 Bed</span><span class="text-neutral-300">|</span>
               <span>2 Bath</span>
@@ -322,12 +364,12 @@
         </div>
 
         <!-- Card 2: MagicBricks -->
-        <div class="bg-white border border-neutral-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group">
-          <div class="relative h-44 overflow-hidden bg-neutral-100">
+        <div class="bg-[#1C1B19] border border-white/10 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group" style="min-width: 320px; flex-shrink: 0; snap-align: start;">
+          <div class="relative h-44 overflow-hidden bg-white/5">
             <img src="/defaults/real-estate/shoot.png" alt="Property Listing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-            <div class="absolute top-3 left-3 flex items-center gap-1.5 bg-white/95 backdrop-blur rounded-full px-2.5 py-1 shadow-sm border border-neutral-100">
+            <div class="absolute top-3 left-3 flex items-center gap-1.5 bg-white backdrop-blur rounded-full px-2.5 py-1 shadow-sm border border-transparent">
               <div class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></div>
-              <span class="text-[9px] font-bold text-neutral-700 uppercase tracking-wider">Live</span>
+              <span class="text-[9px] font-bold text-black uppercase tracking-wider">Live</span>
             </div>
             <div class="absolute top-3 right-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full shadow-sm text-white text-[9px] font-bold uppercase tracking-wider" style="background:#D7232C">
               MagicBricks
@@ -336,12 +378,12 @@
           <div class="p-4">
             <div class="flex items-start justify-between gap-2 mb-2">
               <div>
-                <h4 class="text-sm font-semibold text-[#1C1B19]">2 BHK Builder Floor</h4>
-                <p class="text-neutral-400 text-[10px] font-light mt-0.5">DLF Phase 3, Gurugram</p>
+                <h4 class="text-sm font-semibold text-white">2 BHK Builder Floor</h4>
+                <p class="text-white/40 text-[10px] font-light mt-0.5">DLF Phase 3, Gurugram</p>
               </div>
-              <span class="text-sm font-bold text-[#1C1B19] font-mono whitespace-nowrap">₹2 Cr - ₹3.4 Cr</span>
+              <span class="text-sm font-bold text-white font-mono whitespace-nowrap">₹2 Cr - ₹3.4 Cr</span>
             </div>
-            <div class="flex items-center gap-3 text-[10px] text-neutral-500 pt-3 border-t border-neutral-100">
+            <div class="flex items-center gap-3 text-[10px] text-white/60 pt-3 border-t border-transparent">
               <span>950 sq.ft</span><span class="text-neutral-300">|</span>
               <span>2 Bed</span><span class="text-neutral-300">|</span>
               <span>2 Bath</span>
@@ -353,25 +395,44 @@
         </div>
 
         <!-- Card 3: Square Yards -->
-        <div class="bg-white border border-neutral-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group sm:col-span-2 lg:col-span-1">
-          <div class="relative h-44 overflow-hidden bg-neutral-100">
+        <div class="bg-[#1C1B19] border border-white/10 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group sm:col-span-2 lg:col-span-1" style="min-width: 320px; flex-shrink: 0; snap-align: start;">
+          <div class="relative h-44 overflow-hidden bg-white/5">
             <img src="/defaults/real-estate/still.png" alt="Property Listing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-            <div class="absolute top-3 left-3 flex items-center gap-1.5 bg-white/95 backdrop-blur rounded-full px-2.5 py-1 shadow-sm border border-neutral-100">
+            <div class="absolute top-3 left-3 flex items-center gap-1.5 bg-white backdrop-blur rounded-full px-2.5 py-1 shadow-sm border border-transparent">
               <div class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></div>
-              <span class="text-[9px] font-bold text-neutral-700 uppercase tracking-wider">Live</span>
+              <span class="text-[9px] font-bold text-black uppercase tracking-wider">Live</span>
             </div>
             <div class="absolute top-3 right-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full shadow-sm text-white text-[9px] font-bold uppercase tracking-wider" style="background:#0E2D6B">
               Square Yards
             </div>
           </div>
-<!-- Card 4: Housing.com -->
-        <div class="bg-white border border-neutral-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group">
-          <div class="relative h-44 overflow-hidden bg-neutral-100">
+          <div class="p-4">
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <div>
+                <h4 class="text-sm font-semibold text-white">4 BHK Luxury Condo</h4>
+                <p class="text-white/40 text-[10px] font-light mt-0.5">M3M Golfestate</p>
+              </div>
+              <span class="text-sm font-bold text-white font-mono whitespace-nowrap">₹3.8 Cr - ₹5.2 Cr</span>
+            </div>
+            <div class="flex items-center gap-3 text-[10px] text-white/60 pt-3 border-t border-white/10">
+              <span>2,500 sq.ft</span><span class="text-neutral-300">|</span>
+              <span>4 Bed</span><span class="text-neutral-300">|</span>
+              <span>4 Bath</span>
+              <span class="ml-auto flex items-center gap-1 text-green-600 font-semibold">
+                <i class="fa-solid fa-rotate text-[8px]"></i> Auto-synced
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Housing.com -->
+        <div class="bg-[#1C1B19] border border-white/10 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group" style="min-width: 320px; flex-shrink: 0; snap-align: start;">
+          <div class="relative h-44 overflow-hidden bg-white/5">
             <img src="/defaults/real-estate/emotion.png" alt="Property Listing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
             <!-- Live badge -->
-            <div class="absolute top-3 left-3 flex items-center gap-1.5 bg-white/95 backdrop-blur rounded-full px-2.5 py-1 shadow-sm border border-neutral-100">
+            <div class="absolute top-3 left-3 flex items-center gap-1.5 bg-white backdrop-blur rounded-full px-2.5 py-1 shadow-sm border border-transparent">
               <div class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></div>
-              <span class="text-[9px] font-bold text-neutral-700 uppercase tracking-wider">Live</span>
+              <span class="text-[9px] font-bold text-black uppercase tracking-wider">Live</span>
             </div>
             <!-- Portal badge -->
             <div class="absolute top-3 right-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full shadow-sm text-white text-[9px] font-bold uppercase tracking-wider" style="background:#1A5BCA">
@@ -381,12 +442,12 @@
           <div class="p-4">
             <div class="flex items-start justify-between gap-2 mb-2">
               <div>
-                <h4 class="text-sm font-semibold text-[#1C1B19]">Luxury 4 BHK Villa</h4>
-                <p class="text-neutral-400 text-[10px] font-light mt-0.5">Golf Course Extension</p>
+                <h4 class="text-sm font-semibold text-white">Luxury 4 BHK Villa</h4>
+                <p class="text-white/40 text-[10px] font-light mt-0.5">Golf Course Extension</p>
               </div>
-              <span class="text-sm font-bold text-[#1C1B19] font-mono whitespace-nowrap">₹8.5 Cr - ₹12.0 Cr</span>
+              <span class="text-sm font-bold text-white font-mono whitespace-nowrap">₹8.5 Cr - ₹12.0 Cr</span>
             </div>
-            <div class="flex items-center gap-3 text-[10px] text-neutral-500 pt-3 border-t border-neutral-100">
+            <div class="flex items-center gap-3 text-[10px] text-white/60 pt-3 border-t border-transparent">
               <span>1,450 sq.ft</span><span class="text-neutral-300">|</span>
               <span>3 Bed</span><span class="text-neutral-300">|</span>
               <span>2 Washrooms</span>
@@ -398,12 +459,12 @@
         </div>
 
         <!-- Card 5: NoBroker -->
-        <div class="bg-white border border-neutral-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group">
-          <div class="relative h-44 overflow-hidden bg-neutral-100">
+        <div class="bg-[#1C1B19] border border-white/10 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group" style="min-width: 320px; flex-shrink: 0; snap-align: start;">
+          <div class="relative h-44 overflow-hidden bg-white/5">
             <img src="/defaults/real-estate/shoot.png" alt="Property Listing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-            <div class="absolute top-3 left-3 flex items-center gap-1.5 bg-white/95 backdrop-blur rounded-full px-2.5 py-1 shadow-sm border border-neutral-100">
+            <div class="absolute top-3 left-3 flex items-center gap-1.5 bg-white backdrop-blur rounded-full px-2.5 py-1 shadow-sm border border-transparent">
               <div class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></div>
-              <span class="text-[9px] font-bold text-neutral-700 uppercase tracking-wider">Live</span>
+              <span class="text-[9px] font-bold text-black uppercase tracking-wider">Live</span>
             </div>
             <div class="absolute top-3 right-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full shadow-sm text-white text-[9px] font-bold uppercase tracking-wider" style="background:#229342">
               NoBroker
@@ -412,12 +473,12 @@
           <div class="p-4">
             <div class="flex items-start justify-between gap-2 mb-2">
               <div>
-                <h4 class="text-sm font-semibold text-[#1C1B19]">Commercial Office Space</h4>
-                <p class="text-neutral-400 text-[10px] font-light mt-0.5">Cyber City, Gurugram</p>
+                <h4 class="text-sm font-semibold text-white">Commercial Office Space</h4>
+                <p class="text-white/40 text-[10px] font-light mt-0.5">Cyber City, Gurugram</p>
               </div>
-              <span class="text-sm font-bold text-[#1C1B19] font-mono whitespace-nowrap">₹4.0 Cr - ₹6.5 Cr</span>
+              <span class="text-sm font-bold text-white font-mono whitespace-nowrap">₹4.0 Cr - ₹6.5 Cr</span>
             </div>
-            <div class="flex items-center gap-3 text-[10px] text-neutral-500 pt-3 border-t border-neutral-100">
+            <div class="flex items-center gap-3 text-[10px] text-white/60 pt-3 border-t border-transparent">
               <span>950 sq.ft</span><span class="text-neutral-300">|</span>
               <span>Open Plan</span><span class="text-neutral-300">|</span>
               <span>2 Washrooms</span>
@@ -429,25 +490,25 @@
         </div>
 
         <!-- Card 6: PropTiger -->
-        <div class="bg-white border border-neutral-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group sm:col-span-2 lg:col-span-1">
-          <div class="relative h-44 overflow-hidden bg-neutral-100">
+        <div class="bg-[#1C1B19] border border-white/10 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group sm:col-span-2 lg:col-span-1" style="min-width: 320px; flex-shrink: 0; snap-align: start;">
+          <div class="relative h-44 overflow-hidden bg-white/5">
             <img src="/defaults/real-estate/still.png" alt="Property Listing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-            <div class="absolute top-3 left-3 flex items-center gap-1.5 bg-white/95 backdrop-blur rounded-full px-2.5 py-1 shadow-sm border border-neutral-100">
+            <div class="absolute top-3 left-3 flex items-center gap-1.5 bg-white backdrop-blur rounded-full px-2.5 py-1 shadow-sm border border-transparent">
               <div class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></div>
-              <span class="text-[9px] font-bold text-neutral-700 uppercase tracking-wider">Live</span>
+              <span class="text-[9px] font-bold text-black uppercase tracking-wider">Live</span>
             </div>
             <div class="absolute top-3 right-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full shadow-sm text-white text-[9px] font-bold uppercase tracking-wider" style="background:#FF8E2B">
               PropTiger
             </div>
           </div>
 <!-- Card 7: 99acres -->
-        <div class="bg-white border border-neutral-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group">
-          <div class="relative h-44 overflow-hidden bg-neutral-100">
+        <div class="bg-[#1C1B19] border border-white/10 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group" style="min-width: 320px; flex-shrink: 0; snap-align: start;">
+          <div class="relative h-44 overflow-hidden bg-white/5">
             <img src="/defaults/real-estate/emotion.png" alt="Property Listing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
             <!-- Live badge -->
-            <div class="absolute top-3 left-3 flex items-center gap-1.5 bg-white/95 backdrop-blur rounded-full px-2.5 py-1 shadow-sm border border-neutral-100">
+            <div class="absolute top-3 left-3 flex items-center gap-1.5 bg-white backdrop-blur rounded-full px-2.5 py-1 shadow-sm border border-transparent">
               <div class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></div>
-              <span class="text-[9px] font-bold text-neutral-700 uppercase tracking-wider">Live</span>
+              <span class="text-[9px] font-bold text-black uppercase tracking-wider">Live</span>
             </div>
             <!-- Portal badge -->
             <div class="absolute top-3 right-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full shadow-sm text-white text-[9px] font-bold uppercase tracking-wider" style="background:#E8441E">
@@ -457,12 +518,12 @@
           <div class="p-4">
             <div class="flex items-start justify-between gap-2 mb-2">
               <div>
-                <h4 class="text-sm font-semibold text-[#1C1B19]">5 BHK Independent House</h4>
-                <p class="text-neutral-400 text-[10px] font-light mt-0.5">Palam Vihar, Gurugram</p>
+                <h4 class="text-sm font-semibold text-white">5 BHK Independent House</h4>
+                <p class="text-white/40 text-[10px] font-light mt-0.5">Palam Vihar, Gurugram</p>
               </div>
-              <span class="text-sm font-bold text-[#1C1B19] font-mono whitespace-nowrap">₹5.5 Cr - ₹9.0 Cr</span>
+              <span class="text-sm font-bold text-white font-mono whitespace-nowrap">₹5.5 Cr - ₹9.0 Cr</span>
             </div>
-            <div class="flex items-center gap-3 text-[10px] text-neutral-500 pt-3 border-t border-neutral-100">
+            <div class="flex items-center gap-3 text-[10px] text-white/60 pt-3 border-t border-transparent">
               <span>4,200 sq.ft</span><span class="text-neutral-300">|</span>
               <span>5 Bed</span><span class="text-neutral-300">|</span>
               <span>5 Bath</span>
@@ -474,12 +535,12 @@
         </div>
 
         <!-- Card 8: MagicBricks -->
-        <div class="bg-white border border-neutral-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group">
-          <div class="relative h-44 overflow-hidden bg-neutral-100">
+        <div class="bg-[#1C1B19] border border-white/10 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group" style="min-width: 320px; flex-shrink: 0; snap-align: start;">
+          <div class="relative h-44 overflow-hidden bg-white/5">
             <img src="/defaults/real-estate/shoot.png" alt="Property Listing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-            <div class="absolute top-3 left-3 flex items-center gap-1.5 bg-white/95 backdrop-blur rounded-full px-2.5 py-1 shadow-sm border border-neutral-100">
+            <div class="absolute top-3 left-3 flex items-center gap-1.5 bg-white backdrop-blur rounded-full px-2.5 py-1 shadow-sm border border-transparent">
               <div class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></div>
-              <span class="text-[9px] font-bold text-neutral-700 uppercase tracking-wider">Live</span>
+              <span class="text-[9px] font-bold text-black uppercase tracking-wider">Live</span>
             </div>
             <div class="absolute top-3 right-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full shadow-sm text-white text-[9px] font-bold uppercase tracking-wider" style="background:#D7232C">
               MagicBricks
@@ -488,12 +549,12 @@
           <div class="p-4">
             <div class="flex items-start justify-between gap-2 mb-2">
               <div>
-                <h4 class="text-sm font-semibold text-[#1C1B19]">3 BHK Luxury Condo</h4>
-                <p class="text-neutral-400 text-[10px] font-light mt-0.5">M3M Golfestate</p>
+                <h4 class="text-sm font-semibold text-white">3 BHK Luxury Condo</h4>
+                <p class="text-white/40 text-[10px] font-light mt-0.5">M3M Golfestate</p>
               </div>
-              <span class="text-sm font-bold text-[#1C1B19] font-mono whitespace-nowrap">₹3.8 Cr - ₹5.2 Cr</span>
+              <span class="text-sm font-bold text-white font-mono whitespace-nowrap">₹3.8 Cr - ₹5.2 Cr</span>
             </div>
-            <div class="flex items-center gap-3 text-[10px] text-neutral-500 pt-3 border-t border-neutral-100">
+            <div class="flex items-center gap-3 text-[10px] text-white/60 pt-3 border-t border-transparent">
               <span>2,100 sq.ft</span><span class="text-neutral-300">|</span>
               <span>3 Bed</span><span class="text-neutral-300">|</span>
               <span>5 Bath</span>
@@ -505,12 +566,12 @@
         </div>
 
         <!-- Card 9: Housing.com -->
-        <div class="bg-white border border-neutral-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group sm:col-span-2 lg:col-span-1">
-          <div class="relative h-44 overflow-hidden bg-neutral-100">
+        <div class="bg-[#1C1B19] border border-white/10 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group sm:col-span-2 lg:col-span-1" style="min-width: 320px; flex-shrink: 0; snap-align: start;">
+          <div class="relative h-44 overflow-hidden bg-white/5">
             <img src="/defaults/real-estate/still.png" alt="Property Listing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-            <div class="absolute top-3 left-3 flex items-center gap-1.5 bg-white/95 backdrop-blur rounded-full px-2.5 py-1 shadow-sm border border-neutral-100">
+            <div class="absolute top-3 left-3 flex items-center gap-1.5 bg-white backdrop-blur rounded-full px-2.5 py-1 shadow-sm border border-transparent">
               <div class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></div>
-              <span class="text-[9px] font-bold text-neutral-700 uppercase tracking-wider">Live</span>
+              <span class="text-[9px] font-bold text-black uppercase tracking-wider">Live</span>
             </div>
             <div class="absolute top-3 right-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full shadow-sm text-white text-[9px] font-bold uppercase tracking-wider" style="background:#1A5BCA">
               Housing.com
@@ -519,12 +580,12 @@
           <div class="p-4">
             <div class="flex items-start justify-between gap-2 mb-2">
               <div>
-                <h4 class="text-sm font-semibold text-[#1C1B19]">Penthouse — Sky Villa</h4>
-                <p class="text-neutral-400 text-[10px] font-light mt-0.5">Golf Course Rd, Gurugram</p>
+                <h4 class="text-sm font-semibold text-white">Penthouse — Sky Villa</h4>
+                <p class="text-white/40 text-[10px] font-light mt-0.5">Golf Course Rd, Gurugram</p>
               </div>
-              <span class="text-sm font-bold text-[#1C1B19] font-mono whitespace-nowrap">₹9.5 Cr - ₹16.4 Cr</span>
+              <span class="text-sm font-bold text-white font-mono whitespace-nowrap">₹9.5 Cr - ₹16.4 Cr</span>
             </div>
-            <div class="flex items-center gap-3 text-[10px] text-neutral-500 pt-3 border-t border-neutral-100">
+            <div class="flex items-center gap-3 text-[10px] text-white/60 pt-3 border-t border-transparent">
               <span>3,200 sq.ft</span><span class="text-neutral-300">|</span>
               <span>4 Bed</span><span class="text-neutral-300">|</span>
               <span>4 Bath</span>
@@ -538,10 +599,10 @@
       </div>
 
       <!-- Bottom CTA Bar -->
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-6 bg-[#FAF9F6] border border-brand-border rounded-2xl px-6 md:px-10 py-6">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-6 bg-[#1C1B19]/50 border border-white/10 rounded-2xl px-6 md:px-10 py-6">
         <div class="text-center sm:text-left">
-          <p class="text-sm font-semibold text-[#1C1B19]">Stop copy-pasting listings across portals.</p>
-          <p class="text-neutral-500 text-xs font-light mt-1">Update once on your dashboard — we push to 99acres, MagicBricks, Square Yards & more instantly.</p>
+          <p class="text-sm font-semibold text-white">Stop copy-pasting listings across portals.</p>
+          <p class="text-white/60 text-xs font-light mt-1">Update once on your dashboard — we push to 99acres, MagicBricks, Square Yards & more instantly.</p>
         </div>
         <a href="https://wa.me/918708528150?text=Hi%20Cora%20Team%2C%20I%20want%20to%20sync%20Aarsan Realtors%20listings%20across%20all%20portals%20automatically." target="_blank" class="flex-shrink-0 inline-flex items-center gap-2.5 bg-[#1C1B19] hover:bg-neutral-800 text-white text-[10px] font-bold uppercase tracking-widest px-7 py-3.5 rounded-full transition-all duration-300 hover:scale-105 active:scale-95 shadow-md whitespace-nowrap">
           <i class="fa-solid fa-rotate text-xs"></i>
@@ -759,15 +820,20 @@
         <div class="relative w-full max-w-[680px] h-[480px]">
           
           <!-- Slide 1 (Skyline Heights) -->
-          <div id="slide-0" class="carousel-slide absolute inset-0 bg-white rounded-3xl border border-brand-border p-6 shadow-xl flex flex-col justify-between hover:shadow-2xl">
-            <div class="relative w-full h-[65%] rounded-2xl overflow-hidden bg-neutral-100">
-              <video autoplay muted loop playsinline class="w-full h-full object-cover">
+          <div id="slide-0" class="carousel-slide absolute inset-0 bg-white/70 backdrop-blur-xl rounded-3xl border border-white/40 p-6 shadow-xl flex flex-col justify-between hover:shadow-2xl hover:border-brand-gold/30 transition-all">
+            <div class="relative w-full h-[65%] rounded-2xl overflow-hidden bg-neutral-100 shadow-inner">
+              <video autoplay muted loop playsinline class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-1000">
                 <source src="https://videos.pexels.com/video-files/3773486/3773486-uhd_2560_1440_30fps.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
-              <span class="absolute top-4 left-4 bg-[#A1C4FD] text-white text-[7.5px] font-mono tracking-widest uppercase font-semibold px-2.5 py-1 rounded-full">
-                FOR SALE
-              </span>
+              <div class="absolute top-4 left-4 flex gap-2">
+                <span class="bg-black text-white text-[7.5px] font-mono tracking-widest uppercase font-semibold px-2.5 py-1 rounded-full shadow-md">
+                  JUST LISTED
+                </span>
+                <span class="bg-[#A1C4FD] text-black text-[7.5px] font-mono tracking-widest uppercase font-semibold px-2.5 py-1 rounded-full shadow-md">
+                  VIRTUAL TOUR
+                </span>
+              </div>
             </div>
             <div class="pt-6 flex-1 flex flex-col justify-between">
               <div class="flex items-start justify-between gap-4">
@@ -777,18 +843,20 @@
                     A luxury duplex sanctuary with wrap-around balconies, private elevator access, and views.
                   </p>
                 </div>
-                <div class="text-right">
+                <div class="text-right shrink-0">
                   <span class="block text-xl font-semibold text-[#1C1B19] font-mono">₹4.1 Cr - ₹6.8 Cr</span>
                   <span class="text-[9px] font-mono text-neutral-400 uppercase tracking-widest block mt-0.5">Pricing Band</span>
                 </div>
               </div>
-              <div class="pt-4 border-t border-brand-border flex items-center justify-between text-xs text-neutral-500">
-                <div class="flex gap-4">
-                  <span>3 Bedrooms</span>
-                  <span>•</span>
-                  <span>3.5 Bathrooms</span>
+              <div class="pt-4 border-t border-brand-border flex items-center justify-between text-xs text-neutral-500 font-mono">
+                <div class="flex items-center gap-3">
+                  <span class="flex items-center gap-1.5"><i class="fa-solid fa-bed text-brand-goldLight text-[10px]"></i> 3 Beds</span>
+                  <span class="text-neutral-300">•</span>
+                  <span class="flex items-center gap-1.5"><i class="fa-solid fa-bath text-brand-goldLight text-[10px]"></i> 3.5 Baths</span>
+                  <span class="text-neutral-300">•</span>
+                  <span class="flex items-center gap-1.5"><i class="fa-solid fa-ruler-combined text-brand-goldLight text-[10px]"></i> 4,200 Sq.Ft.</span>
                 </div>
-                <a href="https://wa.me/918708528150?text=Hi%20Cora%20Team%2C%20I%2520am%2520interested%2520in%252520booking%252520a%252520private%252520tour%25252520for%25252520The%25252520Skyline%25252520Heights." target="_blank" class="text-black hover:text-brand-gold text-[10px] font-mono tracking-wider uppercase font-semibold flex items-center gap-1">
+                <a href="https://wa.me/918708528150?text=Hi%20Cora%20Team%2C%20I%2520am%2520interested%2520in%252520booking%252520a%252520private%252520tour%25252520for%25252520The%25252520Skyline%25252520Heights." target="_blank" class="text-white bg-black hover:bg-neutral-800 px-4 py-2 rounded-full text-[10px] font-mono tracking-wider uppercase font-semibold flex items-center gap-1.5 transition-colors shadow-md">
                   Book Tour <i class="fa-solid fa-arrow-right text-[8px]"></i>
                 </a>
               </div>
@@ -796,12 +864,17 @@
           </div>
 
           <!-- Slide 2 (Oceanfront Vista) -->
-          <div id="slide-1" class="carousel-slide absolute inset-0 bg-white rounded-3xl border border-brand-border p-6 shadow-xl flex flex-col justify-between hover:shadow-2xl">
-            <div class="relative w-full h-[65%] rounded-2xl overflow-hidden bg-neutral-100">
-              <img src="/defaults/real-estate/emotion.png" alt="The Oceanfront Vista" class="w-full h-full object-cover" />
-              <span class="absolute top-4 left-4 bg-black text-white text-[7.5px] font-mono tracking-widest uppercase font-semibold px-2.5 py-1 rounded-full">
-                PENTHOUSE
-              </span>
+          <div id="slide-1" class="carousel-slide absolute inset-0 bg-white/70 backdrop-blur-xl rounded-3xl border border-white/40 p-6 shadow-xl flex flex-col justify-between hover:shadow-2xl hover:border-brand-gold/30 transition-all">
+            <div class="relative w-full h-[65%] rounded-2xl overflow-hidden bg-neutral-100 shadow-inner">
+              <img src="/defaults/real-estate/emotion.png" alt="The Oceanfront Vista" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-1000" />
+              <div class="absolute top-4 left-4 flex gap-2">
+                <span class="bg-brand-gold text-white text-[7.5px] font-mono tracking-widest uppercase font-semibold px-2.5 py-1 rounded-full shadow-md">
+                  OFF-MARKET
+                </span>
+                <span class="bg-black text-white text-[7.5px] font-mono tracking-widest uppercase font-semibold px-2.5 py-1 rounded-full shadow-md">
+                  PENTHOUSE
+                </span>
+              </div>
             </div>
             <div class="pt-6 flex-1 flex flex-col justify-between">
               <div class="flex items-start justify-between gap-4">
@@ -811,18 +884,20 @@
                     Direct beachfront penthouse featuring private deck, glass pool, and premium home automation.
                   </p>
                 </div>
-                <div class="text-right">
+                <div class="text-right shrink-0">
                   <span class="block text-xl font-semibold text-[#1C1B19] font-mono">₹9.5 Cr - ₹16.4 Cr</span>
                   <span class="text-[9px] font-mono text-neutral-400 uppercase tracking-widest block mt-0.5">Pricing Band</span>
                 </div>
               </div>
-              <div class="pt-4 border-t border-brand-border flex items-center justify-between text-xs text-neutral-500">
-                <div class="flex gap-4">
-                  <span>4 Bedrooms</span>
-                  <span>•</span>
-                  <span>4.5 Bathrooms</span>
+              <div class="pt-4 border-t border-brand-border flex items-center justify-between text-xs text-neutral-500 font-mono">
+                <div class="flex items-center gap-3">
+                  <span class="flex items-center gap-1.5"><i class="fa-solid fa-bed text-brand-goldLight text-[10px]"></i> 4 Beds</span>
+                  <span class="text-neutral-300">•</span>
+                  <span class="flex items-center gap-1.5"><i class="fa-solid fa-bath text-brand-goldLight text-[10px]"></i> 4.5 Baths</span>
+                  <span class="text-neutral-300">•</span>
+                  <span class="flex items-center gap-1.5"><i class="fa-solid fa-ruler-combined text-brand-goldLight text-[10px]"></i> 6,800 Sq.Ft.</span>
                 </div>
-                <a href="https://wa.me/918708528150?text=Hi%20Cora%20Team%2C%20I%2520am%2520interested%2520in%252520booking%25252525for%25252525The%25252525Oceanfront%25252525Vista." target="_blank" class="text-black hover:text-brand-gold text-[10px] font-mono tracking-wider uppercase font-semibold flex items-center gap-1">
+                <a href="https://wa.me/918708528150?text=Hi%20Cora%20Team%2C%20I%2520am%2520interested%2520in%252520booking%25252525for%25252525The%25252525Oceanfront%25252525Vista." target="_blank" class="text-white bg-black hover:bg-neutral-800 px-4 py-2 rounded-full text-[10px] font-mono tracking-wider uppercase font-semibold flex items-center gap-1.5 transition-colors shadow-md">
                   Book Tour <i class="fa-solid fa-arrow-right text-[8px]"></i>
                 </a>
               </div>
@@ -830,12 +905,14 @@
           </div>
 
           <!-- Slide 3 (Suburban Sanctuary) -->
-          <div id="slide-2" class="carousel-slide absolute inset-0 bg-white rounded-3xl border border-brand-border p-6 shadow-xl flex flex-col justify-between hover:shadow-2xl">
-            <div class="relative w-full h-[65%] rounded-2xl overflow-hidden bg-neutral-100">
-              <img src="/defaults/real-estate/shoot.png" alt="The Suburban Sanctuary" class="w-full h-full object-cover" />
-              <span class="absolute top-4 left-4 bg-brand-gold text-white text-[7.5px] font-mono tracking-widest uppercase font-semibold px-2.5 py-1 rounded-full">
-                FOR SALE
-              </span>
+          <div id="slide-2" class="carousel-slide absolute inset-0 bg-white/70 backdrop-blur-xl rounded-3xl border border-white/40 p-6 shadow-xl flex flex-col justify-between hover:shadow-2xl hover:border-brand-gold/30 transition-all">
+            <div class="relative w-full h-[65%] rounded-2xl overflow-hidden bg-neutral-100 shadow-inner">
+              <img src="/defaults/real-estate/shoot.png" alt="The Suburban Sanctuary" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-1000" />
+              <div class="absolute top-4 left-4 flex gap-2">
+                <span class="bg-emerald-600 text-white text-[7.5px] font-mono tracking-widest uppercase font-semibold px-2.5 py-1 rounded-full shadow-md">
+                  READY TO MOVE
+                </span>
+              </div>
             </div>
             <div class="pt-6 flex-1 flex flex-col justify-between">
               <div class="flex items-start justify-between gap-4">
@@ -845,18 +922,20 @@
                     Sleek minimalist layouts tailored with community green belt parks, and smart energy.
                   </p>
                 </div>
-                <div class="text-right">
+                <div class="text-right shrink-0">
                   <span class="block text-xl font-semibold text-[#1C1B19] font-mono">₹2 Cr - ₹3.4 Cr</span>
                   <span class="text-[9px] font-mono text-neutral-400 uppercase tracking-widest block mt-0.5">Pricing Band</span>
                 </div>
               </div>
-              <div class="pt-4 border-t border-brand-border flex items-center justify-between text-xs text-neutral-500">
-                <div class="flex gap-4">
-                  <span>2 Bedrooms</span>
-                  <span>•</span>
-                  <span>2 Bathrooms</span>
+              <div class="pt-4 border-t border-brand-border flex items-center justify-between text-xs text-neutral-500 font-mono">
+                <div class="flex items-center gap-3">
+                  <span class="flex items-center gap-1.5"><i class="fa-solid fa-bed text-brand-goldLight text-[10px]"></i> 2 Beds</span>
+                  <span class="text-neutral-300">•</span>
+                  <span class="flex items-center gap-1.5"><i class="fa-solid fa-bath text-brand-goldLight text-[10px]"></i> 2 Baths</span>
+                  <span class="text-neutral-300">•</span>
+                  <span class="flex items-center gap-1.5"><i class="fa-solid fa-ruler-combined text-brand-goldLight text-[10px]"></i> 1,850 Sq.Ft.</span>
                 </div>
-                <a href="https://wa.me/918708528150?text=Hi%20Cora%20Team%2C%20I%2520am%2520interested%2520in%252520booking%252520a%252520private%252520tour%25252520for%25252520The%25252525Suburban%25252525Sanctuary." target="_blank" class="text-black hover:text-brand-gold text-[10px] font-mono tracking-wider uppercase font-semibold flex items-center gap-1">
+                <a href="https://wa.me/918708528150?text=Hi%20Cora%20Team%2C%20I%2520am%2520interested%2520in%252520booking%252520a%252520private%252520tour%25252520for%25252520The%25252525Suburban%25252525Sanctuary." target="_blank" class="text-white bg-black hover:bg-neutral-800 px-4 py-2 rounded-full text-[10px] font-mono tracking-wider uppercase font-semibold flex items-center gap-1.5 transition-colors shadow-md">
                   Book Tour <i class="fa-solid fa-arrow-right text-[8px]"></i>
                 </a>
               </div>
@@ -1044,7 +1123,7 @@
   </section>
 
   <!-- AGENTS SECTION -->
-  <section class="py-32 px-6 bg-[#FAF9F6] relative z-20 border-t border-brand-border">
+  <section class="py-32 px-6 bg-white relative z-20 border-t border-brand-border">
     <div class="max-w-6xl mx-auto">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 relative">
         
@@ -1052,34 +1131,34 @@
         <div class="lg:col-span-5 lg:sticky lg:top-28 self-start pr-0 lg:pr-12 pb-8 relative">
           <!-- Vertical Line Design with Node Icons (Visible on Large Screens) -->
           <div class="hidden lg:block absolute right-0 top-0 bottom-0 w-[1px] bg-brand-border/60">
-            <div class="absolute top-[20%] right-[-10px] w-5 h-5 rounded-full bg-[#FCF9F2] border border-brand-border flex items-center justify-center text-[8px] text-brand-gold shadow-sm">
-              <i class="fa-solid fa-user-tie"></i>
+            <div class="absolute top-[20%] right-[-10px] w-5 h-5 rounded-full bg-white border border-brand-border flex items-center justify-center text-[8px] text-brand-gold shadow-sm">
+              <i class="fa-solid fa-gem"></i>
             </div>
-            <div class="absolute top-[60%] right-[-10px] w-5 h-5 rounded-full bg-[#FCF9F2] border border-brand-border flex items-center justify-center text-[8px] text-brand-gold shadow-sm">
-              <i class="fa-solid fa-handshake"></i>
+            <div class="absolute top-[60%] right-[-10px] w-5 h-5 rounded-full bg-white border border-brand-border flex items-center justify-center text-[8px] text-brand-gold shadow-sm">
+              <i class="fa-solid fa-key"></i>
             </div>
           </div>
 
           <div class="space-y-6">
             <h2 class="text-3xl sm:text-4xl font-display font-light text-[#1C1B19] tracking-tight leading-[1.15]">
-              Best Agents,<br>Exceptional Results!
+              Exclusive Roster of<br><span class="font-serif italic text-brand-goldLight">Luxury Consultants.</span>
             </h2>
             <p class="text-neutral-600 text-lg font-light leading-relaxed">
-              Experts help in guiding you with ease through process.
+              Discreet, data-driven, and highly connected.
             </p>
             <p class="text-neutral-500 text-xs sm:text-sm font-light leading-relaxed">
-              From the first consultation to the final handshake, our agents combine data-driven insight with genuine human connection. They listen, anticipate your needs, and remain fully committed to achieving the best possible outcome, ensuring a smooth and confident journey from vision to closing.
+              Our brokers are area specialists with unmatched access to off-market inventory and ultra-high-net-worth networks. They provide a frictionless acquisition and disposition experience for luxury assets.
             </p>
             
             <!-- CTA Buttons -->
             <div class="flex flex-wrap gap-3 pt-4">
-              <a href="#agents-list" class="bg-[#FCF9F2] border border-brand-border text-neutral-800 text-xs px-5 py-3.5 rounded-xl hover:bg-neutral-50 transition-colors inline-flex items-center gap-2 shadow-sm">
+              <a href="#agents-list" class="bg-black text-white text-xs px-6 py-4 rounded-full hover:bg-neutral-800 transition-colors inline-flex items-center gap-2 shadow-xl tracking-wide font-semibold">
                 <i class="fa-regular fa-id-card text-brand-gold"></i>
-                <span>Our Agents</span>
+                <span>Meet The Team</span>
               </a>
-              <a href="https://wa.me/918708528150" target="_blank" class="bg-[#FCF9F2] border border-brand-border text-neutral-800 text-xs px-5 py-3.5 rounded-xl hover:bg-neutral-50 transition-colors inline-flex items-center gap-2 shadow-sm">
+              <a href="https://wa.me/918708528150" target="_blank" class="bg-white border border-brand-border text-neutral-800 text-xs px-6 py-4 rounded-full hover:bg-neutral-50 transition-colors inline-flex items-center gap-2 shadow-sm tracking-wide font-semibold">
                 <i class="fa-regular fa-comment text-brand-gold"></i>
-                <span>Contact us!</span>
+                <span>Private Consultation</span>
               </a>
             </div>
           </div>
@@ -1089,14 +1168,20 @@
         <div id="agents-list" class="lg:col-span-7 space-y-6">
           
           <!-- Agent 1 -->
-          <div class="bg-[#FCF9F2] border border-brand-border rounded-[2rem] p-6 flex flex-col sm:flex-row gap-6 shadow-sm hover:shadow-md transition-shadow group">
-            <div class="sm:w-44 w-full aspect-[4/5] rounded-[1.5rem] overflow-hidden bg-neutral-100 flex-shrink-0">
-              <img src="/defaults/real-estate/agent_rahul.png" alt="Rahul Sharma" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500" />
+          <div class="bg-white border border-brand-border rounded-[2rem] p-6 flex flex-col sm:flex-row gap-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:border-neutral-300 transition-all group">
+            <div class="sm:w-44 w-full aspect-[4/5] rounded-[1.5rem] overflow-hidden bg-neutral-100 flex-shrink-0 relative">
+              <img src="/defaults/real-estate/agent_rahul.png" alt="Rahul Sharma" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <div class="absolute bottom-2 left-2 right-2 bg-white/90 backdrop-blur-md rounded-xl p-2 text-center border border-white/50">
+                <span class="block text-[10px] font-mono text-neutral-500 uppercase tracking-widest">Volume</span>
+                <span class="block text-sm font-bold text-black font-mono">₹450 Cr+</span>
+              </div>
             </div>
             <div class="flex-1 flex flex-col justify-between py-1">
               <div>
                 <h3 class="text-2xl font-display font-light text-[#1C1B19]">Rahul Sharma</h3>
                 <p class="text-neutral-500 text-xs font-light leading-relaxed mt-2 mb-4">
+                  Director of Sales, specializing in South Delhi's premium independent floors and luxury estates.
+                </p>
                   Guiding clients to find a home that matches their dreams with seamless transaction management.
                 </p>
                 <div class="space-y-2 text-xs font-light text-neutral-600">
@@ -1121,14 +1206,21 @@
           <div class="bg-[#FCF9F2] border border-brand-border rounded-[2rem] p-6 flex flex-col sm:flex-row gap-6 shadow-sm hover:shadow-md transition-shadow group">
             <div class="sm:w-44 w-full aspect-[4/5] rounded-[1.5rem] overflow-hidden bg-neutral-100 flex-shrink-0">
               <img src="/defaults/real-estate/agent_ananya.png" alt="Ananya Roy" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500" />
+          <div class="bg-white border border-brand-border rounded-[2rem] p-6 flex flex-col sm:flex-row gap-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:border-neutral-300 transition-all group">
+            <div class="sm:w-44 w-full aspect-[4/5] rounded-[1.5rem] overflow-hidden bg-neutral-100 flex-shrink-0 relative">
+              <img src="/defaults/real-estate/agent_ananya.png" alt="Ananya Roy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <div class="absolute bottom-2 left-2 right-2 bg-white/90 backdrop-blur-md rounded-xl p-2 text-center border border-white/50">
+                <span class="block text-[10px] font-mono text-neutral-500 uppercase tracking-widest">Volume</span>
+                <span class="block text-sm font-bold text-black font-mono">₹380 Cr+</span>
+              </div>
             </div>
             <div class="flex-1 flex flex-col justify-between py-1">
               <div>
                 <h3 class="text-2xl font-display font-light text-[#1C1B19]">Ananya Roy</h3>
                 <p class="text-neutral-500 text-xs font-light leading-relaxed mt-2 mb-4">
-                  Specializes in beachfront penthouses, seafront villas, and high-end residential acquisitions.
+                  Luxury High-Rise Specialist, known for off-market access to Mumbai's finest sea-facing properties.
                 </p>
-                <div class="space-y-2 text-xs font-light text-neutral-600">
+                <div class="space-y-2 text-xs font-light text-neutral-600 font-mono">
                   <div class="flex items-center gap-2">
                     <i class="fa-light fa-phone text-brand-gold text-sm w-4"></i>
                     <span>+91 87085 28150</span>
@@ -1139,17 +1231,27 @@
                   </div>
                 </div>
               </div>
-              <div class="self-start mt-4 px-4 py-1.5 bg-[#FAF9F6] border border-brand-border rounded-full text-[10px] text-neutral-600 font-light flex items-center gap-1.5 shadow-inner">
-                <i class="fa-solid fa-location-dot text-[8px] text-brand-gold"></i>
-                <span>Bandra West, Mumbai</span>
+              <div class="flex items-center gap-3 mt-4">
+                <div class="px-4 py-1.5 bg-neutral-50 border border-brand-border rounded-full text-[10px] text-neutral-600 font-light flex items-center gap-1.5 shadow-sm">
+                  <i class="fa-solid fa-location-dot text-[8px] text-brand-gold"></i>
+                  <span>Bandra West</span>
+                </div>
+                <div class="px-4 py-1.5 bg-neutral-50 border border-brand-border rounded-full text-[10px] text-neutral-600 font-light flex items-center gap-1.5 shadow-sm">
+                  <i class="fa-solid fa-house-chimney text-[8px] text-brand-gold"></i>
+                  <span>8 Exclusive Listings</span>
+                </div>
               </div>
             </div>
           </div>
 
           <!-- Agent 3 -->
-          <div class="bg-[#FCF9F2] border border-brand-border rounded-[2rem] p-6 flex flex-col sm:flex-row gap-6 shadow-sm hover:shadow-md transition-shadow group">
-            <div class="sm:w-44 w-full aspect-[4/5] rounded-[1.5rem] overflow-hidden bg-neutral-100 flex-shrink-0">
-              <img src="/defaults/real-estate/agent_kabir.png" alt="Kabir Mehta" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500" />
+          <div class="bg-white border border-brand-border rounded-[2rem] p-6 flex flex-col sm:flex-row gap-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:border-neutral-300 transition-all group">
+            <div class="sm:w-44 w-full aspect-[4/5] rounded-[1.5rem] overflow-hidden bg-neutral-100 flex-shrink-0 relative">
+              <img src="/defaults/real-estate/agent_kabir.png" alt="Kabir Mehta" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <div class="absolute bottom-2 left-2 right-2 bg-white/90 backdrop-blur-md rounded-xl p-2 text-center border border-white/50">
+                <span class="block text-[10px] font-mono text-neutral-500 uppercase tracking-widest">Volume</span>
+                <span class="block text-sm font-bold text-black font-mono">₹290 Cr+</span>
+              </div>
             </div>
             <div class="flex-1 flex flex-col justify-between py-1">
               <div>
@@ -1157,7 +1259,7 @@
                 <p class="text-neutral-500 text-xs font-light leading-relaxed mt-2 mb-4">
                   Assisting clients with investment properties, developer relations, and legal documentation.
                 </p>
-                <div class="space-y-2 text-xs font-light text-neutral-600">
+                <div class="space-y-2 text-xs font-light text-neutral-600 font-mono">
                   <div class="flex items-center gap-2">
                     <i class="fa-light fa-phone text-brand-gold text-sm w-4"></i>
                     <span>+91 87085 28150</span>
@@ -1168,9 +1270,15 @@
                   </div>
                 </div>
               </div>
-              <div class="self-start mt-4 px-4 py-1.5 bg-[#FAF9F6] border border-brand-border rounded-full text-[10px] text-neutral-600 font-light flex items-center gap-1.5 shadow-inner">
-                <i class="fa-solid fa-location-dot text-[8px] text-brand-gold"></i>
-                <span>Worli, Mumbai</span>
+              <div class="flex items-center gap-3 mt-4">
+                <div class="px-4 py-1.5 bg-neutral-50 border border-brand-border rounded-full text-[10px] text-neutral-600 font-light flex items-center gap-1.5 shadow-sm">
+                  <i class="fa-solid fa-location-dot text-[8px] text-brand-gold"></i>
+                  <span>Worli, Mumbai</span>
+                </div>
+                <div class="px-4 py-1.5 bg-neutral-50 border border-brand-border rounded-full text-[10px] text-neutral-600 font-light flex items-center gap-1.5 shadow-sm">
+                  <i class="fa-solid fa-house-chimney text-[8px] text-brand-gold"></i>
+                  <span>12 Active Listings</span>
+                </div>
               </div>
             </div>
           </div>
@@ -1182,23 +1290,27 @@
   </section>
 
   <!-- AI INFLUENCER FOR REAL ESTATE SECTION -->
-  <section class="py-24 md:py-32 px-6 bg-[#FAF9F5] relative z-20 border-b border-brand-border overflow-hidden">
-    <div class="max-w-4xl mx-auto flex flex-col items-center text-center">
+  <section class="py-24 md:py-32 px-6 bg-[#0A0A0A] relative z-20 overflow-hidden">
+    <!-- Subtle glow background -->
+    <div class="absolute inset-0 bg-gradient-to-b from-[#0A0A0A] to-[#1C1B19]"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-gold/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+    <div class="max-w-4xl mx-auto flex flex-col items-center text-center relative z-10">
 
       <!-- Badge -->
-      <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-[#7C3AED]/5 border border-[#7C3AED]/10 rounded-full w-fit mb-6">
-        <span class="w-1.5 h-1.5 bg-[#7C3AED] rounded-full animate-pulse"></span>
-        <span class="text-[9px] sm:text-[10px] font-semibold uppercase tracking-wider text-[#7C3AED] font-sans">AI Influencer for your agency</span>
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-brand-gold/10 border border-brand-gold/20 rounded-full w-fit mb-6">
+        <span class="w-1.5 h-1.5 bg-brand-goldLight rounded-full animate-pulse"></span>
+        <span class="text-[9px] sm:text-[10px] font-semibold uppercase tracking-wider text-brand-goldLight font-mono">Meet Your Digital Broker</span>
       </div>
 
       <!-- Heading -->
-      <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-[#1C1B19] tracking-tight leading-[1.1] mb-6 max-w-2xl">
-        Create your best <span class="font-serif italic font-light">property tours</span> yet.
+      <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-light text-white tracking-tight leading-[1.1] mb-6 max-w-2xl">
+        24/7 Virtual Showings &<br><span class="font-serif italic text-brand-goldLight">Lead Qualification.</span>
       </h2>
 
       <!-- Paragraph -->
-      <p class="text-neutral-600 text-sm sm:text-base font-light leading-relaxed mb-12 max-w-3xl">
-        Scale Aarsan Realtors's listing reach with an AI influencer for your agency. We script, render, and edit cinematic property walkthroughs & social reels in 24 hours.
+      <p class="text-white/60 text-sm sm:text-base font-light leading-relaxed mb-12 max-w-3xl">
+        Never miss a high-net-worth inquiry. Your Aarsan Realtors AI assistant instantly answers floor plan questions, qualifies budgets, and schedules on-site visits while you sleep.
       </p>
 
       <!-- Central Wide Image and Badges -->
@@ -1212,35 +1324,35 @@
 
         <!-- Floating Badges -->
         <!-- Badge 1: VEO 3 Engine (Overlapping left edge) -->
-        <div class="absolute left-2 md:-left-6 top-[25%] md:top-1/2 -translate-y-1/2 bg-white/95 backdrop-blur-md border border-neutral-200/80 rounded-2xl shadow-xl px-3 sm:px-4 py-2.5 sm:py-3 flex items-center gap-2.5 sm:gap-3 animate-bounce z-20" style="animation-duration: 4s;">
-          <div class="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-[#10B981]/15 border border-[#10B981]/20 flex items-center justify-center flex-shrink-0">
-            <i class="fa-solid fa-circle-check text-[#10B981] text-[10px] sm:text-xs"></i>
+        <div class="absolute left-2 md:-left-6 top-[25%] md:top-1/2 -translate-y-1/2 bg-[#1C1B19]/80 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl px-3 sm:px-4 py-2.5 sm:py-3 flex items-center gap-2.5 sm:gap-3 animate-bounce z-20" style="animation-duration: 4s;">
+          <div class="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center flex-shrink-0">
+            <i class="fa-solid fa-comments text-emerald-400 text-[10px] sm:text-xs"></i>
           </div>
           <div class="text-left">
-            <span class="block text-[7px] sm:text-[8px] font-mono text-neutral-400 uppercase tracking-widest font-bold leading-none mb-1">VEO 3 ENGINE</span>
-            <span class="text-[10px] sm:text-xs font-bold text-neutral-800 leading-none">98.4% Lip-Sync</span>
+            <span class="block text-[7px] sm:text-[8px] font-mono text-white/50 uppercase tracking-widest font-bold leading-none mb-1">INSTANT REPLIES</span>
+            <span class="text-[10px] sm:text-xs font-bold text-white leading-none">< 3s Response</span>
           </div>
         </div>
 
         <!-- Badge 2: Lead Inquiries (Overlapping top right) -->
-        <div class="absolute right-2 md:-right-4 -top-3 md:-top-4 bg-white/95 backdrop-blur-md border border-neutral-200/80 rounded-2xl shadow-xl px-3 sm:px-4 py-2.5 sm:py-3 flex items-center gap-2.5 sm:gap-3 animate-bounce z-20" style="animation-duration: 5s; animation-delay: 0.5s;">
-          <div class="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-[#7C3AED]/15 border border-[#7C3AED]/20 flex items-center justify-center flex-shrink-0">
-            <i class="fa-solid fa-arrow-trend-up text-[#7C3AED] text-[10px] sm:text-xs"></i>
+        <div class="absolute right-2 md:-right-4 -top-3 md:-top-4 bg-[#1C1B19]/80 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl px-3 sm:px-4 py-2.5 sm:py-3 flex items-center gap-2.5 sm:gap-3 animate-bounce z-20" style="animation-duration: 5s; animation-delay: 0.5s;">
+          <div class="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-blue-500/20 border border-blue-500/30 flex items-center justify-center flex-shrink-0">
+            <i class="fa-solid fa-filter text-blue-400 text-[10px] sm:text-xs"></i>
           </div>
           <div class="text-left">
-            <span class="block text-[7px] sm:text-[8px] font-mono text-neutral-400 uppercase tracking-widest font-bold leading-none mb-1">LEAD INQUIRIES</span>
-            <span class="text-[10px] sm:text-xs font-bold text-neutral-800 leading-none">3.4x More Leads</span>
+            <span class="block text-[7px] sm:text-[8px] font-mono text-white/50 uppercase tracking-widest font-bold leading-none mb-1">QUALIFICATION</span>
+            <span class="text-[10px] sm:text-xs font-bold text-white leading-none">Budget Verified</span>
           </div>
         </div>
 
         <!-- Badge 3: Listing Speed (Overlapping bottom right) -->
-        <div class="absolute right-2 md:-right-2 -bottom-3 md:-bottom-4 bg-white/95 backdrop-blur-md border border-neutral-200/80 rounded-2xl shadow-xl px-3 sm:px-4 py-2.5 sm:py-3 flex items-center gap-2.5 sm:gap-3 animate-bounce z-20" style="animation-duration: 4.5s; animation-delay: 1s;">
-          <div class="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-[#F59E0B]/15 border border-[#F59E0B]/20 flex items-center justify-center flex-shrink-0">
-            <i class="fa-solid fa-bolt text-[#F59E0B] text-[10px] sm:text-xs"></i>
+        <div class="absolute right-2 md:-right-2 -bottom-3 md:-bottom-4 bg-[#1C1B19]/80 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl px-3 sm:px-4 py-2.5 sm:py-3 flex items-center gap-2.5 sm:gap-3 animate-bounce z-20" style="animation-duration: 4.5s; animation-delay: 1s;">
+          <div class="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-amber-500/20 border border-amber-500/30 flex items-center justify-center flex-shrink-0">
+            <i class="fa-solid fa-calendar-check text-amber-400 text-[10px] sm:text-xs"></i>
           </div>
           <div class="text-left">
-            <span class="block text-[7px] sm:text-[8px] font-mono text-neutral-400 uppercase tracking-widest font-bold leading-none mb-1">LISTING SPEED</span>
-            <span class="text-[10px] sm:text-xs font-bold text-neutral-800 leading-none">24h Video Delivery</span>
+            <span class="block text-[7px] sm:text-[8px] font-mono text-white/50 uppercase tracking-widest font-bold leading-none mb-1">CONVERSION</span>
+            <span class="text-[10px] sm:text-xs font-bold text-white leading-none">Auto-Scheduling</span>
           </div>
         </div>
       </div>
@@ -1250,77 +1362,58 @@
         <!-- Col 1 -->
         <div class="flex flex-col gap-4 items-start md:items-start">
           <div class="flex items-center gap-2.5">
-            <div class="w-5 h-5 rounded-full bg-[#7C3AED]/10 flex items-center justify-center flex-shrink-0">
-              <i class="fa-solid fa-check text-[#7C3AED] text-[10px]"></i>
+            <div class="w-5 h-5 rounded-full bg-brand-gold/20 flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-check text-brand-goldLight text-[10px]"></i>
             </div>
-            <span class="text-neutral-700 text-xs sm:text-sm font-medium">Property Walkthroughs</span>
+            <span class="text-white/80 text-xs sm:text-sm font-light">Interactive Virtual Tours</span>
           </div>
           <div class="flex items-center gap-2.5">
-            <div class="w-5 h-5 rounded-full bg-[#7C3AED]/10 flex items-center justify-center flex-shrink-0">
-              <i class="fa-solid fa-check text-[#7C3AED] text-[10px]"></i>
+            <div class="w-5 h-5 rounded-full bg-brand-gold/20 flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-check text-brand-goldLight text-[10px]"></i>
             </div>
-            <span class="text-neutral-700 text-xs sm:text-sm font-medium">Virtual Site Tours</span>
+            <span class="text-white/80 text-xs sm:text-sm font-light">Automated Follow-ups</span>
           </div>
         </div>
         <!-- Col 2 -->
         <div class="flex flex-col gap-4 items-start md:items-start">
           <div class="flex items-center gap-2.5">
-            <div class="w-5 h-5 rounded-full bg-[#7C3AED]/10 flex items-center justify-center flex-shrink-0">
-              <i class="fa-solid fa-check text-[#7C3AED] text-[10px]"></i>
+            <div class="w-5 h-5 rounded-full bg-brand-gold/20 flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-check text-brand-goldLight text-[10px]"></i>
             </div>
-            <span class="text-neutral-700 text-xs sm:text-sm font-medium">AI Property Scripting</span>
+            <span class="text-white/80 text-xs sm:text-sm font-light">Lead Qualification</span>
           </div>
           <div class="flex items-center gap-2.5">
-            <div class="w-5 h-5 rounded-full bg-[#7C3AED]/10 flex items-center justify-center flex-shrink-0">
-              <i class="fa-solid fa-check text-[#7C3AED] text-[10px]"></i>
+            <div class="w-5 h-5 rounded-full bg-brand-gold/20 flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-check text-brand-goldLight text-[10px]"></i>
             </div>
-            <span class="text-neutral-700 text-xs sm:text-sm font-medium">Multilingual Voiceovers</span>
+            <span class="text-white/80 text-xs sm:text-sm font-light">CRM Synchronization</span>
           </div>
         </div>
         <!-- Col 3 -->
         <div class="flex flex-col gap-4 items-start md:items-start">
           <div class="flex items-center gap-2.5">
-            <div class="w-5 h-5 rounded-full bg-[#7C3AED]/10 flex items-center justify-center flex-shrink-0">
-              <i class="fa-solid fa-check text-[#7C3AED] text-[10px]"></i>
+            <div class="w-5 h-5 rounded-full bg-brand-gold/20 flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-check text-brand-goldLight text-[10px]"></i>
             </div>
-            <span class="text-neutral-700 text-xs sm:text-sm font-medium">Instagram Reels & Shorts</span>
+            <span class="text-white/80 text-xs sm:text-sm font-light">Site Visit Booking</span>
           </div>
           <div class="flex items-center gap-2.5">
-            <div class="w-5 h-5 rounded-full bg-[#7C3AED]/10 flex items-center justify-center flex-shrink-0">
-              <i class="fa-solid fa-check text-[#7C3AED] text-[10px]"></i>
+            <div class="w-5 h-5 rounded-full bg-brand-gold/20 flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-check text-brand-goldLight text-[10px]"></i>
             </div>
-            <span class="text-neutral-700 text-xs sm:text-sm font-medium">Interactive Subtitles</span>
+            <span class="text-white/80 text-xs sm:text-sm font-light">Multi-language Chat</span>
           </div>
         </div>
       </div>
 
       <!-- CTA & Note -->
-      <div class="flex flex-col items-center gap-3 mb-10">
-        <a href="https://wa.me/918708528150?text=Hi%20Cora%20Team%2C%20I%20want%20to%20get%20a%20free%20AI%20property%20tour%20for%20Aarsan Realtors." target="_blank" class="inline-flex items-center justify-center gap-2.5 bg-[#7C3AED] hover:bg-[#6D28D9] text-white text-[11px] sm:text-xs font-bold uppercase tracking-widest px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg shadow-[#7C3AED]/20 w-fit">
-          <span>Get Free AI Property Tour</span>
-          <i class="fa-solid fa-wand-magic-sparkles text-sm"></i>
+      <div class="flex flex-col items-center gap-4">
+        <a href="https://wa.me/918708528150" class="inline-flex items-center justify-center gap-2 bg-white text-black px-8 py-4 rounded-full font-semibold tracking-wide hover:bg-neutral-200 transition-colors shadow-lg">
+          <i class="fa-solid fa-robot"></i> Deploy Your AI Broker
         </a>
-        <p class="text-neutral-400 text-[10px] font-light italic text-center">
-          *No upfront payment. WhatsApp draft delivered in 24 hours.
+        <p class="text-white/40 text-[10px] font-mono tracking-widest uppercase">
+          *No upfront payment. Fully integrated with WhatsApp in 24h.
         </p>
-      </div>
-
-      <!-- Trust Badges -->
-      <div class="flex flex-wrap items-center justify-center gap-6 mt-8 pt-8 border-t border-neutral-200/60 w-full max-w-md">
-        <div class="flex items-center gap-1.5 bg-white border border-neutral-200/80 px-3 py-1.5 rounded-lg shadow-sm">
-          <i class="fa-solid fa-house-chimney text-[#7C3AED] text-sm"></i>
-          <span class="text-[9px] font-extrabold uppercase tracking-wide text-neutral-800">CRM & WhatsApp Sync</span>
-        </div>
-        <div class="flex items-center gap-2">
-          <span class="text-[10px] font-bold text-neutral-700">5.0 Google Rating</span>
-          <div class="flex gap-0.5 text-[#EAB308]">
-            <i class="fa-solid fa-star text-[9px]"></i>
-            <i class="fa-solid fa-star text-[9px]"></i>
-            <i class="fa-solid fa-star text-[9px]"></i>
-            <i class="fa-solid fa-star text-[9px]"></i>
-            <i class="fa-solid fa-star text-[9px]"></i>
-          </div>
-        </div>
       </div>
 
     </div>
