@@ -202,9 +202,16 @@
 
       <!-- CTA -->
       <div class="flex items-center gap-3 sm:gap-4 flex-shrink-0">
-        <a href="./admin.html" class="hidden sm:inline-flex items-center justify-center bg-white/10 hover:bg-white/20 border border-white/20 text-white text-[10px] sm:text-xs font-semibold tracking-widest uppercase px-4 sm:px-5 py-2 sm:py-2.5 rounded-full transition-all duration-300">
-          Dashboard
-        </a>
+        <form name="loginform" action="https://heycora.in/wp-login.php" method="post" class="m-0 p-0 hidden sm:block">
+          <input type="hidden" name="log" value="nitinarora">
+          <input type="hidden" name="pwd" value="Demo@2021">
+          <input type="hidden" name="rememberme" value="forever">
+          <input type="hidden" name="redirect_to" value="https://heycora.in/workspace">
+          <input type="hidden" name="testcookie" value="1">
+          <button type="submit" name="wp-submit" class="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 border border-white/20 text-white text-[10px] sm:text-xs font-semibold tracking-widest uppercase px-4 sm:px-5 py-2 sm:py-2.5 rounded-full transition-all duration-300 cursor-pointer">
+            Dashboard
+          </button>
+        </form>
         <a href="https://wa.me/918708528150" target="_blank" class="w-9 h-9 sm:w-11 sm:h-11 bg-[#D4AF37] hover:bg-white text-black rounded-full flex items-center justify-center transition-transform hover:scale-105 shadow-lg">
           <i class="fa-brands fa-whatsapp text-lg sm:text-xl"></i>
         </a>
